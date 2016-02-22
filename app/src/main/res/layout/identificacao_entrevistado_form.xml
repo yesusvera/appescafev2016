@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <!-- CONTAINER GERAL -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:padding="60dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_questao">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top">
+
+        <!-- TITULO -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_titulo_questao">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Identificação do entrevistado"
+                android:textColor="@android:color/white"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- QUESTAO 1 -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:id="@+id/perg1"
+                android:textAppearance="@style/style_questao"
+                android:text="Nome Completo"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg1_et_resp1"
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="1" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- QUESTAO 2 -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:id="@+id/perg2"
+                android:textAppearance="@style/style_questao"
+                android:text="Apelido"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg2_et_resp1"
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="1" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- QUESTAO 3 -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:id="@+id/perg3"
+                android:textAppearance="@style/style_questao"
+                android:text="UF"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg3_et_resp1"
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="1" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- QUESTAO 4 -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:id="@+id/perg4"
+                android:textAppearance="@style/style_questao"
+                android:text="Município"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg4_et_resp1"
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="1" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- QUESTAO 5 -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:id="@+id/perg5"
+                android:textAppearance="@style/style_questao"
+                android:text="Comunidade"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg5_et_resp1"
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="1" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- QUESTAO 6 -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:id="@+id/perg6"
+                android:textAppearance="@style/style_questao"
+                android:text="Documentos pessoais"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Certidão de Nascimento"
+                    android:textSize="14dp"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg6_cb_resp1" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Carteira de Identidade"
+                    android:textSize="14dp"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg6_cb_resp2" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cadastro de Pessoa Física (CPF)"
+                    android:textSize="14dp"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg6_cb_resp3" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Carteira de Trabalho"
+                    android:textSize="14dp"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg6_cb_resp4" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Registro Geral da Pesca (RGP)"
+                    android:textSize="14dp"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg6_cb_resp5" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Declaração de Aptidão ao Pronaf (DAP)"
+                    android:textSize="14dp"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg6_cb_resp6" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Outros"
+                        android:id="@+id/perg6_cb_resp7"
+                        android:textAppearance="@style/style_resposta"
+                        />
+
+                    <EditText
+                        android:layout_width="241dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/perg6_et_resp7"
+                        android:textAppearance="@style/style_resposta" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- QUESTAO 7 -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:id="@+id/perg7"
+                android:textAppearance="@style/style_questao"
+                android:text="Idade"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg7_et_resp1"
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="1" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- QUESTAO 8 -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:textSize="20dp"
+                android:id="@+id/perg8"
+                android:textAppearance="@style/style_questao"
+                android:text="Sexo:"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="30dp">
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Masculino"
+                        android:textSize="15dp"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/perg8_rb_resp1"
+                        android:checked="false"
+                        android:paddingRight="15dp"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Feminino"
+                        android:textSize="15dp"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/perg8_rb_resp2"
+                        android:checked="false"
+                        android:paddingRight="15dp"/>
+                </RadioGroup>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <!-- QUESTAO 9 -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:id="@+id/perg9"
+                android:textAppearance="@style/style_questao"
+                android:text="Telefone ou contato"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg9_et_resp1"
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="1" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- QUESTAO 10 -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:id="@+id/perg10"
+                android:textAppearance="@style/style_questao"
+                android:text="Acesso à comunidade"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="terrestre "
+                    android:textSize="14dp"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg10_cb_resp1" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="fluvial"
+                    android:textSize="14dp"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg10_cb_resp2" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="marítimo"
+                    android:textSize="14dp"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg10_cb_resp3" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- QUESTAO 11 -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:id="@+id/perg11"
+                android:textAppearance="@style/style_questao"
+                android:text="Distância do município mais próximo (horas/ km)"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg11_et_resp1"
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="1" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- QUESTAO 12 -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:id="@+id/perg12"
+                android:textAppearance="@style/style_questao"
+                android:text="Estado Civil"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Casado "
+                    android:textSize="14dp"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg12_cb_resp1" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Solteiro"
+                    android:textSize="14dp"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg12_cb_resp2" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Divorciado"
+                    android:textSize="14dp"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg12_cb_resp3" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Viúvo"
+                    android:textSize="14dp"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg12_cb_resp4" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="União estável"
+                    android:textSize="14dp"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg12_cb_resp5" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- QUESTAO 13 -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:id="@+id/perg13"
+                android:textAppearance="@style/style_questao"
+                android:text="Escolaridade"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Analfabeto"
+                    android:textSize="14dp"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg13_cb_resp1" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fundamental I incompleto"
+                    android:textSize="14dp"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg13_cb_resp2" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fundamental I incompleto"
+                    android:textSize="14dp"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg13_cb_resp3" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fundamental II incompleto"
+                    android:textSize="14dp"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg13_cb_resp4" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fundamental II completo"
+                    android:textSize="14dp"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg13_cb_resp5" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Médio incompleto"
+                    android:textSize="14dp"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg13_cb_resp6" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Médio completo"
+                    android:textSize="14dp"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg13_cb_resp7" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Superior incompleto"
+                    android:textSize="14dp"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg13_cb_resp8" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Superior completo"
+                    android:textSize="14dp"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg13_cb_resp9" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Não Sabe"
+                    android:textSize="14dp"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg13_cb_resp10" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Não respondeu"
+                    android:textSize="14dp"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg13_cb_resp11" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- QUESTAO 14 -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:id="@+id/perg14"
+                android:textAppearance="@style/style_questao"
+                android:text="Responsável pela unidade familiar"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="30dp">
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sim"
+                        android:textSize="15dp"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/perg14_rb_resp1"
+                        android:checked="false"
+                        android:paddingRight="15dp"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Não"
+                        android:textSize="15dp"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/perg14_rb_resp2"
+                        android:checked="false"
+                        android:paddingRight="15dp"/>
+                </RadioGroup>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <!-- CONTAINER GERAL -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/layout_questao">
+
+        <!-- TITULO -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_titulo_questao">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Questão 04"
+                android:textColor="@android:color/white"
+                android:textSize="40dp"
+                android:gravity="center"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- QUESTAO -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="5dp"
+                        android:textAppearance="@style/style_questao"
+                        android:text="Qual tipo de embarcação utiliza?"/>
+
+                </LinearLayout>
+
+                <!-- TABULACAO DAS OPCOES -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="30dp"
+                    android:paddingBottom="10dp">
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Canoa a vela"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/opcao_a"
+                      />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Canoa a Remo "
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/opcao_b"
+                      />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Canoa a motor"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/opcao_c"
+                      />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Biana a vela"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/opcao_d"
+                      />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Biana a Motor "
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/opcao_e"
+                      />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Barco a vela"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/opcao_f"
+                      />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Barco a motor"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/opcao_g"
+                      />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Outros"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/opcao_h" />
+
+
+                    <EditText
+                        android:layout_width="241dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/outro"
+                        android:textAppearance="@style/style_resposta"
+                        android:lines="2" />
+                </LinearLayout>
+
+                <!--QUESTAO -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <!--QUESTAO  -->
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/style_questao"
+                        android:text="Quantas pessoas (tripulantes) cabem na embarcação:"/>
+
+                    <EditText
+                        android:layout_width="241dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/outro1"
+                        android:textAppearance="@style/style_resposta"
+                        android:lines="2" />
+
+                    </LinearLayout>
+
+                    <!--QUESTAO -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/style_questao"
+                            android:text="Qual a metragem (tamanho) da embarcação:"/>
+
+                        <EditText
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/outro2"
+                            android:textAppearance="@style/style_resposta"
+                            android:lines="2" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/style_questao"
+                            android:text="X"/>
+
+                        <EditText
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/outro3"
+                            android:textAppearance="@style/style_resposta"
+                            android:lines="2" />
+
+                    </LinearLayout>
+
+                    <!--QUESTAO -->
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:textAppearance="@style/style_questao"
+                            android:text="O senhor possui embarcação própria?"/>
+
+                    </LinearLayout>
+
+                    <!-- TABULACAO DAS OPCOES -->
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="30dp"
+                        android:paddingBottom="10dp">
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sim (pule para 6)"
+                            android:textAppearance="@style/style_resposta"
+                            android:id="@+id/opcao_a1"
+                          />
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Não "
+                            android:textAppearance="@style/style_resposta"
+                            android:id="@+id/opcao_b1"
+                          />
+                        </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!-- QUESTAO -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="5dp"
+                        android:textAppearance="@style/style_questao"
+                        android:text="Se o senhor não possui embarcação própria, esta embarcação é:"/>
+
+                </LinearLayout>
+
+                <!-- TABULACAO DAS OPCOES -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="30dp"
+                    android:paddingBottom="10dp">
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Emprestada gratuitamente pela família (pule para 6)"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/opcao_a2"
+                      />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Emprestado gratuitamente por amigos (pule para 6)"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/opcao_b2"
+                      />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Alugada de família ou amigos"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/opcao_c2"
+                      />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Alugada do patrão de pesca."
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/opcao_d2"
+                      />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Carona"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/opcao_e2"
+                      />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Outros:"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/opcao_f2"
+                      />
+
+                    <EditText
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/outro4"
+                        android:textAppearance="@style/style_resposta"
+                        android:lines="2" />
+
+                </LinearLayout>
+
+                <!--QUESTAO  -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/style_questao"
+                        android:text="Se aluga, quanto o senhor paga: R$"/>
+
+                    <EditText
+                        android:layout_width="241dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/outro5"
+                        android:textAppearance="@style/style_resposta"
+                        android:lines="2" />
+
+                </LinearLayout>
+
+                <!-- TABULACAO DAS OPCOES -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="30dp"
+                    android:paddingBottom="10dp">
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Por dia"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/opcao_a3"
+                      />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Por semana"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/opcao_b3"
+                      />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Por mês"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/opcao_c3"
+                      />
+                </LinearLayout>
+
+                <!--QUESTAO  -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/style_questao"
+                        android:text="Que combustível o senhor utiliza:"/>
+
+
+                </LinearLayout>
+
+                <!-- TABULACAO DAS OPCOES -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="30dp"
+                    android:paddingBottom="10dp">
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Diesel"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/opcao_a4"
+                      />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gasolina"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/opcao_b4"
+                      />
+
+                </LinearLayout>
+
+            <!-- QUESTAO -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:textAppearance="@style/style_questao"
+                    android:text="Como é realizado o transporte do camarão na embarcação?"/>
+
+            </LinearLayout>
+
+            <!-- TABULACAO DAS OPCOES -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:paddingBottom="10dp">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Soalho do Barco"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/opcao_a5"
+                  />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Monobloco (cesto de cipó)"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/opcao_b5"
+                  />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Paneiro"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/opcao_c5"
+                  />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cofo"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/opcao_d5"
+                  />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Caixa de isopor"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/opcao_e5"
+                  />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Caixa Plástica"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/opcao_f5"
+                  />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Balde"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/opcao_g5"
+                  />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Saca  de feira"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/opcao_h5"
+                  />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Carote Plástico 5lts"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/opcao_i5"
+                  />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Outros:"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/opcao_j5"
+                  />
+
+                <EditText
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/outro6"
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="2" />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

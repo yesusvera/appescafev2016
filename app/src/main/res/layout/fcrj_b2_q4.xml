@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <!-- CONTAINER GERAL -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/layout_questao">
+
+        <!-- TITULO -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_titulo_questao">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Questão 04"
+                android:textColor="@android:color/white"
+                android:textSize="40dp"
+                android:gravity="center"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- QUESTAO -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:textAppearance="@style/style_questao"
+                android:text="De quanto é a renda da sua família hoje?"/>
+
+        </LinearLayout>
+
+        <!-- TABULACAO DAS OPCOES -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30dp"
+            android:paddingBottom="10dp">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Menos de 1/2 salário-mínimo ( Menos de R$400,00) "
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/opcao_a"
+              />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="De 1/2 a 1 salário-mínimo (de R$ 400,00 a 800,00)  "
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/opcao_b"
+              />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="De 1 a 3 salários-mínimos (de R$ 800,00 a  2.400,00) "
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/opcao_c"
+              />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="De 3 a 5 salários-mínimos (de R$ 2.400,00 a 4.000,00) "
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/opcao_d"
+              />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mais de 5 salários-mínimos (Mais de R$ 4.000,00) "
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/opcao_e"
+              />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

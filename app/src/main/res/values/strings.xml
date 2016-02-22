@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Appesca</string>
+    <string name="title_formulario_detail">Formulario Detail</string>
+    <string name="title_questao_list">Questões</string>
+    <string name="title_questao_detail">Detalhamento de questões</string>
+    <string name="title_activity_login_unesco">Appesca</string>
+
+    <string name="titulo_activity_fcr">Formulário Camarão Regional</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Senha</string>
+    <string name="action_sign_in">Entrar</string>
+    <string name="action_sign_in_short">Entrar</string>
+    <string name="error_invalid_email">O endereço de email não é válido</string>
+    <string name="error_invalid_password">Esta senha é muito curta</string>r
+    <string name="error_incorrect_password">A senha está incorreta</string>
+    <string name="error_field_required">Este campo é obrigatório</string>
+    <string name="permission_rationale">"-"</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="title_activity_tela_inicial_unesco_splash">TelaInicialUnescoSplashActivity
+    </string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+
+</resources>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single" >
+
+        <item
+            android:id="@+id/nav_enviados"
+            android:icon="@drawable/enviado_icone"
+            android:title="Enviados (Online)" />
+        <item
+            android:id="@+id/nav_nao_enviados"
+            android:icon="@drawable/nao_enviado_icone"
+            android:title="Não Enviados (Local)" />
+        <item
+            android:id="@+id/nav_todos"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Todos" />
+
+    </group>
+
+    <item android:title="Cadastrar Pesquisa">
+        <menu>
+
+            <item
+                android:id="@+id/novoCamaraoRegional"
+                android:icon="@drawable/novo_formulario"
+                android:title="Camarão Regional" />
+            <item
+                android:id="@+id/novoCamaraoECaranguejo"
+                android:icon="@drawable/novo_formulario"
+                android:title="Caranguejo" />
+            <item
+                android:id="@+id/novoCamaraoEBranco"
+                android:icon="@drawable/novo_formulario"
+                android:title="Camarão Piticaia e Branco" />
+
+        </menu>
+    </item>
+
+
+    <item android:title="Equipes">
+        <menu>
+            <item
+                android:id="@+id/idPrimeiraEquipe"
+                android:icon="@drawable/equipe_icon"
+                android:title="Primeira equipe" />
+
+            <item
+                android:id="@+id/idSegundaEquipe"
+                android:icon="@drawable/equipe_icon"
+                android:title="Segunda Equipe" />
+
+        </menu>
+    </item>
+
+</menu>

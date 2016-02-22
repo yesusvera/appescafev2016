@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <!-- CONTAINER GERAL -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/layout_questao">
+
+        <!-- TITULO -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_titulo_questao">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Bloco 3 - Questão 03"
+                android:textColor="@android:color/white"
+                android:textSize="40dp"
+                android:gravity="center"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- QUESTAO -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/perg1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:textAppearance="@style/style_questao"
+                android:text="Quais outras religiões existem aqui na comunidade? (Não ler as opções, apenas marcar após a resposta
+do entrevistado)"/>
+
+
+
+
+            <!-- CONDICAO E RESPOSTA 2 -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp">
+
+
+                <!-- TABULACAO DAS OPCOES -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="30dp">
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Católica"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/perg1_cb_resp1" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Protestante"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/perg1_cb_resp2" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Evangélica"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/perg1_cb_resp3" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Espírita"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/perg1_cb_resp4" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Umbanda"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/perg1_cb_resp5" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Candomblé"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/perg1_cb_resp6" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tambor de Mina"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/perg1_cb_resp7" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Outro. Qual?"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/perg1_cb_resp8" />
+
+                    <EditText
+                        android:layout_width="241dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/perg1_et_resp9"
+                        android:textAppearance="@style/style_resposta"
+                        android:lines="2" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

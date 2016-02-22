@@ -1,0 +1,240 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+
+    <!-- CONTAINER GERAL -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/layout_questao">
+
+        <!-- TITULO -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/layout_titulo_questao">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="Bloco 7 - Questão 1"
+                android:textColor="@android:color/white"
+                android:textSize="40dp"
+                android:gravity="center"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp"
+                android:textAppearance="@style/style_questao"
+                android:text=" Como é vendido o camarão? (pode marcar mais de uma resposta)"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:textAppearance="@style/style_questao"
+                android:text="Misturado (vários tamanhos)"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="inteiro fresco"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg1_cb_resp1"
+                android:paddingTop="10dp"
+                android:paddingRight="15dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="inteiro resfriado (no gelo)    "
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg1_cb_resp2"
+                android:paddingRight="15dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="inteiro congelado"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg1_cb_resp3"
+                android:paddingRight="15dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="descascado fresco "
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg1_cb_resp4"
+                android:paddingRight="15dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="descascado congelado"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg1_cb_resp5"
+                android:paddingRight="15dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:textAppearance="@style/style_questao"
+                android:text="Selecionado (em tamanhos diferentes):"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:textAppearance="@style/style_questao"
+                android:text="Graúdo"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="inteiro fresco"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg2_cb_resp1"
+                android:paddingTop="10dp"
+                android:paddingRight="15dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="inteiro resfriado (no gelo)    "
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg2_cb_resp2"
+                android:paddingRight="15dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="inteiro congelado"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg2_cb_resp3"
+                android:paddingRight="15dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="descascado fresco "
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg2_cb_resp4"
+                android:paddingRight="15dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="descascado congelado"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg2_cb_resp5"
+                android:paddingRight="15dp"/>
+
+
+
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:textAppearance="@style/style_questao"
+                android:text="Médio:"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="inteiro fresco"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg3_cb_resp1"
+                android:paddingTop="10dp"
+                android:paddingRight="15dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="inteiro resfriado (no gelo)    "
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg3_cb_resp2"
+                android:paddingRight="15dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="inteiro congelado"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg3_cb_resp3"
+                android:paddingRight="15dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="descascado fresco "
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg3_cb_resp4"
+                android:paddingRight="15dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="descascado congelado"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg3_cb_resp5"
+                android:paddingRight="15dp"/>
+
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:textAppearance="@style/style_questao"
+                android:text="Pequeno:"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="inteiro fresco"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg4_cb_resp1"
+                android:paddingTop="10dp"
+                android:paddingRight="15dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="inteiro resfriado (no gelo)    "
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg4_cb_resp2"
+                android:paddingRight="15dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="inteiro congelado"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg4_cb_resp3"
+                android:paddingRight="15dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="descascado fresco "
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg4_cb_resp4"
+                android:paddingRight="15dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="descascado congelado"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg4_cb_resp5"
+                android:paddingRight="15dp"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

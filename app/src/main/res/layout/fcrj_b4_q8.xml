@@ -1,0 +1,146 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <!-- CONTAINERa GERAL -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/layout_questao">
+
+        <!-- TITULO -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_titulo_questao">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Questão 08"
+                android:textColor="@android:color/white"
+                android:textSize="40dp"
+                android:gravity="center"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- QUESTAO -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:textAppearance="@style/style_questao"
+                android:text="Na sua visão, qual é o papel da RESEX para a sua comunidade? (Pode haver mais de uma resposta)"/>
+
+            <!-- CONDICAO E RESPOSTA 2 -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp">
+
+                <!-- TABULACAO DAS OPCOES -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="30dp">
+
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Melhorar a estrutura da comunidade"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/opcao_a" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Melhorar os serviços básicos na comunidade (saúde, educação, saneamento, abastecimento de água e energia, etc.) "
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/opcao_b" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Facilitar o acesso a programas sociais do governo"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/opcao_c" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Melhorar as condições de vida (de modo geral)"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/opcao_d" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mediar conflitos entre comunidades "
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/opcao_e" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Promover ações de fiscalização ambiental"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/opcao_f" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Promover ações de educação ambiental"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/opcao_g" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Promover a sustentabilidade das atividades extrativistas"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/opcao_i" />
+
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Outra"
+                            android:textAppearance="@style/style_resposta"
+                            android:id="@+id/opcao_j" />
+
+                        <EditText
+                            android:layout_width="241dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/outros_quais"
+                            android:textAppearance="@style/style_resposta" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

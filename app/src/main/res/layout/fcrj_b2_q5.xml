@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <!-- CONTAINER GERAL -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:background="@drawable/layout_questao">
+
+        <!-- TITULO -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_titulo_questao">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Questão 05"
+                android:textColor="@android:color/white"
+                android:textSize="40dp"
+                android:gravity="center"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- QUESTAO -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:textAppearance="@style/style_questao"
+                android:text="Você já acessou algum tipo de crédito / financiamento?"/>
+
+        </LinearLayout>
+
+        <!-- RESPOSTA + TABULACAO DAS OPCOES -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="30dp">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sim"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/sim"
+
+                android:paddingRight="15dp"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Não"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/nao"
+
+                android:paddingRight="15dp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:textAppearance="@style/style_questao"
+                android:text="Se sim, para que finalidade? (Pode haver mais de uma resposta)"/>
+
+        </LinearLayout>
+
+        <!-- TABULACAO DAS OPCOES -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30dp"
+            android:paddingBottom="10dp">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Compra de material de pesca"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/opcao_a"
+              />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Compra de embarcação"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/opcao_b"
+              />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Beneficiamento de pescado"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/opcao_c"
+              />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Produção agrícola"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/opcao_d"
+              />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Criação de animais"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/opcao_e"
+              />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pequenos empreendimentos"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/opcao_f"
+              />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Artesanato"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/opcao_g"
+              />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Beneficiamento de produtos extrativistas"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/opcao_h"
+              />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Outros. Quais?"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/opcao_i"
+              />
+
+            <EditText
+                android:layout_width="241dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/outro"
+                android:textAppearance="@style/style_resposta"
+                android:lines="2" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:textAppearance="@style/style_questao"
+                android:text="Por meio de qual instituição?"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30dp">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Banco da Amazônia"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/opcao_a2"
+              />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Banco do Nordeste"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/opcao_b2"
+              />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Caixa Econômica"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/opcao_c2"
+              />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Banco do Pará"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/opcao_d2"
+              />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Banco do Brasil"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/opcao_e2"
+              />
+
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Outros. Quais?"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/opcao_f2"
+              />
+
+            <EditText
+                android:layout_width="241dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/outro2"
+                android:textAppearance="@style/style_resposta"
+                android:lines="2" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

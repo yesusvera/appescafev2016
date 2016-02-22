@@ -1,0 +1,29 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/questaoIdentificacao"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="286dp"
+        android:layout_height="286dp"
+        android:padding="50dp"
+        android:layout_gravity="center_horizontal|top"
+        android:src="@mipmap/ic_user"
+        android:id="@+id/entrevistadoImg"
+        android:onClick="onClickCamera"
+        android:clickable="true"
+        />
+
+    <EditText
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="100"
+        android:id="@+id/Name"
+        android:layout_gravity="center" />
+
+
+</FrameLayout>

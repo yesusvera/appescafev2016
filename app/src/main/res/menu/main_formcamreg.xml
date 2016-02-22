@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/itemEnviarFormulario"
+        android:orderInCategory="100"
+        android:title="Enviar formulário"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/itemClose"
+        android:orderInCategory="100"
+        android:title="Encerrar formulário"
+        app:showAsAction="never" />
+</menu>

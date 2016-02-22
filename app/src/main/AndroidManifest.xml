@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.org.unesco.appesca">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:logo="@mipmap/ic_launcher"
+        android:theme="@style/AppTheme">
+
+        <!-- <activity -->
+        <!-- android:name=".view.codigoantigo.HomeActivity" -->
+        <!-- android:label="@string/app_name" -->
+        <!-- android:theme="@style/AppTheme.NoActionBar"/> -->
+
+
+        <!-- <activity -->
+        <!-- android:name=".view.codigoantigo.FormularioCaranguejoActivity" -->
+        <!-- android:label="@string/title_questao_list" -->
+        <!-- android:screenOrientation="landscape" -->
+        <!-- android:theme="@style/AppTheme.NoActionBar" /> -->
+
+
+        <!-- <activity -->
+        <!-- android:name=".view.codigoantigo.FormularioCamaraoRegionalActivity" -->
+        <!-- android:label="@string/title_questao_list" -->
+        <!-- android:theme="@style/AppTheme.NoActionBar" /> -->
+
+
+        <!-- <activity -->
+        <!-- android:name=".view.codigoantigo.FormularioCamaraoActivity" -->
+        <!-- android:label="@string/title_questao_list" -->
+        <!-- android:screenOrientation="landscape" -->
+        <!-- android:theme="@style/AppTheme.NoActionBar" /> -->
+
+        <activity
+            android:name=".view.FormCamRegActivityNew"
+            android:label="@string/titulo_activity_fcr"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".view.LoginUnescoActivity"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/title_activity_login_unesco"
+            android:logo="@mipmap/ic_launcher">
+        </activity>
+
+        <activity
+            android:name=".view.PrincipalUnescoActivity"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:logo="@mipmap/ic_launcher"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".view.TelaInicialUnescoSplashActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+    </application>
+
+</manifest>

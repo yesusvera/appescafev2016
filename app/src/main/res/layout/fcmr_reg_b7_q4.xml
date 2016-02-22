@@ -1,0 +1,138 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+    <!-- CONTAINER GERAL -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/layout_questao">
+
+        <!-- TITULO -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_titulo_questao">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Bloco 7 - Questão 4"
+                android:textColor="@android:color/white"
+                android:textSize="40dp"
+                android:gravity="center"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TableLayout
+            android:paddingTop="15dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:paddingBottom="10dp"
+            android:layout_gravity="center_vertical"
+            android:stretchColumns="*">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:textAppearance="@style/style_questao"
+                            android:paddingBottom="5dp"
+                            android:gravity="center"
+                            android:text="Produto"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textAppearance="@style/style_questao"
+                            android:paddingBottom="5dp"
+                            android:gravity="center"
+                            android:background="@drawable/border"
+                            android:text="Período"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/style_questao"
+                            android:paddingBottom="5dp"
+                            android:gravity="center"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_span="2"
+                            android:text="Quantidade Média Vendida" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/style_questao"
+                            android:paddingBottom="5dp"
+                            android:gravity="center"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Observações"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:layout_column="2"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Verão"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:layout_column="3"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Inverno"/>
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:text="Misturado Inteiro Fresco"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/layout_titulo_questao">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Bloco 7 - Questão 4"
+                        android:textColor="@android:color/white"
+                        android:textSize="40dp"
+                        android:gravity="center"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+
+</ScrollView>
