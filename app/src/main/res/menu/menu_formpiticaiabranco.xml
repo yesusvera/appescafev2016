@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- JON REFERENTE AO PITICAIA BRANCO -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/localizacao_residencia_entrevistado"
+            android:icon="@drawable/endereco_icon"
+            android:title="Localização da residência" />
+        <item
+            android:id="@+id/identificacao_entrevistado"
+            android:icon="@drawable/ident_icon"
+            android:title="Identificação do entrevistado" />
+    </group>
+
+    <item android:title="Bloco 1 - Aspectos sociais" android:id="@+id/formpiticaiabranco_bloco1">
+        <menu>
+            <item
+                android:id="@+id/b1_q1"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 1" />
+            <item
+                android:id="@+id/b1_q2"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 2" />
+            <item
+                android:id="@+id/b1_q3"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 3" />
+            <item
+                android:id="@+id/b1_q4"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 4" />
+            <item
+                android:id="@+id/b1_q5"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 5" />
+            <item
+                android:id="@+id/b1_q6"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 6" />
+            <item
+                android:id="@+id/b1_q7"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 7" />
+            <item
+                android:id="@+id/b1_q8"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 8" />
+            <item
+                android:id="@+id/b1_q9"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 9" />
+            <item
+                android:id="@+id/b1_q10"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 10" />
+            <item
+                android:id="@+id/b1_q11"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 11" />
+            <item
+                android:id="@+id/b1_q12"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 12" />
+            <item
+                android:id="@+id/b1_q13"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 13" />
+            <item
+                android:id="@+id/b1_q14"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 14" />
+            <item
+                android:id="@+id/b1_q15"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 15" />
+        </menu>
+    </item>
+
+    <item android:title="Bloco 2 - Aspectos econômicos" android:id="@+id/formpiticaiabranco_bloco2">
+        <menu>
+            <item
+                android:id="@+id/b2_q1"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 1" />
+            <item
+                android:id="@+id/b2_q2"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 2" />
+            <item
+                android:id="@+id/b2_q3"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 3" />
+            <item
+                android:id="@+id/b2_q4"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 4" />
+            <item
+                android:id="@+id/b2_q5"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 5" />
+            <item
+                android:id="@+id/b2_q6"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 6" />
+        </menu>
+    </item>
+
+    <item android:title="Bloco 3 - Aspectos Culturais" android:id="@+id/formpiticaiabranco_bloco3">
+        <menu>
+            <item
+                android:id="@+id/b3_q1"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 1" />
+            <item
+                android:id="@+id/b3_q2"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 2" />
+            <item
+                android:id="@+id/b3_q3"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 3" />
+            <item
+                android:id="@+id/b3_q4"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 4" />
+            <item
+                android:id="@+id/b3_q5"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 5" />
+            <item
+                android:id="@+id/b3_q6"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 6" />
+            <item
+                android:id="@+id/b3_q7"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 7" />
+            <item
+                android:id="@+id/b3_q8"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 8" />
+            <item
+                android:id="@+id/b3_q9"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 9" />
+        </menu>
+    </item>
+
+    <item android:title="Bloco 4 - Aspectos Ambientais" android:id="@+id/formpiticaiabranco_bloco4">
+        <menu>
+            <item
+                android:id="@+id/b4_q1"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 1" />
+            <item
+                android:id="@+id/b4_q2"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 2" />
+            <item
+                android:id="@+id/b4_q3"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 3" />
+            <item
+                android:id="@+id/b4_q4"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 4" />
+            <item
+                android:id="@+id/b4_q5"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 5" />
+            <item
+                android:id="@+id/b4_q6"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 6" />
+            <item
+                android:id="@+id/b4_q7"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 7" />
+            <item
+                android:id="@+id/b4_q8"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 8" />
+            <item
+                android:id="@+id/b4_q9"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 9" />
+            <item
+                android:id="@+id/b4_q10"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 10" />
+            <item
+                android:id="@+id/b4_q11"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 11" />
+        </menu>
+    </item>
+
+    <item android:title="Bloco 5 - Questões para Pescadores" android:id="@+id/formpiticaiabranco_bloco5">
+        <menu>
+            <item
+                android:id="@+id/b5_q1"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 1" />
+            <item
+                android:id="@+id/b5_q2"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 2" />
+            <item
+                android:id="@+id/b5_q3"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 3" />
+            <item
+                android:id="@+id/b5_q4"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 4" />
+            <item
+                android:id="@+id/b5_q5"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 5" />
+
+        </menu>
+    </item>
+
+    <item android:title="Bloco 6 - Dados Sobre a Captura\nou Produção" android:id="@+id/formpiticaiabranco_bloco6">
+        <menu>
+            <item
+                android:id="@+id/b6_q1"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 1" />
+            <item
+                android:id="@+id/b6_q2"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 2" />
+            <item
+                android:id="@+id/b6_q3"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 3" />
+            <item
+                android:id="@+id/b6_q4"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 4" />
+            <item
+                android:id="@+id/b6_q5"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 5" />
+            <item
+                android:id="@+id/b6_q6"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 6" />
+
+        </menu>
+    </item>
+
+    <item android:title="Bloco 7 - Dados Sobre armazenamento, comercialização\ne Beneficiamento" android:id="@+id/formpiticaiabranco_bloco7">
+        <menu>
+            <item
+                android:id="@+id/b7_q1"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 1" />
+            <item
+                android:id="@+id/b7_q2"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 2" />
+        </menu>
+    </item>
+
+    <item android:title="Bloco 8 - Dados Sobre Bens\ne gastos" android:id="@+id/formpiticaiabranco_bloco8">
+        <menu>
+            <item
+                android:id="@+id/b8_q1"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 1" />
+            <item
+                android:id="@+id/b8_q2"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 2" />
+            <item
+                android:id="@+id/b8_q3"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 3" />
+            <item
+                android:id="@+id/b8_q4"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 4" />
+           
+        </menu>
+    </item>
+
+    <item android:title="Bloco 9 - Dados Sobre Gargalos\ne Oportunidades" android:id="@+id/formpiticaiabranco_bloco9">
+        <menu>
+            <item
+                android:id="@+id/b9_q1"
+                android:icon="@drawable/questao_icon"
+                android:title="Questão 1" />
+        </menu>
+    </item>
+</menu>
