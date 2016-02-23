@@ -228,7 +228,14 @@ public class PrincipalUnescoActivity extends AppCompatActivity
         }else if(id == R.id.novoCamaraoRegional){
             Intent intent = new Intent(PrincipalUnescoActivity.this, FormCamRegActivityNew.class);
             PrincipalUnescoActivity.this.startActivity(intent);
+        }else if(id == R.id.novoCamaraoECaranguejo){
+            Intent intent = new Intent(PrincipalUnescoActivity.this, FormCamRegActivityNew.class);
+            PrincipalUnescoActivity.this.startActivity(intent);
+        }else if(id == R.id.novoCamaraoEBranco){
+            Intent intent = new Intent(PrincipalUnescoActivity.this, FormCamRegActivityNew.class);
+            PrincipalUnescoActivity.this.startActivity(intent);
         }
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
