@@ -25,6 +25,7 @@ import java.util.Date;
 import java.util.List;
 
 import br.org.unesco.appesca.R;
+import br.org.unesco.appesca.bo.FormularioBO;
 import br.org.unesco.appesca.bo.QuestaoBO;
 import br.org.unesco.appesca.control.QuestaoDetailFragment;
 import br.org.unesco.appesca.dao.FormularioDAO;
@@ -169,14 +170,7 @@ public class FormCamRegActivityNew extends AppCompatActivity
                     }else{
                         Toast.makeText(getApplicationContext(), "Questão salva na base local.", Toast.LENGTH_LONG).show();
 
-//                        new AlertDialog.Builder(FormCamRegActivityNew.this)
-//                                .setTitle("Appesca")
-//                                .setMessage("Formulário salvo na base local.")
-//                                .setIcon(android.R.drawable.ic_dialog_alert)
-//
-//                                .setPositiveButton(android.R.string.ok, null).show();
-
-                        pintarQuestoes();
+                        chekListQuestoes();
 
                         if (posAtual == arrayIdsQuestoes.length - 1) {
                             posAtual = -1;
@@ -237,7 +231,7 @@ public class FormCamRegActivityNew extends AppCompatActivity
         }else{
             dtCriacaoFormulario = formulario.getDataAplicacao();
 
-            pintarQuestoes();
+            chekListQuestoes();
         }
 
         TextView txtPesquisador = (TextView) cabecalhoNavigationView.findViewById(R.id.txtPesquisador);
@@ -253,8 +247,12 @@ public class FormCamRegActivityNew extends AppCompatActivity
         posAtual = 0;
     }
 
-    private void pintarQuestoes(){
 
+    /**
+     * @author yesus
+     * Método necessário para assinalar quais questões já foram respondidas.
+     */
+    private void chekListQuestoes(){
             if (formulario != null) {
                 List<Questao> listaQuestoes = questaoDAO.getQuestoesByFormulario(formulario.getId());
 
@@ -268,14 +266,11 @@ public class FormCamRegActivityNew extends AppCompatActivity
                             item.setIcon(R.drawable.questao_icon_respondida);
                             item.setTitle(item.getTitle() + "(Respondida)");
                         }
-
-
                     }catch(Exception e){
                         e.printStackTrace();
                     }
                 }
             }
-
     }
 
 
@@ -400,16 +395,42 @@ public class FormCamRegActivityNew extends AppCompatActivity
                     .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            formulario.setSituacao(1);
-                            FormularioDAO formularioDAO = new FormularioDAO(FormCamRegActivityNew.this);
-                            formulario = formularioDAO.insertFormulario(formulario);
-                            Toast.makeText(getApplicationContext(), "Formulário salvo na base local.", Toast.LENGTH_LONG).show();Toast.makeText(getApplicationContext(), "Formulário enviado com sucesso!.", Toast.LENGTH_LONG).show();
+
+                            List<Questao> listaQuestoes = questaoDAO.getQuestoesByFormulario(formulario.getId());
+
+                            //VALIDACOES QUE IMPEDEM O ENVIO DO FORMULARIO
+                            if (listaQuestoes == null) {
+
+                                Toast.makeText(getApplicationContext(), "Não foi possível enviar. Nenhuma questão foi respondida.", Toast.LENGTH_LONG).show();
+
+                                return;
+                            } else if (listaQuestoes.size() < arrayIdsQuestoes.length) {
+
+                                    new AlertDialog.Builder(FormCamRegActivityNew.this)
+                                            .setTitle("Appesca")
+                                            .setMessage("Não foi possível enviar. " +
+                                                         " Você respondeu somente " + listaQuestoes.size() + " de " + arrayIdsQuestoes.length + " questões." +
+                                                        "\nVerifique a lista ao lado para validar as questões não respondidas.")
+                                            .setIcon(android.R.drawable.ic_dialog_alert)
+                                            .setPositiveButton(android.R.string.ok, null).show();
+
+                                    return;
+                            }
+
+
+                            new FormularioBO().enviarFormulario(formulario);
+
+                            Toast.makeText(getApplicationContext(), "Formulário enviado com sucesso!.", Toast.LENGTH_LONG).show();
+
+//                            formulario.setSituacao(1);
+//                            FormularioDAO formularioDAO = new FormularioDAO(FormCamRegActivityNew.this);
+//                            formulario = formularioDAO.insertFormulario(formulario);
+//                            Toast.makeText(getApplicationContext(), "Formulário salvo na base local.", Toast.LENGTH_LONG).show();Toast.makeText(getApplicationContext(), "Formulário enviado com sucesso!.", Toast.LENGTH_LONG).show();
                             finish();
                         }
-                    })
-                    .setNegativeButton(android.R.string.no, null).show();
-        }
-        if (id == R.id.itemClose) {
+                    }). setNegativeButton(android.R.string.no, null). show();
+                    }
+            if (id == R.id.itemClose) {
 
             new AlertDialog.Builder(this)
                     .setTitle("Appesca")
