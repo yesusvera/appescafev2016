@@ -63,11 +63,25 @@ public class FormCamRegActivityNew extends AppCompatActivity
     private RespostaDAO respostaDAO;
     private PerguntaDAO perguntaDAO;
 
+    public static int[] arraysIdsMenuLateral;
+    public static int[] arrayIdsQuestoes;
+
     View cabecalhoNavigationView;
+    Menu menu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if(getIntent().getExtras()!=null && getIntent().getExtras().get(ID_FORMULARIO_OPEN)!=null) {
+            formulario = (Formulario) getIntent().getExtras().get(ID_FORMULARIO_OPEN);
+
+
+            if(formulario!=null){
+                tipoFormulario = formulario.getIdTipoFormulario();
+                nomeFormulario = formulario.getNome();
+            }
+        }
 
         if(getIntent().getExtras()!=null && getIntent().getExtras().get(ID_TIPO_FORMULARIO)!=null) {
             tipoFormulario = (Integer) getIntent().getExtras().get(ID_TIPO_FORMULARIO);
@@ -77,10 +91,25 @@ public class FormCamRegActivityNew extends AppCompatActivity
             nomeFormulario = (String) getIntent().getExtras().get(ID_NOME_FORMULARIO);
         }
 
+
         switch (tipoFormulario){
-            case 1: setContentView(R.layout.activity_formcamreg); setTitle("Formulário Camarão Regional"); break;
-            case 2: setContentView(R.layout.activity_formcaranguejo); setTitle("Formulário Caranguejo"); break;
-            case 3: setContentView(R.layout.activity_formpiticaiabranco); setTitle("Formulário Camarão Piticaia e Branco"); break;
+            case 1: setContentView(R.layout.activity_formcamreg);
+                    setTitle("Formulário Camarão Regional");
+                    arraysIdsMenuLateral = ConstantesIdsFormularios.arraysIdsMenuLateralCamaraoRegional;
+                    arrayIdsQuestoes = ConstantesIdsFormularios.arrayIdsFormularioCamaraoRegional;
+                    break;
+            case 2:
+                    setContentView(R.layout.activity_formcaranguejo);
+                    setTitle("Formulário Caranguejo");
+                    arraysIdsMenuLateral = ConstantesIdsFormularios.arraysIdsMenuLateralCaranguejo;
+                    arrayIdsQuestoes = ConstantesIdsFormularios.arrayIdsFormularioCaranguejo;
+                    break;
+            case 3:
+                    setContentView(R.layout.activity_formpiticaiabranco);
+                    setTitle("Formulário Camarão Piticaia e Branco");
+                    arraysIdsMenuLateral = ConstantesIdsFormularios.arraysIdsMenuLateralPiticaiaEBranco;
+                    arrayIdsQuestoes = ConstantesIdsFormularios.arrayIdsFormularioPiticaiaEBranco;
+                    break;
         }
 //        setContentView(R.layout.activity_formcamreg);
 
@@ -102,48 +131,49 @@ public class FormCamRegActivityNew extends AppCompatActivity
             @Override
             public void onClick(View view) {
 
-                    int ordemQuestao = posAtual -1;
+                int ordemQuestao = posAtual - 1;
 
-                    Questao questao = questaoDAO.findQuestaoByOrdemIdFormulario(ordemQuestao, formulario.getId());
+                Questao questao = questaoDAO.findQuestaoByOrdemIdFormulario(ordemQuestao, formulario.getId());
 
 
-                    //PRIMEIRO EXCLUIR TUDO EM CASCATA: RESPOSTAS, PERGUNTAS E QUESTAO. DEPOIS RE-INSERIR.
-                    if(questao!=null) {
-                        List<Pergunta> listaPerguntas = questao.getPerguntas();
+                //PRIMEIRO EXCLUIR TUDO EM CASCATA: RESPOSTAS, PERGUNTAS E QUESTAO. DEPOIS RE-INSERIR.
+                if (questao != null) {
+                    List<Pergunta> listaPerguntas = questao.getPerguntas();
 
-                        for (Pergunta pergunta : listaPerguntas) {
-                            List<Resposta> listaRespostas = pergunta.getRespostas();
+                    for (Pergunta pergunta : listaPerguntas) {
+                        List<Resposta> listaRespostas = pergunta.getRespostas();
 
-                            for (Resposta resposta : listaRespostas) {
-                                respostaDAO.delete(resposta.getId());
-                            }
-                            perguntaDAO.deletePerguntaById(pergunta.getId());
+                        for (Resposta resposta : listaRespostas) {
+                            respostaDAO.delete(resposta.getId());
                         }
-                        questaoDAO.deleteQuestaoById(questao.getId());
-                        questao = null;
+                        perguntaDAO.deletePerguntaById(pergunta.getId());
                     }
+                    questaoDAO.deleteQuestaoById(questao.getId());
+                    questao = null;
+                }
 
-                    if(questao == null){
-                        questao = new Questao();
-                        questao.setOrdem(ordemQuestao);
-                        questao.setIdFormulario(formulario.getId());
-                        questao.setTitulo("Questão " + ordemQuestao);
-                        questao = questaoDAO.insertQuestao(questao);
+                if (questao == null) {
+                    questao = new Questao();
+                    questao.setOrdem(ordemQuestao);
+                    questao.setIdFormulario(formulario.getId());
+                    questao.setTitulo("Questão " + ordemQuestao);
+                    questao = questaoDAO.insertQuestao(questao);
 
-                        questao.setPerguntas(buildPerguntaList(questao));
+                    questao.setPerguntas(buildPerguntaList(questao));
 
-                        if(questao.getPerguntas() != null && !questao.getPerguntas().isEmpty()){
-                            questaoDAO.updateQuestao(questao);
-                        }
+                    if (questao.getPerguntas() != null && !questao.getPerguntas().isEmpty()) {
+                        questaoDAO.updateQuestao(questao);
                     }
+                }
                 Toast.makeText(getApplicationContext(), "Formulário salvo na base local.", Toast.LENGTH_LONG).show();
 
-                if(posAtual == ConstantesIdsFormularios.arrayIdsFormularioCamaraoRegionalApresentacao.length-1){
+                pintarQuestoes();
+
+                if (posAtual == arrayIdsQuestoes.length - 1) {
                     posAtual = -1;
                 }
 
-                openFragment(ConstantesIdsFormularios.
-                        arrayIdsFormularioCamaraoRegionalApresentacao[++posAtual]);
+                openFragment(arrayIdsQuestoes[++posAtual]);
             }
         });
 
@@ -158,6 +188,9 @@ public class FormCamRegActivityNew extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         cabecalhoNavigationView = navigationView.getHeaderView(0);
+
+        menu = navigationView.getMenu();
+
 
         //TODO if(insert){
         inicializaFormulario();
@@ -192,6 +225,8 @@ public class FormCamRegActivityNew extends AppCompatActivity
             formulario = formularioDAO.insertFormulario(formulario);
         }else{
             dtCriacaoFormulario = formulario.getDataAplicacao();
+
+            pintarQuestoes();
         }
 
         TextView txtPesquisador = (TextView) cabecalhoNavigationView.findViewById(R.id.txtPesquisador);
@@ -205,6 +240,31 @@ public class FormCamRegActivityNew extends AppCompatActivity
         locResidencia = null;
         id_activity_questao_atual = 0;
         posAtual = 0;
+    }
+
+    private void pintarQuestoes(){
+
+            if (formulario != null) {
+                List<Questao> listaQuestoes = questaoDAO.getQuestoesByFormulario(formulario.getId());
+
+                for (Questao q : listaQuestoes) {
+                    try {
+                        int id_item = arraysIdsMenuLateral[q.getOrdem().intValue()+1];
+
+                        MenuItem item = (MenuItem) menu.findItem(id_item);
+
+                        if((q.getOrdem()+1)>1) {
+                            item.setIcon(R.drawable.questao_icon_respondida);
+                            item.setTitle(item.getTitle() + "(Respondida)");
+                        }
+
+
+                    }catch(Exception e){
+                        e.printStackTrace();
+                    }
+                }
+            }
+
     }
 
 
@@ -339,7 +399,19 @@ public class FormCamRegActivityNew extends AppCompatActivity
                     .setNegativeButton(android.R.string.no, null).show();
         }
         if (id == R.id.itemClose) {
-            finish();
+
+            new AlertDialog.Builder(this)
+                    .setTitle("Appesca")
+                    .setMessage("As últimas mudanças não salvas serão perdidadas. Deseja encerrar o formulário?")
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            finish();
+                        }
+                    })
+                    .setNegativeButton(android.R.string.no, null).show();
+
         }
 
         return super.onOptionsItemSelected(item);
@@ -353,7 +425,7 @@ public class FormCamRegActivityNew extends AppCompatActivity
      */
     private int descobrirPos(int idMenuLateral){
         int i=0;
-        for(int idMenu: ConstantesIdsFormularios.arraysIdsMenusLaterais){
+        for(int idMenu: arraysIdsMenuLateral){
             if(idMenu == idMenuLateral){
                 return i;
             }
@@ -369,8 +441,7 @@ public class FormCamRegActivityNew extends AppCompatActivity
         int id = item.getItemId();
 
         posAtual = descobrirPos(id);
-        openFragment(ConstantesIdsFormularios.
-                arrayIdsFormularioCamaraoRegionalApresentacao[posAtual]);
+        openFragment(arrayIdsQuestoes[posAtual]);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

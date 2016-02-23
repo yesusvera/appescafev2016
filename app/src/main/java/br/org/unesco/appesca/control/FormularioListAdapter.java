@@ -101,7 +101,7 @@ public class FormularioListAdapter extends RecyclerView.Adapter<FormularioListAd
                     questao.getPerguntas().get(2).getRespostas().get(0).getTexto();
             holder.txtUfMunicipio.setText(ufMunicipio);
         }catch(Exception e){
-            Log.i("Erro", e.getMessage());
+            Log.i("Erro", "teste");
         }
 
         holder.imgVisualizarFormulario.setOnClickListener(new View.OnClickListener() {

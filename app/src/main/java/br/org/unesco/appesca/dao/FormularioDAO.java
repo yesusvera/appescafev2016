@@ -160,6 +160,49 @@ public class FormularioDAO {
         return formularioList;
     }
 
+
+    /**
+     * @author yesus
+     * @param situacao
+     * @param tipoFormulario
+     * @param idUsuario
+     * @return
+     */
+    public List<Formulario> listarPorSituacaoUsuario(int situacao, int idUsuario) {
+        SQLiteDatabase db = appescaHelper.getReadableDatabase();
+        Cursor cursor = db.rawQuery(
+                "SELECT " + AppescaHelper.COL_FORMULARIO_ID + " , " +
+                        AppescaHelper.COL_FORMULARIO_NOME + " , " +
+                        AppescaHelper.COL_FORMULARIO_DATA_APLICACAO + " , " +
+                        AppescaHelper.COL_FORMULARIO_ID_USUARIO+ " , " +
+                        AppescaHelper.COL_FORMULARIO_ID_TIPO_FORMULARIO+
+                        " FROM " + AppescaHelper.TABLE_FORMULARIO +
+                        " WHERE " + AppescaHelper.COL_FORMULARIO_SITUACAO + " = ? " +
+                        " AND " + AppescaHelper.COL_FORMULARIO_ID_USUARIO + " = ?" ,
+                new String[]{String.valueOf(situacao),
+                        String.valueOf(idUsuario)});
+        cursor.moveToFirst();
+
+        List<Formulario> formularioList = new ArrayList<Formulario>();
+
+        for (int i = 0; i < cursor.getCount(); i++) {
+            Formulario formulario = new Formulario();
+            formulario.setId(cursor.getInt(0));
+            formulario.setNome(cursor.getString(1));
+            try {
+                setDataFormatada(cursor, formulario);
+            } catch (ParseException e) {
+                Log.e("FormularioDAO", "Erro ao efetuar o parse da data.");
+            }
+            formulario.setIdUsuario(cursor.getInt(3));
+            formulario.setIdTipoFormulario(cursor.getInt(4));
+
+            formularioList.add(formulario);
+            cursor.moveToNext();
+        }
+        return formularioList;
+    }
+
     /**
      * @author yesus
      * @param situacao

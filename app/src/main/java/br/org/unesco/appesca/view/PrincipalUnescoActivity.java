@@ -20,6 +20,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 
@@ -115,10 +116,15 @@ public class PrincipalUnescoActivity extends AppCompatActivity
                         URL newurl = new URL(
                                 ConstantesREST.getURLService(ConstantesREST.IMAGEM_USUARIO)
                                         + "?login=" + Identity.getUsuarioLogado().getLogin() + "&senha=" + Identity.getUsuarioLogado().getSenha());
-                        bitmap = BitmapFactory.decodeStream(newurl.openConnection().getInputStream());
+//                        bitmap = BitmapFactory.decodeStream(newurl.openConnection().getInputStream());
 
 
-                    } catch (IOException e) {
+                    }
+//                    catch(FileNotFoundException fe){
+//                        fe.printStackTrace();
+//                    }
+
+                    catch(IOException e) {
                         e.printStackTrace();
                     }
                     return null;
@@ -126,11 +132,12 @@ public class PrincipalUnescoActivity extends AppCompatActivity
 
                 @Override
                 protected void onPostExecute(Void aVoid) {
-                    fotoUsuario.setImageBitmap(bitmap);
-                    fotoUsuario.setVisibility(View.VISIBLE);
+                    if(bitmap!=null) {
+                        fotoUsuario.setImageBitmap(bitmap);
+                        fotoUsuario.setVisibility(View.VISIBLE);
 
-                    //SALVANDO IMAGEM NA BASE
-                    Identity.getUsuarioLogado().setImagem(DBBitmapUtil.getBytes(bitmap));
+                        Identity.getUsuarioLogado().setImagem(DBBitmapUtil.getBytes(bitmap));
+                     }
                     new UsuarioDAO(PrincipalUnescoActivity.this).save(Identity.getUsuarioLogado());
 
 //                    super.onPostExecute(aVoid);
@@ -226,26 +233,35 @@ public class PrincipalUnescoActivity extends AppCompatActivity
         }else if (id == R.id.nav_todos) {
             listarFormularios(0);
         }else if(id == R.id.novoCamaraoRegional ){
-            Intent intent = new Intent(PrincipalUnescoActivity.this, FormCamRegActivityNew.class);
-            intent.putExtra(FormCamRegActivityNew.ID_NOME_FORMULARIO, "Camarão Regional");
-            intent.putExtra(FormCamRegActivityNew.ID_TIPO_FORMULARIO, 1);
-            PrincipalUnescoActivity.this.startActivity(intent);
+            abrirFormulario("Camarão Regional", 1);
         }else if(id == R.id.novoCamaraoECaranguejo){
-            Intent intent = new Intent(PrincipalUnescoActivity.this, FormCamRegActivityNew.class);
-            intent.putExtra(FormCamRegActivityNew.ID_NOME_FORMULARIO, "Caranguejo");
-            intent.putExtra(FormCamRegActivityNew.ID_TIPO_FORMULARIO, 2);
-            PrincipalUnescoActivity.this.startActivity(intent);
+            abrirFormulario("Caranguejo", 2);
         }else if(id == R.id.novoCamaraoEBranco){
-            Intent intent = new Intent(PrincipalUnescoActivity.this, FormCamRegActivityNew.class);
-            intent.putExtra(FormCamRegActivityNew.ID_NOME_FORMULARIO, "Camarão Piticaia e Branco");
-            intent.putExtra(FormCamRegActivityNew.ID_TIPO_FORMULARIO, 3);
-            PrincipalUnescoActivity.this.startActivity(intent);
+            abrirFormulario("Camarão Piticaia e Branco", 3);
         }
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private  void abrirFormulario(final String nome, final int tipoFormulario){
+
+        new AlertDialog.Builder(this)
+                .setTitle("Appesca")
+                .setMessage("Deseja realmente cadastrar uma nova pesquisa?")
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(PrincipalUnescoActivity.this, FormCamRegActivityNew.class);
+                        intent.putExtra(FormCamRegActivityNew.ID_NOME_FORMULARIO, nome);
+                        intent.putExtra(FormCamRegActivityNew.ID_TIPO_FORMULARIO, tipoFormulario);
+                        PrincipalUnescoActivity.this.startActivity(intent);
+                    }
+                })
+                .setNegativeButton(android.R.string.no, null).show();
+
     }
 
     private void listarFormularios(int value) {

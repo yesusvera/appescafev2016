@@ -15,7 +15,7 @@ import br.org.unesco.appesca.R;
  */
 public class TelaInicialUnescoSplashActivity extends Activity {
 
-    private int TEMPO_INICIAL_MS = 500;
+    private int TEMPO_INICIAL_MS = 1000;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

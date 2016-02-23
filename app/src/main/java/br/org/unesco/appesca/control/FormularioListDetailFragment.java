@@ -42,11 +42,11 @@ public class FormularioListDetailFragment extends Fragment {
                         titulo = "Lista - Todos os Formulários";
                         break;
                     case 1: //ENVIADOS
-                        mFormularioList = formularioDAO.listarPorSituacaoTipoUsuario(1, 1, Identity.getUsuarioLogado().getId());
+                        mFormularioList = formularioDAO.listarPorSituacaoUsuario(1, Identity.getUsuarioLogado().getId());
                         titulo = "Lista - Formulários Enviados";
                         break;
                     case 2: //NÃO ENVIADOS
-                        mFormularioList = formularioDAO.listarPorSituacaoTipoUsuario(0, 1, Identity.getUsuarioLogado().getId());
+                        mFormularioList = formularioDAO.listarPorSituacaoUsuario(0, Identity.getUsuarioLogado().getId());
                         titulo = "Lista - Formulários Não Enviados";
                         break;
                 }

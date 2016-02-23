@@ -124,8 +124,8 @@ public class QuestaoDAO {
             questao.setOrdem(cursor.getInt(2));
             questao.setIdFormulario(cursor.getInt(3));
 
-            PerguntaDAO respostaDAO = new PerguntaDAO(context);
-            questao.setPerguntas(respostaDAO.findPerguntasByQuestao(questao.getId()));
+//            PerguntaDAO respostaDAO = new PerguntaDAO(context);
+//            questao.setPerguntas(respostaDAO.findPerguntasByQuestao(questao.getId()));
 
             questaoList.add(questao);
             cursor.moveToNext();
