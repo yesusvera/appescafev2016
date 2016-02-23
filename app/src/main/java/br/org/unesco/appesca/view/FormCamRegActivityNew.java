@@ -45,13 +45,19 @@ public class FormCamRegActivityNew extends AppCompatActivity
      * ID EXTRAS
      */
     public static String ID_FORMULARIO_OPEN = "ID_FORMULARIO_OPEN";
+    public static String ID_TIPO_FORMULARIO = "ID_TIPO_FORMULARIO";
+    public static String ID_NOME_FORMULARIO = "ID_NOME_FORMULARIO";
+
 
     public static Formulario formulario;
     public static LocResidencia locResidencia = null;
-//    public static List<Questao> questoes = new ArrayList<Questao>();
 
     public static int  id_activity_questao_atual = 0;
     public static int posAtual = 0;
+
+
+    private String nomeFormulario;
+    private Integer tipoFormulario;
 
     private QuestaoDAO questaoDAO;
     private RespostaDAO respostaDAO;
@@ -62,7 +68,23 @@ public class FormCamRegActivityNew extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_formcamreg);
+
+        if(getIntent().getExtras()!=null && getIntent().getExtras().get(ID_TIPO_FORMULARIO)!=null) {
+            tipoFormulario = (Integer) getIntent().getExtras().get(ID_TIPO_FORMULARIO);
+        }
+
+        if(getIntent().getExtras()!=null && getIntent().getExtras().get(ID_NOME_FORMULARIO)!=null) {
+            nomeFormulario = (String) getIntent().getExtras().get(ID_NOME_FORMULARIO);
+        }
+
+        switch (tipoFormulario){
+            case 1: setContentView(R.layout.activity_formcamreg); setTitle("Formulário Camarão Regional"); break;
+            case 2: setContentView(R.layout.activity_formcaranguejo); setTitle("Formulário Caranguejo"); break;
+            case 3: setContentView(R.layout.activity_formpiticaiabranco); setTitle("Formulário Camarão Piticaia e Branco"); break;
+        }
+//        setContentView(R.layout.activity_formcamreg);
+
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -154,10 +176,16 @@ public class FormCamRegActivityNew extends AppCompatActivity
 
         if(formulario==null) {
             formulario = new Formulario();
-            formulario.setIdTipoFormulario(1);
+
+//            formulario.setIdTipoFormulario(1);
+//            formulario.setNome("Camarão Regional");
+            
+            formulario.setIdTipoFormulario(tipoFormulario);
+            formulario.setNome(nomeFormulario);
+
             formulario.setIdUsuario(Identity.getUsuarioLogado().getId());
             formulario.setDataAplicacao(dtCriacaoFormulario);
-            formulario.setNome("Formulário Camarão Regional");
+
             formulario.setSituacao(0);
 
             FormularioDAO formularioDAO = new FormularioDAO(this);

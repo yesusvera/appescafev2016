@@ -225,14 +225,20 @@ public class PrincipalUnescoActivity extends AppCompatActivity
             listarFormularios(2);
         }else if (id == R.id.nav_todos) {
             listarFormularios(0);
-        }else if(id == R.id.novoCamaraoRegional){
+        }else if(id == R.id.novoCamaraoRegional ){
             Intent intent = new Intent(PrincipalUnescoActivity.this, FormCamRegActivityNew.class);
+            intent.putExtra(FormCamRegActivityNew.ID_NOME_FORMULARIO, "Camarão Regional");
+            intent.putExtra(FormCamRegActivityNew.ID_TIPO_FORMULARIO, 1);
             PrincipalUnescoActivity.this.startActivity(intent);
         }else if(id == R.id.novoCamaraoECaranguejo){
             Intent intent = new Intent(PrincipalUnescoActivity.this, FormCamRegActivityNew.class);
+            intent.putExtra(FormCamRegActivityNew.ID_NOME_FORMULARIO, "Caranguejo");
+            intent.putExtra(FormCamRegActivityNew.ID_TIPO_FORMULARIO, 2);
             PrincipalUnescoActivity.this.startActivity(intent);
         }else if(id == R.id.novoCamaraoEBranco){
             Intent intent = new Intent(PrincipalUnescoActivity.this, FormCamRegActivityNew.class);
+            intent.putExtra(FormCamRegActivityNew.ID_NOME_FORMULARIO, "Camarão Piticaia e Branco");
+            intent.putExtra(FormCamRegActivityNew.ID_TIPO_FORMULARIO, 3);
             PrincipalUnescoActivity.this.startActivity(intent);
         }
 
