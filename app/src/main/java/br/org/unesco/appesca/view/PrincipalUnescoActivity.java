@@ -116,14 +116,10 @@ public class PrincipalUnescoActivity extends AppCompatActivity
                         URL newurl = new URL(
                                 ConstantesREST.getURLService(ConstantesREST.IMAGEM_USUARIO)
                                         + "?login=" + Identity.getUsuarioLogado().getLogin() + "&senha=" + Identity.getUsuarioLogado().getSenha());
-//                        bitmap = BitmapFactory.decodeStream(newurl.openConnection().getInputStream());
+                        bitmap = BitmapFactory.decodeStream(newurl.openConnection().getInputStream());
 
 
                     }
-//                    catch(FileNotFoundException fe){
-//                        fe.printStackTrace();
-//                    }
-
                     catch(IOException e) {
                         e.printStackTrace();
                     }

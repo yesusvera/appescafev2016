@@ -178,7 +178,8 @@ public class FormularioDAO {
                         AppescaHelper.COL_FORMULARIO_ID_TIPO_FORMULARIO+
                         " FROM " + AppescaHelper.TABLE_FORMULARIO +
                         " WHERE " + AppescaHelper.COL_FORMULARIO_SITUACAO + " = ? " +
-                        " AND " + AppescaHelper.COL_FORMULARIO_ID_USUARIO + " = ?" ,
+                        " AND " + AppescaHelper.COL_FORMULARIO_ID_USUARIO + " = ? " +
+                        " ORDER BY " + AppescaHelper.COL_FORMULARIO_DATA_APLICACAO +  " DESC " ,
                 new String[]{String.valueOf(situacao),
                         String.valueOf(idUsuario)});
         cursor.moveToFirst();
@@ -221,7 +222,7 @@ public class FormularioDAO {
                         " FROM " + AppescaHelper.TABLE_FORMULARIO +
                         " WHERE " + AppescaHelper.COL_FORMULARIO_SITUACAO + " = ? " +
                         " AND " + AppescaHelper.COL_FORMULARIO_ID_TIPO_FORMULARIO + " = ? " +
-                        " AND " + AppescaHelper.COL_FORMULARIO_ID_USUARIO + " = ?" ,
+                        " AND " + AppescaHelper.COL_FORMULARIO_ID_USUARIO + " = ? " ,
                                 new String[]{String.valueOf(situacao),
                                              String.valueOf(tipoFormulario),
                                              String.valueOf(idUsuario)});

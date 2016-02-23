@@ -25,6 +25,7 @@ import java.util.Date;
 import java.util.List;
 
 import br.org.unesco.appesca.R;
+import br.org.unesco.appesca.bo.QuestaoBO;
 import br.org.unesco.appesca.control.QuestaoDetailFragment;
 import br.org.unesco.appesca.dao.FormularioDAO;
 import br.org.unesco.appesca.dao.PerguntaDAO;
@@ -111,7 +112,6 @@ public class FormCamRegActivityNew extends AppCompatActivity
                     arrayIdsQuestoes = ConstantesIdsFormularios.arrayIdsFormularioPiticaiaEBranco;
                     break;
         }
-//        setContentView(R.layout.activity_formcamreg);
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -135,20 +135,11 @@ public class FormCamRegActivityNew extends AppCompatActivity
 
                 Questao questao = questaoDAO.findQuestaoByOrdemIdFormulario(ordemQuestao, formulario.getId());
 
+                QuestaoBO questaoBO= new QuestaoBO();
 
                 //PRIMEIRO EXCLUIR TUDO EM CASCATA: RESPOSTAS, PERGUNTAS E QUESTAO. DEPOIS RE-INSERIR.
                 if (questao != null) {
-                    List<Pergunta> listaPerguntas = questao.getPerguntas();
-
-                    for (Pergunta pergunta : listaPerguntas) {
-                        List<Resposta> listaRespostas = pergunta.getRespostas();
-
-                        for (Resposta resposta : listaRespostas) {
-                            respostaDAO.delete(resposta.getId());
-                        }
-                        perguntaDAO.deletePerguntaById(pergunta.getId());
-                    }
-                    questaoDAO.deleteQuestaoById(questao.getId());
+                    questaoBO.excluirQuestao(questao, FormCamRegActivityNew.this);
                     questao = null;
                 }
 
@@ -164,16 +155,36 @@ public class FormCamRegActivityNew extends AppCompatActivity
                     if (questao.getPerguntas() != null && !questao.getPerguntas().isEmpty()) {
                         questaoDAO.updateQuestao(questao);
                     }
+
+                    if(!questaoBO.temAlgumaResposta(questao, FormCamRegActivityNew.this)){
+                        questaoBO.excluirQuestao(questao, FormCamRegActivityNew.this);
+
+                        new AlertDialog.Builder(FormCamRegActivityNew.this)
+                                .setTitle("Appesca")
+                                .setMessage("Esta questão não pode ser salva, uma resposta é necessária.")
+                                .setIcon(android.R.drawable.ic_dialog_alert)
+
+                                .setPositiveButton(android.R.string.ok, null).show();
+
+                    }else{
+                        Toast.makeText(getApplicationContext(), "Questão salva na base local.", Toast.LENGTH_LONG).show();
+
+//                        new AlertDialog.Builder(FormCamRegActivityNew.this)
+//                                .setTitle("Appesca")
+//                                .setMessage("Formulário salvo na base local.")
+//                                .setIcon(android.R.drawable.ic_dialog_alert)
+//
+//                                .setPositiveButton(android.R.string.ok, null).show();
+
+                        pintarQuestoes();
+
+                        if (posAtual == arrayIdsQuestoes.length - 1) {
+                            posAtual = -1;
+                        }
+                        openFragment(arrayIdsQuestoes[++posAtual]);
+                    }
                 }
-                Toast.makeText(getApplicationContext(), "Formulário salvo na base local.", Toast.LENGTH_LONG).show();
 
-                pintarQuestoes();
-
-                if (posAtual == arrayIdsQuestoes.length - 1) {
-                    posAtual = -1;
-                }
-
-                openFragment(arrayIdsQuestoes[++posAtual]);
             }
         });
 

@@ -332,7 +332,6 @@
                         android:textSize="15dp"
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg8_rb_resp1"
-                        android:checked="false"
                         android:paddingRight="15dp"/>
 
                     <RadioButton
@@ -342,7 +341,6 @@
                         android:textSize="15dp"
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg8_rb_resp2"
-                        android:checked="false"
                         android:paddingRight="15dp"/>
                 </RadioGroup>
 
@@ -644,7 +642,6 @@
                         android:textSize="15dp"
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg14_rb_resp1"
-                        android:checked="false"
                         android:paddingRight="15dp"/>
 
                     <RadioButton
@@ -654,7 +651,6 @@
                         android:textSize="15dp"
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg14_rb_resp2"
-                        android:checked="false"
                         android:paddingRight="15dp"/>
                 </RadioGroup>
 

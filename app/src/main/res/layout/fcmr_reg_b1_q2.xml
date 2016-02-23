@@ -54,15 +54,13 @@
                 <RadioGroup
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                     Button="@+id/perg1_rb_resp3">
+                    android:orientation="horizontal">
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Sim"
                         android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg1_rb_resp3"
-
+                        android:id="@+id/perg1_rb_resp1"
                         android:paddingRight="15dp"/>
 
                     <RadioButton
@@ -70,7 +68,7 @@
                         android:layout_height="wrap_content"
                         android:text="Não"
                         android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg1_rb_resp3"
+                        android:id="@+id/perg1_rb_resp2"
 
                         android:paddingRight="15dp"/>
                 </RadioGroup>

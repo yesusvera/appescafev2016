@@ -77,14 +77,14 @@
                             android:layout_height="wrap_content"
                             android:text="é queimado"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg1_rb_resp3" />
+                            android:id="@+id/perg1_rb_resp1" />
 
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="é enterrado"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg1_rb_resp3" />
+                            android:id="@+id/perg1_rb_resp2" />
 
                         <RadioButton
                             android:layout_width="wrap_content"
