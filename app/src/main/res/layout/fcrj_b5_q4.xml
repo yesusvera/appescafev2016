@@ -21,7 +21,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Bloco 5 - Questão 01"
+                android:text="Bloco 5 - Questão 4"
                 android:textColor="@android:color/white"
                 android:textSize="40dp"
                 android:gravity="center"
@@ -41,8 +41,7 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
                 android:textAppearance="@style/style_questao"
-                android:text="A partir de que idade você começou a trabalhar com a
-pesca do camarão?"/>
+                android:text="Dá para se sustentar o ano todo somente com a atividade de pesca do caranguejo?"/>
 
             <!-- RESPOSTA + TABULACAO DAS OPCOES -->
             <LinearLayout
@@ -51,15 +50,28 @@ pesca do camarão?"/>
                 android:layout_height="wrap_content"
                 android:paddingBottom="10dp"
                 android:paddingLeft="30dp">
-
-                <EditText
-                    android:layout_width="241dp"
+                <RadioGroup
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg1_et_resp1"
-                    android:textAppearance="@style/style_resposta"
-                    android:lines="2" />
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sim"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/perg1_rb_resp1"
+                        android:paddingRight="15dp"/>
 
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Não"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/perg1_rb_resp2"
+                        android:paddingRight="15dp"/>
+                </RadioGroup>
             </LinearLayout>
+
         </LinearLayout>
 
     </LinearLayout>

@@ -41,7 +41,7 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
                 android:textAppearance="@style/style_questao"
-                android:text="Você acha que o valor que você recebe pela venda do caranguejo é justo?"/>
+                android:text="Você acha que o valor que você recebe pela venda do camarão é justo?"/>
 
             <!-- RESPOSTA + TABULACAO DAS OPCOES -->
             <LinearLayout
