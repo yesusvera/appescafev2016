@@ -49,6 +49,14 @@
         android:layout_height="wrap_content"
         />
 
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:text="Progresso"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
     <ProgressBar
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
@@ -58,9 +66,10 @@
         android:id="@+id/progressBarRespostas" />
     <TextView
         android:id="@+id/txtTextoResposta"
-        android:text="0 de 0 respondidas"
-        android:layout_width="wrap_content"
+        android:text="0 de 0 questões respondidas"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="right"
         />
 
 </LinearLayout>

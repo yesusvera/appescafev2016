@@ -265,7 +265,14 @@ public class FormCamRegActivityNew extends AppCompatActivity
 
                         if((q.getOrdem()+1)>1) {
                             item.setIcon(R.drawable.questao_icon_respondida);
-                            item.setTitle(item.getTitle() + "(Respondida)");
+                            if(item.getTitle().toString().indexOf("(Respondida)")==-1) {
+                                item.setTitle(item.getTitle() + "(Respondida)");
+                            }
+                        }else{
+//                            item.setIcon(R.drawable.questao_icon_respondida);
+                            if(item.getTitle().toString().indexOf("(√)")==-1) {
+                                item.setTitle(item.getTitle() + "(√)");
+                            }
                         }
                     }catch(Exception e){
                         e.printStackTrace();
@@ -275,10 +282,21 @@ public class FormCamRegActivityNew extends AppCompatActivity
                 ProgressBar progressBar = (ProgressBar)cabecalhoNavigationView.findViewById(R.id.progressBarRespostas);
                 if(progressBar!=null){
                     progressBar.setMax(arraysIdsMenuLateral.length);
-                    progressBar.setProgress(listaQuestoes==null?0:listaQuestoes.size());
-
                     TextView txtTextoResposta = (TextView)cabecalhoNavigationView.findViewById(R.id.txtTextoResposta);
-                    txtTextoResposta.setText((listaQuestoes==null?0:listaQuestoes.size()) + " de " + arraysIdsMenuLateral.length + " respondidas.");
+
+                    if(listaQuestoes==null || listaQuestoes.size() == 0) {
+                        progressBar.setProgress(0);
+                        txtTextoResposta.setText("Nenhuma questão respondida");
+                    }else {
+                        progressBar.setProgress(listaQuestoes.size());
+
+                        txtTextoResposta.setText((listaQuestoes == null ? 0 : listaQuestoes.size()) + " de " + arraysIdsMenuLateral.length + " respondidas.");
+
+                        if(listaQuestoes.size() == arraysIdsMenuLateral.length) {
+
+                            txtTextoResposta.setText(txtTextoResposta.getText()+"\nTodas as questões foram respondidas.\nFormulário pronto para envio");
+                        }
+                    }
                 }
             }
     }
