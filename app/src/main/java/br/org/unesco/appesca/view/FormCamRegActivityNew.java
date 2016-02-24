@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -270,6 +271,15 @@ public class FormCamRegActivityNew extends AppCompatActivity
                         e.printStackTrace();
                     }
                 }
+
+                ProgressBar progressBar = (ProgressBar)cabecalhoNavigationView.findViewById(R.id.progressBarRespostas);
+                if(progressBar!=null){
+                    progressBar.setMax(arraysIdsMenuLateral.length);
+                    progressBar.setProgress(listaQuestoes==null?0:listaQuestoes.size());
+
+                    TextView txtTextoResposta = (TextView)cabecalhoNavigationView.findViewById(R.id.txtTextoResposta);
+                    txtTextoResposta.setText((listaQuestoes==null?0:listaQuestoes.size()) + " de " + arraysIdsMenuLateral.length + " respondidas.");
+                }
             }
     }
 
@@ -399,34 +409,35 @@ public class FormCamRegActivityNew extends AppCompatActivity
                             List<Questao> listaQuestoes = questaoDAO.getQuestoesByFormulario(formulario.getId());
 
                             //VALIDACOES QUE IMPEDEM O ENVIO DO FORMULARIO
-                            if (listaQuestoes == null) {
+                            if (listaQuestoes == null || listaQuestoes.size() == 0) {
 
                                 Toast.makeText(getApplicationContext(), "Não foi possível enviar. Nenhuma questão foi respondida.", Toast.LENGTH_LONG).show();
 
                                 return;
                             } else if (listaQuestoes.size() < arrayIdsQuestoes.length) {
 
-                                    new AlertDialog.Builder(FormCamRegActivityNew.this)
-                                            .setTitle("Appesca")
-                                            .setMessage("Não foi possível enviar. " +
-                                                         " Você respondeu somente " + listaQuestoes.size() + " de " + arrayIdsQuestoes.length + " questões." +
-                                                        "\nVerifique a lista ao lado para validar as questões não respondidas.")
-                                            .setIcon(android.R.drawable.ic_dialog_alert)
-                                            .setPositiveButton(android.R.string.ok, null).show();
+                                new AlertDialog.Builder(FormCamRegActivityNew.this)
+                                        .setTitle("Appesca")
+                                        .setMessage("Não foi possível enviar. " +
+                                                " Você respondeu somente " + listaQuestoes.size() + " de " + arrayIdsQuestoes.length + " questões." +
+                                                "\nVerifique a lista ao lado para validar as questões não respondidas.")
+                                        .setIcon(android.R.drawable.ic_dialog_alert)
+                                        .setPositiveButton(android.R.string.ok, null).show();
 
-                                    return;
-                            }
+                                return;
+                            } else if (listaQuestoes.size() == arrayIdsQuestoes.length) {
 
 
-                            new FormularioBO().enviarFormulario(formulario);
+                                new FormularioBO().enviarFormulario(formulario);
 
-                            Toast.makeText(getApplicationContext(), "Formulário enviado com sucesso!.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(), "Formulário enviado com sucesso!.", Toast.LENGTH_LONG).show();
 
 //                            formulario.setSituacao(1);
 //                            FormularioDAO formularioDAO = new FormularioDAO(FormCamRegActivityNew.this);
 //                            formulario = formularioDAO.insertFormulario(formulario);
 //                            Toast.makeText(getApplicationContext(), "Formulário salvo na base local.", Toast.LENGTH_LONG).show();Toast.makeText(getApplicationContext(), "Formulário enviado com sucesso!.", Toast.LENGTH_LONG).show();
-                            finish();
+                                finish();
+                            }
                         }
                     }). setNegativeButton(android.R.string.no, null). show();
                     }

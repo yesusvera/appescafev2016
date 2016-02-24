@@ -60,7 +60,7 @@
                         android:layout_height="wrap_content"
                         android:text="é filtrada"
                         android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg1_rb_resp3"
+                        android:id="@+id/perg1_rb_resp1"
                       />
 
                     <RadioButton
@@ -68,7 +68,7 @@
                         android:layout_height="wrap_content"
                         android:text="é tratada com cloro / hipoclorito / água sanitária"
                         android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg1_rb_resp3"
+                        android:id="@+id/perg1_rb_resp2"
                       />
 
                     <RadioButton
