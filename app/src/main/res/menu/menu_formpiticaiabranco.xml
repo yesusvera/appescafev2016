@@ -3,6 +3,8 @@
 <!-- JON REFERENTE AO PITICAIA BRANCO -->
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+
+
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/localizacao_residencia_entrevistado"
