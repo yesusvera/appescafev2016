@@ -1,0 +1,260 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+
+    <!-- CONTAINER GERAL -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/layout_questao">
+
+        <!-- TITULO -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/layout_titulo_questao">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="Bloco 7 - Questão 7"
+                android:textColor="@android:color/white"
+                android:textSize="40dp"
+                android:gravity="center"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:textAppearance="@style/style_questao"
+                android:text="Para quem se vende o camarão? (pode marcar mais de uma)"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:textAppearance="@style/style_questao"
+                android:text="Na comunidade: "
+                />
+
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="famílias"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg1_cb_resp1"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="restaurantes"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg1_cb_resp2"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="pousadas"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg1_cb_resp3"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="peixarias"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg1_cb_resp4"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="feirantes"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg1_cb_resp5"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="pequenos comércios"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg1_cb_resp6"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="atravessadores (compradores)"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg1_cb_resp7"
+                android:paddingRight="15dp"
+                android:checked="false" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="cooperativa"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg1_cb_resp8"
+                android:paddingRight="15dp"
+                android:checked="false" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="frigorífico (empresa)"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg1_cb_resp9"
+                android:paddingRight="15dp"
+                android:checked="false" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CONAB (que destina o produto para a comunidade – escolas, asilos, etc.)"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg1_cb_resp10"
+                android:paddingRight="15dp"
+                android:checked="false" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="outros:"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg1_cb_resp11"
+                android:paddingRight="15dp"
+                android:checked="false" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/perg1_et_resp12"
+                android:textAppearance="@style/style_resposta"/>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:textAppearance="@style/style_questao"
+                android:text="Fora: "
+                />
+
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="famílias"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg2_cb_resp1"
+                android:paddingRight="15dp"
+                android:checked="false" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="restaurantes"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg2_cb_resp2"
+                android:paddingRight="15dp"
+                android:checked="false" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="pousadas"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg2_cb_resp3"
+                android:paddingRight="15dp"
+                android:checked="false" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="peixarias"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg2_cb_resp4"
+                android:paddingRight="15dp"
+                android:checked="false" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="feirantes"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg2_cb_resp5"
+                android:paddingRight="15dp"
+                android:checked="false" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="pequenos comércios"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg2_cb_resp6"
+                android:paddingRight="15dp"
+                android:checked="false" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="atravessadores (compradores)"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg2_cb_resp7"
+                android:paddingRight="15dp"
+                android:checked="false" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="cooperativa"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg2_cb_resp8"
+                android:paddingRight="15dp"
+                android:checked="false" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="frigorífico (empresa)"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg2_cb_resp9"
+                android:paddingRight="15dp"
+                android:checked="false" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CONAB (que destina o produto para a comunidade – escolas, asilos, etc.)"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg2_cb_resp10"
+                android:paddingRight="15dp"
+                android:checked="false" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="outros:"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg2_cb_resp11"
+                android:paddingRight="15dp"
+                android:checked="false" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/perg2_et_resp12"
+                android:textAppearance="@style/style_resposta"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

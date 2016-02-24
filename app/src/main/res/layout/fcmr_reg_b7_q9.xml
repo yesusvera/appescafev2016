@@ -20,12 +20,21 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Bloco 7 - Questão 4"
+                android:text="Bloco 7 - Questão 9"
                 android:textColor="@android:color/white"
                 android:textSize="40dp"
                 android:gravity="center"
                 android:textStyle="bold" />
         </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/style_questao"
+            android:paddingBottom="5dp"
+            android:gravity="center"
+            android:text="Qual é o preço é pago, em 2015, pelos principais compradores/consumidores por quilo?"/>
 
         <TableLayout
             android:paddingTop="15dp"
@@ -56,8 +65,9 @@
                             android:textAppearance="@style/style_questao"
                             android:paddingBottom="5dp"
                             android:gravity="center"
+                            android:layout_span="2"
                             android:background="@drawable/border"
-                            android:text="Período"/>
+                            android:text="Preço (R$)/kg do 1º."/>
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -66,15 +76,16 @@
                             android:gravity="center"
                             android:layout_gravity="center_horizontal"
                             android:layout_span="2"
-                            android:text="Quantidade Média Vendida" />
+                            android:text="Preço (R$)/kg do 2º" />
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textAppearance="@style/style_questao"
                             android:paddingBottom="5dp"
                             android:gravity="center"
+                            android:layout_span="2"
                             android:layout_gravity="center_horizontal"
-                            android:text="Observações"/>
+                            android:text="Preço (R$)/kg do 3º"/>
             </TableRow>
 
             <TableRow
@@ -88,7 +99,7 @@
                     android:textAppearance="@style/style_questao"
                     android:paddingBottom="5dp"
                     android:gravity="center"
-                    android:layout_column="2"
+                    android:layout_column="1"
                     android:layout_gravity="center_horizontal"
                     android:text="Verão"/>
                 <TextView
@@ -97,7 +108,43 @@
                     android:textAppearance="@style/style_questao"
                     android:paddingBottom="5dp"
                     android:gravity="center"
+                    android:layout_column="2"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Inverno"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
                     android:layout_column="3"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Verão"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:layout_column="4"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Inverno"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:layout_column="5"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Verão"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:layout_column="6"
                     android:layout_gravity="center_horizontal"
                     android:text="Inverno"/>
 
@@ -115,46 +162,38 @@
                     android:paddingBottom="5dp"
                     android:gravity="center"
                     android:text="Misturado Inteiro Fresco"/>
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <RadioGroup
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Por dia"
-                            android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg1_rb_resp1"
-                            android:paddingRight="15dp"/>
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Por Semana"
-                            android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg1_rb_resp2"
-                            android:paddingRight="15dp"/>
-                    </RadioGroup>
-                </LinearLayout>
 
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg1_et_resp1"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg1_et_resp2"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg1_et_resp3"
                     android:textAppearance="@style/style_resposta"/>
+
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg1_et_resp4"
                     android:textAppearance="@style/style_resposta"/>
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg1_et_resp5"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg1_et_resp6"
                     android:textAppearance="@style/style_resposta"/>
 
             </TableRow>
@@ -171,48 +210,38 @@
                     android:paddingBottom="5dp"
                     android:gravity="center"
                     android:text="Misturado inteiro resfriado (no gelo)"/>
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <RadioGroup
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Por dia"
-                            android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg2_rb_resp1"
-                            android:paddingRight="15dp"/>
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Por Semana"
-                            android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg2_rb_resp2"
-                            android:paddingRight="15dp"/>
-                    </RadioGroup>
-                </LinearLayout>
 
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg2_et_resp1"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg2_et_resp2"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg2_et_resp3"
                     android:textAppearance="@style/style_resposta"/>
+
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg2_et_resp4"
                     android:textAppearance="@style/style_resposta"/>
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg2_et_resp5"
                     android:textAppearance="@style/style_resposta"/>
-
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg2_et_resp6"
+                    android:textAppearance="@style/style_resposta"/>
             </TableRow>
 
             <TableRow
@@ -226,48 +255,38 @@
                     android:paddingBottom="5dp"
                     android:gravity="center"
                     android:text="Misturado inteiro congelado"/>
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <RadioGroup
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Por dia"
-                            android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg3_rb_resp1"
-                            android:paddingRight="15dp"/>
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Por Semana"
-                            android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg3_rb_resp2"
-                            android:paddingRight="15dp"/>
-                    </RadioGroup>
-                </LinearLayout>
 
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg3_et_resp1"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg3_et_resp2"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg3_et_resp3"
                     android:textAppearance="@style/style_resposta"/>
+
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg3_et_resp4"
                     android:textAppearance="@style/style_resposta"/>
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg3_et_resp5"
                     android:textAppearance="@style/style_resposta"/>
-
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg3_et_resp6"
+                    android:textAppearance="@style/style_resposta"/>
             </TableRow>
 
 
@@ -283,46 +302,37 @@
                     android:paddingBottom="5dp"
                     android:gravity="center"
                     android:text="Misturado descascado fresco"/>
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <RadioGroup
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Por dia"
-                            android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg4_rb_resp1"
-                            android:paddingRight="15dp"/>
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Por Semana"
-                            android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg4_rb_resp2"
-                            android:paddingRight="15dp"/>
-                    </RadioGroup>
-                </LinearLayout>
 
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg4_et_resp1"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg4_et_resp2"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg4_et_resp3"
                     android:textAppearance="@style/style_resposta"/>
+
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg4_et_resp4"
                     android:textAppearance="@style/style_resposta"/>
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg4_et_resp5"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg4_et_resp6"
                     android:textAppearance="@style/style_resposta"/>
 
             </TableRow>
@@ -339,46 +349,37 @@
                     android:paddingBottom="5dp"
                     android:gravity="center"
                     android:text="Misturado descascado salgado"/>
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <RadioGroup
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Por dia"
-                            android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg5_rb_resp1"
-                            android:paddingRight="15dp"/>
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Por Semana"
-                            android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg5_rb_resp2"
-                            android:paddingRight="15dp"/>
-                    </RadioGroup>
-                </LinearLayout>
 
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg5_et_resp1"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg5_et_resp2"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg5_et_resp3"
                     android:textAppearance="@style/style_resposta"/>
+
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg5_et_resp4"
                     android:textAppearance="@style/style_resposta"/>
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg5_et_resp5"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg5_et_resp6"
                     android:textAppearance="@style/style_resposta"/>
 
             </TableRow>
@@ -397,46 +398,37 @@
                     android:paddingBottom="5dp"
                     android:gravity="center"
                     android:text="Graúdo inteiro fresco"/>
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <RadioGroup
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Por dia"
-                            android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg6_rb_resp1"
-                            android:paddingRight="15dp"/>
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Por Semana"
-                            android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg6_rb_resp2"
-                            android:paddingRight="15dp"/>
-                    </RadioGroup>
-                </LinearLayout>
 
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg6_et_resp1"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg6_et_resp2"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg6_et_resp3"
                     android:textAppearance="@style/style_resposta"/>
+
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg6_et_resp4"
                     android:textAppearance="@style/style_resposta"/>
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg6_et_resp5"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg6_et_resp6"
                     android:textAppearance="@style/style_resposta"/>
 
             </TableRow>
@@ -459,46 +451,37 @@
                     android:paddingBottom="5dp"
                     android:gravity="center"
                     android:text="Graúdo inteiro resfriado (no gelo)"/>
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <RadioGroup
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Por dia"
-                            android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg7_rb_resp1"
-                            android:paddingRight="15dp"/>
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Por Semana"
-                            android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg7_rb_resp2"
-                            android:paddingRight="15dp"/>
-                    </RadioGroup>
-                </LinearLayout>
 
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg7_et_resp1"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg7_et_resp2"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg7_et_resp3"
                     android:textAppearance="@style/style_resposta"/>
+
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg7_et_resp4"
                     android:textAppearance="@style/style_resposta"/>
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg7_et_resp5"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg7_et_resp6"
                     android:textAppearance="@style/style_resposta"/>
 
             </TableRow>
@@ -520,46 +503,37 @@
                     android:paddingBottom="5dp"
                     android:gravity="center"
                     android:text="Graúdo inteiro congelado"/>
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <RadioGroup
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Por dia"
-                            android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg8_rb_resp1"
-                            android:paddingRight="15dp"/>
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Por Semana"
-                            android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg8_rb_resp2"
-                            android:paddingRight="15dp"/>
-                    </RadioGroup>
-                </LinearLayout>
 
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg8_et_resp1"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg8_et_resp2"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg8_et_resp3"
                     android:textAppearance="@style/style_resposta"/>
+
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg8_et_resp4"
                     android:textAppearance="@style/style_resposta"/>
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg8_et_resp5"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg8_et_resp6"
                     android:textAppearance="@style/style_resposta"/>
 
             </TableRow>
@@ -581,48 +555,38 @@
                     android:paddingBottom="5dp"
                     android:gravity="center"
                     android:text="Graúdo descascado fresco"/>
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <RadioGroup
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Por dia"
-                            android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg9_rb_resp1"
-                            android:paddingRight="15dp"/>
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Por Semana"
-                            android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg9_rb_resp2"
-                            android:paddingRight="15dp"/>
-                    </RadioGroup>
-                </LinearLayout>
 
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg9_et_resp1"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg9_et_resp2"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg9_et_resp3"
                     android:textAppearance="@style/style_resposta"/>
+
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg9_et_resp4"
                     android:textAppearance="@style/style_resposta"/>
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg9_et_resp5"
                     android:textAppearance="@style/style_resposta"/>
-
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg9_et_resp6"
+                    android:textAppearance="@style/style_resposta"/>
             </TableRow>
 
 
@@ -642,46 +606,37 @@
                     android:paddingBottom="5dp"
                     android:gravity="center"
                     android:text="Graúdo descascado salgado"/>
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <RadioGroup
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Por dia"
-                            android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg10_rb_resp1"
-                            android:paddingRight="15dp"/>
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Por Semana"
-                            android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg10_rb_resp2"
-                            android:paddingRight="15dp"/>
-                    </RadioGroup>
-                </LinearLayout>
 
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg10_et_resp1"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg10_et_resp2"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg10_et_resp3"
                     android:textAppearance="@style/style_resposta"/>
+
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg10_et_resp4"
                     android:textAppearance="@style/style_resposta"/>
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg10_et_resp5"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg10_et_resp6"
                     android:textAppearance="@style/style_resposta"/>
 
             </TableRow>
@@ -702,46 +657,37 @@
                     android:paddingBottom="5dp"
                     android:gravity="center"
                     android:text="Médio inteiro fresco"/>
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <RadioGroup
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Por dia"
-                            android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg11_rb_resp1"
-                            android:paddingRight="15dp"/>
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Por Semana"
-                            android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg11_rb_resp2"
-                            android:paddingRight="15dp"/>
-                    </RadioGroup>
-                </LinearLayout>
 
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg11_et_resp1"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg11_et_resp2"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg11_et_resp3"
                     android:textAppearance="@style/style_resposta"/>
+
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg11_et_resp4"
                     android:textAppearance="@style/style_resposta"/>
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg11_et_resp5"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg11_et_resp6"
                     android:textAppearance="@style/style_resposta"/>
 
             </TableRow>
@@ -761,46 +707,37 @@
                     android:paddingBottom="5dp"
                     android:gravity="center"
                     android:text="Médio inteiro resfriado (no gelo)"/>
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <RadioGroup
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Por dia"
-                            android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg12_rb_resp1"
-                            android:paddingRight="15dp"/>
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Por Semana"
-                            android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg12_rb_resp2"
-                            android:paddingRight="15dp"/>
-                    </RadioGroup>
-                </LinearLayout>
 
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg12_et_resp1"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg12_et_resp2"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg12_et_resp3"
                     android:textAppearance="@style/style_resposta"/>
+
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg12_et_resp4"
                     android:textAppearance="@style/style_resposta"/>
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg12_et_resp5"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg12_et_resp6"
                     android:textAppearance="@style/style_resposta"/>
 
             </TableRow>
@@ -820,46 +757,37 @@
                     android:paddingBottom="5dp"
                     android:gravity="center"
                     android:text="Médio inteiro congelado"/>
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <RadioGroup
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Por dia"
-                            android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg13_rb_resp1"
-                            android:paddingRight="15dp"/>
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Por Semana"
-                            android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg13_rb_resp2"
-                            android:paddingRight="15dp"/>
-                    </RadioGroup>
-                </LinearLayout>
 
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg13_et_resp1"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg13_et_resp2"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg13_et_resp3"
                     android:textAppearance="@style/style_resposta"/>
+
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg13_et_resp4"
                     android:textAppearance="@style/style_resposta"/>
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg13_et_resp5"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg13_et_resp6"
                     android:textAppearance="@style/style_resposta"/>
 
             </TableRow>
@@ -878,48 +806,38 @@
                     android:paddingBottom="5dp"
                     android:gravity="center"
                     android:text="Pequeno descascado fresco"/>
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <RadioGroup
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Por dia"
-                            android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg14_rb_resp1"
-                            android:paddingRight="15dp"/>
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Por Semana"
-                            android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg14_rb_resp2"
-                            android:paddingRight="15dp"/>
-                    </RadioGroup>
-                </LinearLayout>
 
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg14_et_resp1"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg14_et_resp2"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg14_et_resp3"
                     android:textAppearance="@style/style_resposta"/>
+
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg14_et_resp4"
                     android:textAppearance="@style/style_resposta"/>
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg14_et_resp5"
                     android:textAppearance="@style/style_resposta"/>
-
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg14_et_resp6"
+                    android:textAppearance="@style/style_resposta"/>
             </TableRow>
 
 
@@ -938,46 +856,37 @@
                     android:paddingBottom="5dp"
                     android:gravity="center"
                     android:text="Pequeno descascado salgado"/>
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <RadioGroup
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Por dia"
-                            android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg15_rb_resp1"
-                            android:paddingRight="15dp"/>
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Por Semana"
-                            android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg15_rb_resp2"
-                            android:paddingRight="15dp"/>
-                    </RadioGroup>
-                </LinearLayout>
 
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg15_et_resp1"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg15_et_resp2"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg15_et_resp3"
                     android:textAppearance="@style/style_resposta"/>
+
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg15_et_resp4"
                     android:textAppearance="@style/style_resposta"/>
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg15_et_resp5"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg15_et_resp6"
                     android:textAppearance="@style/style_resposta"/>
 
             </TableRow>
@@ -998,46 +907,37 @@
                     android:paddingBottom="5dp"
                     android:gravity="center"
                     android:text="Outros:"/>
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <RadioGroup
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Por dia"
-                            android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg16_rb_resp1"
-                            android:paddingRight="15dp"/>
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Por Semana"
-                            android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg16_rb_resp2"
-                            android:paddingRight="15dp"/>
-                    </RadioGroup>
-                </LinearLayout>
 
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg16_et_resp1"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg16_et_resp2"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg16_et_resp3"
                     android:textAppearance="@style/style_resposta"/>
+
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg16_et_resp4"
                     android:textAppearance="@style/style_resposta"/>
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg16_et_resp5"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg16_et_resp6"
                     android:textAppearance="@style/style_resposta"/>
 
             </TableRow>

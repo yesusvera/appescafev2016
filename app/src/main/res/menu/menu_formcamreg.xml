@@ -314,6 +314,14 @@
                 android:id="@+id/b7_q10"
                 android:icon="@drawable/questao_icon_nao_respondida"
                 android:title="Questão 10" />
+            <item
+                android:id="@+id/b7_q11"
+                android:icon="@drawable/questao_icon_nao_respondida"
+                android:title="Questão 11" />
+            <item
+                android:id="@+id/b7_q12"
+                android:icon="@drawable/questao_icon_nao_respondida"
+                android:title="Questão 12" />
 
             </group>
         </menu>
