@@ -23,7 +23,9 @@ public class ConstantesIdsFormularios {
 
                 R.id.b4_q1, R.id.b4_q2, R.id.b4_q3,R.id.b4_q4,R.id.b4_q5,R.id.b4_q6,R.id.b4_q7, R.id.b4_q8,R.id.b4_q9,R.id.b4_q10,R.id.b4_q11,
 
-                R.id.b5_q1, R.id.b5_q2, R.id.b5_q3,R.id.b5_q4,R.id.b5_q5
+                R.id.b5_q1, R.id.b5_q2, R.id.b5_q3,R.id.b5_q4,R.id.b5_q5,
+
+                R.id.b6_q1
         };
 
         public static int[] arrayIdsFormularioCaranguejo = {
@@ -48,8 +50,10 @@ public class ConstantesIdsFormularios {
                 R.layout.fcmr_reg_b4_q7, R.layout.fcmr_reg_b4_q8,R.layout.fcmr_reg_b4_q9,
                 R.layout.fcmr_reg_b4_q10, R.layout.fcmr_reg_b4_q11,
 
-                R.layout.fcmr_reg_b5_q1, R.layout.fcmr_reg_b5_q2, R.layout.fcmr_reg_b5_q3,
-                R.layout.fcmr_reg_b5_q4, R.layout.fcmr_reg_b5_q5
+                R.layout.fcrj_b5_q1, R.layout.fcrj_b5_q2, R.layout.fcrj_b5_q3,
+                R.layout.fcrj_b5_q4, R.layout.fcrj_b5_q5,
+
+                R.layout.fcrj_b6_q1
 
         };
 

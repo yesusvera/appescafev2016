@@ -1,7 +1,7 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/fcrj_b6_q1"
     android:gravity="center">
 
     <!-- CONTAINERa GERAL -->
@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
                 android:textAppearance="@style/style_questao"
-                android:text="Como é feita a pesca do camarão(I)? "/>
+                android:text="Normalmente, como é feita a pesca do caranguejo? "/>
 
             <!-- CONDICAO E RESPOSTA 2 -->
             <LinearLayout
@@ -64,12 +64,25 @@
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/opcao_a" />
 
-                    <CheckBox
+                    <LinearLayout
+                        android:orientation="horizontal"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Em família"
-                        android:textAppearance="@style/style_resposta"
-                        android:id="@+id/opcao_b" />
+                        android:layout_height="wrap_content">
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Em família. Quantas pessoas?"
+                            android:textAppearance="@style/style_resposta"
+                            android:id="@+id/opcao_b" />
+
+                        <EditText
+                            android:layout_width="241dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/quantos"
+                            android:textAppearance="@style/style_resposta" />
+
+                    </LinearLayout>
 
                     <CheckBox
                         android:layout_width="wrap_content"
@@ -113,4 +126,4 @@
 
     </LinearLayout>
 
-</LinearLayout>
+</ScrollView>

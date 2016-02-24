@@ -1,7 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:gravity="center">
 
     <!-- CONTAINER GERAL -->
@@ -21,7 +21,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Bloco 5 - Questão 2"
+                android:text="Bloco 5 - Questão 4"
                 android:textColor="@android:color/white"
                 android:textSize="40dp"
                 android:gravity="center"
@@ -41,7 +41,7 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
                 android:textAppearance="@style/style_questao"
-                android:text="Você acha que o valor que você recebe pela venda do camarão é justo?"/>
+                android:text="Dá para se sustentar o ano todo somente com a atividade de pesca do caranguejo?"/>
 
             <!-- RESPOSTA + TABULACAO DAS OPCOES -->
             <LinearLayout

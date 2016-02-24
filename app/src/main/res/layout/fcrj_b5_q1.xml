@@ -1,7 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:gravity="center">
 
     <!-- CONTAINER GERAL -->
@@ -21,7 +21,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Bloco 5 - Questão 2"
+                android:text="Bloco 5 - Questão 01"
                 android:textColor="@android:color/white"
                 android:textSize="40dp"
                 android:gravity="center"
@@ -41,7 +41,8 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
                 android:textAppearance="@style/style_questao"
-                android:text="Você acha que o valor que você recebe pela venda do camarão é justo?"/>
+                android:text="A partir de que idade você começou a trabalhar com a
+pesca e/ou catação de caranguejo?"/>
 
             <!-- RESPOSTA + TABULACAO DAS OPCOES -->
             <LinearLayout
@@ -50,28 +51,15 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="10dp"
                 android:paddingLeft="30dp">
-                <RadioGroup
-                    android:layout_width="match_parent"
+
+                <EditText
+                    android:layout_width="241dp"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Sim"
-                        android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg1_rb_resp1"
-                        android:paddingRight="15dp"/>
+                    android:id="@+id/perg1_et_resp1"
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="2" />
 
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Não"
-                        android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg1_rb_resp2"
-                        android:paddingRight="15dp"/>
-                </RadioGroup>
             </LinearLayout>
-
         </LinearLayout>
 
     </LinearLayout>

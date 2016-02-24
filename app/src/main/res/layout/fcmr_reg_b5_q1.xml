@@ -42,7 +42,7 @@
                 android:paddingBottom="5dp"
                 android:textAppearance="@style/style_questao"
                 android:text="A partir de que idade você começou a trabalhar com a
-pesca e/ou catação de caranguejo?"/>
+pesca do camarão?"/>
 
             <!-- RESPOSTA + TABULACAO DAS OPCOES -->
             <LinearLayout
