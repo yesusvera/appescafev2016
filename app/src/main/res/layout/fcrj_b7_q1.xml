@@ -1,0 +1,192 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <!-- CONTAINERa GERAL -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_questao"
+        android:orientation="vertical">
+
+        <!-- TITULO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_titulo_questao"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Bloco 6 - Questão 08"
+                android:textColor="@android:color/white"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- QUESTAO 1-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+
+            <TextView
+                android:id="@+id/perg1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="Como é vendido o caranguejo? (filtro) – pode ser marcada mais de uma opção"
+                android:textAppearance="@style/style_questao" />
+
+        </LinearLayout>
+
+        <!-- CONDICAO E RESPOSTA 2 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/perg1_rb_resp1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="15dp"
+                    android:text="Não (pule para a B8)"
+                    android:textAppearance="@style/style_resposta" />
+
+                <RadioButton
+                    android:id="@+id/perg1_rb_resp2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="15dp"
+                    android:text="Sim"
+                    android:textAppearance="@style/style_resposta" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <!-- QUESTAO 2-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+
+            <TextView
+                android:id="@+id/perg2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="Em quais situações?"
+                android:textAppearance="@style/style_questao" />
+
+            <EditText
+                android:id="@+id/perg2_et_resp1"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/style_resposta" />
+
+        </LinearLayout>
+
+        <!-- QUESTAO 3-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+
+            <TextView
+                android:id="@+id/perg3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="Quanto, em média (kg)?"
+                android:textAppearance="@style/style_questao" />
+
+            <EditText
+                android:id="@+id/perg3_et_resp1"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/style_resposta" />
+
+        </LinearLayout>
+
+        <!-- QUESTAO 4-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+
+            <TextView
+                android:id="@+id/perg4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="Há reaproveitamento?"
+                android:textAppearance="@style/style_questao" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/perg4_rb_resp1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="15dp"
+                    android:text="Não"
+                    android:textAppearance="@style/style_resposta" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp">
+
+                    <RadioButton
+                        android:id="@+id/perg4_rb_resp2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="15dp"
+                        android:text="Sim. De que forma?"
+                        android:textAppearance="@style/style_resposta" />
+
+                    <EditText
+                        android:id="@+id/perg4_et_resp3"
+                        android:layout_width="1000dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/style_resposta" />
+                </LinearLayout>
+            </RadioGroup>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

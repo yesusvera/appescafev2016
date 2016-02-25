@@ -25,7 +25,13 @@ public class ConstantesIdsFormularios {
 
                 R.id.b5_q1, R.id.b5_q2, R.id.b5_q3,R.id.b5_q4,R.id.b5_q5,
 
-                R.id.b6_q1, R.id.b6_q2, R.id.b6_q3, R.id.b6_q4, R.id.b6_q5, R.id.b6_q6, R.id.b6_q7, R.id.b6_q8
+                R.id.b6_q1, R.id.b6_q2, R.id.b6_q3, R.id.b6_q4, R.id.b6_q5, R.id.b6_q6, R.id.b6_q7, R.id.b6_q8,
+
+                R.id.b7_q1, R.id.b7_q2, R.id.b7_q3,R.id.b7_q4,R.id.b7_q5 ,R.id.b7_q6,R.id.b7_q7, R.id.b7_q8,R.id.b7_q9,R.id.b7_q10,R.id.b7_q11,R.id.b7_q12,
+
+                R.id.b8_q1, R.id.b8_q2, R.id.b8_q3,R.id.b8_q4,R.id.b8_q5,R.id.b8_q6,R.id.b8_q7,
+
+                R.id.b9_q1
         };
 
         public static int[] arrayIdsFormularioCaranguejo = {
@@ -54,7 +60,9 @@ public class ConstantesIdsFormularios {
                 R.layout.fcrj_b5_q4, R.layout.fcrj_b5_q5,
 
                 R.layout.fcrj_b6_q1, R.layout.fcrj_b6_q2, R.layout.fcrj_b6_q3, R.layout.fcrj_b6_q4, R.layout.fcrj_b6_q5,
-                R.layout.fcrj_b6_q6, R.layout.fcrj_b6_q7, R.layout.fcrj_b6_q8
+                R.layout.fcrj_b6_q6, R.layout.fcrj_b6_q7, R.layout.fcrj_b6_q8,
+
+                R.layout.fcrj_b7_q1
 
         };
 
@@ -163,11 +171,12 @@ public class ConstantesIdsFormularios {
                 R.layout.fcmr_reg_b7_q7, R.layout.fcmr_reg_b7_q8,R.layout.fcmr_reg_b7_q9,
                 R.layout.fcmr_reg_b7_q10,R.layout.fcmr_reg_b7_q11,R.layout.fcmr_reg_b7_q12,
 
-               R.layout.fcmr_reg_b8_q1 , R.layout.fcmr_reg_b8_q2, R.layout.fcmr_reg_b8_q3,
-                R.layout.fcmr_reg_b8_q4, R.layout.fcmr_reg_b8_q5, R.layout.fcmr_reg_b8_q6,
-                R.layout.fcmr_reg_b8_q7,
-
-                R.layout.fcmr_reg_b9_q1
+               R.layout.fcmr_reg_b8_q1 , R.layout.fcmr_reg_b8_q2
+// , R.layout.fcmr_reg_b8_q3,
+//                R.layout.fcmr_reg_b8_q4, R.layout.fcmr_reg_b8_q5, R.layout.fcmr_reg_b8_q6,
+//                R.layout.fcmr_reg_b8_q7,
+//
+//                R.layout.fcmr_reg_b9_q1
         };
 
 }
