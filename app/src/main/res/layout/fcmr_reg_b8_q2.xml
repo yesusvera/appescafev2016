@@ -1,0 +1,885 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+
+    <!-- CONTAINER GERAL -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/layout_questao">
+
+        <!-- TITULO -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/layout_titulo_questao">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="Bloco 8 - Questão 2"
+                android:textColor="@android:color/white"
+                android:textSize="40dp"
+                android:gravity="center"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:textAppearance="@style/style_questao"
+                android:text=" A embarcação utilizada na pesca é própria?"
+                />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sim"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg1_rb_resp1"
+                    android:paddingRight="15dp"/>
+
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Não"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg1_rb_resp3"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:textAppearance="@style/style_questao"
+                android:text="Qual o tipo de casco é utilizado?  (perguntar para cada embarcação que possuir)"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="20dp"
+                android:textAppearance="@style/style_questao"
+                android:text="De madeira: "
+                />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Canoa a remo"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg2_rb_resp1"
+                    android:paddingRight="15dp"/>
+
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Canoa a vela (batelão)"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg2_rb_resp2"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Canoa para rabeta"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg2_rb_resp3"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Outro:"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg2_rb_resp4"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:id="@+id/perg2_et_resp5"
+                    android:textAppearance="@style/style_resposta"/>
+
+
+            </RadioGroup>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="20dp"
+                android:textAppearance="@style/style_questao"
+                android:text="De alumínio: "
+                />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Barco a vela"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg2_rb_resp6"
+                    android:paddingRight="15dp"/>
+
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Barco a motor  (catraio)"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg2_rb_resp7"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Outro:"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg2_rb_resp8"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:id="@+id/perg2_et_resp9"
+                    android:textAppearance="@style/style_resposta"/>
+
+
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:textAppearance="@style/style_questao"
+                android:text="Quantos são os tripulantes (piloteiro, proeiro, etc)? (perguntar para cada embarcação que possuir)"
+                />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Canoa a remo"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/perg3_rb_resp1"
+                        android:paddingRight="15dp"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="20dp"
+                        android:id="@+id/perg3_et_resp2"
+                        android:textAppearance="@style/style_resposta"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Canoa a vela (batelão)"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/perg3_rb_resp3"
+                        android:paddingRight="15dp"
+                        android:checked="false" />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="20dp"
+                        android:id="@+id/perg3_et_resp4"
+                        android:textAppearance="@style/style_resposta"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Canoa para rabeta"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/perg3_rb_resp5"
+                        android:paddingRight="15dp"
+                        android:checked="false" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="20dp"
+                        android:id="@+id/perg3_et_resp6"
+                        android:textAppearance="@style/style_resposta"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Barco a vela"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/perg3_rb_resp7"
+                        android:paddingRight="15dp"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="20dp"
+                        android:id="@+id/perg3_et_resp8"
+                        android:textAppearance="@style/style_resposta"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Barco a motor  (catraio)"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/perg3_rb_resp9"
+                        android:paddingRight="15dp"
+                        android:checked="false" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="20dp"
+                        android:id="@+id/perg3_et_resp10"
+                        android:textAppearance="@style/style_resposta"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Outro:"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/perg3_rb_resp11"
+                        android:paddingRight="15dp"
+                        android:checked="false" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="20dp"
+                        android:id="@+id/perg3_et_resp12"
+                        android:textAppearance="@style/style_resposta"/>
+                </LinearLayout>
+            </RadioGroup>
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:textAppearance="@style/style_questao"
+                android:text="Se não possui embarcação própria, de quem é a embarcação que utiliza?"
+                />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:orientation="vertical">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Emprestada (sem custo) por familiares ou amigos"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg4_rb_resp1"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alugada de familiares ou amigos"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg4_rb_resp2"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alugada de alguém"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg4_rb_resp3"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Outros:"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/perg4_rb_resp4"
+                        android:paddingRight="15dp"
+                        android:checked="false" />
+
+                    <EditText
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="20dp"
+                        android:id="@+id/perg4_et_resp5"
+                        android:textAppearance="@style/style_resposta"/>
+                </LinearLayout>
+            </RadioGroup>
+
+        </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:textAppearance="@style/style_questao"
+            android:text="Quanto é pago pelo aluguel da embarcação? R$"
+            />
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:id="@+id/perg5_et_resp1"
+            android:textAppearance="@style/style_resposta"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30dp"
+            android:orientation="vertical">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Por dia (ou)"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg5_rb_resp2"
+                android:paddingRight="15dp"
+                android:checked="false" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Por semana (ou)"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg5_rb_resp3"
+                android:paddingRight="15dp"
+                android:checked="false" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Por mês"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg5_rb_resp4"
+                android:paddingRight="15dp"
+                android:checked="false" />
+
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="5dp"
+                        android:textAppearance="@style/style_questao"
+                        android:text="Quanto custaram os equipamentos para pesca e beneficiamento? Com qual recursos foram adquiridos? Quando foram comprados e serão substituídos? (inserir os bens marcados na questão 1 do bloco 8)"/>
+
+
+                        <TableLayout
+                            android:paddingTop="15dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingLeft="50dp"
+                            android:paddingRight="50dp"
+                            android:paddingBottom="10dp"
+                            android:layout_gravity="center_vertical"
+                            android:stretchColumns="*">
+
+                                    <TableRow
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:background="@drawable/border">
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:textAppearance="@style/style_questao"
+                                            android:gravity="center"
+                                            android:background="@drawable/border"
+                                            android:text="Bens"/>
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:textAppearance="@style/style_questao"
+                                            android:gravity="center"
+
+                                            android:text="Ano de\n Compra"/>
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:textAppearance="@style/style_questao"
+                                            android:gravity="center"
+                                            android:background="@drawable/border"
+                                            android:layout_gravity="center_horizontal"
+                                            android:text="Quantidade" />
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="@style/style_questao"
+                                            android:gravity="center"
+                                            android:layout_gravity="center_horizontal"
+                                            android:text="Valor Unitário\n de Compra (R$)"/>
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="@style/style_questao"
+                                            android:gravity="center"
+                                            android:layout_gravity="center_horizontal"
+                                            android:background="@drawable/border"
+                                            android:text="Fonte de Recurso\n para aquisição do bens"/>
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="@style/style_questao"
+                                            android:gravity="center"
+                                            android:layout_gravity="center_horizontal"
+                                            android:text="Ano de\n Substituição"/>
+                                    </TableRow>
+
+
+                                    <TableRow
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:background="@drawable/border">
+
+                                        <LinearLayout
+                                            android:background="@drawable/border"
+                                            android:orientation="vertical"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:padding="20dp">
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:gravity="center"
+                                                    android:textAppearance="@style/style_resposta"
+                                                    android:text="Embarcação. Qual tamanho?"/>
+
+
+                                            <LinearLayout
+                                                android:orientation="horizontal"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content">
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:gravity="center"
+                                                    android:textAppearance="@style/style_resposta"
+                                                    android:text="1º"/>
+
+                                                <EditText
+                                                    android:layout_width="50dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:id="@+id/perg6_et_resp1"
+                                                    android:textAppearance="@style/style_resposta"/>
+                                            </LinearLayout>
+                                            <LinearLayout
+                                                android:orientation="horizontal"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content">
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:gravity="center"
+                                                    android:textAppearance="@style/style_resposta"
+                                                    android:text="2º"/>
+
+                                                <EditText
+                                                    android:layout_width="50dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:id="@+id/perg6_et_resp2"
+                                                    android:textAppearance="@style/style_resposta"/>
+                                            </LinearLayout>
+                                            <LinearLayout
+                                                android:orientation="horizontal"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content">
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:gravity="center"
+                                                    android:textAppearance="@style/style_resposta"
+                                                    android:text="3º"/>
+
+                                                <EditText
+                                                    android:layout_width="50dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:id="@+id/perg6_et_resp3"
+                                                    android:textAppearance="@style/style_resposta"/>
+                                            </LinearLayout>
+
+                                       </LinearLayout>
+
+
+                                        <LinearLayout
+                                            android:background="@drawable/border"
+                                            android:orientation="vertical"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:padding="20dp">
+
+
+                                            <LinearLayout
+                                                android:orientation="horizontal"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content">
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:gravity="center"
+                                                    android:textAppearance="@style/style_resposta"
+                                                    android:text="1º"/>
+
+                                                <EditText
+                                                    android:layout_width="50dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:id="@+id/perg6_et_resp4"
+                                                    android:textAppearance="@style/style_resposta"/>
+                                            </LinearLayout>
+                                            <LinearLayout
+                                                android:orientation="horizontal"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content">
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:gravity="center"
+                                                    android:textAppearance="@style/style_resposta"
+                                                    android:text="2º"/>
+
+                                                <EditText
+                                                    android:layout_width="50dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:id="@+id/perg6_et_resp5"
+                                                    android:textAppearance="@style/style_resposta"/>
+                                            </LinearLayout>
+                                            <LinearLayout
+                                                android:orientation="horizontal"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content">
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:gravity="center"
+                                                    android:textAppearance="@style/style_resposta"
+                                                    android:text="3º"/>
+
+                                                <EditText
+                                                    android:layout_width="50dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:id="@+id/perg6_et_resp6"
+                                                    android:textAppearance="@style/style_resposta"/>
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+
+                                        <LinearLayout
+                                            android:background="@drawable/border"
+                                            android:orientation="vertical"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:padding="20dp">
+
+
+                                            <LinearLayout
+                                                android:orientation="horizontal"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content">
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:gravity="center"
+                                                    android:textAppearance="@style/style_resposta"
+                                                    android:text="1º"/>
+
+                                                <EditText
+                                                    android:layout_width="50dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:id="@+id/perg6_et_res7"
+                                                    android:textAppearance="@style/style_resposta"/>
+                                            </LinearLayout>
+                                            <LinearLayout
+                                                android:orientation="horizontal"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content">
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:gravity="center"
+                                                    android:textAppearance="@style/style_resposta"
+                                                    android:text="2º"/>
+
+                                                <EditText
+                                                    android:layout_width="50dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:id="@+id/perg6_et_resp8"
+                                                    android:textAppearance="@style/style_resposta"/>
+                                            </LinearLayout>
+                                            <LinearLayout
+                                                android:orientation="horizontal"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content">
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:gravity="center"
+                                                    android:textAppearance="@style/style_resposta"
+                                                    android:text="3º"/>
+
+                                                <EditText
+                                                    android:layout_width="50dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:id="@+id/perg6_et_resp9"
+                                                    android:textAppearance="@style/style_resposta"/>
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:background="@drawable/border"
+                                            android:orientation="vertical"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:padding="20dp">
+
+
+                                            <LinearLayout
+                                                android:orientation="horizontal"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content">
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:gravity="center"
+                                                    android:textAppearance="@style/style_resposta"
+                                                    android:text="1º"/>
+
+                                                <EditText
+                                                    android:layout_width="50dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:id="@+id/perg6_et_res10"
+                                                    android:textAppearance="@style/style_resposta"/>
+                                            </LinearLayout>
+                                            <LinearLayout
+                                                android:orientation="horizontal"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content">
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:gravity="center"
+                                                    android:textAppearance="@style/style_resposta"
+                                                    android:text="2º"/>
+
+                                                <EditText
+                                                    android:layout_width="50dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:paddingLeft="20dp"
+                                                    android:id="@+id/perg6_et_resp11"
+                                                    android:textAppearance="@style/style_resposta"/>
+                                            </LinearLayout>
+                                            <LinearLayout
+                                                android:orientation="horizontal"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content">
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:gravity="center"
+                                                    android:textAppearance="@style/style_resposta"
+                                                    android:text="3º"/>
+
+                                                <EditText
+                                                    android:layout_width="50dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:id="@+id/perg6_et_resp12"
+                                                    android:textAppearance="@style/style_resposta"/>
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+
+
+
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="@style/style_questao"
+                                            android:gravity="center"
+                                            android:layout_gravity="center_horizontal"
+                                            android:background="@drawable/border"
+                                            android:text="Fonte de Recurso\n para aquisição do bens"/>
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="@style/style_questao"
+                                            android:gravity="center"
+                                            android:layout_gravity="center_horizontal"
+                                            android:text="Ano de\n Substituição"/>
+                                    </TableRow>
+
+
+
+                        </TableLayout>
+
+
+            </LinearLayout>
+
+
+
+
+    </LinearLayout>
+</ScrollView>

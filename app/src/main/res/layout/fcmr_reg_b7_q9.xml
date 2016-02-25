@@ -58,6 +58,7 @@
                             android:textAppearance="@style/style_questao"
                             android:paddingBottom="5dp"
                             android:gravity="center"
+                            android:background="@drawable/border"
                             android:text="Produto"/>
                         <TextView
                             android:layout_width="match_parent"
@@ -84,6 +85,7 @@
                             android:paddingBottom="5dp"
                             android:gravity="center"
                             android:layout_span="2"
+                            android:background="@drawable/border"
                             android:layout_gravity="center_horizontal"
                             android:text="Preço (R$)/kg do 3º"/>
             </TableRow>

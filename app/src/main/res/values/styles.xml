@@ -30,7 +30,7 @@
     <style name="style_resposta">
         <item name="android:textColor">@android:color/secondary_text_light</item>
         <item name="android:textStyle">italic</item>
-        <item name="android:textSize">15dp</item>
+        <item name="android:textSize">13dp</item>
         <item name="android:typeface">serif</item>
     </style>
 
