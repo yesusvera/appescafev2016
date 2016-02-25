@@ -1,0 +1,181 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+
+    <!-- CONTAINER GERAL -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/layout_questao">
+
+        <!-- TITULO -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/layout_titulo_questao">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="Bloco 7 - Questão 5"
+                android:textColor="@android:color/white"
+                android:textSize="40dp"
+                android:gravity="center"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:textAppearance="@style/style_questao"
+                android:text="Normalmente, quando o camarão é vendido?"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:textAppearance="@style/style_questao"
+                android:text="Camarão Fresco:"
+                />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="no mesmo dia que é pescado"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg1_rb_resp1"
+                    android:paddingRight="15dp"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="no dia seguinte"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg1_rb_resp2"
+                    android:paddingRight="15dp"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="na semana que pescou"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg1_rb_resp3"
+                    android:paddingRight="15dp"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="na semana seguinte"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg1_rb_resp4"
+                    android:paddingRight="15dp"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="no mês  que pescou"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg1_rb_resp5"
+                    android:paddingRight="15dp"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="no mês seguinte"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg1_rb_resp6"
+                    android:paddingRight="15dp"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="com mais de um mês"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg1_rb_resp7"
+                    android:paddingRight="15dp"/>
+            </RadioGroup>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:textAppearance="@style/style_questao"
+                android:text="Camarão Salgado:"
+                />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="no mesmo dia que é pescado"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg2_rb_resp1"
+                    android:paddingRight="15dp"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="no dia seguinte"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg2_rb_resp2"
+                    android:paddingRight="15dp"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="na semana que pescou"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg2_rb_resp3"
+                    android:paddingRight="15dp"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="na semana seguinte"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg2_rb_resp4"
+                    android:paddingRight="15dp"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="no mês  que pescou"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg2_rb_resp5"
+                    android:paddingRight="15dp"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="no mês seguinte"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg2_rb_resp6"
+                    android:paddingRight="15dp"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="com mais de um mês"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg2_rb_resp7"
+                    android:paddingRight="15dp"/>
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
