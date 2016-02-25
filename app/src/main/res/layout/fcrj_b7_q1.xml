@@ -22,7 +22,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="Bloco 6 - Questão 08"
+                android:text="Bloco 7 - Questão 01"
                 android:textColor="@android:color/white"
                 android:textSize="40dp"
                 android:textStyle="bold" />
@@ -56,90 +56,48 @@
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="horizontal">
 
-                <RadioButton
-                    android:id="@+id/perg1_rb_resp1"
+                <CheckBox
+                    android:id="@+id/perg1_cb_resp1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingRight="15dp"
-                    android:text="Não (pule para a B8)"
+                    android:text="Vivo em cambada ou saca:"
                     android:textAppearance="@style/style_resposta" />
 
-                <RadioButton
-                    android:id="@+id/perg1_rb_resp2"
+                <CheckBox
+                    android:id="@+id/perg1_cb_resp2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingRight="15dp"
-                    android:text="Sim"
+                    android:text="graúdo"
+                    android:textAppearance="@style/style_resposta" />
+
+                <CheckBox
+                    android:id="@+id/perg1_cb_resp3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="15dp"
+                    android:text="médio"
+                    android:textAppearance="@style/style_resposta" />
+
+                <CheckBox
+                    android:id="@+id/perg1_cb_resp4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="15dp"
+                    android:text="pequeno"
+                    android:textAppearance="@style/style_resposta" />
+
+                <CheckBox
+                    android:id="@+id/perg1_cb_resp5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="15dp"
+                    android:text="misturado"
                     android:textAppearance="@style/style_resposta" />
             </RadioGroup>
-
-        </LinearLayout>
-
-        <!-- QUESTAO 2-->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="20dp">
-
-
-            <TextView
-                android:id="@+id/perg2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingBottom="5dp"
-                android:text="Em quais situações?"
-                android:textAppearance="@style/style_questao" />
-
-            <EditText
-                android:id="@+id/perg2_et_resp1"
-                android:layout_width="400dp"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/style_resposta" />
-
-        </LinearLayout>
-
-        <!-- QUESTAO 3-->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="20dp">
-
-
-            <TextView
-                android:id="@+id/perg3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingBottom="5dp"
-                android:text="Quanto, em média (kg)?"
-                android:textAppearance="@style/style_questao" />
-
-            <EditText
-                android:id="@+id/perg3_et_resp1"
-                android:layout_width="400dp"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/style_resposta" />
-
-        </LinearLayout>
-
-        <!-- QUESTAO 4-->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="20dp">
-
-
-            <TextView
-                android:id="@+id/perg4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingBottom="5dp"
-                android:text="Há reaproveitamento?"
-                android:textAppearance="@style/style_questao" />
 
         </LinearLayout>
 
@@ -154,38 +112,32 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <RadioButton
-                    android:id="@+id/perg4_rb_resp1"
+                <CheckBox
+                    android:id="@+id/perg1_cb_resp6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingRight="15dp"
-                    android:text="Não"
+                    android:text="Esquartejado"
                     android:textAppearance="@style/style_resposta" />
 
-                <LinearLayout
+                <CheckBox
+                    android:id="@+id/perg1_cb_resp7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingBottom="10dp">
+                    android:paddingRight="15dp"
+                    android:text="Cozido (massa)"
+                    android:textAppearance="@style/style_resposta" />
 
-                    <RadioButton
-                        android:id="@+id/perg4_rb_resp2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="15dp"
-                        android:text="Sim. De que forma?"
-                        android:textAppearance="@style/style_resposta" />
-
-                    <EditText
-                        android:id="@+id/perg4_et_resp3"
-                        android:layout_width="1000dp"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="@style/style_resposta" />
-                </LinearLayout>
+                <CheckBox
+                    android:id="@+id/perg1_cb_resp8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="15dp"
+                    android:text="Pata"
+                    android:textAppearance="@style/style_resposta" />
             </RadioGroup>
 
         </LinearLayout>
-
 
     </LinearLayout>
 

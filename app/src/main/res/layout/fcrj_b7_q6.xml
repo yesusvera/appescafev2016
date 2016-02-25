@@ -1,0 +1,129 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <!-- CONTAINER GERAL -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_questao"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- TITULO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_titulo_questao"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Bloco 7 - Questão 06"
+                android:textColor="@android:color/white"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- QUESTAO -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/perg1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="Por quanto tempo, em média o caranguejo fica armazenados?"
+                android:textAppearance="@style/style_questao" />
+
+            <!-- CONDICAO E RESPOSTA 2 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp">
+
+
+                <!-- TABULACAO DAS OPCOES -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="30dp">
+
+
+                    <EditText
+                        android:id="@+id/perg1_et_resp1"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="5dp"
+                        android:text="dias(ou)"
+                        android:textAppearance="@style/style_resposta" />
+                </LinearLayout>
+
+                <!-- TABULACAO DAS OPCOES -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="30dp">
+
+
+                    <EditText
+                        android:id="@+id/perg1_et_resp2"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="5dp"
+                        android:text="semanas"
+                        android:textAppearance="@style/style_resposta" />
+                </LinearLayout>
+
+                <!-- TABULACAO DAS OPCOES -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="30dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="5dp"
+                        android:text="(ou)"
+                        android:textAppearance="@style/style_resposta" />
+
+                    <EditText
+                        android:id="@+id/perg1_et_resp3"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="5dp"
+                        android:text="meses"
+                        android:textAppearance="@style/style_resposta" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

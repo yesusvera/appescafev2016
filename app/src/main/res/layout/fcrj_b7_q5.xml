@@ -1,0 +1,109 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <!-- CONTAINER GERAL -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_questao"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- TITULO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_titulo_questao"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Bloco 7 - Questão 05"
+                android:textColor="@android:color/white"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- QUESTAO -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/perg1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="Como o senhor armazena a massa do caranguejo? "
+                android:textAppearance="@style/style_questao" />
+
+            <!-- CONDICAO E RESPOSTA 2 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+
+                <!-- TABULACAO DAS OPCOES -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="30dp">
+
+
+                    <RadioButton
+                        android:id="@+id/perg1_rb_resp1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="geladeira"
+                        android:textAppearance="@style/style_resposta" />
+
+                    <RadioButton
+                        android:id="@+id/perg1_rb_resp2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="freezer"
+                        android:textAppearance="@style/style_resposta" />
+
+                    <RadioButton
+                        android:id="@+id/perg1_rb_resp3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="câmara fria"
+                        android:textAppearance="@style/style_resposta" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/perg1_rb_resp4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Outros:"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <EditText
+                            android:id="@+id/perg1_et_resp5"
+                            android:layout_width="240dp"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
