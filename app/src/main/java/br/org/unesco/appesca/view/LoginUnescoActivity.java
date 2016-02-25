@@ -182,48 +182,68 @@ public class LoginUnescoActivity extends AppCompatActivity implements LoaderCall
         if (cancel) {
             focusView.requestFocus();
         } else {
-            //Se tiver internet sempre vai no servidor.
-            if(ConnectionNetwork.verifiedInternetConnection(this)){
-                loginNoServidor( email,  password);
-                return;
-            }else {//LOGIN LOCAL
-                UsuarioDAO usuarioDAO = new UsuarioDAO(LoginUnescoActivity.this);
 
-                List<Usuario> lista = usuarioDAO.listAll();
-                if (lista != null && lista.size() > 0) {
-                    for (Usuario usr : lista) {
-                        if (((usr.getLogin() != null && usr.getLogin().equals(email))
-                                ||
-                                (usr.getEmail() != null && usr.getEmail().equals(email))
-                        )
-                                &&
-                                usr.getSenha().equals(password)
-                                ) { //LOGIN CORRETO
+            //Priorizar login local SEMPRE!!!!! 25/02/2016
+            loginLocal(email, password);
 
-                            Identity.setUsuarioLogado(usr);
-                            Intent intent = new Intent(LoginUnescoActivity.this, PrincipalUnescoActivity.class);
-                            startActivity(intent);
-                            Toast.makeText(getApplicationContext(), "Bem vindo ao Appesca. Conectado pela base local.", Toast.LENGTH_LONG).show();
-                            return;
-                        } else {
-                            new AlertDialog.Builder(LoginUnescoActivity.this)
-                                    .setTitle("Appesca")
-                                    .setMessage("Não foi possível autenticar este usuário na base local, é possível que a senha tenha sido alterada. Deseja se conectar aos servidores da Appesca?")
-                                    .setIcon(android.R.drawable.ic_dialog_alert)
-                                    .setPositiveButton("Realizar login pela internet", new DialogInterface.OnClickListener() {
-                                        @Override
-                                        public void onClick(DialogInterface dialog, int which) {
-                                            loginNoServidor(email, password);
-                                        }
-                                    })
-                                    .setNegativeButton(android.R.string.no, null).show();
-                            Identity.setUsuarioLogado(null);
-                        }
-                    }
-                }else{
-                    Toast.makeText(getApplicationContext(), "Não existem usuários na base local. Conecte-se na internet e tente novamente.", Toast.LENGTH_LONG).show();
+//            //Se tiver internet sempre vai no servidor.
+//            if(ConnectionNetwork.verifiedInternetConnection(this)){
+//                loginNoServidor( email,  password);
+//                return;
+//            }else {//LOGIN LOCAL
+//                loginLocal(email, password);
+//            }
+        }
+    }
+
+    private void loginLocal(final String email, final String password) {
+        UsuarioDAO usuarioDAO = new UsuarioDAO(LoginUnescoActivity.this);
+
+        List<Usuario> lista = usuarioDAO.listAll();
+        if (lista != null && lista.size() > 0) {
+            for (Usuario usr : lista) {
+                if (((usr.getLogin() != null && usr.getLogin().equals(email))
+                        ||
+                        (usr.getEmail() != null && usr.getEmail().equals(email))
+                )
+                        &&
+                        usr.getSenha().equals(password)
+                        ) { //LOGIN CORRETO
+
+                    Identity.setUsuarioLogado(usr);
+                    Intent intent = new Intent(LoginUnescoActivity.this, PrincipalUnescoActivity.class);
+                    startActivity(intent);
+                    Toast.makeText(getApplicationContext(), "Bem vindo ao Appesca. Conectado pela base local.", Toast.LENGTH_LONG).show();
+                    return;
+                } else {
+                    new AlertDialog.Builder(LoginUnescoActivity.this)
+                            .setTitle("Appesca")
+                            .setMessage("Não foi possível autenticar este usuário na base local, é possível que a senha tenha sido alterada. Deseja se conectar aos servidores da Appesca?")
+                            .setIcon(android.R.drawable.ic_dialog_alert)
+                            .setPositiveButton("Realizar login pela internet", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    loginNoServidor(email, password);
+                                }
+                            })
+                            .setNegativeButton(android.R.string.no, null).show();
+                    Identity.setUsuarioLogado(null);
                 }
             }
+        }else{
+            new AlertDialog.Builder(LoginUnescoActivity.this)
+                    .setTitle("Appesca")
+                    .setMessage("Não foi possível autenticar este usuário na base local, é possível que a senha tenha sido alterada. Deseja se conectar aos servidores da Appesca?")
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .setPositiveButton("Realizar login pela internet", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            loginNoServidor(email, password);
+                        }
+                    })
+                    .setNegativeButton(android.R.string.no, null).show();
+            Identity.setUsuarioLogado(null);
+//            Toast.makeText(getApplicationContext(), "Não existem usuários na base local. Conecte-se na internet e tente novamente.", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -232,7 +252,7 @@ public class LoginUnescoActivity extends AppCompatActivity implements LoaderCall
      * @param email
      * @param password
      */
-    private void loginNoServidor(String email, String password) {
+    private void loginNoServidor(final String email, final String password) {
 
         if(!ConnectionNetwork.verifiedInternetConnection(this)){
             String mensagemErro = "Seu aparelho está sem conectividade com a internet. Por favor habilite seu WIFI ou rede de celular.";
@@ -281,11 +301,26 @@ public class LoginUnescoActivity extends AppCompatActivity implements LoaderCall
             }
 
             @Override
+            public void onFinish() {
+                super.onFinish();
+            }
+
+            @Override
+            public void onCancel() {
+                super.onCancel();
+            }
+
+
+
+            @Override
             public void onFailure(int statusCode, Header[] headers, byte[] errorResponse, Throwable e) {
                 showProgress(false);
 
-                mPasswordView.setError("Aconteceu um problema ao conectar.");
+                mPasswordView.setError("Aconteceu um problema no servidor. Conectando local");
                 mPasswordView.requestFocus();
+
+
+//                loginLocal(email, password);
             }
 
             @Override

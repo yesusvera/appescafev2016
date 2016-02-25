@@ -307,7 +307,7 @@ public class FormCamRegActivityNew extends AppCompatActivity
         List<Pergunta> perguntas = new ArrayList<Pergunta>();
 
         /** PERGUNTAS **/
-        for(int seqPergunta=1; seqPergunta<=30; seqPergunta++){
+        for(int seqPergunta=1; seqPergunta<=50; seqPergunta++){
 
             PerguntaDAO perguntaDAO = new PerguntaDAO(this);
             RespostaDAO respostaDAO = new RespostaDAO(this);

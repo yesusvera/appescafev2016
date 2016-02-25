@@ -1,0 +1,1271 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+
+    <!-- CONTAINER GERAL -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/layout_questao">
+
+        <!-- TITULO -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/layout_titulo_questao">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="Bloco 8 - Questão 4"
+                android:textColor="@android:color/white"
+                android:textSize="40dp"
+                android:gravity="center"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="5dp"
+                        android:textAppearance="@style/style_questao"
+                        android:text=" Normalmente, quais são os gastos que ocorrem frequentemente? Qual é o valor gasto ou correspondente para 2015?"/>
+
+                        <TableLayout
+                            android:paddingTop="15dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingBottom="10dp"
+                            android:layout_gravity="center_vertical"
+                            android:stretchColumns="*">
+
+
+                                    <TableRow
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal">
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:textAppearance="@style/style_questao"
+                                            android:gravity="center"
+                                            android:text="Materiais e Serviços"/>
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:textAppearance="@style/style_questao"
+                                            android:gravity="center"
+
+                                            android:text="Frequência do gasto"/>
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:textAppearance="@style/style_questao"
+                                            android:gravity="center"
+                                            android:layout_gravity="center_horizontal"
+                                            android:text="Valor (R$)" />
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="@style/style_questao"
+                                            android:gravity="center"
+                                            android:layout_gravity="center_horizontal"
+                                            android:text="Observação"/>
+
+                                    </TableRow>
+
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/border"
+                                android:layout_gravity="center_horizontal">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textAppearance="@style/style_questao"
+                                    android:background="@drawable/border"
+                                    android:gravity="center"
+                                    android:text="Recipiente para transporte\ndo camarão, como paneiro,\ncesto de fibra,\nbalde de plástico"/>
+
+                                <RadioGroup
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/border"
+                                    android:orientation="vertical">
+
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Todo mês"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg1_rb_resp1"
+                                        android:paddingRight="15dp"/>
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="3 x no ano"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg1_rb_resp2"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="2 x no ano"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg1_rb_resp3"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1 x no ano"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg1_rb_resp4"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1 x em 2 anos"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg1_rb_resp5"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1 x  em 3 anos"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg1_rb_resp6"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Outro:"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg1_rb_resp7"
+                                        android:checked="false" />
+
+                                    <EditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="20dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:id="@+id/perg1_et_resp8"
+                                        android:textAppearance="@style/style_resposta"/>
+                                </RadioGroup>
+
+                                <EditText
+                                    android:layout_width="50dp"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="20dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:id="@+id/perg1_et_resp9"
+                                    android:textAppearance="@style/style_resposta"/>
+
+                                <RadioGroup
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center_vertical"
+                                    android:background="@drawable/border"
+                                    android:orientation="vertical">
+
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Não sabe"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg1_rb_resp10"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Não utiliza"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg1_rb_resp11"
+                                        android:paddingRight="15dp"/>
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Não respondeu"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg1_rb_resp12"
+                                        android:checked="false" />
+                                </RadioGroup>
+                            </TableRow>
+
+
+
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/border"
+                                android:layout_gravity="center_horizontal">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textAppearance="@style/style_questao"
+                                    android:background="@drawable/border"
+                                    android:gravity="center"
+                                    android:text="Material para\nmanutenção de matapis\n(talas, fibra,\nlinha, arame,\nprego, etc)"/>
+
+                                <RadioGroup
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/border"
+                                    android:orientation="vertical">
+
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Todo mês"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg2_rb_resp1"
+                                        android:paddingRight="15dp"/>
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="3 x no ano"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg2_rb_resp2"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="2 x no ano"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg2_rb_resp3"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1 x no ano"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg2_rb_resp4"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1 x em 2 anos"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg2_rb_resp5"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1 x  em 3 anos"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg2_rb_resp6"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Outro:"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg2_rb_resp7"
+                                        android:checked="false" />
+
+                                    <EditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="20dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:id="@+id/perg2_et_resp8"
+                                        android:textAppearance="@style/style_resposta"/>
+                                </RadioGroup>
+
+                                <EditText
+                                    android:layout_width="50dp"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="20dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:id="@+id/perg2_et_resp9"
+                                    android:textAppearance="@style/style_resposta"/>
+
+                                <RadioGroup
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center_vertical"
+                                    android:background="@drawable/border"
+                                    android:orientation="vertical">
+
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Não sabe"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg2_rb_resp10"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Não utiliza"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg2_rb_resp11"
+                                        android:paddingRight="15dp"/>
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Não respondeu"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg2_rb_resp12"
+                                        android:checked="false" />
+                                </RadioGroup>
+                            </TableRow>
+
+
+
+
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/border"
+                                android:layout_gravity="center_horizontal">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textAppearance="@style/style_questao"
+                                    android:background="@drawable/border"
+                                    android:gravity="center"
+                                    android:text="Material para\ncalafetar o casco/bote\n(massa, prego,\nalgodão, etc )"/>
+
+                                <RadioGroup
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/border"
+                                    android:orientation="vertical">
+
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Todo mês"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg3_rb_resp1"
+                                        android:paddingRight="15dp"/>
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="3 x no ano"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg3_rb_resp2"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="2 x no ano"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg3_rb_resp3"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1 x no ano"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg3_rb_resp4"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1 x em 2 anos"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg3_rb_resp5"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1 x  em 3 anos"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg3_rb_resp6"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Outro:"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg3_rb_resp7"
+                                        android:checked="false" />
+
+                                    <EditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="20dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:id="@+id/perg3_et_resp8"
+                                        android:textAppearance="@style/style_resposta"/>
+                                </RadioGroup>
+
+                                <EditText
+                                    android:layout_width="50dp"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="20dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:id="@+id/perg3_et_resp9"
+                                    android:textAppearance="@style/style_resposta"/>
+
+                                <RadioGroup
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center_vertical"
+                                    android:background="@drawable/border"
+                                    android:orientation="vertical">
+
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Não sabe"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg3_rb_resp10"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Não utiliza"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg3_rb_resp11"
+                                        android:paddingRight="15dp"/>
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Não respondeu"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg3_rb_resp12"
+                                        android:checked="false" />
+                                </RadioGroup>
+                            </TableRow>
+
+
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/border"
+                                android:layout_gravity="center_horizontal">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textAppearance="@style/style_questao"
+                                    android:background="@drawable/border"
+                                    android:gravity="center"
+                                    android:text="Serviço para\ncalafetar o casco/bote\n(pagamento de diárias ou serviço)"/>
+
+                                <RadioGroup
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/border"
+                                    android:orientation="vertical">
+
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Todo mês"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg4_rb_resp1"
+                                        android:paddingRight="15dp"/>
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="3 x no ano"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg4_rb_resp2"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="2 x no ano"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg4_rb_resp3"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1 x no ano"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg4_rb_resp4"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1 x em 2 anos"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg4_rb_resp5"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1 x  em 3 anos"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg4_rb_resp6"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Outro:"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg4_rb_resp7"
+                                        android:checked="false" />
+
+                                    <EditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="20dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:id="@+id/perg4_et_resp8"
+                                        android:textAppearance="@style/style_resposta"/>
+                                </RadioGroup>
+
+                                <EditText
+                                    android:layout_width="50dp"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="20dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:id="@+id/perg4_et_resp9"
+                                    android:textAppearance="@style/style_resposta"/>
+
+                                <RadioGroup
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center_vertical"
+                                    android:background="@drawable/border"
+                                    android:orientation="vertical">
+
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Não sabe"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg4_rb_resp10"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Não utiliza"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg4_rb_resp11"
+                                        android:paddingRight="15dp"/>
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Não respondeu"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg4_rb_resp12"
+                                        android:checked="false" />
+                                </RadioGroup>
+                            </TableRow>
+
+
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/border"
+                                android:layout_gravity="center_horizontal">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textAppearance="@style/style_questao"
+                                    android:background="@drawable/border"
+                                    android:gravity="center"
+                                    android:text="Peças para\nmanutenção no\nmotor"/>
+
+                                <RadioGroup
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/border"
+                                    android:orientation="vertical">
+
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Todo mês"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg5_rb_resp1"
+                                        android:paddingRight="15dp"/>
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="3 x no ano"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg5_rb_resp2"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="2 x no ano"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg5_rb_resp3"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1 x no ano"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg5_rb_resp4"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1 x em 2 anos"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg5_rb_resp5"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1 x  em 3 anos"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg5_rb_resp6"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Outro:"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg5_rb_resp7"
+                                        android:checked="false" />
+
+                                    <EditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="20dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:id="@+id/perg5_et_resp8"
+                                        android:textAppearance="@style/style_resposta"/>
+                                </RadioGroup>
+
+                                <EditText
+                                    android:layout_width="50dp"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="20dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:id="@+id/perg5_et_resp9"
+                                    android:textAppearance="@style/style_resposta"/>
+
+                                <RadioGroup
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center_vertical"
+                                    android:background="@drawable/border"
+                                    android:orientation="vertical">
+
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Não sabe"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg5_rb_resp10"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Não utiliza"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg5_rb_resp11"
+                                        android:paddingRight="15dp"/>
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Não respondeu"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg5_rb_resp12"
+                                        android:checked="false" />
+                                </RadioGroup>
+                            </TableRow>
+
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/border"
+                                android:layout_gravity="center_horizontal">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textAppearance="@style/style_questao"
+                                    android:background="@drawable/border"
+                                    android:gravity="center"
+                                    android:text="Lubrificante para\nmotor"/>
+
+                                <RadioGroup
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/border"
+                                    android:orientation="vertical">
+
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Todo mês"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg6_rb_resp1"
+                                        android:paddingRight="15dp"/>
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="3 x no ano"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg6_rb_resp2"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="2 x no ano"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg6_rb_resp3"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1 x no ano"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg6_rb_resp4"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1 x em 2 anos"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg6_rb_resp5"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1 x  em 3 anos"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg6_rb_resp6"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Outro:"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg6_rb_resp7"
+                                        android:checked="false" />
+
+                                    <EditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="20dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:id="@+id/perg6_et_resp8"
+                                        android:textAppearance="@style/style_resposta"/>
+                                </RadioGroup>
+
+                                <EditText
+                                    android:layout_width="50dp"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="20dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:id="@+id/perg6_et_resp9"
+                                    android:textAppearance="@style/style_resposta"/>
+
+                                <RadioGroup
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center_vertical"
+                                    android:background="@drawable/border"
+                                    android:orientation="vertical">
+
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Não sabe"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg6_rb_resp10"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Não utiliza"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg6_rb_resp11"
+                                        android:paddingRight="15dp"/>
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Não respondeu"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg6_rb_resp12"
+                                        android:checked="false" />
+                                </RadioGroup>
+                            </TableRow>
+
+
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/border"
+                                android:layout_gravity="center_horizontal">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textAppearance="@style/style_questao"
+                                    android:background="@drawable/border"
+                                    android:gravity="center"
+                                    android:text="Serviço para\nmanutenção do motor\n(pagamento de\ndiárias ou\nserviço)"/>
+
+                                <RadioGroup
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/border"
+                                    android:orientation="vertical">
+
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Todo mês"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg7_rb_resp1"
+                                        android:paddingRight="15dp"/>
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="3 x no ano"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg7_rb_resp2"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="2 x no ano"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg7_rb_resp3"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1 x no ano"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg7_rb_resp4"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1 x em 2 anos"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg7_rb_resp5"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1 x  em 3 anos"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg7_rb_resp6"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Outro:"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg7_rb_resp7"
+                                        android:checked="false" />
+
+                                    <EditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="20dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:id="@+id/perg7_et_resp8"
+                                        android:textAppearance="@style/style_resposta"/>
+                                </RadioGroup>
+
+                                <EditText
+                                    android:layout_width="50dp"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="20dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:id="@+id/perg7_et_resp9"
+                                    android:textAppearance="@style/style_resposta"/>
+
+                                <RadioGroup
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center_vertical"
+                                    android:background="@drawable/border"
+                                    android:orientation="vertical">
+
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Não sabe"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg7_rb_resp10"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Não utiliza"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg7_rb_resp11"
+                                        android:paddingRight="15dp"/>
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Não respondeu"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg7_rb_resp12"
+                                        android:checked="false" />
+                                </RadioGroup>
+                            </TableRow>
+
+
+
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/border"
+                                android:layout_gravity="center_horizontal">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textAppearance="@style/style_questao"
+                                    android:background="@drawable/border"
+                                    android:gravity="center"
+                                    android:text="Material para\nmanutenção de\nviveiro"/>
+
+                                <RadioGroup
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/border"
+                                    android:orientation="vertical">
+
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Todo mês"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg8_rb_resp1"
+                                        android:paddingRight="15dp"/>
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="3 x no ano"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg8_rb_resp2"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="2 x no ano"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg8_rb_resp3"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1 x no ano"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg8_rb_resp4"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1 x em 2 anos"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg8_rb_resp5"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1 x  em 3 anos"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg8_rb_resp6"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Outro:"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg8_rb_resp7"
+                                        android:checked="false" />
+
+                                    <EditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="20dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:id="@+id/perg8_et_resp8"
+                                        android:textAppearance="@style/style_resposta"/>
+                                </RadioGroup>
+
+                                <EditText
+                                    android:layout_width="50dp"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="20dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:id="@+id/perg8_et_resp9"
+                                    android:textAppearance="@style/style_resposta"/>
+
+                                <RadioGroup
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center_vertical"
+                                    android:background="@drawable/border"
+                                    android:orientation="vertical">
+
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Não sabe"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg8_rb_resp10"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Não utiliza"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg8_rb_resp11"
+                                        android:paddingRight="15dp"/>
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Não respondeu"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg8_rb_resp12"
+                                        android:checked="false" />
+                                </RadioGroup>
+                            </TableRow>
+
+
+
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/border"
+                                android:layout_gravity="center_horizontal">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textAppearance="@style/style_questao"
+                                    android:background="@drawable/border"
+                                    android:gravity="center"
+                                    android:text="Material para\nmanutenção de\nrede ou tarrafa\n(nylon, entralho,\nchumbo, etc)"/>
+
+                                <RadioGroup
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/border"
+                                    android:orientation="vertical">
+
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Todo mês"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg9_rb_resp1"
+                                        android:paddingRight="15dp"/>
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="3 x no ano"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg9_rb_resp2"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="2 x no ano"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg9_rb_resp3"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1 x no ano"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg9_rb_resp4"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1 x em 2 anos"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg9_rb_resp5"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1 x  em 3 anos"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg9_rb_resp6"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Outro:"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg9_rb_resp7"
+                                        android:checked="false" />
+
+                                    <EditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="20dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:id="@+id/perg9_et_resp8"
+                                        android:textAppearance="@style/style_resposta"/>
+                                </RadioGroup>
+
+                                <EditText
+                                    android:layout_width="50dp"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="20dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:id="@+id/perg9_et_resp9"
+                                    android:textAppearance="@style/style_resposta"/>
+
+                                <RadioGroup
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center_vertical"
+                                    android:background="@drawable/border"
+                                    android:orientation="vertical">
+
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Não sabe"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg9_rb_resp10"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Não utiliza"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg9_rb_resp11"
+                                        android:paddingRight="15dp"/>
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Não respondeu"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg9_rb_resp12"
+                                        android:checked="false" />
+                                </RadioGroup>
+                            </TableRow>
+
+
+
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/border"
+                                android:layout_gravity="center_horizontal">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textAppearance="@style/style_questao"
+                                    android:background="@drawable/border"
+                                    android:gravity="center"
+                                    android:text="Outros:"/>
+
+                                <RadioGroup
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/border"
+                                    android:orientation="vertical">
+
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Todo mês"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg10_rb_resp1"
+                                        android:paddingRight="15dp"/>
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="3 x no ano"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg10_rb_resp2"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="2 x no ano"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg10_rb_resp3"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1 x no ano"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg10_rb_resp4"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1 x em 2 anos"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg10_rb_resp5"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1 x  em 3 anos"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg10_rb_resp6"
+                                        android:checked="false" />
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Outro:"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:id="@+id/perg10_rb_resp7"
+                                        android:checked="false" />
+
+                                    <EditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="20dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:id="@+id/perg10_et_resp8"
+                                        android:textAppearance="@style/style_resposta"/>
+                                </RadioGroup>
+
+                                <EditText
+                                    android:layout_width="50dp"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="20dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:id="@+id/perg10_et_resp9"
+                                    android:textAppearance="@style/style_resposta"/>
+
+
+                            </TableRow>
+
+                        </TableLayout>
+
+
+
+
+            </LinearLayout>
+
+
+
+
+    </LinearLayout>
+</ScrollView>
