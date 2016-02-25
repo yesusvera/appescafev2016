@@ -53,7 +53,7 @@
                 android:paddingBottom="10dp">
 
                 <EditText
-                    android:id="@+id/perg2_et_resp1"
+                    android:id="@+id/perg1_et_resp1"
                     android:layout_width="741dp"
                     android:layout_height="wrap_content"
                     android:textAppearance="@style/style_resposta" />

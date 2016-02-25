@@ -1,77 +1,84 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical">
 
     <!-- CONTAINERa GERAL -->
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/layout_questao"
         android:gravity="center"
-        android:background="@drawable/layout_questao">
+        android:orientation="vertical">
 
         <!-- TITULO -->
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/layout_titulo_questao">
+            android:background="@drawable/layout_titulo_questao"
+            android:orientation="horizontal">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Questão 05"
+                android:gravity="center"
+                android:text="Bloco 6 - Questão 05"
                 android:textColor="@android:color/white"
                 android:textSize="40dp"
-                android:gravity="center"
                 android:textStyle="bold" />
         </LinearLayout>
 
-        <!-- QUESTAO -->
+        <!-- QUESTAO 1-->
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
             android:padding="20dp">
 
+
             <TextView
+                android:id="@+id/perg1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
-                android:textAppearance="@style/style_questao"
-                android:text="Utiliza gelo no transporte do camarão?"/>
-
-            <!-- RESPOSTA + TABULACAO DAS OPCOES -->
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingBottom="10dp"
-                android:layout_gravity="center">
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Sim"
-                    android:textAppearance="@style/style_resposta"
-                    android:id="@+id/sim"
-
-                    android:paddingRight="15dp"/>
-
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Não"
-                    android:textAppearance="@style/style_resposta"
-                    android:id="@+id/nao"
-
-                    android:paddingRight="15dp"/>
-
-
-            </LinearLayout>
+                android:text="Em qual estação do ano realiza a pesca? (filtro da questão de produção 7. ) "
+                android:textAppearance="@style/style_questao" />
 
         </LinearLayout>
 
+        <!-- CONDICAO E RESPOSTA 2 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/perg1_rb_resp1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="15dp"
+                    android:text="Verão"
+                    android:textAppearance="@style/style_resposta" />
+
+                <RadioButton
+                    android:id="@+id/perg1_rb_resp2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="15dp"
+                    android:text="Inverno"
+                    android:textAppearance="@style/style_resposta" />
+            </RadioGroup>
+
+
+        </LinearLayout>
     </LinearLayout>
 
-</LinearLayout>
+</ScrollView>

@@ -121,7 +121,7 @@
 
                         <EditText
                             android:id="@+id/perg1_et_resp7"
-                            android:layout_width="241dp"
+                            android:layout_width="70dp"
                             android:layout_height="wrap_content"
                             android:textAppearance="@style/style_resposta" />
 
@@ -141,7 +141,7 @@
 
                         <EditText
                             android:id="@+id/perg1_et_resp9"
-                            android:layout_width="241dp"
+                            android:layout_width="70dp"
                             android:layout_height="wrap_content"
                             android:textAppearance="@style/style_resposta" />
 
@@ -154,7 +154,7 @@
 
                         <EditText
                             android:id="@+id/perg1_et_resp10"
-                            android:layout_width="241dp"
+                            android:layout_width="70dp"
                             android:layout_height="wrap_content"
                             android:textAppearance="@style/style_resposta" />
 
