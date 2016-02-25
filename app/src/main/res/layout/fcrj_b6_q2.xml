@@ -1,55 +1,67 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical">
 
     <!-- CONTAINERa GERAL -->
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/layout_questao"
         android:gravity="center"
-        android:background="@drawable/layout_questao">
+        android:orientation="vertical">
 
         <!-- TITULO -->
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/layout_titulo_questao">
+            android:background="@drawable/layout_titulo_questao"
+            android:orientation="horizontal">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Questão 02"
+                android:gravity="center"
+                android:text="Bloco 6 - Questão 02"
                 android:textColor="@android:color/white"
                 android:textSize="40dp"
-                android:gravity="center"
                 android:textStyle="bold" />
         </LinearLayout>
 
-
+        <!-- QUESTAO -->
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp">
 
             <TextView
+                android:id="@+id/perg1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
-                android:textAppearance="@style/style_questao"
-                android:text="Normalmente, quantas pessoas no total vão pescar juntas?  "/>
+                android:text="Quais são os locais de pesca (pesqueiros) mais utilizados? "
+                android:textAppearance="@style/style_questao" />
 
-            <EditText
-                android:layout_width="241dp"
+            <!-- CONDICAO E RESPOSTA 2 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/outros_quais"
-                android:textAppearance="@style/style_resposta" />
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <EditText
+                    android:id="@+id/perg2_et_resp1"
+                    android:layout_width="741dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
-
     </LinearLayout>
 
-</LinearLayout>
+</ScrollView>

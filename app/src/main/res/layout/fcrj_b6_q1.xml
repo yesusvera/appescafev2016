@@ -1,124 +1,167 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:id="@+id/fcrj_b6_q1"
-    android:gravity="center">
+    android:layout_gravity="center"
+    android:orientation="vertical">
 
     <!-- CONTAINERa GERAL -->
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/layout_questao"
         android:gravity="center"
-        android:background="@drawable/layout_questao">
+        android:orientation="vertical">
 
         <!-- TITULO -->
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/layout_titulo_questao">
+            android:background="@drawable/layout_titulo_questao"
+            android:orientation="horizontal">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Questão 01"
+                android:gravity="center"
+                android:text="Bloco 6 - Questão 01"
                 android:textColor="@android:color/white"
                 android:textSize="40dp"
-                android:gravity="center"
                 android:textStyle="bold" />
         </LinearLayout>
 
         <!-- QUESTAO -->
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
             android:padding="20dp">
 
             <TextView
+                android:id="@+id/perg1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
-                android:textAppearance="@style/style_questao"
-                android:text="Normalmente, como é feita a pesca do caranguejo? "/>
+                android:text="Normalmente, como é feita a pesca do caranguejo? "
+                android:textAppearance="@style/style_questao" />
 
             <!-- CONDICAO E RESPOSTA 2 -->
             <LinearLayout
-                android:orientation="vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:orientation="vertical"
                 android:paddingBottom="10dp">
+
 
                 <!-- TABULACAO DAS OPCOES -->
                 <LinearLayout
-                    android:orientation="vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:orientation="vertical"
                     android:paddingLeft="30dp">
 
-
                     <CheckBox
+                        android:id="@+id/perg1_cb_resp1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Individual (sozinho) "
-                        android:textAppearance="@style/style_resposta"
-                        android:id="@+id/opcao_a" />
+                        android:textAppearance="@style/style_resposta" />
 
                     <LinearLayout
-                        android:orientation="horizontal"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <CheckBox
+                            android:id="@+id/perg1_cb_resp2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Em família. Quantas pessoas?"
-                            android:textAppearance="@style/style_resposta"
-                            android:id="@+id/opcao_b" />
+                            android:textAppearance="@style/style_resposta" />
 
                         <EditText
+                            android:id="@+id/perg1_et_resp3"
                             android:layout_width="241dp"
                             android:layout_height="wrap_content"
-                            android:id="@+id/quantos"
                             android:textAppearance="@style/style_resposta" />
 
                     </LinearLayout>
 
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Em grupo"
-                        android:textAppearance="@style/style_resposta"
-                        android:id="@+id/opcao_c" />
-
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Em grupo e em família"
-                        android:textAppearance="@style/style_resposta"
-                        android:id="@+id/opcao_d" />
-
                     <LinearLayout
-                        android:orientation="horizontal"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <CheckBox
+                            android:id="@+id/perg1_cb_resp4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Outros"
-                            android:textAppearance="@style/style_resposta"
-                            android:id="@+id/opcao_e" />
+                            android:text="Em grupo de companheiros(as). Quantas pessoas?"
+                            android:textAppearance="@style/style_resposta" />
 
                         <EditText
+                            android:id="@+id/perg1_et_resp5"
                             android:layout_width="241dp"
                             android:layout_height="wrap_content"
-                            android:id="@+id/outros_quais"
+                            android:textAppearance="@style/style_resposta" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/perg1_cb_resp6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Em grupo de companheiros(as) e família. Quantas pessoas?"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <EditText
+                            android:id="@+id/perg1_et_resp7"
+                            android:layout_width="241dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/style_resposta" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/perg1_cb_resp8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Outros:"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <EditText
+                            android:id="@+id/perg1_et_resp9"
+                            android:layout_width="241dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <TextView
+                            android:id="@+id/perg2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Quantas pessoas?"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <EditText
+                            android:id="@+id/perg1_et_resp10"
+                            android:layout_width="241dp"
+                            android:layout_height="wrap_content"
                             android:textAppearance="@style/style_resposta" />
 
                     </LinearLayout>
 
                 </LinearLayout>
+
 
             </LinearLayout>
 
