@@ -29,6 +29,17 @@
         </LinearLayout>
 
 
+        <TextView
+            android:id="@+id/perg1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:textAppearance="@style/style_questao"
+            android:text="Qual é quantidade média capturada/dia nas marés alta e baixa, nos períodos de inverno e verão, por arte de pesca?  Quanto tempo é gasto? Quantos dias são trabalhados? ( O dia de pesca se refere tanto ao período diurno quanto noturno)"/>
+
+        <!--INVERNO -->
         <TableLayout
             android:paddingTop="15dp"
             android:orientation="vertical"
@@ -40,6 +51,7 @@
             android:paddingBottom="10dp"
             android:layout_gravity="center_vertical"
             android:stretchColumns="*">
+
 
             <TableRow
                 android:background="@drawable/border"
@@ -55,16 +67,13 @@
                     android:background="@drawable/border"
                     android:layout_span="7"
                     android:text="Inverno"/>
-
             </TableRow>
-
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/border">
-
                         <TextView
                             android:layout_width="match_parent"
                             android:textAppearance="@style/style_questao"
@@ -72,7 +81,6 @@
                             android:background="@drawable/border"
                             android:gravity="center"
                             android:text="Maré"/>
-
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -81,7 +89,6 @@
                             android:gravity="center"
                             android:background="@drawable/border"
                             android:text="Arte"/>
-
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -96,22 +103,1015 @@
             <TableRow
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:background="@drawable/border"
                 android:layout_gravity="center_horizontal">
                 <TextView android:text="Quilos\nPescado/\ndia"
+                    android:layout_gravity="center"
                     android:layout_column="2" />
                 <TextView android:text="Nº\nLances ou\nde Pesca\n/dia"
+                    android:layout_gravity="center"
                     android:layout_column="3" />
                 <TextView android:text="Tempo\ngasto\n(horas/ Dia)"
+                    android:layout_gravity="center"
                     android:layout_column="4" />
                 <TextView android:text="Quilos\nPescado/\ndia"
+                    android:layout_gravity="center"
                     android:layout_column="5" />
             </TableRow>
 
-            <!-- just draw a red line -->
-            <View
-                android:layout_height="1dip"
-                android:background="#FF0000" />
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/border"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:text="Baixa/Morta"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Matapi"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg1_cb_resp1"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg1_et_resp2"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg1_et_resp3"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg1_et_resp4"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg1_et_resp5"
+                    android:textAppearance="@style/style_resposta"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/border"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:text=""/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Viveiro"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg2_cb_resp1"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg2_et_resp2"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg2_et_resp3"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg2_et_resp4"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg2_et_resp5"
+                    android:textAppearance="@style/style_resposta"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/border"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:text=""/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rede de arrasto"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg3_cb_resp1"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg3_et_resp2"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg3_et_resp3"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg3_et_resp4"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg3_et_resp5"
+                    android:textAppearance="@style/style_resposta"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/border"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:text=""/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tarrafa"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg4_cb_resp1"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg4_et_resp2"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg4_et_resp3"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg4_et_resp4"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg4_et_resp5"
+                    android:textAppearance="@style/style_resposta"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/border"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:text=""/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Outros"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg5_cb_resp1"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg5_et_resp2"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg5_et_resp3"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg5_et_resp4"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg5_et_resp5"
+                    android:textAppearance="@style/style_resposta"/>
+
+            </TableRow>
+
+
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/border"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:text="Grande/ Alta"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Matapi"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg6_cb_resp1"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg6_et_resp2"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg6_et_resp3"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg6_et_resp4"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg6_et_resp5"
+                    android:textAppearance="@style/style_resposta"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/border"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:text=""/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Viveiro"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg7_cb_resp1"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg7_et_resp2"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg7_et_resp3"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg7_et_resp4"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg7_et_resp5"
+                    android:textAppearance="@style/style_resposta"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/border"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:text=""/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rede de arrasto"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg8_cb_resp1"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg8_et_resp2"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg8_et_resp3"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg8_et_resp4"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg8_et_resp5"
+                    android:textAppearance="@style/style_resposta"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/border"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:text=""/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tarrafa"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg9_cb_resp1"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg9_et_resp2"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg9_et_resp3"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg9_et_resp4"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg9_et_resp5"
+                    android:textAppearance="@style/style_resposta"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/border"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:text=""/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Outros"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg10_cb_resp1"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg10_et_resp2"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg10_et_resp3"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg10_et_resp4"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg10_et_resp5"
+                    android:textAppearance="@style/style_resposta"/>
+
+            </TableRow>
+
+
         </TableLayout>
+
+
+
+        <!-- VERAO -->
+
+        <TableLayout
+            android:paddingTop="15dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:paddingBottom="10dp"
+            android:layout_gravity="center_vertical"
+            android:stretchColumns="*">
+
+
+            <TableRow
+                android:background="@drawable/border"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:background="@drawable/border"
+                    android:layout_span="7"
+                    android:text="Verão"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:text="Maré"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:background="@drawable/border"
+                    android:text="Arte"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Esforço de pesca"
+                    android:layout_span="4" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/border"
+                android:layout_gravity="center_horizontal">
+                <TextView android:text="Quilos\nPescado/\ndia"
+                    android:layout_gravity="center"
+                    android:layout_column="2" />
+                <TextView android:text="Nº\nLances ou\nde Pesca\n/dia"
+                    android:layout_gravity="center"
+                    android:layout_column="3" />
+                <TextView android:text="Tempo\ngasto\n(horas/ Dia)"
+                    android:layout_gravity="center"
+                    android:layout_column="4" />
+                <TextView android:text="Quilos\nPescado/\ndia"
+                    android:layout_gravity="center"
+                    android:layout_column="5" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/border"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:text="Baixa/Morta"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Matapi"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg11_cb_resp1"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg11_et_resp2"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg11_et_resp3"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg11_et_resp4"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg11_et_resp5"
+                    android:textAppearance="@style/style_resposta"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/border"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:text=""/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Viveiro"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg12_cb_resp1"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg12_et_resp2"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg12_et_resp3"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg12_et_resp4"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg12_et_resp5"
+                    android:textAppearance="@style/style_resposta"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/border"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:text=""/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rede de arrasto"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg13_cb_resp1"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg13_et_resp2"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg13_et_resp3"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg13_et_resp4"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg13_et_resp5"
+                    android:textAppearance="@style/style_resposta"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/border"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:text=""/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tarrafa"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg14_cb_resp1"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg14_et_resp2"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg14_et_resp3"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg14_et_resp4"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg14_et_resp5"
+                    android:textAppearance="@style/style_resposta"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/border"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:text=""/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Outros"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg15_cb_resp1"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg15_et_resp2"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg15_et_resp3"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg15_et_resp4"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg15_et_resp5"
+                    android:textAppearance="@style/style_resposta"/>
+
+            </TableRow>
+
+
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/border"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:text="Grande/ Alta"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Matapi"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg16_cb_resp1"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg16_et_resp2"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg16_et_resp3"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg16_et_resp4"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg16_et_resp5"
+                    android:textAppearance="@style/style_resposta"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/border"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:text=""/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Viveiro"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg17_cb_resp1"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg17_et_resp2"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg17_et_resp3"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg17_et_resp4"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg17_et_resp5"
+                    android:textAppearance="@style/style_resposta"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/border"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:text=""/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rede de arrasto"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg18_cb_resp1"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg18_et_resp2"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg18_et_resp3"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg18_et_resp4"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg18_et_resp5"
+                    android:textAppearance="@style/style_resposta"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/border"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:text=""/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tarrafa"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg19_cb_resp1"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg19_et_resp2"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg19_et_resp3"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg19_et_resp4"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg19_et_resp5"
+                    android:textAppearance="@style/style_resposta"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/border"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:text=""/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Outros"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg20_cb_resp1"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg20_et_resp2"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg20_et_resp3"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg20_et_resp4"
+                    android:textAppearance="@style/style_resposta"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg20_et_resp5"
+                    android:textAppearance="@style/style_resposta"/>
+
+            </TableRow>
+
+
+        </TableLayout>
+
 
     </LinearLayout>
 

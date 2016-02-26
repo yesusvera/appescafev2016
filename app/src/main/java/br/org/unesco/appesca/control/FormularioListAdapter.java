@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
@@ -17,6 +18,7 @@ import br.org.unesco.appesca.R;
 import br.org.unesco.appesca.dao.QuestaoDAO;
 import br.org.unesco.appesca.model.Formulario;
 import br.org.unesco.appesca.model.Questao;
+import br.org.unesco.appesca.util.ConstantesIdsFormularios;
 import br.org.unesco.appesca.util.ConstantesUNESCO;
 import br.org.unesco.appesca.view.FormCamRegActivityNew;
 
@@ -36,6 +38,8 @@ public class FormularioListAdapter extends RecyclerView.Adapter<FormularioListAd
         public TextView txtDataFormulario;
         public ImageView imgSituacaoFormulario;
         public ImageView imgVisualizarFormulario;
+        public ProgressBar progressBar;
+        public TextView txtTextoResposta;
 
         public ViewHolder(View v) {
             super(v);
@@ -47,6 +51,8 @@ public class FormularioListAdapter extends RecyclerView.Adapter<FormularioListAd
             txtDataFormulario = (TextView) v.findViewById(R.id.txtDataFormulario);
             imgSituacaoFormulario = (ImageView) v.findViewById(R.id.imgSituacaoFormulario);
             imgVisualizarFormulario = (ImageView) v.findViewById(R.id.imgVisualizar);
+            progressBar = (ProgressBar)v.findViewById(R.id.progressBarRespostas);
+            txtTextoResposta = (TextView)v.findViewById(R.id.txtTextoResposta);
 
             //Questão ordem 0 - Identificação do formulário
             questaoDAO = new QuestaoDAO(v.getContext());
@@ -91,6 +97,24 @@ public class FormularioListAdapter extends RecyclerView.Adapter<FormularioListAd
             holder.imgSituacaoFormulario.setImageResource(R.drawable.nao_enviado_icone);
         }
 
+        int[] arraysIdsMenuLateral = new int[]{};
+        int[] arrayIdsQuestoes = new int[]{};
+
+        switch (formulario.getIdTipoFormulario()){
+            case 1:
+                arraysIdsMenuLateral = ConstantesIdsFormularios.arraysIdsMenuLateralCamaraoRegional;
+                arrayIdsQuestoes = ConstantesIdsFormularios.arrayIdsFormularioCamaraoRegional;
+                break;
+            case 2:
+                arraysIdsMenuLateral = ConstantesIdsFormularios.arraysIdsMenuLateralCaranguejo;
+                arrayIdsQuestoes = ConstantesIdsFormularios.arrayIdsFormularioCaranguejo;
+                break;
+            case 3:
+                arraysIdsMenuLateral = ConstantesIdsFormularios.arraysIdsMenuLateralPiticaiaEBranco;
+                arrayIdsQuestoes = ConstantesIdsFormularios.arrayIdsFormularioPiticaiaEBranco;
+                break;
+        }
+
         //QUESTAO ORDEM 0 (ZERO) -> IDENTIFICACAO FORMULARIO
         Questao questao = questaoDAO.findQuestaoByOrdemIdFormulario(0, formulario.getId());
 
@@ -112,6 +136,27 @@ public class FormularioListAdapter extends RecyclerView.Adapter<FormularioListAd
                 FormularioListAdapter.this.context.startActivity(intent);
             }
         });
+
+
+        if(holder.progressBar!=null){
+            holder.progressBar.setMax(arraysIdsMenuLateral.length);
+
+            List<Questao> listaQuestoes = questaoDAO.getQuestoesByFormulario(formulario.getId());
+
+            if(listaQuestoes==null || listaQuestoes.size() == 0) {
+                holder.progressBar.setProgress(0);
+                holder.txtTextoResposta.setText("Nenhuma questão respondida");
+            }else {
+                holder.progressBar.setProgress(listaQuestoes.size());
+
+                holder.txtTextoResposta.setText((listaQuestoes == null ? 0 : listaQuestoes.size()) + " de " + arraysIdsMenuLateral.length + " respondidas.");
+
+                if(listaQuestoes.size() == arraysIdsMenuLateral.length) {
+
+                    holder.txtTextoResposta.setText(holder.txtTextoResposta.getText()+"\nPronto para envio.");
+                }
+            }
+        }
     }
 
     @Override

@@ -319,7 +319,6 @@ public class LoginUnescoActivity extends AppCompatActivity implements LoaderCall
                 mPasswordView.setError("Aconteceu um problema no servidor. Conectando local");
                 mPasswordView.requestFocus();
 
-
 //                loginLocal(email, password);
             }
 

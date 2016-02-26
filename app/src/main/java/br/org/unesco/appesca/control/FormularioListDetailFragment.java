@@ -66,7 +66,6 @@ public class FormularioListDetailFragment extends Fragment {
 
             }
         }
-
     }
 
     @Override
