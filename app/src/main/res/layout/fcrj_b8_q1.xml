@@ -1,0 +1,229 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+
+    <!-- CONTAINER GERAL -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/layout_questao">
+
+        <!-- TITULO -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/layout_titulo_questao">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="Bloco 8 - Questão 1"
+                android:textColor="@android:color/white"
+                android:textSize="40dp"
+                android:gravity="center"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:textAppearance="@style/style_questao"
+                android:text="Quais são os bens utilizados na pesca e, se realizado, no beneficiamento?"
+                />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Embarcação (se marcado, responda as questões 2 em diante). Quantas possui?"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg1_rb_resp1"
+                    android:paddingRight="15dp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:id="@+id/perg1_et_resp2"
+                    android:textAppearance="@style/style_resposta"/>
+
+
+
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Motor de popa. Quantos possui?"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg1_rb_resp3"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:id="@+id/perg1_et_resp4"
+                    android:textAppearance="@style/style_resposta"/>
+
+
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sacas. Quantos possui?"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg1_rb_resp5"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:id="@+id/perg1_et_resp6"
+                    android:textAppearance="@style/style_resposta"/>
+
+
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Linhas. Quantos possui?"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg1_rb_resp7"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:id="@+id/perg1_et_resp8"
+                    android:textAppearance="@style/style_resposta"/>
+
+
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cubas ou Basquetas. Quantos possui?"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg1_rb_resp9"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:id="@+id/perg1_et_resp10"
+                    android:textAppearance="@style/style_resposta"/>
+
+
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fogão . Quantos possui?"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg1_rb_resp11"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:id="@+id/perg1_et_resp12"
+                    android:textAppearance="@style/style_resposta"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Freezer. Quantos possui?"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg1_rb_resp13"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:id="@+id/perg1_et_resp14"
+                    android:textAppearance="@style/style_resposta"/>
+
+
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Geladeira. Quantos possui?"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg1_rb_resp15"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:id="@+id/perg1_et_resp16"
+                    android:textAppearance="@style/style_resposta"/>
+
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Outros. Quais?"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg1_rb_resp17"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:id="@+id/perg1_et_resp18"
+                    android:textAppearance="@style/style_resposta"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:textAppearance="@style/style_questao"
+                    android:text="Quantos?"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:id="@+id/perg1_et_resp19"
+                    android:textAppearance="@style/style_resposta"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

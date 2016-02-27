@@ -1,0 +1,217 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+
+    <!-- CONTAINER GERAL -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/layout_questao">
+
+        <!-- TITULO -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/layout_titulo_questao">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="Bloco 7 - Questão 11"
+                android:textColor="@android:color/white"
+                android:textSize="40dp"
+                android:gravity="center"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:textAppearance="@style/style_questao"
+                android:text="Qual é forma de pagamento dos principais compradores/consumidores? (marcar a forma principal)"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingTop="20dp"
+                android:textAppearance="@style/style_questao"
+                android:text="1º Comprador: "
+                />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="à vista (no ato da entrega)"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg1_rb_resp1"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="parcelado (antes e depois da entrega)"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg1_rb_resp2"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a prazo (após entrega)"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg1_rb_resp3"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="em produtos"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg1_rb_resp4"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+
+            </RadioGroup>
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:textAppearance="@style/style_questao"
+                android:text="2º Comprador: "
+                />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="à vista (no ato da entrega)"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg2_rb_resp1"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="parcelado (antes e depois da entrega)"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg2_rb_resp2"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a prazo (após entrega)"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg2_rb_resp3"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="em produtos"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg2_rb_resp4"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+
+            </RadioGroup>
+
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:textAppearance="@style/style_questao"
+                android:text="2º Comprador: "
+                />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="à vista (no ato da entrega)"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg3_rb_resp1"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="parcelado (antes e depois da entrega)"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg3_rb_resp2"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a prazo (após entrega)"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg3_rb_resp3"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="em produtos"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg3_rb_resp4"
+                    android:paddingRight="15dp"
+                    android:checked="false" />
+
+            </RadioGroup>
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingTop="20dp"
+                android:textAppearance="@style/style_questao"
+                android:text="Outro:"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/perg4_et_resp1"
+                android:textAppearance="@style/style_resposta"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,91 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+    <!-- CONTAINERa GERAL -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_questao"
+        android:orientation="vertical">
+
+        <!-- TITULO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_titulo_questao"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Bloco 7 - Questão 07"
+                android:textColor="@android:color/white"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- QUESTAO 1-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+
+            <TextView
+                android:id="@+id/perg1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="Como ocorre a venda? (pode marcar mais de uma)"
+                android:textAppearance="@style/style_questao" />
+
+        </LinearLayout>
+
+        <!-- CONDICAO E RESPOSTA 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <CheckBox
+                android:id="@+id/perg1_cb_resp1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="vendido sob encomenda"
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg1_cb_resp2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="em ponto de venda próprio "
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg1_cb_resp3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="oferece antes da pesca a compradores/consumidores "
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg1_cb_resp4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="oferece após a pesca a compradores/consumidores "
+                android:textAppearance="@style/style_resposta" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
