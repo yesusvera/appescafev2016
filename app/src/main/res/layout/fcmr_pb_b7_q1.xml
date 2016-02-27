@@ -1,0 +1,4065 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+
+    <!-- CONTAINER GERAL -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_questao"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- TITULO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_titulo_questao"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Bloco 7 - Questão 1"
+                android:textColor="@android:color/white"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp"
+                android:text="Camarão Piticaia (7 Barbas)"
+                android:textAppearance="@style/style_questao" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp"
+                android:text=" Como é vendido o camarão piticaia? (Filtro)"
+                android:textAppearance="@style/style_questao" />
+
+            <CheckBox
+                android:id="@+id/perg1_cb_resp1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp"
+                android:text="Misturado inteiro fresco"
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg1_cb_resp2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp"
+                android:text="Misturado inteiro resfriado (no gelo) "
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg1_cb_resp3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="Misturado inteiro congelado"
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg1_cb_resp4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="Misturado descascado fresco"
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg1_cb_resp5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="Misturado Torrado "
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg1_cb_resp6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="Misturado Batido"
+                android:textAppearance="@style/style_resposta" />
+
+
+            <CheckBox
+                android:id="@+id/perg1_cb_resp7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="Graúdo inteiro fresco"
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg1_cb_resp8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="Graúdo inteiro resfriado (no gelo)"
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/per1_cb_resp9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp"
+                android:text="Graúdo inteiro congelado"
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg1_cb_resp10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="Graúdo descascado fresco "
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg1_cb_resp11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="Graúdo torrado"
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg1_cb_resp12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="Graúdo Batido"
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg1_cb_resp13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="Médio inteiro fresco"
+                android:textAppearance="@style/style_resposta" />
+
+
+            <CheckBox
+                android:id="@+id/perg1_cb_resp14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp"
+                android:text="Médio inteiro resfriado (no gelo)"
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg1_cb_resp15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp"
+                android:text="Médio inteiro congelado"
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg1_cb_resp16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="Médio descascado fresco "
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg1_cb_resp17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="Médio torrado"
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg1_cb_resp18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="Médio Batido"
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg1_cb_resp19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="Pequeno inteiro fresco"
+                android:textAppearance="@style/style_resposta" />
+
+
+            <CheckBox
+                android:id="@+id/perg1_cb_resp20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp"
+                android:text="Pequeno inteiro resfriado (no gelo)"
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg1_cb_resp21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp"
+                android:text="Pequeno inteiro resfriado (no gelo)"
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg1_cb_resp22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="Pequeno inteiro congelado"
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg1_cb_resp23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="Pequeno descascado fresco"
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg1_cb_resp24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="Pequeno torrado"
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg1_cb_resp25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="Pequeno descascado batido"
+                android:textAppearance="@style/style_resposta" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/perg1_cb_resp26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="15dp"
+                    android:text="Outros:"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg1_et_resp27"
+                    android:layout_width="241dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp"
+                android:text="Dos produtos selecionados e/ou processados, qual é quantidade vendida?"
+                android:textAppearance="@style/style_questao" />
+
+        </LinearLayout>
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:paddingTop="15dp"
+            android:stretchColumns="*">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Produto"
+                    android:textAppearance="@style/style_questao" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Período"
+                    android:textAppearance="@style/style_questao" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_span="2"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Quantidade Média (kg)/dia"
+                    android:textAppearance="@style/style_questao" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Observações"
+                    android:textAppearance="@style/style_questao" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Verão"
+                    android:textAppearance="@style/style_questao" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="3"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Inverno"
+                    android:textAppearance="@style/style_questao" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Misturado Inteiro Fresco"
+                    android:textAppearance="@style/style_questao" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/perg2_rb_resp1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg2_rb_resp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/perg2_et_resp3"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg2_et_resp4"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg2_et_resp5"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Misturado inteiro resfriado (no gelo)"
+                    android:textAppearance="@style/style_questao" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/perg3_rb_resp1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg3_rb_resp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/perg3_et_resp3"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg3_et_resp4"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg3_et_resp5"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Misturado inteiro congelado"
+                    android:textAppearance="@style/style_questao" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/perg4_rb_resp1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg4_rb_resp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/perg4_et_resp3"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg4_et_resp4"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg4_et_resp5"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Misturado descascado fresco"
+                    android:textAppearance="@style/style_questao" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/perg5_rb_resp1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg5_rb_resp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/perg5_et_resp3"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg5_et_resp4"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg5_et_resp5"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Misturado Torrado"
+                    android:textAppearance="@style/style_questao" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/perg6_rb_resp1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg6_rb_resp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/perg6_et_resp3"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg6_et_resp4"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg6_et_resp5"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Misturado Batido"
+                    android:textAppearance="@style/style_questao" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/perg7_rb_resp1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg7_rb_resp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/perg7_et_resp3"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg7_et_resp4"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg7_et_resp5"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Graúdo inteiro fresco"
+                    android:textAppearance="@style/style_questao" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/perg8_rb_resp1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg8_rb_resp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/perg8_et_resp3"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg8_et_resp4"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg8_et_resp5"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Graúdo inteiro resfriado (no gelo)"
+                    android:textAppearance="@style/style_questao" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/perg9_rb_resp1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg9_rb_resp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/perg9_et_resp3"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg9_et_resp4"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg9_et_resp5"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Graúdo inteiro congelado"
+                    android:textAppearance="@style/style_questao" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/perg10_rb_resp1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg10_rb_resp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/perg10_et_resp3"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg10_et_resp4"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg10_et_resp5"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Graúdo descascado fresco"
+                    android:textAppearance="@style/style_questao" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/perg11_rb_resp1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg11_rb_resp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/perg11_et_resp3"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg11_et_resp4"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg11_et_resp5"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Graúdo torrado"
+                    android:textAppearance="@style/style_questao" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/perg12_rb_resp1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg12_rb_resp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/perg12_et_resp3"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg12_et_resp4"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg12_et_resp5"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Graúdo Batido"
+                    android:textAppearance="@style/style_questao" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/perg13_rb_resp1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg13_rb_resp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/perg13_et_resp3"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg13_et_resp4"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg13_et_resp5"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Médio inteiro fresco"
+                    android:textAppearance="@style/style_questao" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/perg14_rb_resp1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg14_rb_resp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/perg14_et_resp3"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg14_et_resp4"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg14_et_resp5"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Médio inteiro resfriado (no gelo)"
+                    android:textAppearance="@style/style_questao" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/perg15_rb_resp1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg15_rb_resp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/perg15_et_resp3"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg15_et_resp4"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg15_et_resp5"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Médio inteiro congelado"
+                    android:textAppearance="@style/style_questao" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/perg16_rb_resp1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg16_rb_resp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/perg16_et_resp3"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg16_et_resp4"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg16_et_resp5"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Médio descascado fresco"
+                    android:textAppearance="@style/style_questao" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/perg17_rb_resp1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg17_rb_resp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/perg17_et_resp3"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg17_et_resp4"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg17_et_resp5"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Médio torrado"
+                    android:textAppearance="@style/style_questao" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/perg18_rb_resp1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg18_rb_resp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/perg18_et_resp3"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg18_et_resp4"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg18_et_resp5"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Médio batido"
+                    android:textAppearance="@style/style_questao" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/perg19_rb_resp1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg19_rb_resp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/perg19_et_resp3"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg19_et_resp4"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg19_et_resp5"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Pequeno inteiro fresco"
+                    android:textAppearance="@style/style_questao" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/perg20_rb_resp1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg20_rb_resp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/perg20_et_resp3"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg20_et_resp4"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg20_et_resp5"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Pequeno inteiro resfriado (no gelo)"
+                    android:textAppearance="@style/style_questao" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/perg21_rb_resp1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg21_rb_resp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/perg21_et_resp3"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg21_et_resp4"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg21_et_resp5"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Pequeno inteiro congelado"
+                    android:textAppearance="@style/style_questao" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/perg22_rb_resp1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg22_rb_resp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/perg22_et_resp3"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg22_et_resp4"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg22_et_resp5"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Pequeno descascado fresco"
+                    android:textAppearance="@style/style_questao" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/perg23_rb_resp1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg23_rb_resp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/perg23_et_resp3"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg23_et_resp4"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg23_et_resp5"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Pequeno torrado"
+                    android:textAppearance="@style/style_questao" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/perg24_rb_resp1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg24_rb_resp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/perg24_et_resp3"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg24_et_resp4"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg24_et_resp5"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Pequeno descascado batido"
+                    android:textAppearance="@style/style_questao" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/perg25_rb_resp1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg25_rb_resp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/perg25_et_resp3"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg25_et_resp4"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg25_et_resp5"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Outros:"
+                    android:textAppearance="@style/style_questao" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/perg26_rb_resp1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg26_rb_resp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/perg26_et_resp3"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg26_et_resp4"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg26_et_resp5"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </TableRow>
+        </TableLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="Qual é a proporção da “quebra” (beneficiamento)"
+                android:textAppearance="@style/style_questao" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="Quantos quilos de camarão piticaia fresco  é preciso para produzir 1Kg de Camarão Torrado?"
+                android:textAppearance="@style/style_questao" />
+
+            <EditText
+                android:id="@+id/perg27_et_resp1"
+                android:layout_width="241dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="Quantos kilos de camarão piticaia torrado é preciso para produzir 1Kg de Camarão Batido?"
+                android:textAppearance="@style/style_questao" />
+
+            <EditText
+                android:id="@+id/perg28_et_resp1"
+                android:layout_width="241dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingLeft="30dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="O senhor armazena o camarão branco?  "
+                android:textAppearance="@style/style_questao" />
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/perg29_rb_resp1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="15dp"
+                    android:text="Não (pule para 1.6)"
+                    android:textAppearance="@style/style_resposta" />
+
+                <RadioButton
+                    android:id="@+id/perg29_rb_resp2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="15dp"
+                    android:text="Sim"
+                    android:textAppearance="@style/style_resposta" />
+            </RadioGroup>
+        </LinearLayout>
+
+
+        <!-- QUESTAO -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/perg1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="Como o senhor armazena o camarao piticaia? "
+                android:textAppearance="@style/style_questao" />
+
+            <!-- CONDICAO E RESPOSTA 2 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+
+                <!-- TABULACAO DAS OPCOES -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="30dp">
+
+
+                    <RadioButton
+                        android:id="@+id/perg30_rb_resp1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="geladeira"
+                        android:textAppearance="@style/style_resposta" />
+
+                    <RadioButton
+                        android:id="@+id/perg30_rb_resp2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="freezer"
+                        android:textAppearance="@style/style_resposta" />
+
+                    <RadioButton
+                        android:id="@+id/perg30_rb_resp3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="câmara fria"
+                        android:textAppearance="@style/style_resposta" />
+
+                    <RadioButton
+                        android:id="@+id/perg30_rb_resp4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="sacos"
+                        android:textAppearance="@style/style_resposta" />
+
+                    <RadioButton
+                        android:id="@+id/perg30_rb_resp5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="caixas"
+                        android:textAppearance="@style/style_resposta" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/perg30_rb_resp6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Outros:"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <EditText
+                            android:id="@+id/perg30_et_resp7"
+                            android:layout_width="240dp"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- QUESTAO -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="Por quanto tempo, em média o camarao piticaia fica armazenado?"
+                android:textAppearance="@style/style_questao" />
+
+            <!-- CONDICAO E RESPOSTA 2 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp">
+
+
+                <!-- TABULACAO DAS OPCOES -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="30dp">
+
+
+                    <EditText
+                        android:id="@+id/perg31_et_resp1"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="5dp"
+                        android:text="dias(ou)"
+                        android:textAppearance="@style/style_resposta" />
+                </LinearLayout>
+
+                <!-- TABULACAO DAS OPCOES -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="30dp">
+
+
+                    <EditText
+                        android:id="@+id/perg31_et_resp2"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="5dp"
+                        android:text="semanas"
+                        android:textAppearance="@style/style_resposta" />
+                </LinearLayout>
+
+                <!-- TABULACAO DAS OPCOES -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="30dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="5dp"
+                        android:text="(ou)"
+                        android:textAppearance="@style/style_resposta" />
+
+                    <EditText
+                        android:id="@+id/perg31_et_resp3"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="5dp"
+                        android:text="meses"
+                        android:textAppearance="@style/style_resposta" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- QUESTAO -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="Como ocorre a venda? (pode marcar mais de uma)"
+                android:textAppearance="@style/style_questao" />
+
+        </LinearLayout>
+
+        <!-- CONDICAO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <CheckBox
+                android:id="@+id/perg32_cb_resp1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="vendido sob encomenda"
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg32_cb_resp2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="em ponto de venda próprio "
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg32_cb_resp3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="oferece antes da pesca a compradores/consumidores "
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg32_cb_resp4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="oferece após a pesca a compradores/consumidores "
+                android:textAppearance="@style/style_resposta" />
+
+        </LinearLayout>
+
+
+        <!-- QUESTAO 1-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="Para quem se vende o camarão piticaia? (pode marcar mais de uma)"
+                android:textAppearance="@style/style_questao" />
+
+        </LinearLayout>
+
+        <!-- CONDICAO E RESPOSTA 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="Na comunidade: "
+                android:textAppearance="@style/style_questao" />
+
+
+            <CheckBox
+                android:id="@+id/perg33_cb_resp1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="outro pescador"
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg33_cb_resp2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="catadeira"
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg33_cb_resp3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="famílias"
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg33_cb_resp4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="restaurantes"
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg33_cb_resp5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="pousadas"
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg33_cb_resp6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="peixarias"
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg33_cb_resp7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="feirantes"
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg33_cb_resp8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="pequenos comércios"
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg33_cb_resp9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="compradores locais/beneficiadores"
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg33_cb_resp10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="cooperativa"
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg33_cb_resp11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="Fábricas de beneficiamento"
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg33_cb_resp12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="CONAB"
+                android:textAppearance="@style/style_resposta" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <CheckBox
+                    android:id="@+id/perg33_cb_resp13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="15dp"
+                    android:text="Outros:"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg1_et_resp14"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="Fora: "
+                android:textAppearance="@style/style_questao" />
+
+
+            <CheckBox
+                android:id="@+id/perg33_cb_resp15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="famílias"
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg33_cb_resp16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="restaurantes"
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg33_cb_resp17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="pousadas"
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg33_cb_resp18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="peixarias"
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg33_cb_resp19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="feirantes"
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg33_cb_resp20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="pequenos comércios"
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg33_cb_resp21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="compradores externos"
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg33_cb_resp22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="cooperativa"
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg33_cb_resp23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="Figrorífico (empresa)"
+                android:textAppearance="@style/style_resposta" />
+
+            <CheckBox
+                android:id="@+id/perg33_cb_resp24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:text="CONAB"
+                android:textAppearance="@style/style_resposta" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <CheckBox
+                    android:id="@+id/perg33_cb_resp25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="15dp"
+                    android:text="Outros:"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg33_et_resp26"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="Desses compradores/consumidores quais são os três principais?  "
+                android:textAppearance="@style/style_questao" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="30dp">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1º"
+                    android:textAppearance="@style/style_questao" />
+
+                <EditText
+                    android:id="@+id/perg34_et_resp1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2º"
+                    android:textAppearance="@style/style_questao" />
+
+                <EditText
+                    android:id="@+id/perg34_et_resp2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3º"
+                    android:textAppearance="@style/style_questao" />
+
+                <EditText
+                    android:id="@+id/perg34_et_resp3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:text="(inserir lista dos sinalizados na questão anterior)"
+                android:textAppearance="@style/style_questao" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:text="Qual é o preço de venda do camarão piticaia pelos principais compradores ao longo do ano? (R$/kg) inverno e verão."
+            android:textAppearance="@style/style_questao" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:paddingTop="15dp"
+            android:stretchColumns="*">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Produtos"
+                    android:textAppearance="@style/style_questao" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_span="2"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Preço (R$)/kg do 1º."
+                    android:textAppearance="@style/style_questao" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_span="2"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Preço (R$)/kg do 2º"
+                    android:textAppearance="@style/style_questao" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_span="2"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Preço (R$)/kg do 3º"
+                    android:textAppearance="@style/style_questao" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Inverno"
+                    android:textAppearance="@style/style_questao" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Verão"
+                    android:textAppearance="@style/style_questao" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="3"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Inverno"
+                    android:textAppearance="@style/style_questao" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Verão"
+                    android:textAppearance="@style/style_questao" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="5"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Inverno"
+                    android:textAppearance="@style/style_questao" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="6"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Verão"
+                    android:textAppearance="@style/style_questao" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Misturado Inteiro Fresco"
+                    android:textAppearance="@style/style_questao" />
+
+
+                <EditText
+                    android:id="@+id/perg35_et_resp1"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg35_et_resp2"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg35_et_resp3"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg35_et_resp4"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg35_et_resp5"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg35_et_resp6"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Misturado inteiro resfriado (no gelo)"
+                    android:textAppearance="@style/style_questao" />
+
+                <EditText
+                    android:id="@+id/perg36_et_resp1"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg36_et_resp2"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg36_et_resp3"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg36_et_resp4"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg36_et_resp5"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg36_et_resp6"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Misturado inteiro congelado"
+                    android:textAppearance="@style/style_questao" />
+
+                <EditText
+                    android:id="@+id/perg37_et_resp1"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg37_et_resp2"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg37_et_resp3"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg37_et_resp4"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg37_et_resp5"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg37_et_resp6"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Misturado descascado fresco"
+                    android:textAppearance="@style/style_questao" />
+
+                <EditText
+                    android:id="@+id/perg38_et_resp1"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg38_et_resp2"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg38_et_resp3"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg38_et_resp4"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg38_et_resp5"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg38_et_resp6"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Misturado Torrado"
+                    android:textAppearance="@style/style_questao" />
+
+                <EditText
+                    android:id="@+id/perg39_et_resp1"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg39_et_resp2"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg39_et_resp3"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg39_et_resp4"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg39_et_resp5"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg39_et_resp6"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Misturado Batido"
+                    android:textAppearance="@style/style_questao" />
+
+                <EditText
+                    android:id="@+id/perg40_et_resp1"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg40_et_resp2"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg40_et_resp3"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg40_et_resp4"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg40_et_resp5"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg40_et_resp6"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Graúdo inteiro fresco"
+                    android:textAppearance="@style/style_questao" />
+
+                <EditText
+                    android:id="@+id/perg41_et_resp1"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg41_et_resp2"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg41_et_resp3"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg41_et_resp4"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg41_et_resp5"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg41_et_resp6"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Graúdo inteiro resfriado (no gelo)"
+                    android:textAppearance="@style/style_questao" />
+
+                <EditText
+                    android:id="@+id/perg42_et_resp1"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg42_et_resp2"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg42_et_resp3"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg42_et_resp4"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg42_et_resp5"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg42_et_resp6"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Graúdo inteiro congelado"
+                    android:textAppearance="@style/style_questao" />
+
+                <EditText
+                    android:id="@+id/perg43_et_resp1"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg43_et_resp2"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg43_et_resp3"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg43_et_resp4"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg43_et_resp5"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg43_et_resp6"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Graúdo descascado fresco"
+                    android:textAppearance="@style/style_questao" />
+
+                <EditText
+                    android:id="@+id/perg44_et_resp1"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg44_et_resp2"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg44_et_resp3"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg44_et_resp4"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg44_et_resp5"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg44_et_resp6"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Graúdo torrado"
+                    android:textAppearance="@style/style_questao" />
+
+                <EditText
+                    android:id="@+id/perg45_et_resp1"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg45_et_resp2"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg45_et_resp3"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg45_et_resp4"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg45_et_resp5"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg45_et_resp6"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Graúdo Batido"
+                    android:textAppearance="@style/style_questao" />
+
+                <EditText
+                    android:id="@+id/perg46_et_resp1"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg46_et_resp2"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg46_et_resp3"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg46_et_resp4"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg46_et_resp5"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg46_et_resp6"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Médio inteiro fresco"
+                    android:textAppearance="@style/style_questao" />
+
+                <EditText
+                    android:id="@+id/perg47_et_resp1"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg47_et_resp2"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg47_et_resp3"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg47_et_resp4"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg47_et_resp5"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg47_et_resp6"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Médio inteiro resfriado (no gelo)"
+                    android:textAppearance="@style/style_questao" />
+
+                <EditText
+                    android:id="@+id/perg48_et_resp1"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg48_et_resp2"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg48_et_resp3"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg48_et_resp4"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg48_et_resp5"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg48_et_resp6"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Médio inteiro congelado"
+                    android:textAppearance="@style/style_questao" />
+
+                <EditText
+                    android:id="@+id/perg49_et_resp1"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg49_et_resp2"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg49_et_resp3"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg49_et_resp4"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg49_et_resp5"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg49_et_resp6"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Médio descascado fresco"
+                    android:textAppearance="@style/style_questao" />
+
+                <EditText
+                    android:id="@+id/perg50_et_resp1"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg50_et_resp2"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg50_et_resp3"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg50_et_resp4"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg50_et_resp5"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg50_et_resp6"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Médio torrado"
+                    android:textAppearance="@style/style_questao" />
+
+                <EditText
+                    android:id="@+id/perg51_et_resp1"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg51_et_resp2"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg51_et_resp3"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg51_et_resp4"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg51_et_resp5"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg51_et_resp6"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Médio Batido"
+                    android:textAppearance="@style/style_questao" />
+
+                <EditText
+                    android:id="@+id/perg52_et_resp1"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg52_et_resp2"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg52_et_resp3"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg52_et_resp4"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg52_et_resp5"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg52_et_resp6"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Pequeno inteiro fresco"
+                    android:textAppearance="@style/style_questao" />
+
+                <EditText
+                    android:id="@+id/perg53_et_resp1"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg53_et_resp2"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg53_et_resp3"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg53_et_resp4"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg53_et_resp5"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg53_et_resp6"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Pequeno inteiro resfriado (no gelo)"
+                    android:textAppearance="@style/style_questao" />
+
+                <EditText
+                    android:id="@+id/perg54_et_resp1"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg54_et_resp2"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg54_et_resp3"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg54_et_resp4"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg54_et_resp5"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg54_et_resp6"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Pequeno inteiro congelado"
+                    android:textAppearance="@style/style_questao" />
+
+                <EditText
+                    android:id="@+id/perg55_et_resp1"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg55_et_resp2"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg55_et_resp3"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg55_et_resp4"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg55_et_resp5"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg55_et_resp6"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Pequeno descascado fresco"
+                    android:textAppearance="@style/style_questao" />
+
+                <EditText
+                    android:id="@+id/perg56_et_resp1"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg56_et_resp2"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg56_et_resp3"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg56_et_resp4"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg56_et_resp5"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg56_et_resp6"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Pequeno torrado"
+                    android:textAppearance="@style/style_questao" />
+
+                <EditText
+                    android:id="@+id/perg57_et_resp1"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg57_et_resp2"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg57_et_resp3"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg57_et_resp4"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg57_et_resp5"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg57_et_resp6"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Pequeno descascado batido"
+                    android:textAppearance="@style/style_questao" />
+
+                <EditText
+                    android:id="@+id/perg58_et_resp1"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg58_et_resp2"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg58_et_resp3"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg58_et_resp4"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg58_et_resp5"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg58_et_resp6"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="Outros:"
+                    android:textAppearance="@style/style_questao" />
+
+                <EditText
+                    android:id="@+id/perg59_et_resp1"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg59_et_resp2"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg59_et_resp3"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg59_et_resp4"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg59_et_resp5"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg59_et_resp6"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </TableRow>
+        </TableLayout>
+
+
+    </LinearLayout>
+</ScrollView>

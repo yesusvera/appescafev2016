@@ -1,0 +1,2101 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+
+    <!-- CONTAINER GERAL -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_questao"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- TITULO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_titulo_questao"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Bloco 8 - Questão 3"
+                android:textColor="@android:color/white"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="Quais recursos necessários para pesca? Qual a quantidade e preço unitário em 2015?"
+                android:textAppearance="@style/style_questao" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="15dp"
+                android:stretchColumns="*">
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Recursos"
+                        android:textAppearance="@style/style_questao" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Quantidade \n “ida e volta” \n No mesmo dia"
+
+                        android:textAppearance="@style/style_questao" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:text="Frequência \n de uso"
+                        android:textAppearance="@style/style_questao" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:text="Quantidade \n “decida” \n Durante alguns dias"
+                        android:textAppearance="@style/style_questao" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:text="Frequência \n de uso"
+                        android:textAppearance="@style/style_questao" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:text="Preço \n Unitário(R$)"
+                        android:textAppearance="@style/style_questao" />
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:text="Combustível"
+                        android:textAppearance="@style/style_questao" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:text="Litros:"
+                            android:textAppearance="@style/style_questao" />
+
+                        <EditText
+                            android:id="@+id/perg1_et_resp1"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="60dp"
+                            android:textAppearance="@style/style_resposta" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <RadioButton
+                            android:id="@+id/perg1_rb_resp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg1_rb_resp3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:text="Litros:"
+                            android:textAppearance="@style/style_questao" />
+
+                        <EditText
+                            android:id="@+id/perg1_et_resp4"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="60dp"
+                            android:textAppearance="@style/style_resposta" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <RadioButton
+                            android:id="@+id/perg1_rb_resp5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por viagem"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg1_rb_resp6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+
+                    <EditText
+                        android:id="@+id/perg1_et_resp7"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:textAppearance="@style/style_resposta" />
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:text="Farinha"
+                        android:textAppearance="@style/style_questao" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:text="Kilos/litros:"
+                            android:textAppearance="@style/style_questao" />
+
+                        <EditText
+                            android:id="@+id/perg2_et_resp1"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="60dp"
+                            android:textAppearance="@style/style_resposta" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <RadioButton
+                            android:id="@+id/perg2_rb_resp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg2_rb_resp3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:text="Kilos/litros:"
+                            android:textAppearance="@style/style_questao" />
+
+                        <EditText
+                            android:id="@+id/perg2_et_resp4"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="60dp"
+                            android:textAppearance="@style/style_resposta" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <RadioButton
+                            android:id="@+id/perg2_rb_resp5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por viagem"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg2_rb_resp6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+
+                    <EditText
+                        android:id="@+id/perg2_et_resp7"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:textAppearance="@style/style_resposta" />
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:text="Sardinha"
+                        android:textAppearance="@style/style_questao" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:text="Latas:"
+                            android:textAppearance="@style/style_questao" />
+
+                        <EditText
+                            android:id="@+id/perg3_et_resp1"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="60dp"
+                            android:textAppearance="@style/style_resposta" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <RadioButton
+                            android:id="@+id/perg3_rb_resp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg3_rb_resp3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:text="Latas:"
+                            android:textAppearance="@style/style_questao" />
+
+                        <EditText
+                            android:id="@+id/perg3_et_resp4"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="60dp"
+                            android:textAppearance="@style/style_resposta" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <RadioButton
+                            android:id="@+id/perg3_rb_resp5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por viagem"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg3_rb_resp6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+
+                    <EditText
+                        android:id="@+id/perg3_et_resp7"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:textAppearance="@style/style_resposta" />
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:text="Conserva"
+                        android:textAppearance="@style/style_questao" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:text="Latas:"
+                            android:textAppearance="@style/style_questao" />
+
+                        <EditText
+                            android:id="@+id/perg4_et_resp1"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="60dp"
+                            android:textAppearance="@style/style_resposta" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <RadioButton
+                            android:id="@+id/perg4_rb_resp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg4_rb_resp3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:text="Latas:"
+                            android:textAppearance="@style/style_questao" />
+
+                        <EditText
+                            android:id="@+id/perg4_et_resp4"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="60dp"
+                            android:textAppearance="@style/style_resposta" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <RadioButton
+                            android:id="@+id/perg4_rb_resp5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por viagem"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg4_rb_resp6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+
+                    <EditText
+                        android:id="@+id/perg4_et_resp7"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:textAppearance="@style/style_resposta" />
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:text="Sal"
+                        android:textAppearance="@style/style_questao" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:text="Kilos:"
+                            android:textAppearance="@style/style_questao" />
+
+                        <EditText
+                            android:id="@+id/perg5_et_resp1"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="60dp"
+                            android:textAppearance="@style/style_resposta" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <RadioButton
+                            android:id="@+id/perg5_rb_resp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg5_rb_resp3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:text="Kilos:"
+                            android:textAppearance="@style/style_questao" />
+
+                        <EditText
+                            android:id="@+id/perg5_et_resp4"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="60dp"
+                            android:textAppearance="@style/style_resposta" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <RadioButton
+                            android:id="@+id/perg5_rb_resp5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por viagem"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg5_rb_resp6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+
+                    <EditText
+                        android:id="@+id/perg5_et_resp7"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:textAppearance="@style/style_resposta" />
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:text="Arroz"
+                        android:textAppearance="@style/style_questao" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:text="Kilos:"
+                            android:textAppearance="@style/style_questao" />
+
+                        <EditText
+                            android:id="@+id/perg6_et_resp1"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="60dp"
+                            android:textAppearance="@style/style_resposta" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <RadioButton
+                            android:id="@+id/perg6_rb_resp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg6_rb_resp3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:text="Kilos:"
+                            android:textAppearance="@style/style_questao" />
+
+                        <EditText
+                            android:id="@+id/perg6_et_resp4"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="60dp"
+                            android:textAppearance="@style/style_resposta" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <RadioButton
+                            android:id="@+id/perg6_rb_resp5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por viagem"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg6_rb_resp6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+
+                    <EditText
+                        android:id="@+id/perg6_et_resp7"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:textAppearance="@style/style_resposta" />
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:text="Feijão"
+                        android:textAppearance="@style/style_questao" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:text="Kilos:"
+                            android:textAppearance="@style/style_questao" />
+
+                        <EditText
+                            android:id="@+id/perg7_et_resp1"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="60dp"
+                            android:textAppearance="@style/style_resposta" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <RadioButton
+                            android:id="@+id/perg7_rb_resp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg7_rb_resp3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:text="Kilos:"
+                            android:textAppearance="@style/style_questao" />
+
+                        <EditText
+                            android:id="@+id/perg7_et_resp4"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="60dp"
+                            android:textAppearance="@style/style_resposta" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <RadioButton
+                            android:id="@+id/perg7_rb_resp5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por viagem"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg7_rb_resp6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+
+                    <EditText
+                        android:id="@+id/perg7_et_resp7"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:textAppearance="@style/style_resposta" />
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:text="Suco"
+                        android:textAppearance="@style/style_questao" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:text="Pct:"
+                            android:textAppearance="@style/style_questao" />
+
+                        <EditText
+                            android:id="@+id/perg8_et_resp1"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="60dp"
+                            android:textAppearance="@style/style_resposta" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <RadioButton
+                            android:id="@+id/perg8_rb_resp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg8_rb_resp3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:text="Pct:"
+                            android:textAppearance="@style/style_questao" />
+
+                        <EditText
+                            android:id="@+id/perg8_et_resp4"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="60dp"
+                            android:textAppearance="@style/style_resposta" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <RadioButton
+                            android:id="@+id/perg8_rb_resp5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por viagem"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg8_rb_resp6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+
+                    <EditText
+                        android:id="@+id/perg8_et_resp7"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:textAppearance="@style/style_resposta" />
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:text="Bolacha"
+                        android:textAppearance="@style/style_questao" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:text="Pct:"
+                            android:textAppearance="@style/style_questao" />
+
+                        <EditText
+                            android:id="@+id/perg9_et_resp1"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="60dp"
+                            android:textAppearance="@style/style_resposta" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <RadioButton
+                            android:id="@+id/perg9_rb_resp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg9_rb_resp3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:text="Pct:"
+                            android:textAppearance="@style/style_questao" />
+
+                        <EditText
+                            android:id="@+id/perg9_et_resp4"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="60dp"
+                            android:textAppearance="@style/style_resposta" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <RadioButton
+                            android:id="@+id/perg9_rb_resp5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por viagem"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg9_rb_resp6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+
+                    <EditText
+                        android:id="@+id/perg9_et_resp7"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:textAppearance="@style/style_resposta" />
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:text="Gelo"
+                        android:textAppearance="@style/style_questao" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:text="Kilos:"
+                            android:textAppearance="@style/style_questao" />
+
+                        <EditText
+                            android:id="@+id/perg10_et_resp1"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="60dp"
+                            android:textAppearance="@style/style_resposta" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <RadioButton
+                            android:id="@+id/perg10_rb_resp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg10_rb_resp3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:text="Kilos:"
+                            android:textAppearance="@style/style_questao" />
+
+                        <EditText
+                            android:id="@+id/perg10_et_resp4"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="60dp"
+                            android:textAppearance="@style/style_resposta" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <RadioButton
+                            android:id="@+id/perg10_rb_resp5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por viagem"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg10_rb_resp6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+
+                    <EditText
+                        android:id="@+id/perg10_et_resp7"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:textAppearance="@style/style_resposta" />
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:text="Querosene"
+                        android:textAppearance="@style/style_questao" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:text="Litros:"
+                            android:textAppearance="@style/style_questao" />
+
+                        <EditText
+                            android:id="@+id/perg11_et_resp1"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="60dp"
+                            android:textAppearance="@style/style_resposta" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <RadioButton
+                            android:id="@+id/perg11_rb_resp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg11_rb_resp3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:text="Litros:"
+                            android:textAppearance="@style/style_questao" />
+
+                        <EditText
+                            android:id="@+id/perg11_et_resp4"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="60dp"
+                            android:textAppearance="@style/style_resposta" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <RadioButton
+                            android:id="@+id/perg11_rb_resp5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por viagem"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg11_rb_resp6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+
+                    <EditText
+                        android:id="@+id/perg11_et_resp7"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:textAppearance="@style/style_resposta" />
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:text="Óleo Diesel \n(ascender fogo \ne repelente)"
+                        android:textAppearance="@style/style_questao" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:text="Litros:"
+                            android:textAppearance="@style/style_questao" />
+
+                        <EditText
+                            android:id="@+id/perg12_et_resp1"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="60dp"
+                            android:textAppearance="@style/style_resposta" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <RadioButton
+                            android:id="@+id/perg12_rb_resp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg12_rb_resp3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:text="Litros:"
+                            android:textAppearance="@style/style_questao" />
+
+                        <EditText
+                            android:id="@+id/perg12_et_resp4"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="60dp"
+                            android:textAppearance="@style/style_resposta" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <RadioButton
+                            android:id="@+id/perg12_rb_resp5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por viagem"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg12_rb_resp6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+
+                    <EditText
+                        android:id="@+id/perg12_et_resp7"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:textAppearance="@style/style_resposta" />
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:text="Carvão"
+                        android:textAppearance="@style/style_questao" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:text="Kilos:"
+                            android:textAppearance="@style/style_questao" />
+
+                        <EditText
+                            android:id="@+id/perg13_et_resp1"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="60dp"
+                            android:textAppearance="@style/style_resposta" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <RadioButton
+                            android:id="@+id/perg13_rb_resp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg13_rb_resp3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:text="Kilos:"
+                            android:textAppearance="@style/style_questao" />
+
+                        <EditText
+                            android:id="@+id/perg13_et_resp4"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="60dp"
+                            android:textAppearance="@style/style_resposta" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <RadioButton
+                            android:id="@+id/perg13_rb_resp5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por viagem"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg13_rb_resp6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+
+                    <EditText
+                        android:id="@+id/perg13_et_resp7"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:textAppearance="@style/style_resposta" />
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/border">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Lenha para \n Beneficiamento de um cofo"
+                            android:textAppearance="@style/style_questao" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:text="Unid:"
+                            android:textAppearance="@style/style_questao" />
+
+                        <EditText
+                            android:id="@+id/perg14_et_resp1"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="60dp"
+                            android:textAppearance="@style/style_resposta" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <RadioButton
+                            android:id="@+id/perg14_rb_resp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg14_rb_resp3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:text="Unid:"
+                            android:textAppearance="@style/style_questao" />
+
+                        <EditText
+                            android:id="@+id/perg14_et_resp4"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="60dp"
+                            android:textAppearance="@style/style_resposta" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <RadioButton
+                            android:id="@+id/perg14_rb_resp5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por viagem"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg14_rb_resp6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+
+                    <EditText
+                        android:id="@+id/perg14_et_resp7"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:textAppearance="@style/style_resposta" />
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/border">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Sal para \n Beneficiamento de um cofo"
+                            android:textAppearance="@style/style_questao" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:text="Kilos:"
+                            android:textAppearance="@style/style_questao" />
+
+                        <EditText
+                            android:id="@+id/perg15_et_resp1"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="60dp"
+                            android:textAppearance="@style/style_resposta" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <RadioButton
+                            android:id="@+id/perg15_rb_resp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg15_rb_resp3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:text="Kilos:"
+                            android:textAppearance="@style/style_questao" />
+
+                        <EditText
+                            android:id="@+id/perg15_et_resp4"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="60dp"
+                            android:textAppearance="@style/style_resposta" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <RadioButton
+                            android:id="@+id/perg15_rb_resp5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por viagem"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg15_rb_resp6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+
+                    <EditText
+                        android:id="@+id/perg15_et_resp7"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:textAppearance="@style/style_resposta" />
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/border">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Mão de obra para \n Beneficiamento de um cofo"
+                            android:textAppearance="@style/style_questao" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:text="Pessoas:"
+                            android:textAppearance="@style/style_questao" />
+
+                        <EditText
+                            android:id="@+id/perg16_et_resp1"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="60dp"
+                            android:textAppearance="@style/style_resposta" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <RadioButton
+                            android:id="@+id/perg16_rb_resp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg16_rb_resp3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:text="Pessoas:"
+                            android:textAppearance="@style/style_questao" />
+
+                        <EditText
+                            android:id="@+id/perg16_et_resp4"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="60dp"
+                            android:textAppearance="@style/style_resposta" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <RadioButton
+                            android:id="@+id/perg16_rb_resp5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por viagem"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg16_rb_resp6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+
+                    <EditText
+                        android:id="@+id/perg16_et_resp7"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:textAppearance="@style/style_resposta" />
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/border">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Outros"
+                            android:textAppearance="@style/style_questao" />
+
+                        <EditText
+                            android:id="@+id/perg17_et_resp1"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:paddingLeft="20dp"
+                            android:textAppearance="@style/style_resposta" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:text="Unid:"
+                            android:textAppearance="@style/style_questao" />
+
+                        <EditText
+                            android:id="@+id/perg17_et_resp2"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="60dp"
+                            android:textAppearance="@style/style_resposta" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <RadioButton
+                            android:id="@+id/perg17_rb_resp3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta" />
+
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:text="Unid:"
+                            android:textAppearance="@style/style_questao" />
+
+                        <EditText
+                            android:id="@+id/perg17_et_resp4"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="60dp"
+                            android:textAppearance="@style/style_resposta" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <RadioButton
+                            android:id="@+id/perg17_rb_resp5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Por viagem"
+                            android:textAppearance="@style/style_resposta" />
+
+                        <RadioButton
+                            android:id="@+id/perg17_rb_resp6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta" />
+                    </RadioGroup>
+
+                    <EditText
+                        android:id="@+id/perg17_et_resp7"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:textAppearance="@style/style_resposta" />
+                </TableRow>
+
+
+            </TableLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

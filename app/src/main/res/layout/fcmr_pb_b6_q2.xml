@@ -128,6 +128,170 @@
 
         </LinearLayout>
 
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+
+            <TextView
+                android:id="@+id/perg4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="Quanto tempo se gasta para chegar ao local de pesca (pesqueiro) mais distante? "
+                android:textAppearance="@style/style_questao" />
+
+            <EditText
+                android:id="@+id/perg2_et_resp1"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/style_resposta" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/perg2_rb_resp2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="15dp"
+                    android:text="Hora"
+                    android:textAppearance="@style/style_resposta" />
+
+                <RadioButton
+                    android:id="@+id/perg2_rb_resp3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="15dp"
+                    android:text="Minutos"
+                    android:textAppearance="@style/style_resposta" />
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+        <!-- CONDICAO E RESPOSTA 2 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/perg2_rb_resp4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="15dp"
+                    android:text="Não sabe"
+                    android:textAppearance="@style/style_resposta" />
+
+                <RadioButton
+                    android:id="@+id/perg2_rb_resp5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="15dp"
+                    android:text="Não respondeu"
+                    android:textAppearance="@style/style_resposta" />
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+
+            <TextView
+                android:id="@+id/perg5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="Quanto tempo se gasta para chegar ao local de pesca (pesqueiro) mais perto? "
+                android:textAppearance="@style/style_questao" />
+
+            <EditText
+                android:id="@+id/perg3_et_resp1"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/style_resposta" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/perg3_rb_resp2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="15dp"
+                    android:text="Hora"
+                    android:textAppearance="@style/style_resposta" />
+
+                <RadioButton
+                    android:id="@+id/perg3_rb_resp3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="15dp"
+                    android:text="Minutos"
+                    android:textAppearance="@style/style_resposta" />
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+        <!-- CONDICAO E RESPOSTA 2 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/perg3_rb_resp4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="15dp"
+                    android:text="Não sabe"
+                    android:textAppearance="@style/style_resposta" />
+
+                <RadioButton
+                    android:id="@+id/perg3_rb_resp5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="15dp"
+                    android:text="Não respondeu"
+                    android:textAppearance="@style/style_resposta" />
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+
+
     </LinearLayout>
 
 </ScrollView>
