@@ -1,0 +1,133 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <!-- CONTAINERa GERAL -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_questao"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- TITULO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_titulo_questao"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Bloco 6 - Questão 02"
+                android:textColor="@android:color/white"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- QUESTAO -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/perg1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="Como o senhor realiza este tipo de pescaria (múltipla)? "
+                android:textAppearance="@style/style_questao" />
+
+            <!-- CONDICAO E RESPOSTA 2 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/perg1_cb_resp1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vai e volta no mesmo dia (“ir e vir” ou “bate e volta”) – Nesta categoria, quantos dias por semana realiza a pesca? "
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg1_et_resp2"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/perg1_cb_resp3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pesca de decida ou de baixada (pesca que dura mais de um dia fora de casa) Quantos dias dura em média a viagem?"
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg1_et_resp4"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/perg2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quantas viagens realiza por semana? "
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg1_et_resp5"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/perg3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quantas viagens realiza por mês? "
+                    android:textAppearance="@style/style_resposta" />
+
+                <EditText
+                    android:id="@+id/perg1_et_resp6"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_resposta" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

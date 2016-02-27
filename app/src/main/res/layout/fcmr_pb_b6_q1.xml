@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <!-- CONTAINER GERAL -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/layout_questao">
+
+        <!-- TITULO -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_titulo_questao">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Bloco 6 - Questão 01"
+                android:textColor="@android:color/white"
+                android:textSize="40dp"
+                android:gravity="center"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- QUESTAO -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/perg1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:textAppearance="@style/style_questao"
+                android:text="Normalmente, como é feita a pesca do camarão?"/>
+
+        </LinearLayout>
+
+        <!-- TABULACAO DAS OPCOES -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30dp"
+            android:paddingBottom="10dp">
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Individual (sozinho)"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg1_rb_resp1"
+              />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Em família."
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg1_rb_resp2"
+                  />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="6dp"
+                    android:textAppearance="@style/style_resposta"
+                    android:text="Quantas pessoas?"/>
+
+                <EditText
+                    android:layout_width="241dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg1_et_resp3"
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Em grupo de companheiros (as)."
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg1_rb_resp4"
+                  />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="6dp"
+                    android:textAppearance="@style/style_resposta"
+                    android:text="Quantas pessoas?"/>
+
+                <EditText
+                    android:layout_width="241dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg1_et_resp5"
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Em grupo de companheiros (as) e família."
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg1_rb_resp6"
+                  />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="6dp"
+                    android:textAppearance="@style/style_resposta"
+                    android:text="Quantas pessoas?"/>
+
+                <EditText
+                    android:layout_width="241dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg1_et_resp7"
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Outros"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg1_rb_resp8"
+                  />
+                <EditText
+                    android:layout_width="241dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg1_et_resp9"
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="6dp"
+                    android:textAppearance="@style/style_resposta"
+                    android:text="Quantas pessoas?"/>
+
+                <EditText
+                    android:layout_width="241dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg1_et_resp10"
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="1" />
+            </LinearLayout>
+
+            </RadioGroup>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
