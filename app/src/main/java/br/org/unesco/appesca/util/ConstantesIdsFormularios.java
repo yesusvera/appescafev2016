@@ -91,7 +91,7 @@ public class ConstantesIdsFormularios {
 
               R.id.b7_q1, R.id.b7_q2,
 
-              R.id.b8_q1, R.id.b8_q2, R.id.b8_q3,R.id.b8_q4,R.id.b8_q5,R.id.b8_q6,R.id.b8_q7,
+              R.id.b8_q1, R.id.b8_q2, R.id.b8_q3,R.id.b8_q4,R.id.b8_q5,R.id.b8_q6,
 
               R.id.b9_q1
       };

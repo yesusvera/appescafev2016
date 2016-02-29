@@ -2235,6 +2235,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:paddingLeft="40dp"
             android:paddingBottom="10dp">
 
             <CheckBox
@@ -2294,6 +2295,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:paddingLeft="40dp"
             android:paddingBottom="10dp">
 
             <TextView
@@ -2426,6 +2428,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:paddingLeft="40dp"
             android:paddingBottom="10dp">
 
             <TextView
@@ -2572,6 +2575,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:paddingLeft="30dp"
             android:padding="20dp">
 
             <LinearLayout

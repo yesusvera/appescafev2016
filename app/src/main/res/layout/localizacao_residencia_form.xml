@@ -72,14 +72,14 @@
                     android:paddingRight="15dp"/>
 
 
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="RESEX"
-                        android:textSize="15dp"
-                        android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg1_rb_resp3"
-                        android:paddingRight="15dp"/>
+                    <!--<RadioButton-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="RESEX"-->
+                        <!--android:textSize="15dp"-->
+                        <!--android:textAppearance="@style/style_resposta"-->
+                        <!--android:id="@+id/perg1_rb_resp3"-->
+                        <!--android:paddingRight="15dp"/>-->
                 </RadioGroup>
 
             </LinearLayout>

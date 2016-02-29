@@ -6,7 +6,7 @@
 
     <!-- CONTAINERa GERAL -->
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/layout_questao"
         android:gravity="center"
@@ -31,7 +31,7 @@
 
         <!-- QUESTAO -->
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="left"
             android:orientation="vertical"
@@ -47,20 +47,20 @@
 
             <!-- CONDICAO E RESPOSTA 2 -->
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <CheckBox
                     android:id="@+id/perg1_cb_resp1"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Vai e volta no mesmo dia (“ir e vir” ou “bate e volta”) – Nesta categoria, quantos dias por semana realiza a pesca? "
+                    android:layout_height="46dp"
+                    android:text="Vai e volta no mesmo dia (“ir e vir” ou “bate e volta”) –\n Nesta categoria, quantos dias por semana realiza a pesca? "
                     android:textAppearance="@style/style_resposta" />
 
                 <EditText
                     android:id="@+id/perg1_et_resp2"
-                    android:layout_width="70dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textAppearance="@style/style_resposta" />
 
@@ -74,14 +74,14 @@
                 <CheckBox
                     android:id="@+id/perg1_cb_resp3"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Pesca de decida ou de baixada (pesca que dura mais de um dia fora de casa) Quantos dias dura em média a viagem?"
+                    android:layout_height="58dp"
+                    android:text="Pesca de decida ou de baixada (pesca que dura mais de um dia fora de casa) \nQuantos dias dura em média a viagem?"
                     android:textAppearance="@style/style_resposta" />
 
                 <EditText
                     android:id="@+id/perg1_et_resp4"
-                    android:layout_width="70dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_width="214dp"
                     android:textAppearance="@style/style_resposta" />
 
             </LinearLayout>
@@ -154,7 +154,7 @@
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
                 <RadioButton
                     android:id="@+id/perg2_rb_resp2"
@@ -236,7 +236,7 @@
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
                 <RadioButton
                     android:id="@+id/perg3_rb_resp2"

@@ -42,6 +42,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
+                android:padding="20dp"
                 android:text="Que tipo de arte utiliza. Quantas horas são trabalhadas por você ou pelo grupo por dia, em média? Qual é a produção por maré no inverno e verão? "
                 android:textAppearance="@style/style_questao" />
 
@@ -50,6 +51,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:padding="20dp"
                 android:paddingBottom="10dp">
 
                 <EditText
