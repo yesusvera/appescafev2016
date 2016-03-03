@@ -28,7 +28,6 @@ import static br.org.unesco.appesca.dao.AppescaHelper.TABLE_USUARIO;
 public class UsuarioDAO extends BaseDAO<Usuario> {
 
     private Context context;
-    private AppescaHelper appescaHelper;
 
     private String SELECT_USUARIO_JOIN_EQUIPE =
                 SELECT_FROM_TABLE()

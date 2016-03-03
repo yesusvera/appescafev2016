@@ -126,22 +126,20 @@ public class FormCamRegActivityNew extends AppCompatActivity
         questaoDAO = new QuestaoDAO(FormCamRegActivityNew.this);
         respostaDAO = new RespostaDAO(FormCamRegActivityNew.this);
         perguntaDAO = new PerguntaDAO(FormCamRegActivityNew.this);
+        final QuestaoBO questaoBO= new QuestaoBO(FormCamRegActivityNew.this);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.float_button_menu_save);
         //SALVAR AS RESPOSTAS DA QUESTAO
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 int ordemQuestao = posAtual - 1;
-
                 Questao questao = questaoDAO.findQuestaoByOrdemIdFormulario(ordemQuestao, formulario.getId());
 
-                QuestaoBO questaoBO= new QuestaoBO();
 
                 //PRIMEIRO EXCLUIR TUDO EM CASCATA: RESPOSTAS, PERGUNTAS E QUESTAO. DEPOIS RE-INSERIR.
                 if (questao != null) {
-                    questaoBO.excluirQuestao(questao, FormCamRegActivityNew.this);
+                    questaoBO.excluirQuestao(questao);
                     questao = null;
                 }
 
@@ -158,8 +156,8 @@ public class FormCamRegActivityNew extends AppCompatActivity
                         questaoDAO.updateQuestao(questao);
                     }
 
-                    if(!questaoBO.temAlgumaResposta(questao, FormCamRegActivityNew.this)){
-                        questaoBO.excluirQuestao(questao, FormCamRegActivityNew.this);
+                    if(!questaoBO.temAlgumaResposta(questao)){
+                        questaoBO.excluirQuestao(questao);
 
                         new AlertDialog.Builder(FormCamRegActivityNew.this)
                                 .setTitle("Appesca")
@@ -170,9 +168,7 @@ public class FormCamRegActivityNew extends AppCompatActivity
 
                     }else{
                         Toast.makeText(getApplicationContext(), "Questão salva na base local.", Toast.LENGTH_LONG).show();
-
                         chekListQuestoes();
-
                         if (posAtual == arrayIdsQuestoes.length - 1) {
                             posAtual = -1;
                         }
@@ -289,11 +285,8 @@ public class FormCamRegActivityNew extends AppCompatActivity
                         txtTextoResposta.setText("Nenhuma questão respondida");
                     }else {
                         progressBar.setProgress(listaQuestoes.size());
-
                         txtTextoResposta.setText((listaQuestoes == null ? 0 : listaQuestoes.size()) + " de " + arraysIdsMenuLateral.length + " respondidas.");
-
                         if(listaQuestoes.size() == arraysIdsMenuLateral.length) {
-
                             txtTextoResposta.setText(txtTextoResposta.getText()+"\nTodas as questões foram respondidas.\nFormulário pronto para envio");
                         }
                     }
@@ -303,14 +296,10 @@ public class FormCamRegActivityNew extends AppCompatActivity
 
 
     private List<Pergunta> buildPerguntaList(Questao questao){
-
         List<Pergunta> perguntas = new ArrayList<Pergunta>();
 
         /** PERGUNTAS **/
-        for(int seqPergunta=1; seqPergunta<=50; seqPergunta++){
-
-            PerguntaDAO perguntaDAO = new PerguntaDAO(this);
-            RespostaDAO respostaDAO = new RespostaDAO(this);
+        for(int seqPergunta=1; seqPergunta<=59; seqPergunta++){
 
             String currentPergunta = ConstantesIdsFormularios.PERGUNTA.concat(String.valueOf(seqPergunta));
 //            TextView perguntaTextView = (TextView) findViewById(getResources().getIdentifier(currentPergunta ,"id", getPackageName())); //perg1
@@ -318,72 +307,65 @@ public class FormCamRegActivityNew extends AppCompatActivity
 //            if(perguntaTextView != null) {
                 List<Resposta> respostas = new ArrayList<Resposta>();
 
-                Pergunta pergunta = perguntaDAO.findPerguntaByOrdemIdQuestao(seqPergunta, questao.getId());
-
-                if(pergunta == null){
-                    pergunta = new Pergunta();
-                    pergunta.setOrdem(seqPergunta);
-                    pergunta.setBooleana(false);
-                    pergunta.setRespBooleana(false);
-                    pergunta.setIdQuestao(questao.getId());
-                    pergunta = perguntaDAO.insertPergunta(pergunta);
-                }
-
                 /** RADIOBUTTON **/
-                for (int rb = 1; rb <= 50; rb++) { //
-                    String currentRadioButton = currentPergunta.concat(ConstantesIdsFormularios.TYPE_RADIO_BUTTON + rb); //1 ou 2 //3 ou 4 //5 e 6
+                for (int x = 1; x <= 30; x++) { //
+                    String currentRadioButton = currentPergunta.concat(ConstantesIdsFormularios.TYPE_RADIO_BUTTON + x); //1 ou 2 //3 ou 4 //5 e 6
                     RadioButton radioButton = (RadioButton) findViewById(getResources().getIdentifier(currentRadioButton, "id", getPackageName()));
-
 
                     if (radioButton != null && radioButton.isChecked()) {
                         Resposta resp = new Resposta();
-                        resp.setOpcao(rb);
-                        resp.setIdPergunta(pergunta.getId());
-                        resp.setOrdem(rb);
-
-                        respostaDAO.save(resp);
-
+                        resp.setOpcao(x);
+                        resp.setOrdem(x);
                         respostas.add(resp);
-//                        break;
+                    }else{
+                     /** CHECKBOX **/
+                        String currentCheckBox = currentPergunta.concat(ConstantesIdsFormularios.TYPE_CHECK_BOX + x);
+                        CheckBox checkBox = (CheckBox) findViewById(getResources().getIdentifier(currentCheckBox, "id", getPackageName()));
+
+                        if (checkBox != null && checkBox.isChecked()) {
+                            Resposta resp = new Resposta();
+                            resp.setOpcao(x);
+                            resp.setOrdem(x);
+                            respostas.add(resp);
+                        }else{
+                            /** EDITTEXT **/
+                            String currentEditText = currentPergunta.concat(ConstantesIdsFormularios.TYPE_EDIT_TEXT + x);
+                            EditText editText = (EditText) findViewById(getResources().getIdentifier(currentEditText, "id", getPackageName()));
+
+                            if (editText != null && !editText.getText().toString().isEmpty()) {
+                                Resposta resp = new Resposta();
+                                resp.setTexto(editText.getText().toString());
+                                resp.setOrdem(x);
+                                respostas.add(resp);
+                            }
+                        }
                     }
-                }
 
-                /** CHECKBOX **/
-                for (int cb = 1; cb <= 50; cb++) {
-                    String currentCheckBox = currentPergunta.concat(ConstantesIdsFormularios.TYPE_CHECK_BOX + cb);
-                    CheckBox checkBox = (CheckBox) findViewById(getResources().getIdentifier(currentCheckBox, "id", getPackageName()));
+                    if(respostas!=null && respostas.size() > 0) {
+                        Pergunta pergunta = perguntaDAO.findPerguntaByOrdemIdQuestao(seqPergunta, questao.getId());
 
-                    if (checkBox != null && checkBox.isChecked()) {
-                        Resposta resp = new Resposta();
-                        resp.setOpcao(cb);
-                        resp.setIdPergunta(pergunta.getId());
-                        resp.setOrdem(cb);
+                        if (pergunta == null) {
+                            pergunta = new Pergunta();
+                            pergunta.setOrdem(seqPergunta);
+                            pergunta.setBooleana(false);
+                            pergunta.setRespBooleana(false);
+                            pergunta.setIdQuestao(questao.getId());
+                            pergunta = perguntaDAO.insertPergunta(pergunta);
+                        }
 
-                        respostaDAO.save(resp);
-                        respostas.add(resp);
+                        for(Resposta resp: respostas){
+                            resp.setIdPergunta(pergunta.getId());
+                            respostaDAO.save(resp);
+                        }
+
+                        pergunta.setRespostas(respostas);
+                        perguntas.add(pergunta);
                     }
-                }
-
-                /** EDITTEXT **/
-                for (int et = 1; et <= 50; et++) {
-                    String currentEditText = currentPergunta.concat(ConstantesIdsFormularios.TYPE_EDIT_TEXT + et);
-                    EditText editText = (EditText) findViewById(getResources().getIdentifier(currentEditText, "id", getPackageName()));
-
-                    if (editText != null && !editText.getText().toString().isEmpty()) {
-                        Resposta resp = new Resposta();
-                        resp.setTexto(editText.getText().toString());
-                        resp.setIdPergunta(pergunta.getId());
-                        resp.setOrdem(et);
-
-                        respostaDAO.save(resp);
-                        respostas.add(resp);
-                    }
-                }
-
-                pergunta.setRespostas(respostas);
-                perguntas.add(pergunta);
+//                else{
+//                    break;
+//                }
             }
-//        }
+        }
         return perguntas;
     }
 
@@ -521,6 +503,7 @@ public class FormCamRegActivityNew extends AppCompatActivity
         arguments.putInt(QuestaoDetailFragment.ARG_FORMULARIO_ID, formulario.getId());
 
         QuestaoDetailFragment fragment = new QuestaoDetailFragment();
+
         fragment.setArguments(arguments);
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.questao_detail_container, fragment)

@@ -32,6 +32,10 @@ public class TipoFormularioDAO {
         values.put(AppescaHelper.COL_TIPO_FORMULARIO_ORDEM, tipoFormulario.getOrdem());
 
         db.insert(AppescaHelper.TABLE_TIPO_FORMULARIO, null,values);
+
+        if (db != null && db.isOpen()) {
+            db.close();
+        }
     }
 
     public void updateTipoFormulario(TipoFormulario tipoFormulario){
@@ -46,6 +50,10 @@ public class TipoFormularioDAO {
         db.update(AppescaHelper.TABLE_TIPO_FORMULARIO, values,
                 AppescaHelper.COL_TIPO_FORMULARIO_ID + " = ?",
                 new String[]{String.valueOf(tipoFormulario.getId())});
+
+        if (db != null && db.isOpen()) {
+            db.close();
+        }
     }
 
     public void deleteTipoFormularioById(int idTipoFormulario){
@@ -53,6 +61,10 @@ public class TipoFormularioDAO {
 
         db.delete(AppescaHelper.TABLE_TIPO_FORMULARIO, AppescaHelper.COL_TIPO_FORMULARIO_ID + " = ?",
                 new String[]{String.valueOf(idTipoFormulario)});
+
+        if (db!=null && db.isOpen()) {
+            db.close();
+        }
     }
 
     public List<TipoFormulario> getAllTipoFormulario() {
@@ -77,6 +89,19 @@ public class TipoFormularioDAO {
             tipoFormularioList.add(tipoFormulario);
             cursor.moveToNext();
         }
+
+        if (cursor != null && !cursor.isClosed()) {
+            cursor.close();
+            db.close();
+        }
+
+
         return tipoFormularioList;
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        super.finalize();
+        appescaHelper.close();
     }
 }

@@ -53,8 +53,21 @@ public abstract class BaseDAO <T extends BaseModel>{
         SQLiteDatabase db = appescaHelper.getReadableDatabase();
         Cursor cursor = db.rawQuery(SELECT_FROM_TABLE() + " WHERE " + COLUNA_CHAVE_PRIMARIA + " = ?", new String[]{id + ""});
         if(cursor.moveToFirst()) {
-            return factoryEntity(cursor);
+            T t = factoryEntity(cursor);
+
+            if (cursor != null && !cursor.isClosed()) {
+                cursor.close();
+                db.close();
+            }
+
+            return t;
         }else{
+
+            if (cursor != null && !cursor.isClosed()) {
+                cursor.close();
+                db.close();
+            }
+
             return null;
         }
     }
@@ -64,6 +77,10 @@ public abstract class BaseDAO <T extends BaseModel>{
         ContentValues values = factoryContentValues(entidade);
         long id = db.insert(TABELA_PRINCIPAL, null, values);
         entidade = findById((int)id);
+
+        if(db!=null && db.isOpen()){
+            db.close();
+        }
     }
 
     private void update(T entidade){
@@ -73,6 +90,10 @@ public abstract class BaseDAO <T extends BaseModel>{
         db.update(TABELA_PRINCIPAL, values,
                 COLUNA_CHAVE_PRIMARIA + " = ?",
                 new String[]{String.valueOf(entidade.getId())});
+
+        if(db!=null && db.isOpen()){
+            db.close();
+        }
     }
 
     public void delete(int id){
@@ -80,6 +101,10 @@ public abstract class BaseDAO <T extends BaseModel>{
 
         db.delete(TABELA_PRINCIPAL, COLUNA_CHAVE_PRIMARIA + " = ?",
                 new String[]{String.valueOf(id)});
+
+        if(db!=null && db.isOpen()){
+            db.close();
+        }
     }
 
     public List<T> listAll() {
@@ -97,6 +122,12 @@ public abstract class BaseDAO <T extends BaseModel>{
             list.add(factoryEntity(cursor));
             cursor.moveToNext();
         }
+
+        if (cursor != null && !cursor.isClosed()) {
+            cursor.close();
+            db.close();
+        }
+
         return list;
     }
 
@@ -111,6 +142,12 @@ public abstract class BaseDAO <T extends BaseModel>{
             list.add(factoryEntity(cursor));
             cursor.moveToNext();
         }
+
+        if (cursor != null && !cursor.isClosed()) {
+            cursor.close();
+            db.close();
+        }
+
         return list;
     }
 
@@ -154,5 +191,11 @@ public abstract class BaseDAO <T extends BaseModel>{
 
     public Context getContext() {
         return context;
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        super.finalize();
+        appescaHelper.close();
     }
 }

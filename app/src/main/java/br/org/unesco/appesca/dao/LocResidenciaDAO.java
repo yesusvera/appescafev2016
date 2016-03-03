@@ -40,6 +40,11 @@ public class LocResidenciaDAO {
         long id = db.insert(AppescaHelper.TABLE_LOC_RESIDENCIA, null, values);
 
         locResidencia.setId((int)id);
+
+        if (db != null && db.isOpen()) {
+            db.close();
+        }
+
         return locResidencia;
     }
 
@@ -56,6 +61,10 @@ public class LocResidenciaDAO {
         db.update(AppescaHelper.TABLE_LOC_RESIDENCIA, values,
                 AppescaHelper.COL_LOC_RESIDENCIA_ID + " = ?",
                 new String[]{String.valueOf(locResidencia.getId())});
+
+        if (db != null && db.isOpen()) {
+            db.close();
+        }
 
         return locResidencia;
     }
@@ -76,9 +85,27 @@ public class LocResidenciaDAO {
            locResidencia.setLocalResid(cursor.getInt(1));
            locResidencia.setResidUnConserv(cursor.getInt(2) == 1);
            locResidencia.setIdFormulario(cursor.getInt(3));
+
+           if (cursor != null && !cursor.isClosed()) {
+               cursor.close();
+               db.close();
+           }
+
            return locResidencia;
        }else{
+
+           if (cursor != null && !cursor.isClosed()) {
+               cursor.close();
+               db.close();
+           }
+
            return null;
        }
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        super.finalize();
+        appescaHelper.close();
     }
 }

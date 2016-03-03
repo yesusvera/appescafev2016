@@ -21,13 +21,13 @@ import static br.org.unesco.appesca.util.ConstantesUNESCO.FORMATO_DATA;
  */
 public class FormularioDAO {
 
-    private Context context;
+//    private Context context;
     private AppescaHelper appescaHelper;
 
 
     public FormularioDAO(Context context){
-        this.context = context;
-        appescaHelper = new AppescaHelper(this.context);
+//        this.context = context;
+        appescaHelper = new AppescaHelper(context);
     }
 
     public Formulario insertFormulario(Formulario formulario){
@@ -42,6 +42,11 @@ public class FormularioDAO {
         values.put(AppescaHelper.COL_FORMULARIO_SITUACAO, formulario.getSituacao());
 
         long id = db.insert(AppescaHelper.TABLE_FORMULARIO, null, values);
+
+        if (db != null && db.isOpen()) {
+            db.close();
+        }
+
         return getFormularioById((int)id);
     }
 
@@ -61,6 +66,11 @@ public class FormularioDAO {
         db.update(AppescaHelper.TABLE_FORMULARIO, values,
                 AppescaHelper.COL_FORMULARIO_ID + " = ?",
                 new String[]{String.valueOf(formulario.getId())});
+
+
+        if (db != null && db.isOpen()) {
+            db.close();
+        }
     }
 
     public void deleteFormularioById(int idFormulario){
@@ -68,6 +78,11 @@ public class FormularioDAO {
 
         db.delete(AppescaHelper.TABLE_FORMULARIO, AppescaHelper.COL_FORMULARIO_ID + " = ?",
                 new String[]{String.valueOf(idFormulario)});
+
+
+        if (db != null && db.isOpen()) {
+            db.close();
+        }
     }
 
     public List<Formulario> listarTodosPorUsuario(int idUsuario) {
@@ -99,6 +114,12 @@ public class FormularioDAO {
             formularioList.add(formulario);
             cursor.moveToNext();
         }
+
+        if (cursor != null && !cursor.isClosed()) {
+            cursor.close();
+            db.close();
+        }
+
         return formularioList;
     }
     public Formulario getFormularioById(int idFormulario) {
@@ -123,6 +144,12 @@ public class FormularioDAO {
         }
         formulario.setIdUsuario(cursor.getInt(3));
         formulario.setIdTipoFormulario(cursor.getInt(4));
+
+
+        if (cursor != null && !cursor.isClosed()) {
+            cursor.close();
+            db.close();
+        }
 
         return formulario;
     }
@@ -157,6 +184,12 @@ public class FormularioDAO {
             formularioList.add(formulario);
             cursor.moveToNext();
         }
+
+        if (cursor != null && !cursor.isClosed()) {
+            cursor.close();
+            db.close();
+        }
+
         return formularioList;
     }
 
@@ -201,6 +234,13 @@ public class FormularioDAO {
             formularioList.add(formulario);
             cursor.moveToNext();
         }
+
+
+        if (cursor != null && !cursor.isClosed()) {
+            cursor.close();
+            db.close();
+        }
+
         return formularioList;
     }
 
@@ -245,6 +285,12 @@ public class FormularioDAO {
             formularioList.add(formulario);
             cursor.moveToNext();
         }
+
+        if (cursor != null && !cursor.isClosed()) {
+            cursor.close();
+            db.close();
+        }
+
         return formularioList;
     }
 
@@ -277,6 +323,12 @@ public class FormularioDAO {
             formularioList.add(formulario);
             cursor.moveToNext();
         }
+
+        if (cursor != null && !cursor.isClosed()) {
+            cursor.close();
+            db.close();
+        }
+
         return formularioList;
     }
 
@@ -310,6 +362,12 @@ public class FormularioDAO {
             formularioList.add(formulario);
             cursor.moveToNext();
         }
+
+        if (cursor != null && !cursor.isClosed()) {
+            cursor.close();
+            db.close();
+        }
+
         return formularioList;
     }
 
@@ -321,5 +379,11 @@ public class FormularioDAO {
     @NonNull
     private String getDataFormatada(Formulario formulario) {
         return new SimpleDateFormat(FORMATO_DATA).format(formulario.getDataAplicacao());
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        super.finalize();
+        appescaHelper.close();
     }
 }

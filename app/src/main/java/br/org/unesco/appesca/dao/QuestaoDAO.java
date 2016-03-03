@@ -32,6 +32,11 @@ public class QuestaoDAO {
         values.put(AppescaHelper.COL_QUESTAO_ID_FORMULARIO, questao.getIdFormulario());
 
         long id = db.insert(AppescaHelper.TABLE_QUESTAO, null,values);
+
+        if (db != null && db.isOpen()) {
+            db.close();
+        }
+
         return getQuestaoById((int)id);
     }
 
@@ -47,6 +52,10 @@ public class QuestaoDAO {
         db.update(AppescaHelper.TABLE_QUESTAO, values,
                 AppescaHelper.COL_QUESTAO_ID + " = ?",
                 new String[]{String.valueOf(questao.getId())});
+
+        if (db != null && db.isOpen()) {
+            db.close();
+        }
     }
 
     public void deleteQuestaoById(int idQuestao){
@@ -54,6 +63,10 @@ public class QuestaoDAO {
 
         db.delete(AppescaHelper.TABLE_QUESTAO, AppescaHelper.COL_QUESTAO_ID + " = ?",
                 new String[]{String.valueOf(idQuestao)});
+
+        if (db != null && db.isOpen()) {
+            db.close();
+        }
     }
 
     public List<Questao> getAllQuestao() {
@@ -78,6 +91,12 @@ public class QuestaoDAO {
             questaoList.add(questao);
             cursor.moveToNext();
         }
+
+        if (cursor != null && !cursor.isClosed()) {
+            cursor.close();
+            db.close();
+        }
+
         return questaoList;
     }
 
@@ -100,6 +119,11 @@ public class QuestaoDAO {
 
         PerguntaDAO respostaDAO = new PerguntaDAO(context);
         questao.setPerguntas(respostaDAO.findPerguntasByQuestao(questao.getId()));
+
+        if (cursor != null && !cursor.isClosed()) {
+            cursor.close();
+            db.close();
+        }
 
         return questao;
     }
@@ -130,6 +154,11 @@ public class QuestaoDAO {
             questaoList.add(questao);
             cursor.moveToNext();
         }
+
+        if (cursor != null && !cursor.isClosed()) {
+            cursor.close();
+            db.close();
+        }
         return questaoList;
     }
 
@@ -155,6 +184,20 @@ public class QuestaoDAO {
             PerguntaDAO respostaDAO = new PerguntaDAO(context);
             questao.setPerguntas(respostaDAO.findPerguntasByQuestao(questao.getId()));
         }
+
+        if (cursor != null && !cursor.isClosed()) {
+            cursor.close();
+            db.close();
+        }
+
+
         return questao;
+    }
+
+
+    @Override
+    protected void finalize() throws Throwable {
+        super.finalize();
+        appescaHelper.close();
     }
 }

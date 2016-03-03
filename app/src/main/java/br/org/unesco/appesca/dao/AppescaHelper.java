@@ -108,14 +108,15 @@ public class AppescaHelper extends SQLiteOpenHelper{
     public static final String COL_MEMBROS_EQUIPE_DATA_CRIACAO = "DATA_CRIACAO";
 
     private Context mContext;
-    private SQLiteDatabase mDataBase;
+//    private SQLiteDatabase mDataBase;
 
     public AppescaHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
 
-        mContext = context;
-        mDataBase = getWritableDatabase();
+//        mContext = context;
+//        mDataBase = getWritableDatabase();
     }
+
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
@@ -334,5 +335,14 @@ public class AppescaHelper extends SQLiteOpenHelper{
         sql.append("); ");
 
         return sql.toString();
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        try{
+            super.close();
+        }catch(Exception e){
+
+        }
     }
 }
