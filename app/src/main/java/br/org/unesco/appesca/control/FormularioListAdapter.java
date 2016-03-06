@@ -18,6 +18,7 @@ import br.org.unesco.appesca.R;
 import br.org.unesco.appesca.dao.QuestaoDAO;
 import br.org.unesco.appesca.model.Formulario;
 import br.org.unesco.appesca.model.Questao;
+import br.org.unesco.appesca.util.AppescaUtil;
 import br.org.unesco.appesca.util.ConstantesIdsFormularios;
 import br.org.unesco.appesca.util.ConstantesUNESCO;
 import br.org.unesco.appesca.view.FormCamRegActivityNew;
@@ -131,6 +132,7 @@ public class FormularioListAdapter extends RecyclerView.Adapter<FormularioListAd
         holder.imgVisualizarFormulario.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                AppescaUtil.limparMemoria();
                 Intent intent = new Intent(FormularioListAdapter.this.context, FormCamRegActivityNew.class);
                 intent.putExtra(FormCamRegActivityNew.ID_FORMULARIO_OPEN, formulario);
                 FormularioListAdapter.this.context.startActivity(intent);

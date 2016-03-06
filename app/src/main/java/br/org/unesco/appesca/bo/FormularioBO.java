@@ -1,5 +1,7 @@
 package br.org.unesco.appesca.bo;
 
+import android.util.Log;
+
 import br.org.unesco.appesca.model.Formulario;
 
 /**
@@ -9,6 +11,7 @@ public class FormularioBO {
 
     public void enviarFormulario(Formulario formulario){
 
+        Log.i("FORMULARIO", formulario.toString());
 
     }
 

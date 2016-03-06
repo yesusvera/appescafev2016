@@ -28,6 +28,7 @@ import br.org.unesco.appesca.R;
 import br.org.unesco.appesca.control.FormularioListDetailFragment;
 import br.org.unesco.appesca.dao.UsuarioDAO;
 import br.org.unesco.appesca.model.Identity;
+import br.org.unesco.appesca.util.AppescaUtil;
 import br.org.unesco.appesca.util.ConnectionNetwork;
 import br.org.unesco.appesca.util.ConstantesREST;
 import br.org.unesco.appesca.util.DBBitmapUtil;
@@ -250,6 +251,7 @@ public class PrincipalUnescoActivity extends AppCompatActivity
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        AppescaUtil.limparMemoria();
                         Intent intent = new Intent(PrincipalUnescoActivity.this, FormCamRegActivityNew.class);
                         intent.putExtra(FormCamRegActivityNew.ID_NOME_FORMULARIO, nome);
                         intent.putExtra(FormCamRegActivityNew.ID_TIPO_FORMULARIO, tipoFormulario);

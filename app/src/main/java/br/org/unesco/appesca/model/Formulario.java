@@ -80,4 +80,17 @@ public class Formulario implements java.io.Serializable {
 	public void setSituacao(int situacao) {
 		this.situacao = situacao;
 	}
+
+	@Override
+	public String toString() {
+		return "Formulario{" +
+				"id=" + id +
+				", nome='" + nome + '\'' +
+				", idTipoFormulario=" + idTipoFormulario +
+				", idUsuario=" + idUsuario +
+				", dataAplicacao=" + dataAplicacao +
+				", situacao=" + situacao +
+				", listQuestoes=" + listQuestoes +
+				'}';
+	}
 }

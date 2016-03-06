@@ -31,6 +31,32 @@
         android:layout_margin="@dimen/fab_margin"
         android:src="@android:drawable/ic_menu_save" />
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:paddingBottom="10dp"
+        android:orientation="vertical">
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="400dp"
+            android:max="100"
+            android:progress="50"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBarRespostas" />
+        <TextView
+            android:id="@+id/txtTextoResposta"
+            android:text="0 de 0 questões respondidas"
+            android:textSize="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="bold|italic" />
+        </LinearLayout>
+
+
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/float_button_menu_back"
         android:layout_width="wrap_content"

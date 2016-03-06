@@ -40,6 +40,7 @@ import br.org.unesco.appesca.model.LocResidencia;
 import br.org.unesco.appesca.model.Pergunta;
 import br.org.unesco.appesca.model.Questao;
 import br.org.unesco.appesca.model.Resposta;
+import br.org.unesco.appesca.util.AppescaUtil;
 import br.org.unesco.appesca.util.ConstantesIdsFormularios;
 
 public class FormCamRegActivityNew extends AppCompatActivity
@@ -170,9 +171,8 @@ public class FormCamRegActivityNew extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                    AppescaUtil.limparMemoria();
                     salvarQuestaoAtual(true);
-
             }
         });
 
@@ -321,22 +321,34 @@ public class FormCamRegActivityNew extends AppCompatActivity
                 }
 
                 ProgressBar progressBar = (ProgressBar)cabecalhoNavigationView.findViewById(R.id.progressBarRespostas);
-                if(progressBar!=null){
-                    progressBar.setMax(arraysIdsMenuLateral.length);
-                    TextView txtTextoResposta = (TextView)cabecalhoNavigationView.findViewById(R.id.txtTextoResposta);
+                TextView txtTextoResposta = (TextView)cabecalhoNavigationView.findViewById(R.id.txtTextoResposta);
 
-                    if(listaQuestoes==null || listaQuestoes.size() == 0) {
-                        progressBar.setProgress(0);
-                        txtTextoResposta.setText("Nenhuma questão respondida");
-                    }else {
-                        progressBar.setProgress(listaQuestoes.size());
-                        txtTextoResposta.setText((listaQuestoes == null ? 0 : listaQuestoes.size()) + " de " + arraysIdsMenuLateral.length + " respondidas.");
-                        if(listaQuestoes.size() == arraysIdsMenuLateral.length) {
-                            txtTextoResposta.setText(txtTextoResposta.getText()+"\nTodas as questões foram respondidas.\nFormulário pronto para envio");
-                        }
-                    }
+                atualizaProgresso(progressBar, txtTextoResposta, listaQuestoes);
+
+
+                ProgressBar progressBarPrincipal = (ProgressBar)findViewById(R.id.progressBarRespostas);
+                TextView txtTextoRespostaPrincipal = (TextView)findViewById(R.id.txtTextoResposta);
+
+                atualizaProgresso(progressBarPrincipal, txtTextoRespostaPrincipal, listaQuestoes);
+
+            }
+    }
+
+    public void atualizaProgresso(ProgressBar progressBar,TextView txtTextoResposta,  List<Questao> listaQuestoes ){
+        if(progressBar!=null){
+            progressBar.setMax(arraysIdsMenuLateral.length);
+
+            if(listaQuestoes==null || listaQuestoes.size() == 0) {
+                progressBar.setProgress(0);
+                txtTextoResposta.setText("Nenhuma questão respondida");
+            }else {
+                progressBar.setProgress(listaQuestoes.size());
+                txtTextoResposta.setText((listaQuestoes == null ? 0 : listaQuestoes.size()) + " de " + arraysIdsMenuLateral.length + " respondidas.");
+                if(listaQuestoes.size() == arraysIdsMenuLateral.length) {
+                    txtTextoResposta.setText(txtTextoResposta.getText()+"\nTodas as questões foram respondidas.\nFormulário pronto para envio");
                 }
             }
+        }
     }
 
 
