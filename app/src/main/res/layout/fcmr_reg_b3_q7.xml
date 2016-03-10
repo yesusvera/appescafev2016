@@ -9,7 +9,7 @@
     <!-- CONTAINER GERAL -->
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:background="@drawable/layout_questao">
@@ -61,67 +61,63 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="30dp">
-
-                    <RadioGroup
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                                android:orientation="vertical">
-                            <RadioButton
+                    
+                            <CheckBox
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Plantas medicinais"
                                 android:textAppearance="@style/style_resposta"
-                                android:id="@+id/perg1_rb_resp1" />
+                                android:id="@+id/perg1_cb_resp1" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Chás e infusões"
                                 android:textAppearance="@style/style_resposta"
-                                android:id="@+id/perg1_rb_resp2" />
+                                android:id="@+id/perg1_cb_resp2" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Banhos de ervas"
                                 android:textAppearance="@style/style_resposta"
-                                android:id="@+id/perg1_rb_resp3" />
+                                android:id="@+id/perg1_cb_resp3" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Preparados e garrafadas"
                                 android:textAppearance="@style/style_resposta"
-                                android:id="@+id/perg1_rb_resp4" />
+                                android:id="@+id/perg1_cb_resp4" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Tinturas"
                                 android:textAppearance="@style/style_resposta"
-                                android:id="@+id/perg1_rb_resp5" />
+                                android:id="@+id/perg1_cb_resp5" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Xaropes, raízes e outros alimentos"
                                 android:textAppearance="@style/style_resposta"
-                                android:id="@+id/perg1_rb_resp6" />
+                                android:id="@+id/perg1_cb_resp6" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Rezas e benzeduras"
                                 android:textAppearance="@style/style_resposta"
-                                android:id="@+id/perg1_rb_resp7" />
+                                android:id="@+id/perg1_cb_resp7" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Outros"
                                 android:textAppearance="@style/style_resposta"
-                                android:id="@+id/perg1_rb_resp8" />
-                    </RadioGroup>
+                                android:id="@+id/perg1_cb_resp8" />
+                    
                 </LinearLayout>
             </LinearLayout>
 

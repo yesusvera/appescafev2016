@@ -120,10 +120,10 @@ public class FormularioListAdapter extends RecyclerView.Adapter<FormularioListAd
         Questao questao = questaoDAO.findQuestaoByOrdemIdFormulario(0, formulario.getId());
 
         try {
-            holder.txtNomeEntrevistado.setText(questao.getPerguntas().get(0).getRespostas().get(0).getTexto());
-            String ufMunicipio = questao.getPerguntas().get(3).getRespostas().get(0).getTexto() +
+            holder.txtNomeEntrevistado.setText(questao.getListaPerguntas().get(0).getRespostas().get(0).getTexto());
+            String ufMunicipio = questao.getListaPerguntas().get(3).getRespostas().get(0).getTexto() +
                     "/" +
-                    questao.getPerguntas().get(2).getRespostas().get(0).getTexto();
+                    questao.getListaPerguntas().get(2).getRespostas().get(0).getTexto();
             holder.txtUfMunicipio.setText(ufMunicipio);
         }catch(Exception e){
             Log.i("Erro", "teste");

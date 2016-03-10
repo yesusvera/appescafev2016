@@ -70,7 +70,7 @@ public class QuestaoDetailFragment extends Fragment {
         Questao questao = questaoDAO.findQuestaoByOrdemIdFormulario(ordemQuestao, idformulario);
 
         if(questao!=null){
-            List<Pergunta> listaPerguntas = questao.getPerguntas();
+            List<Pergunta> listaPerguntas = questao.getListaPerguntas();
 
             for(Pergunta pergunta : listaPerguntas){
                 String currentPergunta = ConstantesIdsFormularios.PERGUNTA.concat(String.valueOf(pergunta.getOrdem()));

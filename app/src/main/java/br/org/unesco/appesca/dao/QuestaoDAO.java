@@ -10,9 +10,6 @@ import java.util.List;
 
 import br.org.unesco.appesca.model.Questao;
 
-/**
- * Created by marcosmagalhaes on 09/01/16.
- */
 public class QuestaoDAO {
 
     private Context context;
@@ -118,7 +115,7 @@ public class QuestaoDAO {
         questao.setIdFormulario(cursor.getInt(3));
 
         PerguntaDAO respostaDAO = new PerguntaDAO(context);
-        questao.setPerguntas(respostaDAO.findPerguntasByQuestao(questao.getId()));
+        questao.setListaPerguntas(respostaDAO.findPerguntasByQuestao(questao.getId()));
 
         if (cursor != null && !cursor.isClosed()) {
             cursor.close();
@@ -162,6 +159,43 @@ public class QuestaoDAO {
         return questaoList;
     }
 
+
+    public List<Questao> getQuestoesRespostasByFormulario(int idFormulario) {
+        SQLiteDatabase db = appescaHelper.getReadableDatabase();
+        Cursor cursor = db.rawQuery(
+                "SELECT " + AppescaHelper.COL_QUESTAO_ID + " , " +
+                        AppescaHelper.COL_QUESTAO_TITULO + " , " +
+                        AppescaHelper.COL_QUESTAO_ORDEM + " , " +
+                        AppescaHelper.COL_QUESTAO_ID_FORMULARIO +
+                        " FROM " + AppescaHelper.TABLE_QUESTAO +
+                        " WHERE " + AppescaHelper.COL_QUESTAO_ID_FORMULARIO + " = ?", new String[]{String.valueOf(idFormulario)});
+        cursor.moveToFirst();
+
+        List<Questao> questaoList = new ArrayList<Questao>();
+
+        PerguntaDAO respostaDAO = new PerguntaDAO(context);
+
+        for (int i = 0; i < cursor.getCount(); i++) {
+            Questao questao = new Questao();
+            questao.setId(cursor.getInt(0));
+            questao.setTitulo(cursor.getString(1));
+            questao.setOrdem(cursor.getInt(2));
+            questao.setIdFormulario(cursor.getInt(3));
+
+            questao.setListaPerguntas(respostaDAO.findPerguntasByQuestao(questao.getId()));
+
+            questaoList.add(questao);
+            cursor.moveToNext();
+        }
+
+        if (cursor != null && !cursor.isClosed()) {
+            cursor.close();
+            db.close();
+        }
+        return questaoList;
+    }
+
+
     public Questao findQuestaoByOrdemIdFormulario(int ordem, int idFormulario) {
         SQLiteDatabase db = appescaHelper.getReadableDatabase();
         Cursor cursor = db.rawQuery(
@@ -182,7 +216,7 @@ public class QuestaoDAO {
             questao.setIdFormulario(cursor.getInt(3));
 
             PerguntaDAO respostaDAO = new PerguntaDAO(context);
-            questao.setPerguntas(respostaDAO.findPerguntasByQuestao(questao.getId()));
+            questao.setListaPerguntas(respostaDAO.findPerguntasByQuestao(questao.getId()));
         }
 
         if (cursor != null && !cursor.isClosed()) {

@@ -10,22 +10,9 @@ public class Pergunta implements java.io.Serializable {
 	private Boolean booleana;
 	private Boolean respBooleana;
 	private Integer ordem;
-	private int idQuestao;
+	private Questao questao = new Questao();
 	private List<Resposta> respostas;
 
-	public Pergunta() {
-	}
-
-	public Pergunta(int idQuestao) {
-		this.idQuestao = idQuestao;
-	}
-
-	public Pergunta(Boolean booleana, Boolean respBooleana, Integer ordem, int idQuestao) {
-		this.booleana = booleana;
-		this.respBooleana = respBooleana;
-		this.ordem = ordem;
-		this.idQuestao = idQuestao;
-	}
 
 	public Integer getId() {
 		return this.id;
@@ -59,12 +46,8 @@ public class Pergunta implements java.io.Serializable {
 		this.ordem = ordem;
 	}
 
-	public int getIdQuestao() {
-		return this.idQuestao;
-	}
-
-	public void setIdQuestao(int idQuestao) {
-		this.idQuestao = idQuestao;
+	public Questao getQuestao() {
+		return questao;
 	}
 
 	public List<Resposta> getRespostas() {

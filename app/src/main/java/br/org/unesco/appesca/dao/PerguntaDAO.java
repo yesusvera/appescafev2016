@@ -30,7 +30,7 @@ public class PerguntaDAO {
         values.put(AppescaHelper.COL_PERGUNTA_BOOLEANA, pergunta.getBooleana());
         values.put(AppescaHelper.COL_PERGUNTA_RESP_BOOLEANA, pergunta.getRespBooleana());
         values.put(AppescaHelper.COL_PERGUNTA_ORDEM, pergunta.getOrdem());
-        values.put(AppescaHelper.COL_PERGUNTA_ID_QUESTAO, pergunta.getIdQuestao());
+        values.put(AppescaHelper.COL_PERGUNTA_ID_QUESTAO, pergunta.getQuestao().getId());
 
         long id = db.insert(AppescaHelper.TABLE_PERGUNTA, null, values);
 
@@ -61,7 +61,7 @@ public class PerguntaDAO {
             if(cursor.getInt(2) == 2)
                 pergunta.setRespBooleana(true);
             pergunta.setOrdem(cursor.getInt(3));
-            pergunta.setIdQuestao(cursor.getInt(4));
+            pergunta.getQuestao().setId(cursor.getInt(4));
 
             RespostaDAO respostaDAO = new RespostaDAO(context);
             pergunta.setRespostas(respostaDAO.findRespostasByPergunta(pergunta.getId()));
@@ -83,7 +83,7 @@ public class PerguntaDAO {
         values.put(AppescaHelper.COL_PERGUNTA_BOOLEANA, pergunta.getBooleana());
         values.put(AppescaHelper.COL_PERGUNTA_RESP_BOOLEANA, pergunta.getRespBooleana());
         values.put(AppescaHelper.COL_PERGUNTA_ORDEM, pergunta.getOrdem());
-        values.put(AppescaHelper.COL_PERGUNTA_ID_QUESTAO, pergunta.getIdQuestao());
+        values.put(AppescaHelper.COL_PERGUNTA_ID_QUESTAO, pergunta.getQuestao().getId());
 
         db.update(AppescaHelper.TABLE_PERGUNTA, values,
                 AppescaHelper.COL_PERGUNTA_ID + " = ?",
@@ -126,7 +126,7 @@ public class PerguntaDAO {
             if(cursor.getInt(2) == 2)
                 pergunta.setRespBooleana(true);
             pergunta.setOrdem(cursor.getInt(3));
-            pergunta.setIdQuestao(cursor.getInt(4));
+            pergunta.getQuestao().setId(cursor.getInt(4));
             perguntaList.add(pergunta);
             cursor.moveToNext();
         }
@@ -161,7 +161,7 @@ public class PerguntaDAO {
             if(cursor.getInt(2) == 2)
                 pergunta.setRespBooleana(true);
             pergunta.setOrdem(cursor.getInt(3));
-            pergunta.setIdQuestao(cursor.getInt(4));
+            pergunta.getQuestao().setId(cursor.getInt(4));
 
             RespostaDAO respostaDAO = new RespostaDAO(context);
             pergunta.setRespostas(respostaDAO.findRespostasByPergunta(pergunta.getId()));
@@ -199,7 +199,7 @@ public class PerguntaDAO {
             if(cursor.getInt(2) == 2)
                 pergunta.setRespBooleana(true);
             pergunta.setOrdem(cursor.getInt(3));
-            pergunta.setIdQuestao(cursor.getInt(4));
+            pergunta.getQuestao().setId(cursor.getInt(4));
 
             RespostaDAO respostaDAO = new RespostaDAO(context);
             pergunta.setRespostas(respostaDAO.findRespostasByPergunta(pergunta.getId()));

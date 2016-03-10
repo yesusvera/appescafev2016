@@ -6,7 +6,7 @@
     <!-- CONTAINER GERAL -->
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:background="@drawable/layout_questao">
@@ -67,6 +67,15 @@
                         android:text="Não"
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg1_rb_resp2"
+                        android:paddingRight="15dp"/>
+
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Não se aplica"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/perg1_rb_resp3"
                         android:paddingRight="15dp"/>
                 </RadioGroup>
             </LinearLayout>

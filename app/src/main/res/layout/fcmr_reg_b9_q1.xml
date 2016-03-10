@@ -84,14 +84,14 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:id="@+id/perg1_et_resp1"
-                                    android:lines="4"
+                                    android:lines="9"
                                     android:textAppearance="@style/style_resposta"/>
 
                                 <EditText
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:id="@+id/perg1_et_resp2"
-                                    android:lines="4"
+                                    android:lines="9"
                                     android:textAppearance="@style/style_resposta"/>
 
                             </TableRow>

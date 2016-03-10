@@ -29,7 +29,7 @@ public class QuestaoBO {
     public void excluirQuestao(Questao questao){
 
         if (questao != null) {
-            List<Pergunta> listaPerguntas = questao.getPerguntas();
+            List<Pergunta> listaPerguntas = questao.getListaPerguntas();
 
             for (Pergunta pergunta : listaPerguntas) {
                 List<Resposta> listaRespostas = pergunta.getRespostas();

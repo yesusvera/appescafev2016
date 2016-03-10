@@ -1,5 +1,6 @@
 package br.org.unesco.appesca.model;
 
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
@@ -12,18 +13,11 @@ public class Formulario implements java.io.Serializable {
 	private int idTipoFormulario;
 	private int idUsuario;
 	private Date dataAplicacao;
+	private BigDecimal latitude;
+	private BigDecimal longitude;
 	private int situacao;
-	private List<Questao> listQuestoes;
+	private List<Questao> listaQuestoes;
 
-	public Formulario() {
-	}
-
-	public Formulario(String nome, int idTipoFormulario, int idUsuario, Date dataAplicacao) {
-		this.nome = nome;
-		this.idTipoFormulario = idTipoFormulario;
-		this.idUsuario = idUsuario;
-		this.dataAplicacao = dataAplicacao;
-	}
 
 	public Integer getId() {
 		return this.id;
@@ -65,12 +59,12 @@ public class Formulario implements java.io.Serializable {
 		this.dataAplicacao = dataAplicacao;
 	}
 
-	public List<Questao> getListQuestoes() {
-		return listQuestoes;
+	public List<Questao> getListaQuestoes() {
+		return listaQuestoes;
 	}
 
-	public void setListQuestoes(List<Questao> listQuestoes) {
-		this.listQuestoes = listQuestoes;
+	public void setListaQuestoes(List<Questao> listQuestoes) {
+		this.listaQuestoes = listQuestoes;
 	}
 
 	public int getSituacao() {
@@ -81,16 +75,19 @@ public class Formulario implements java.io.Serializable {
 		this.situacao = situacao;
 	}
 
-	@Override
-	public String toString() {
-		return "Formulario{" +
-				"id=" + id +
-				", nome='" + nome + '\'' +
-				", idTipoFormulario=" + idTipoFormulario +
-				", idUsuario=" + idUsuario +
-				", dataAplicacao=" + dataAplicacao +
-				", situacao=" + situacao +
-				", listQuestoes=" + listQuestoes +
-				'}';
+	public BigDecimal getLatitude() {
+		return latitude;
+	}
+
+	public void setLatitude(BigDecimal latitude) {
+		this.latitude = latitude;
+	}
+
+	public BigDecimal getLongitude() {
+		return longitude;
+	}
+
+	public void setLongitude(BigDecimal longitude) {
+		this.longitude = longitude;
 	}
 }

@@ -44,17 +44,13 @@
                 android:text="Quais são os bens utilizados na pesca e, se realizado, no beneficiamento?"
                 />
 
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
 
-                <RadioButton
+                <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Embarcação (se marcado, responda as questões 8.1.1 a 8.1.5). Quantas possui?"
                     android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg1_rb_resp1"
+                    android:id="@+id/perg1_cb_resp1"
                     android:paddingRight="15dp"/>
 
                 <EditText
@@ -67,12 +63,12 @@
 
 
 
-                <RadioButton
+                <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Motor de popa. Quantos possui?"
                     android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg1_rb_resp3"
+                    android:id="@+id/perg1_cb_resp3"
                     android:paddingRight="15dp"
                     android:checked="false" />
 
@@ -85,12 +81,12 @@
 
 
 
-                <RadioButton
+                <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Rede de arrasto. Quantos possui?"
                     android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg1_rb_resp5"
+                    android:id="@+id/perg1_cb_resp5"
                     android:paddingRight="15dp"
                     android:checked="false" />
 
@@ -103,12 +99,12 @@
 
 
 
-                <RadioButton
+                <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Tarrafa. Quantos possui?"
                     android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg1_rb_resp7"
+                    android:id="@+id/perg1_cb_resp7"
                     android:paddingRight="15dp"
                     android:checked="false" />
 
@@ -121,12 +117,12 @@
 
 
 
-                <RadioButton
+                <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Viveiro. Quantos possui?"
                     android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg1_rb_resp9"
+                    android:id="@+id/perg1_cb_resp9"
                     android:paddingRight="15dp"
                     android:checked="false" />
 
@@ -139,12 +135,12 @@
 
 
 
-                <RadioButton
+                <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Matapi . Quantos possui?"
                     android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg1_rb_resp11"
+                    android:id="@+id/perg1_cb_resp11"
                     android:paddingRight="15dp"
                     android:checked="false" />
 
@@ -157,12 +153,12 @@
 
 
 
-                <RadioButton
+                <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=" Fogão . Quantos possui?"
                     android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg1_rb_resp13"
+                    android:id="@+id/perg1_cb_resp13"
                     android:paddingRight="15dp"
                     android:checked="false" />
 
@@ -175,12 +171,12 @@
 
 
 
-                <RadioButton
+                <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Freezer. Quantos possui?"
                     android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg1_rb_resp15"
+                    android:id="@+id/perg1_cb_resp15"
                     android:paddingRight="15dp"
                     android:checked="false" />
 
@@ -193,12 +189,12 @@
 
 
 
-                <RadioButton
+                <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Geladeira. Quantos possui?"
                     android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg1_rb_resp17"
+                    android:id="@+id/perg1_cb_resp17"
                     android:paddingRight="15dp"
                     android:checked="false" />
 
@@ -210,12 +206,12 @@
                     android:textAppearance="@style/style_resposta"/>
 
 
-                <RadioButton
+                <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Outros. Quais?"
                     android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg1_rb_resp19"
+                    android:id="@+id/perg1_cb_resp19"
                     android:paddingRight="15dp"
                     android:checked="false" />
 
@@ -240,8 +236,6 @@
                     android:paddingLeft="20dp"
                     android:id="@+id/perg1_et_resp21"
                     android:textAppearance="@style/style_resposta"/>
-
-            </RadioGroup>
 
         </LinearLayout>
 

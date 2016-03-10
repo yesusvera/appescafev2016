@@ -1,7 +1,6 @@
 package br.org.unesco.appesca.view;
 
 import android.app.AlertDialog;
-import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -217,9 +216,9 @@ public class FormCamRegActivityNew extends AppCompatActivity
             questao.setTitulo("Questão " + ordemQuestao);
             questao = questaoDAO.insertQuestao(questao);
 
-            questao.setPerguntas(buildPerguntaList(questao));
+            questao.setListaPerguntas(buildPerguntaList(questao));
 
-            if (questao.getPerguntas() != null && !questao.getPerguntas().isEmpty()) {
+            if (questao.getListaPerguntas() != null && !questao.getListaPerguntas().isEmpty()) {
                 questaoDAO.updateQuestao(questao);
             }
 
@@ -406,7 +405,7 @@ public class FormCamRegActivityNew extends AppCompatActivity
                             pergunta.setOrdem(seqPergunta);
                             pergunta.setBooleana(false);
                             pergunta.setRespBooleana(false);
-                            pergunta.setIdQuestao(questao.getId());
+                            pergunta.getQuestao().setId(questao.getId());
                             pergunta = perguntaDAO.insertPergunta(pergunta);
                         }
 
@@ -463,7 +462,7 @@ public class FormCamRegActivityNew extends AppCompatActivity
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
 
-                            List<Questao> listaQuestoes = questaoDAO.getQuestoesByFormulario(formulario.getId());
+                            List<Questao> listaQuestoes = questaoDAO.getQuestoesRespostasByFormulario(formulario.getId());
 
                             //VALIDACOES QUE IMPEDEM O ENVIO DO FORMULARIO
                             if (listaQuestoes == null || listaQuestoes.size() == 0) {
@@ -484,7 +483,7 @@ public class FormCamRegActivityNew extends AppCompatActivity
                                 return;
                             } else if (listaQuestoes.size() == arrayIdsQuestoes.length) {
 
-
+                                formulario.setListaQuestoes(listaQuestoes);
                                 new FormularioBO().enviarFormulario(formulario);
 
                                 Toast.makeText(getApplicationContext(), "Formulário enviado com sucesso!.", Toast.LENGTH_LONG).show();

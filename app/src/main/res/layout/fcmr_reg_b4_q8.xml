@@ -8,7 +8,7 @@
     <!-- CONTAINER GERAL -->
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:background="@drawable/layout_questao">
@@ -54,13 +54,14 @@
             android:paddingLeft="30dp"
             android:paddingBottom="10dp">
 
+
             <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Melhorar a estrutura da comunidade"
-                android:textAppearance="@style/style_resposta"
-                android:id="@+id/perg1_cb_resp1"
-              />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Melhorar a estrutura da comunidade"
+            android:textAppearance="@style/style_resposta"
+            android:id="@+id/perg1_cb_resp1"
+            />
 
             <CheckBox
                 android:layout_width="wrap_content"
@@ -133,6 +134,15 @@
                 android:id="@+id/perg1_et_resp10"
                 android:textAppearance="@style/style_resposta"
                 android:lines="2" />
+
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Não se aplica"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg1_cb_resp11"
+                />
 
         </LinearLayout>
 

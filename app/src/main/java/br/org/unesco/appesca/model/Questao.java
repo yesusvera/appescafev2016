@@ -10,20 +10,7 @@ public class Questao implements java.io.Serializable {
 	private String titulo;
 	private Integer ordem;
 	private int idFormulario;
-	private List<Pergunta> perguntas;
-
-	public Questao() {
-	}
-
-	public Questao(int idFormulario) {
-		this.idFormulario = idFormulario;
-	}
-
-	public Questao(String titulo, Integer ordem, int idFormulario) {
-		this.titulo = titulo;
-		this.ordem = ordem;
-		this.idFormulario = idFormulario;
-	}
+	private List<Pergunta> listaPerguntas;
 
 	public Integer getId() {
 		return this.id;
@@ -57,12 +44,11 @@ public class Questao implements java.io.Serializable {
 		this.idFormulario = idFormulario;
 	}
 
-	public List<Pergunta> getPerguntas() {
-		return perguntas;
+	public List<Pergunta> getListaPerguntas() {
+		return listaPerguntas;
 	}
 
-	public void setPerguntas(List<Pergunta> perguntas) {
-		this.perguntas = perguntas;
+	public void setListaPerguntas(List<Pergunta> listaPerguntas) {
+		this.listaPerguntas = listaPerguntas;
 	}
-
 }

@@ -38,17 +38,28 @@
     </item>
 
 
-    <item android:title="Equipes">
+    <!--<item android:title="Equipes">-->
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:id="@+id/idPrimeiraEquipe"-->
+                <!--android:icon="@drawable/equipe_icon"-->
+                <!--android:title="Primeira equipe" />-->
+
+            <!--<item-->
+                <!--android:id="@+id/idSegundaEquipe"-->
+                <!--android:icon="@drawable/equipe_icon"-->
+                <!--android:title="Segunda Equipe" />-->
+
+        <!--</menu>-->
+    <!--</item>-->
+
+
+
+    <item android:title="Versão do Appesca Mobile">
         <menu>
             <item
-                android:id="@+id/idPrimeiraEquipe"
-                android:icon="@drawable/equipe_icon"
-                android:title="Primeira equipe" />
-
-            <item
-                android:id="@+id/idSegundaEquipe"
-                android:icon="@drawable/equipe_icon"
-                android:title="Segunda Equipe" />
+                android:icon="@android:drawable/btn_star_big_off"
+                android:title="Versão 1.0 - 10/03/2016" />
 
         </menu>
     </item>
