@@ -64,7 +64,7 @@ public class PerguntaDAO {
             pergunta.getQuestao().setId(cursor.getInt(4));
 
             RespostaDAO respostaDAO = new RespostaDAO(context);
-            pergunta.setRespostas(respostaDAO.findRespostasByPergunta(pergunta.getId()));
+            pergunta.setListaRespostas(respostaDAO.findRespostasByPergunta(pergunta.getId()));
         }
 
         if (cursor != null && !cursor.isClosed()) {
@@ -153,6 +153,8 @@ public class PerguntaDAO {
 
         List<Pergunta> perguntaList = new ArrayList<Pergunta>();
 
+        RespostaDAO respostaDAO = new RespostaDAO(context);
+
         for (int i = 0; i < cursor.getCount(); i++) {
             Pergunta pergunta = new Pergunta();
             pergunta.setId(cursor.getInt(0));
@@ -163,8 +165,7 @@ public class PerguntaDAO {
             pergunta.setOrdem(cursor.getInt(3));
             pergunta.getQuestao().setId(cursor.getInt(4));
 
-            RespostaDAO respostaDAO = new RespostaDAO(context);
-            pergunta.setRespostas(respostaDAO.findRespostasByPergunta(pergunta.getId()));
+            pergunta.setListaRespostas(respostaDAO.findRespostasByPergunta(pergunta.getId()));
 
             perguntaList.add(pergunta);
             cursor.moveToNext();
@@ -202,7 +203,7 @@ public class PerguntaDAO {
             pergunta.getQuestao().setId(cursor.getInt(4));
 
             RespostaDAO respostaDAO = new RespostaDAO(context);
-            pergunta.setRespostas(respostaDAO.findRespostasByPergunta(pergunta.getId()));
+            pergunta.setListaRespostas(respostaDAO.findRespostasByPergunta(pergunta.getId()));
         }
 
         if (cursor != null && !cursor.isClosed()) {

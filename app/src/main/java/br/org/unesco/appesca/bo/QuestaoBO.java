@@ -32,7 +32,7 @@ public class QuestaoBO {
             List<Pergunta> listaPerguntas = questao.getListaPerguntas();
 
             for (Pergunta pergunta : listaPerguntas) {
-                List<Resposta> listaRespostas = pergunta.getRespostas();
+                List<Resposta> listaRespostas = pergunta.getListaRespostas();
 
                 for (Resposta resposta : listaRespostas) {
                     if(resposta!=null && resposta.getId()!=null) {

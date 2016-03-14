@@ -11,7 +11,7 @@ public class Pergunta implements java.io.Serializable {
 	private Boolean respBooleana;
 	private Integer ordem;
 	private Questao questao = new Questao();
-	private List<Resposta> respostas;
+	private List<Resposta> listaRespostas;
 
 
 	public Integer getId() {
@@ -50,11 +50,11 @@ public class Pergunta implements java.io.Serializable {
 		return questao;
 	}
 
-	public List<Resposta> getRespostas() {
-		return respostas;
+	public List<Resposta> getListaRespostas() {
+		return listaRespostas;
 	}
 
-	public void setRespostas(List<Resposta> respostas) {
-		this.respostas = respostas;
+	public void setListaRespostas(List<Resposta> listaRespostas) {
+		this.listaRespostas = listaRespostas;
 	}
 }

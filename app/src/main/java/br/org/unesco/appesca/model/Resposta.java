@@ -9,21 +9,8 @@ public class Resposta extends BaseModel {
 	private String texto;
 	private byte[] audio;
 	private int ordem;
-	private int idPergunta;
+	private Pergunta pergunta = new Pergunta();
 
-	public Resposta() {
-	}
-
-	public Resposta(int idPergunta) {
-		this.idPergunta = idPergunta;
-	}
-
-	public Resposta(Integer opcao, String texto, byte[] audio, int idPergunta) {
-		this.opcao = opcao;
-		this.texto = texto;
-		this.audio = audio;
-		this.idPergunta = idPergunta;
-	}
 
 	public Integer getId() {
 		return this.id;
@@ -57,12 +44,12 @@ public class Resposta extends BaseModel {
 		this.audio = audio;
 	}
 
-	public int getIdPergunta() {
-		return this.idPergunta;
+	public Pergunta getPergunta() {
+		return pergunta;
 	}
 
-	public void setIdPergunta(int idPergunta) {
-		this.idPergunta = idPergunta;
+	public void setPergunta(Pergunta pergunta) {
+		this.pergunta = pergunta;
 	}
 
 	public int getOrdem() {

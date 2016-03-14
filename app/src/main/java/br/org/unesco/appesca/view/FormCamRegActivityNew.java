@@ -212,7 +212,7 @@ public class FormCamRegActivityNew extends AppCompatActivity
         if (questao == null) {
             questao = new Questao();
             questao.setOrdem(ordemQuestao);
-            questao.setIdFormulario(formulario.getId());
+            questao.getFormulario().setId(formulario.getId());
             questao.setTitulo("Questão " + ordemQuestao);
             questao = questaoDAO.insertQuestao(questao);
 
@@ -268,7 +268,7 @@ public class FormCamRegActivityNew extends AppCompatActivity
             formulario.setSituacao(0);
 
             FormularioDAO formularioDAO = new FormularioDAO(this);
-            formulario = formularioDAO.insertFormulario(formulario);
+            formularioDAO.save(formulario);
         }else{
             dtCriacaoFormulario = formulario.getDataAplicacao();
 
@@ -344,7 +344,7 @@ public class FormCamRegActivityNew extends AppCompatActivity
                 progressBar.setProgress(listaQuestoes.size());
                 txtTextoResposta.setText((listaQuestoes == null ? 0 : listaQuestoes.size()) + " de " + arraysIdsMenuLateral.length + " respondidas.");
                 if(listaQuestoes.size() == arraysIdsMenuLateral.length) {
-                    txtTextoResposta.setText(txtTextoResposta.getText()+"\nTodas as questões foram respondidas.\nFormulário pronto para envio");
+                    txtTextoResposta.setText(txtTextoResposta.getText() + "\nTodas as questões foram respondidas.\nFormulário pronto para envio");
                 }
             }
         }
@@ -396,31 +396,29 @@ public class FormCamRegActivityNew extends AppCompatActivity
                             }
                         }
                     }
+                }
 
-                    if(respostas!=null && respostas.size() > 0) {
-                        Pergunta pergunta = perguntaDAO.findPerguntaByOrdemIdQuestao(seqPergunta, questao.getId());
+                if(respostas!=null && respostas.size() > 0) {
+                    Pergunta pergunta = perguntaDAO.findPerguntaByOrdemIdQuestao(seqPergunta, questao.getId());
 
-                        if (pergunta == null) {
-                            pergunta = new Pergunta();
-                            pergunta.setOrdem(seqPergunta);
-                            pergunta.setBooleana(false);
-                            pergunta.setRespBooleana(false);
-                            pergunta.getQuestao().setId(questao.getId());
-                            pergunta = perguntaDAO.insertPergunta(pergunta);
-                        }
-
-                        for(Resposta resp: respostas){
-                            resp.setIdPergunta(pergunta.getId());
-                            respostaDAO.save(resp);
-                        }
-
-                        pergunta.setRespostas(respostas);
-                        perguntas.add(pergunta);
+                    if (pergunta == null) {
+                        pergunta = new Pergunta();
+                        pergunta.setOrdem(seqPergunta);
+                        pergunta.setBooleana(false);
+                        pergunta.setRespBooleana(false);
+                        pergunta.getQuestao().setId(questao.getId());
+                        pergunta = perguntaDAO.insertPergunta(pergunta);
                     }
-//                else{
-//                    break;
-//                }
-            }
+
+                    for(Resposta resp: respostas){
+                        resp.getPergunta().setId(pergunta.getId());
+                        respostaDAO.save(resp);
+                    }
+
+                    pergunta.setListaRespostas(respostas);
+                    perguntas.add(pergunta);
+                }
+
         }
         return perguntas;
     }
@@ -432,7 +430,7 @@ public class FormCamRegActivityNew extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            encerrarFormulario();
         }
     }
 
@@ -452,68 +450,79 @@ public class FormCamRegActivityNew extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.itemEnviarFormulario) {
+            List<Questao> listaQuestoes = questaoDAO.getQuestoesRespostasByFormulario(formulario.getId());
+            formulario.setListaQuestoes(listaQuestoes);
+            new FormularioBO().enviarFormulario(formulario);
 
-            new AlertDialog.Builder(this)
-                    .setTitle("Appesca")
-                    .setMessage("Este formulário será enviado para aprovação, confirma o envio?")
-                    .setIcon(android.R.drawable.ic_dialog_alert)
+            Toast.makeText(getApplicationContext(), "Formulário enviado com sucesso!.", Toast.LENGTH_LONG).show();
 
-                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
+//            enviarFormulario();
+        }
+            if (id == R.id.itemClose) {
+                encerrarFormulario();
+            }
 
-                            List<Questao> listaQuestoes = questaoDAO.getQuestoesRespostasByFormulario(formulario.getId());
+        return super.onOptionsItemSelected(item);
+    }
 
-                            //VALIDACOES QUE IMPEDEM O ENVIO DO FORMULARIO
-                            if (listaQuestoes == null || listaQuestoes.size() == 0) {
+    private void enviarFormulario() {
+        new AlertDialog.Builder(this)
+                .setTitle("Appesca")
+                .setMessage("Este formulário será enviado para aprovação, confirma o envio?")
+                .setIcon(android.R.drawable.ic_dialog_alert)
 
-                                Toast.makeText(getApplicationContext(), "Não foi possível enviar. Nenhuma questão foi respondida.", Toast.LENGTH_LONG).show();
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
 
-                                return;
-                            } else if (listaQuestoes.size() < arrayIdsQuestoes.length) {
+                        List<Questao> listaQuestoes = questaoDAO.getQuestoesRespostasByFormulario(formulario.getId());
 
-                                new AlertDialog.Builder(FormCamRegActivityNew.this)
-                                        .setTitle("Appesca")
-                                        .setMessage("Não foi possível enviar. " +
-                                                " Você respondeu somente " + listaQuestoes.size() + " de " + arrayIdsQuestoes.length + " questões." +
-                                                "\nVerifique a lista ao lado para validar as questões não respondidas.")
-                                        .setIcon(android.R.drawable.ic_dialog_alert)
-                                        .setPositiveButton(android.R.string.ok, null).show();
+                        //VALIDACOES QUE IMPEDEM O ENVIO DO FORMULARIO
+                        if (listaQuestoes == null || listaQuestoes.size() == 0) {
 
-                                return;
-                            } else if (listaQuestoes.size() == arrayIdsQuestoes.length) {
+                            Toast.makeText(getApplicationContext(), "Não foi possível enviar. Nenhuma questão foi respondida.", Toast.LENGTH_LONG).show();
 
-                                formulario.setListaQuestoes(listaQuestoes);
-                                new FormularioBO().enviarFormulario(formulario);
+                            return;
+                        } else if (listaQuestoes.size() < arrayIdsQuestoes.length) {
 
-                                Toast.makeText(getApplicationContext(), "Formulário enviado com sucesso!.", Toast.LENGTH_LONG).show();
+                            new AlertDialog.Builder(FormCamRegActivityNew.this)
+                                    .setTitle("Appesca")
+                                    .setMessage("Não foi possível enviar. " +
+                                            " Você respondeu somente " + listaQuestoes.size() + " de " + arrayIdsQuestoes.length + " questões." +
+                                            "\nVerifique a lista ao lado para validar as questões não respondidas.")
+                                    .setIcon(android.R.drawable.ic_dialog_alert)
+                                    .setPositiveButton(android.R.string.ok, null).show();
+
+                            return;
+                        } else if (listaQuestoes.size() == arrayIdsQuestoes.length) {
+
+                            formulario.setListaQuestoes(listaQuestoes);
+                            new FormularioBO().enviarFormulario(formulario);
+
+                            Toast.makeText(getApplicationContext(), "Formulário enviado com sucesso!.", Toast.LENGTH_LONG).show();
 
 //                            formulario.setSituacao(1);
 //                            FormularioDAO formularioDAO = new FormularioDAO(FormCamRegActivityNew.this);
 //                            formulario = formularioDAO.insertFormulario(formulario);
 //                            Toast.makeText(getApplicationContext(), "Formulário salvo na base local.", Toast.LENGTH_LONG).show();Toast.makeText(getApplicationContext(), "Formulário enviado com sucesso!.", Toast.LENGTH_LONG).show();
-                                finish();
-                            }
+//                                finish();
                         }
-                    }). setNegativeButton(android.R.string.no, null). show();
                     }
-            if (id == R.id.itemClose) {
+                }). setNegativeButton(android.R.string.no, null). show();
+    }
 
-            new AlertDialog.Builder(this)
-                    .setTitle("Appesca")
-                    .setMessage("As últimas mudanças não salvas serão perdidadas. Deseja encerrar o formulário?")
-                    .setIcon(android.R.drawable.ic_dialog_alert)
-                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            finish();
-                        }
-                    })
-                    .setNegativeButton(android.R.string.no, null).show();
-
-        }
-
-        return super.onOptionsItemSelected(item);
+    private void encerrarFormulario() {
+        new AlertDialog.Builder(this)
+                .setTitle("Appesca")
+                .setMessage("As últimas mudanças não salvas serão perdidadas. Deseja encerrar o formulário?")
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+                })
+                .setNegativeButton(android.R.string.no, null).show();
     }
 
 
@@ -556,7 +565,9 @@ public class FormCamRegActivityNew extends AppCompatActivity
         Bundle arguments = new Bundle();
         arguments.putString(QuestaoDetailFragment.ARG_ITEM_ID, String.valueOf(idLayout));
         arguments.putInt(QuestaoDetailFragment.ARG_QUESTAO_ORDEM, ordemQuestao);
-        arguments.putInt(QuestaoDetailFragment.ARG_FORMULARIO_ID, formulario.getId());
+        if(formulario.getId()!=null) {
+            arguments.putInt(QuestaoDetailFragment.ARG_FORMULARIO_ID, formulario.getId());
+        }
 
         QuestaoDetailFragment fragment = new QuestaoDetailFragment();
 

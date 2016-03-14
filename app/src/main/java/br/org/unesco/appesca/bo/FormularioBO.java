@@ -21,7 +21,7 @@ public class FormularioBO {
 
     public void enviarFormulario(Formulario formulario){
 
-        Log.i("FORMULARIO", formulario.toString());
+//        Log.i("FORMULARIO", formulario.toString());
 
         FormularioREST formularioREST = new FormularioREST(formulario);
 

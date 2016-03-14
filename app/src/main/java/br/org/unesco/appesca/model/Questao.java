@@ -9,7 +9,7 @@ public class Questao implements java.io.Serializable {
 	private Integer id;
 	private String titulo;
 	private Integer ordem;
-	private int idFormulario;
+	private Formulario formulario = new Formulario();
 	private List<Pergunta> listaPerguntas;
 
 	public Integer getId() {
@@ -36,12 +36,12 @@ public class Questao implements java.io.Serializable {
 		this.ordem = ordem;
 	}
 
-	public int getIdFormulario() {
-		return this.idFormulario;
+	public Formulario getFormulario() {
+		return formulario;
 	}
 
-	public void setIdFormulario(int idFormulario) {
-		this.idFormulario = idFormulario;
+	public void setFormulario(Formulario formulario) {
+		this.formulario = formulario;
 	}
 
 	public List<Pergunta> getListaPerguntas() {

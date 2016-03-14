@@ -30,7 +30,7 @@ public class RespostaDAO extends BaseDAO<Resposta>  {
         values.put(AppescaHelper.COL_RESPOSTA_TEXTO, resposta.getTexto());
         values.put(AppescaHelper.COL_RESPOSTA_AUDIO, resposta.getAudio());
         values.put(AppescaHelper.COL_RESPOSTA_ORDEM, resposta.getOrdem());
-        values.put(AppescaHelper.COL_RESPOSTA_ID_PERGUNTA, resposta.getIdPergunta());
+        values.put(AppescaHelper.COL_RESPOSTA_ID_PERGUNTA, resposta.getPergunta().getId());
         return values;
     }
 
@@ -42,7 +42,7 @@ public class RespostaDAO extends BaseDAO<Resposta>  {
         resposta.setTexto(getString(cursor, AppescaHelper.COL_RESPOSTA_TEXTO));
         resposta.setAudio(getBlob(cursor, AppescaHelper.COL_RESPOSTA_AUDIO));
         resposta.setOrdem(getInt(cursor, AppescaHelper.COL_RESPOSTA_ORDEM));
-        resposta.setIdPergunta(getInt(cursor, AppescaHelper.COL_RESPOSTA_ID_PERGUNTA));
+        resposta.getPergunta().setId(getInt(cursor, AppescaHelper.COL_RESPOSTA_ID_PERGUNTA));
 
         return resposta;
     }

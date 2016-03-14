@@ -75,7 +75,7 @@ public class QuestaoDetailFragment extends Fragment {
             for(Pergunta pergunta : listaPerguntas){
                 String currentPergunta = ConstantesIdsFormularios.PERGUNTA.concat(String.valueOf(pergunta.getOrdem()));
 
-                List<Resposta> listaRespostas = pergunta.getRespostas();
+                List<Resposta> listaRespostas = pergunta.getListaRespostas();
 
                 for(Resposta resposta: listaRespostas) {
                         /** RADIOBUTTON **/

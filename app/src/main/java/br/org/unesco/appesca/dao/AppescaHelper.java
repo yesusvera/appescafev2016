@@ -19,6 +19,7 @@ public class AppescaHelper extends SQLiteOpenHelper{
     /********************* TABELA FORMULARIO ***********************/
     public static final String TABLE_FORMULARIO = "FORMULARIO";
     public static final String COL_FORMULARIO_ID = "ID_FORMULARIO";
+    public static final String COL_FORMULARIO_ID_SINCRONIZACAO = "ID_SINCRONIZACAO";
     public static final String COL_FORMULARIO_NOME = "NOME";
     public static final String COL_FORMULARIO_ID_TIPO_FORMULARIO = "ID_TIPO_FORMULARIO";
     public static final String COL_FORMULARIO_ID_USUARIO = "ID_USUARIO";
@@ -180,6 +181,7 @@ public class AppescaHelper extends SQLiteOpenHelper{
         sql.append(TABLE_FORMULARIO);
         sql.append(" ( ");
         sql.append(COL_FORMULARIO_ID + " INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL , ");
+        sql.append(COL_FORMULARIO_ID_SINCRONIZACAO + " TEXT , ");
         sql.append(COL_FORMULARIO_NOME + " TEXT , ");
         sql.append(COL_FORMULARIO_DATA_APLICACAO + " DATETIME , ");
         sql.append(COL_FORMULARIO_ID_USUARIO + " INTEGER , ");

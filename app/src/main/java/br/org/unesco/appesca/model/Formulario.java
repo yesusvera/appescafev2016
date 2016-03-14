@@ -4,11 +4,12 @@ import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
-public class Formulario implements java.io.Serializable {
+public class Formulario extends BaseModel implements java.io.Serializable {
 
 	private static final long serialVersionUID = 2165508619825487958L;
 
 	private Integer id;
+	private String idSincronizacao;
 	private String nome;
 	private int idTipoFormulario;
 	private int idUsuario;
@@ -20,11 +21,19 @@ public class Formulario implements java.io.Serializable {
 
 
 	public Integer getId() {
-		return this.id;
+		return id;
 	}
 
 	public void setId(Integer id) {
 		this.id = id;
+	}
+
+	public String getIdSincronizacao() {
+		return idSincronizacao;
+	}
+
+	public void setIdSincronizacao(String idSincronizacao) {
+		this.idSincronizacao = idSincronizacao;
 	}
 
 	public String getNome() {

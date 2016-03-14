@@ -50,33 +50,28 @@ public abstract class BaseDAO <T extends BaseModel>{
     }
 
     public T findById(int id) {
+        T t = null;
         SQLiteDatabase db = appescaHelper.getReadableDatabase();
         Cursor cursor = db.rawQuery(SELECT_FROM_TABLE() + " WHERE " + COLUNA_CHAVE_PRIMARIA + " = ?", new String[]{id + ""});
         if(cursor.moveToFirst()) {
-            T t = factoryEntity(cursor);
-
+            t = factoryEntity(cursor);
             if (cursor != null && !cursor.isClosed()) {
                 cursor.close();
-                db.close();
+                if(db!=null && db.isOpen()){
+                    db.close();
+                }
             }
-
-            return t;
-        }else{
-
-            if (cursor != null && !cursor.isClosed()) {
-                cursor.close();
-                db.close();
-            }
-
-            return null;
         }
+
+        return t;
     }
 
     private void insert(T entidade){
         SQLiteDatabase db = appescaHelper.getWritableDatabase();
         ContentValues values = factoryContentValues(entidade);
         long id = db.insert(TABELA_PRINCIPAL, null, values);
-        entidade = findById((int)id);
+        entidade.setId((int)id);
+//        entidade = findById((int)id);
 
         if(db!=null && db.isOpen()){
             db.close();

@@ -26,7 +26,7 @@ public class QuestaoDAO {
         ContentValues values = new ContentValues();
         values.put(AppescaHelper.COL_QUESTAO_TITULO, questao.getTitulo());
         values.put(AppescaHelper.COL_QUESTAO_ORDEM, questao.getOrdem());
-        values.put(AppescaHelper.COL_QUESTAO_ID_FORMULARIO, questao.getIdFormulario());
+        values.put(AppescaHelper.COL_QUESTAO_ID_FORMULARIO, questao.getFormulario().getId());
 
         long id = db.insert(AppescaHelper.TABLE_QUESTAO, null,values);
 
@@ -44,7 +44,7 @@ public class QuestaoDAO {
         values.put(AppescaHelper.COL_QUESTAO_ID, questao.getId());
         values.put(AppescaHelper.COL_QUESTAO_TITULO, questao.getTitulo());
         values.put(AppescaHelper.COL_QUESTAO_ORDEM, questao.getOrdem());
-        values.put(AppescaHelper.COL_QUESTAO_ID_FORMULARIO, questao.getIdFormulario());
+        values.put(AppescaHelper.COL_QUESTAO_ID_FORMULARIO, questao.getFormulario().getId());
 
         db.update(AppescaHelper.TABLE_QUESTAO, values,
                 AppescaHelper.COL_QUESTAO_ID + " = ?",
@@ -83,7 +83,7 @@ public class QuestaoDAO {
             questao.setId(cursor.getInt(0));
             questao.setTitulo(cursor.getString(1));
             questao.setOrdem(cursor.getInt(2));
-            questao.setIdFormulario(cursor.getInt(3));
+            questao.getFormulario().setId(cursor.getInt(3));
 
             questaoList.add(questao);
             cursor.moveToNext();
@@ -112,7 +112,7 @@ public class QuestaoDAO {
         questao.setId(cursor.getInt(0));
         questao.setTitulo(cursor.getString(1));
         questao.setOrdem(cursor.getInt(2));
-        questao.setIdFormulario(cursor.getInt(3));
+        questao.getFormulario().setId(cursor.getInt(3));
 
         PerguntaDAO respostaDAO = new PerguntaDAO(context);
         questao.setListaPerguntas(respostaDAO.findPerguntasByQuestao(questao.getId()));
@@ -143,7 +143,7 @@ public class QuestaoDAO {
             questao.setId(cursor.getInt(0));
             questao.setTitulo(cursor.getString(1));
             questao.setOrdem(cursor.getInt(2));
-            questao.setIdFormulario(cursor.getInt(3));
+            questao.getFormulario().setId(cursor.getInt(3));
 
 //            PerguntaDAO respostaDAO = new PerguntaDAO(context);
 //            questao.setPerguntas(respostaDAO.findPerguntasByQuestao(questao.getId()));
@@ -180,7 +180,7 @@ public class QuestaoDAO {
             questao.setId(cursor.getInt(0));
             questao.setTitulo(cursor.getString(1));
             questao.setOrdem(cursor.getInt(2));
-            questao.setIdFormulario(cursor.getInt(3));
+            questao.getFormulario().setId(cursor.getInt(3));
 
             questao.setListaPerguntas(respostaDAO.findPerguntasByQuestao(questao.getId()));
 
@@ -213,7 +213,7 @@ public class QuestaoDAO {
             questao.setId(cursor.getInt(0));
             questao.setTitulo(cursor.getString(1));
             questao.setOrdem(cursor.getInt(2));
-            questao.setIdFormulario(cursor.getInt(3));
+            questao.getFormulario().setId(cursor.getInt(3));
 
             PerguntaDAO respostaDAO = new PerguntaDAO(context);
             questao.setListaPerguntas(respostaDAO.findPerguntasByQuestao(questao.getId()));

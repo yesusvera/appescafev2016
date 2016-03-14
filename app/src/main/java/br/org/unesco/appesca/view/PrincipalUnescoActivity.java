@@ -141,7 +141,7 @@ public class PrincipalUnescoActivity extends AppCompatActivity
                 }
             }.execute();
         }else{
-            if(Identity.getUsuarioLogado()!=null) {
+            if(Identity.getUsuarioLogado()!=null && Identity.getUsuarioLogado().getImagem()!=null) {
                 fotoUsuario.setImageBitmap(DBBitmapUtil.getImage(Identity.getUsuarioLogado().getImagem()));
                 fotoUsuario.setVisibility(View.VISIBLE);
             }
