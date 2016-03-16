@@ -8,8 +8,13 @@ import com.loopj.android.http.RequestParams;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 
+import java.util.List;
+
 import br.org.unesco.appesca.model.Formulario;
 import br.org.unesco.appesca.model.Identity;
+import br.org.unesco.appesca.model.Pergunta;
+import br.org.unesco.appesca.model.Questao;
+import br.org.unesco.appesca.model.Resposta;
 import br.org.unesco.appesca.rest.model.FormularioREST;
 import br.org.unesco.appesca.util.ConstantesREST;
 import cz.msebera.android.httpclient.Header;
@@ -19,9 +24,34 @@ import cz.msebera.android.httpclient.Header;
  */
 public class FormularioBO {
 
+
+    public void prepararObjetoFormulario(Formulario form){
+        form.setId(null);
+        if(form.getListaQuestoes()!=null){
+            for(Questao q: form.getListaQuestoes()){
+                q.setId(null);
+                q.setFormulario(null);
+                if(q.getListaPerguntas()!=null){
+                    for(Pergunta p: q.getListaPerguntas()){
+                        p.setId(null);
+                        p.setQuestao(null);
+                        if(p.getListaRespostas()!=null){
+                            for(Resposta r: p.getListaRespostas()){
+                                r.setId(null);
+                                r.setPergunta(null);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     public void enviarFormulario(Formulario formulario){
 
 //        Log.i("FORMULARIO", formulario.toString());
+
+        prepararObjetoFormulario(formulario);
 
         FormularioREST formularioREST = new FormularioREST(formulario);
 

@@ -50,6 +50,10 @@ public class Pergunta implements java.io.Serializable {
 		return questao;
 	}
 
+	public void setQuestao(Questao questao) {
+		this.questao = questao;
+	}
+
 	public List<Resposta> getListaRespostas() {
 		return listaRespostas;
 	}

@@ -20,6 +20,7 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -41,6 +42,7 @@ import br.org.unesco.appesca.model.Questao;
 import br.org.unesco.appesca.model.Resposta;
 import br.org.unesco.appesca.util.AppescaUtil;
 import br.org.unesco.appesca.util.ConstantesIdsFormularios;
+import cz.msebera.android.httpclient.entity.SerializableEntity;
 
 public class FormCamRegActivityNew extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -452,10 +454,12 @@ public class FormCamRegActivityNew extends AppCompatActivity
         if (id == R.id.itemEnviarFormulario) {
             List<Questao> listaQuestoes = questaoDAO.getQuestoesRespostasByFormulario(formulario.getId());
             formulario.setListaQuestoes(listaQuestoes);
+
             new FormularioBO().enviarFormulario(formulario);
 
             Toast.makeText(getApplicationContext(), "Formulário enviado com sucesso!.", Toast.LENGTH_LONG).show();
 
+            finish();
 //            enviarFormulario();
         }
             if (id == R.id.itemClose) {
@@ -505,7 +509,7 @@ public class FormCamRegActivityNew extends AppCompatActivity
 //                            FormularioDAO formularioDAO = new FormularioDAO(FormCamRegActivityNew.this);
 //                            formulario = formularioDAO.insertFormulario(formulario);
 //                            Toast.makeText(getApplicationContext(), "Formulário salvo na base local.", Toast.LENGTH_LONG).show();Toast.makeText(getApplicationContext(), "Formulário enviado com sucesso!.", Toast.LENGTH_LONG).show();
-//                                finish();
+                            finish();
                         }
                     }
                 }). setNegativeButton(android.R.string.no, null). show();
