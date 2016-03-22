@@ -308,82 +308,82 @@
             android:layout_height="wrap_content"
             android:paddingLeft="30dp">
 
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                            android:orientation="vertical">
-                        <RadioButton
+            <!--<RadioGroup-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                            <!--android:orientation="vertical">-->
+                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Compra de material de pesca"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg10_rb_resp1"
+                            android:id="@+id/perg10_cb_resp1"
                           />
 
-                        <RadioButton
+                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Compra de embarcação"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg10_rb_resp2"
+                            android:id="@+id/perg10_cb_resp2"
                           />
 
-                        <RadioButton
+                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Beneficiamento de pescado"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg10_rb_resp3"
+                            android:id="@+id/perg10_cb_resp3"
                           />
 
-                        <RadioButton
+                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Produção agrícola"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg10_rb_resp4"
+                            android:id="@+id/perg10_cb_resp4"
                           />
 
-                        <RadioButton
+                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Criação de animais"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg10_rb_resp5"
+                            android:id="@+id/perg10_cb_resp5"
                           />
 
-                        <RadioButton
+                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Pequenos empreendimentos"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg10_rb_resp6"
+                            android:id="@+id/perg10_cb_resp6"
                           />
 
-                        <RadioButton
+                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Artesanato"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg10_rb_resp7"
+                            android:id="@+id/perg10_cb_resp7"
                           />
 
-                        <RadioButton
+                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Beneficiamento de produtos extrativistas"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg10_rb_resp8"
+                            android:id="@+id/perg10_cb_resp8"
                           />
 
-                        <RadioButton
+                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Outros."
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg10_rb_resp9"
+                            android:id="@+id/perg10_cb_resp9"
                           />
-            </RadioGroup>
+            <!--</RadioGroup>-->
 
         </LinearLayout>
 
@@ -409,58 +409,58 @@
             android:layout_height="wrap_content"
             android:paddingLeft="30dp">
 
-            <RadioGroup
-                android:layout_width="260dp"
-                android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                    <RadioButton
+            <!--<RadioGroup-->
+                <!--android:layout_width="260dp"-->
+                <!--android:layout_height="wrap_content"-->
+                        <!--android:orientation="vertical">-->
+                    <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Banco da Amazônia"
                         android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg11_rb_resp1"
+                        android:id="@+id/perg11_cb_resp1"
                       />
 
-                    <RadioButton
+                    <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Banco do Nordeste"
                         android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg11_rb_resp2"
+                        android:id="@+id/perg11_cb_resp2"
                       />
 
-                    <RadioButton
+                    <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Caixa Econômica"
                         android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg11_rb_resp3"
+                        android:id="@+id/perg11_cb_resp3"
                       />
 
-                    <RadioButton
+                    <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Banco do Pará"
                         android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg11_rb_resp4"
+                        android:id="@+id/perg11_cb_resp4"
                       />
 
-                    <RadioButton
+                    <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Banco do Brasil"
                         android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg11_rb_resp5"
+                        android:id="@+id/perg11_cb_resp5"
                       />
 
-                    <RadioButton
+                    <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Outro."
                         android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg11_rb_resp6"
+                        android:id="@+id/perg11_cb_resp6"
                       />
-            </RadioGroup>
+            <!--</RadioGroup>-->
         </LinearLayout>
 
     </LinearLayout>

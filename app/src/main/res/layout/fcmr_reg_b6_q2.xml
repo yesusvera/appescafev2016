@@ -84,7 +84,7 @@
                     android:layout_height="wrap_content"
                     android:paddingBottom="5dp"
                     android:textAppearance="@style/style_questao"
-                    android:text="Local 1"/>
+                    android:text="Local 2"/>
 
                 <EditText
                     android:layout_width="240dp"
@@ -118,7 +118,7 @@
                     android:layout_height="wrap_content"
                     android:paddingBottom="5dp"
                     android:textAppearance="@style/style_questao"
-                    android:text="Local 1"/>
+                    android:text="Local 3"/>
 
                 <EditText
                     android:layout_width="240dp"
@@ -152,7 +152,7 @@
                     android:layout_height="wrap_content"
                     android:paddingBottom="5dp"
                     android:textAppearance="@style/style_questao"
-                    android:text="Local 1"/>
+                    android:text="Local 4"/>
 
                 <EditText
                     android:layout_width="240dp"
@@ -180,22 +180,27 @@
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent">
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Não Sabe"
-                    android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg5_cb_resp1"
-                    android:paddingRight="15dp"/>
 
-                <CheckBox
-                    android:layout_width="wrap_content"
+                <RadioGroup
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Não Respondeu"
-                    android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg5_cb_resp2"
-                    android:paddingRight="15dp"/>
-
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Não Sabe"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/perg5_rb_resp1"
+                        android:paddingRight="15dp"/>
+    
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Não Respondeu"
+                        android:textAppearance="@style/style_resposta"
+                        android:id="@+id/perg5_rb_resp2"
+                        android:paddingRight="15dp"/>
+                </RadioGroup>
             </LinearLayout>
 
         </LinearLayout>

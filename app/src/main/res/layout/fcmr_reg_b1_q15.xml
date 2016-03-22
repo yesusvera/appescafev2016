@@ -68,111 +68,111 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="30dp">
-                    <RadioGroup
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <RadioButton
+                    <!--<RadioGroup-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:orientation="vertical">-->
+                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Falta de energia elétrica"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg1_rb_resp3" />
+                            android:id="@+id/perg1_cb_resp1" />
 
-                        <RadioButton
+                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Energia elétrica de má qualidade"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg1_rb_resp3" />
+                            android:id="@+id/perg1_cb_resp2" />
 
-                        <RadioButton
+                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Falta de distribuição de água"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg1_rb_resp3" />
+                            android:id="@+id/perg1_cb_resp3" />
 
-                        <RadioButton
+                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Água de má qualidade"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg1_rb_resp4" />
+                            android:id="@+id/perg1_cb_resp4" />
 
-                        <RadioButton
+                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Falta de posto de saúde"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg1_rb_resp5" />
+                            android:id="@+id/perg1_cb_resp5" />
 
-                        <RadioButton
+                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Má qualidade no atendimento de saúde"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg1_rb_resp6" />
+                            android:id="@+id/perg1_cb_resp6" />
 
-                        <RadioButton
+                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Lixo"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg1_rb_resp7" />
+                            android:id="@+id/perg1_cb_resp7" />
 
-                        <RadioButton
+                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Violência"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg1_rb_resp8" />
+                            android:id="@+id/perg1_cb_resp8" />
 
-                        <RadioButton
+                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Conflitos entre moradores"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg1_rb_resp9" />
+                            android:id="@+id/perg1_cb_resp9" />
 
-                        <RadioButton
+                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Falta de oportunidades de emprego"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg1_rb_resp10" />
+                            android:id="@+id/perg1_cb_resp10" />
 
-                        <RadioButton
+                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Falta de escola"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg1_rb_resp11"/>
+                            android:id="@+id/perg1_cb_resp11"/>
 
-                        <RadioButton
+                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Falta de transporte escolar"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg1_rb_resp12" />
-                        <RadioButton
+                            android:id="@+id/perg1_cb_resp12" />
+                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Falta de estradas de acesso"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg1_rb_resp13" />
-                        <RadioButton
+                            android:id="@+id/perg1_cb_resp13" />
+                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Falta de trapiche"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg1_rb_resp14" />
-                        <RadioButton
+                            android:id="@+id/perg1_cb_resp14" />
+                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Outros. Quais?"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg1_rb_resp15"
+                            android:id="@+id/perg1_cb_resp15"
                           />
                         <EditText
                             android:layout_width="241dp"
@@ -180,7 +180,7 @@
                             android:id="@+id/perg1_et_resp16"
                             android:textAppearance="@style/style_resposta"
                             android:lines="2" />
-                    </RadioGroup>
+                    <!--</RadioGroup>-->
                 </LinearLayout>
             </LinearLayout>
 

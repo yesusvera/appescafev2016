@@ -155,7 +155,7 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
                 android:textAppearance="@style/style_questao"
-                android:text="Fora: "
+                android:text="Fora da comunidade:"
                 />
 
 
@@ -235,7 +235,7 @@
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="CONAB (que destina o produto para a comunidade – escolas, asilos, etc.)"
+                android:text="Conab (que destina o produto para locais fora da comunidade)"
                 android:textAppearance="@style/style_resposta"
                 android:id="@+id/perg2_cb_resp10"
                 android:paddingRight="15dp"

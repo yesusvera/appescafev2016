@@ -546,7 +546,7 @@
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Fundamental I incompleto"
+                    android:text="Fundamental I completo"
                     android:textSize="14dp"
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg13_cb_resp3" />

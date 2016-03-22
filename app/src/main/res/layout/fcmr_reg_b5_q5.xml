@@ -96,65 +96,65 @@
                     android:paddingLeft="30dp"
                     android:paddingBottom="10dp">
 
-                    <RadioGroup
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                            <RadioButton
+                    <!--<RadioGroup-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:orientation="vertical">-->
+                            <CheckBox
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Entre marés"
                                 android:textAppearance="@style/style_resposta"
-                                android:id="@+id/perg2_rb_resp1"
+                                android:id="@+id/perg2_cb_resp1"
                               />
         
-                            <RadioButton
+                            <CheckBox
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Maré solidária"
                                 android:textAppearance="@style/style_resposta"
-                                android:id="@+id/perg2_rb_resp2"
+                                android:id="@+id/perg2_cb_resp2"
                               />
         
-                            <RadioButton
+                            <CheckBox
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Conservação Internacional"
                                 android:textAppearance="@style/style_resposta"
-                                android:id="@+id/perg2_rb_resp3"
+                                android:id="@+id/perg2_cb_resp3"
                               />
         
-                            <RadioButton
+                            <CheckBox
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Unesco"
                                 android:textAppearance="@style/style_resposta"
-                                android:id="@+id/perg2_rb_resp4"
+                                android:id="@+id/perg2_cb_resp4"
                               />
         
-                            <RadioButton
+                            <CheckBox
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Manguezais do Brasil"
                                 android:textAppearance="@style/style_resposta"
-                                android:id="@+id/perg2_rb_resp5"
+                                android:id="@+id/perg2_cb_resp5"
                               />
         
-                            <RadioButton
+                            <CheckBox
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Feiras do governo do Estado"
                                 android:textAppearance="@style/style_resposta"
-                                android:id="@+id/perg2_rb_resp6"
+                                android:id="@+id/perg2_cb_resp6"
                               />
         
         
-                            <RadioButton
+                            <CheckBox
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Outro. Qual?"
                                 android:textAppearance="@style/style_resposta"
-                                android:id="@+id/perg2_rb_resp7"
+                                android:id="@+id/perg2_cb_resp7"
                               />
         
                             <EditText
@@ -163,7 +163,7 @@
                                 android:id="@+id/perg2_et_resp8"
                                 android:textAppearance="@style/style_resposta"
                                 android:lines="2" />
-                    </RadioGroup>
+                    <!--</RadioGroup>-->
                 </LinearLayout>
 
             </LinearLayout>

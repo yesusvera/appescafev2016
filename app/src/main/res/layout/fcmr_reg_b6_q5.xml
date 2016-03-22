@@ -51,28 +51,28 @@
             android:layout_height="wrap_content"
             android:paddingBottom="10dp"
             android:paddingLeft="30dp">
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <RadioButton
+            <!--<RadioGroup-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal">-->
+                <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="pequena/baixa/morta"
                     android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg1_rb_resp1"
+                    android:id="@+id/perg1_cb_resp1"
 
                     android:paddingRight="15dp"/>
 
-                <RadioButton
+                <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="alta/grande/lançante"
                     android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg1_rb_resp2"
+                    android:id="@+id/perg1_cb_resp2"
 
                     android:paddingRight="15dp"/>
-            </RadioGroup>
+            <!--</RadioGroup>-->
         </LinearLayout>
 
     </LinearLayout>

@@ -72,19 +72,27 @@
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="oferece antes da pesca a compradores/consumidores"
+                    android:text="oferece diretamente antes da pesca a compradores/consumidores"
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg1_cb_resp4"
                     android:paddingRight="15dp"
                     android:checked="false" />
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="oferece após a pesca a compradores/consumidores"
-                    android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg1_cb_resp5"
-                    android:paddingRight="15dp"
-                    android:checked="false" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="oferece diretamente após a pesca a compradores/consumidores"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg1_cb_resp5"
+                android:paddingRight="15dp"
+                android:checked="false" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="em ponto de venda público (portos, beira de rio, praças etc)"
+                android:textAppearance="@style/style_resposta"
+                android:id="@+id/perg1_cb_resp6"
+                android:paddingRight="15dp"
+                android:checked="false" />
 
 
         </LinearLayout>

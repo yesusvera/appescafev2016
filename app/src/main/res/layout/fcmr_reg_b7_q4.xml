@@ -27,6 +27,15 @@
                 android:textStyle="bold" />
         </LinearLayout>
 
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           android:gravity="center"
+            android:paddingBottom="5dp"
+            android:textAppearance="@style/style_questao"
+            android:text="Dos produtos selecionados e/ou beneficiados, qual é quantidade média vendida por dia ou por semana?"/>
+
         <TableLayout
             android:paddingTop="15dp"
             android:orientation="vertical"

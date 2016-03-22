@@ -48,10 +48,11 @@
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Embarcação (se marcado, responda as questões 8.1.1 a 8.1.5). Quantas possui?"
+                    android:text="Embarcação. Quantas possui?"
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg1_cb_resp1"
-                    android:paddingRight="15dp"/>
+                    android:paddingRight="15dp"
+                    android:checked="false" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -225,8 +226,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
                     android:paddingBottom="5dp"
-                    android:textAppearance="@style/style_questao"
+                    android:textAppearance="@style/style_resposta"
                     android:text="Quantos?"
                     />
 

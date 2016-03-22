@@ -103,46 +103,46 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="30dp">
-                    <RadioGroup
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                                android:orientation="vertical">
-                            <RadioButton
+                    <!--<RadioGroup-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                                <!--android:orientation="vertical">-->
+                            <CheckBox
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Participa do Conselho Deliberativo"
                                 android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg2_rb_resp1" />
+                            android:id="@+id/perg2_cb_resp1" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Participa da Associação de Moradores"
                                 android:textAppearance="@style/style_resposta"
-                                android:id="@+id/perg2_rb_resp2" />
+                                android:id="@+id/perg2_cb_resp2" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Participa de reuniões comunitárias"
                                 android:textAppearance="@style/style_resposta"
-                                android:id="@+id/perg2_rb_resp3" />
+                                android:id="@+id/perg2_cb_resp3" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Recebe informações dos representantes da comunidade no Conselho"
                                 android:textAppearance="@style/style_resposta"
-                                android:id="@+id/perg2_rb_resp4" />
+                                android:id="@+id/perg2_cb_resp4" />
 
 
-                            <RadioButton
+                            <CheckBox
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Outros"
                                 android:textAppearance="@style/style_resposta"
-                                android:id="@+id/perg2_rb_resp5" />
-                    </RadioGroup>
+                                android:id="@+id/perg2_cb_resp5" />
+                    <!--</RadioGroup>-->
                 </LinearLayout>
             </LinearLayout>
 

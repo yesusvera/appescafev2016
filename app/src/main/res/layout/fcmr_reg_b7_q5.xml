@@ -175,6 +175,71 @@
             </RadioGroup>
 
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:textAppearance="@style/style_questao"
+                android:text="Camarão Congelado:"
+                />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="no mesmo dia que é pescado"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg3_rb_resp1"
+                    android:paddingRight="15dp"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="no dia seguinte"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg3_rb_resp2"
+                    android:paddingRight="15dp"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="na semana que pescou"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg3_rb_resp3"
+                    android:paddingRight="15dp"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="na semana seguinte"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg3_rb_resp4"
+                    android:paddingRight="15dp"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="no mês  que pescou"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg3_rb_resp5"
+                    android:paddingRight="15dp"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="no mês seguinte"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg3_rb_resp6"
+                    android:paddingRight="15dp"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="com mais de um mês"
+                    android:textAppearance="@style/style_resposta"
+                    android:id="@+id/perg3_rb_resp7"
+                    android:paddingRight="15dp"/>
+            </RadioGroup>
+
+
         </LinearLayout>
 
     </LinearLayout>

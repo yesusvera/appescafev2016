@@ -6,7 +6,7 @@
     <!-- CONTAINER GERAL -->
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:background="@drawable/layout_questao">
@@ -30,7 +30,7 @@
         <!-- QUESTAO -->
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="20dp">
 
@@ -55,7 +55,7 @@
             <!-- CONDICAO E RESPOSTA 1 -->
             <LinearLayout
                 android:orientation="vertical"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingBottom="10dp">
 
@@ -110,6 +110,12 @@
                                 android:text="Não respondeu"
                                 android:textAppearance="@style/style_resposta"
                                 android:id="@+id/perg1_rb_resp6" />
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Não Sabe"
+                                android:textAppearance="@style/style_resposta"
+                                android:id="@+id/perg1_rb_resp7" />
                     </RadioGroup>
 
                 </LinearLayout>

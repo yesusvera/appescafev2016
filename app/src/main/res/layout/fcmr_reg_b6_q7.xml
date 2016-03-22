@@ -57,10 +57,11 @@
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Não (pule para C)"
+                    android:text="Não"
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg1_rb_resp1"
-                    android:paddingRight="15dp"/>
+                    android:paddingRight="15dp"
+                    android:checked="false" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
