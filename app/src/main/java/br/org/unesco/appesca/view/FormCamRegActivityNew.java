@@ -500,8 +500,11 @@ public class FormCamRegActivityNew extends AppCompatActivity
                             return;
                         } else if (listaQuestoes.size() == arrayIdsQuestoes.length) {
 
-                            formulario.setListaQuestoes(listaQuestoes);
-                            new FormularioBO().enviarFormulario(formulario);
+                            FormularioDAO formularioDAO = new FormularioDAO(FormCamRegActivityNew.this);
+
+                            Formulario formTmp = formularioDAO.findById(formulario.getId());
+                            formTmp.setListaQuestoes(listaQuestoes);
+                            new FormularioBO().enviarFormulario(formTmp);
 
                             Toast.makeText(getApplicationContext(), "Formulário enviado com sucesso!.", Toast.LENGTH_LONG).show();
 

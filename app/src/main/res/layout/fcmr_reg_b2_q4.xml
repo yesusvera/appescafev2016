@@ -93,7 +93,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg1_et_resp1"/>
-                <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout>
+                <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content">
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -137,7 +137,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg2_et_resp1"/>
-                <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout>
+                <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content">
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -182,7 +182,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg3_et_resp1"/>
-                <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout>
+                <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content">
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -228,7 +228,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg4_et_resp1"/>
-                <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout>
+                <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content">
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -270,7 +270,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg5_et_resp1"/>
-                <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout>
+                <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content">
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -313,7 +313,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg6_et_resp1"/>
-                <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout>
+                <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content">
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
