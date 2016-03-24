@@ -455,12 +455,12 @@ public class FormCamRegActivityNew extends AppCompatActivity
             List<Questao> listaQuestoes = questaoDAO.getQuestoesRespostasByFormulario(formulario.getId());
             formulario.setListaQuestoes(listaQuestoes);
 
-            new FormularioBO().enviarFormulario(formulario);
-
-            Toast.makeText(getApplicationContext(), "Formulário enviado com sucesso!.", Toast.LENGTH_LONG).show();
-
-            finish();
-//            enviarFormulario();
+//            new FormularioBO().enviarFormulario(formulario);
+//
+//            Toast.makeText(getApplicationContext(), "Formulário enviado com sucesso!.", Toast.LENGTH_LONG).show();
+//
+//            finish();
+            enviarFormulario();
         }
             if (id == R.id.itemClose) {
                 encerrarFormulario();

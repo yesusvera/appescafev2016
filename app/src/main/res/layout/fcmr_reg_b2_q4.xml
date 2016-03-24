@@ -45,7 +45,7 @@
         </LinearLayout>
 
         <!-- TABULACAO DAS OPCOES -->
-        <TableLayout
+        <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -93,7 +93,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg1_et_resp1"/>
-                <TableLayout>
+                <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout>
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -120,7 +120,7 @@
                                 />
                         </RadioGroup>
                     </TableRow>
-                </TableLayout>
+                </TableLayout></HorizontalScrollView>
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -137,7 +137,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg2_et_resp1"/>
-                <TableLayout>
+                <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout>
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -164,7 +164,7 @@
                                 />
                         </RadioGroup>
                     </TableRow>
-                </TableLayout>
+                </TableLayout></HorizontalScrollView>
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -182,7 +182,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg3_et_resp1"/>
-                <TableLayout>
+                <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout>
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -209,7 +209,7 @@
                                 />
                         </RadioGroup>
                     </TableRow>
-                </TableLayout>
+                </TableLayout></HorizontalScrollView>
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -228,7 +228,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg4_et_resp1"/>
-                <TableLayout>
+                <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout>
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -255,7 +255,7 @@
                                 />
                         </RadioGroup>
                     </TableRow>
-                </TableLayout>
+                </TableLayout></HorizontalScrollView>
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -270,7 +270,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg5_et_resp1"/>
-                <TableLayout>
+                <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout>
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -297,7 +297,7 @@
                                 />
                         </RadioGroup>
                     </TableRow>
-                </TableLayout>
+                </TableLayout></HorizontalScrollView>
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -313,7 +313,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg6_et_resp1"/>
-                <TableLayout>
+                <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout>
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -340,14 +340,14 @@
                                 />
                         </RadioGroup>
                     </TableRow>
-                </TableLayout>
+                </TableLayout></HorizontalScrollView>
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg6_et_resp4"/>
             </TableRow>
 
-        </TableLayout>
+        </TableLayout></HorizontalScrollView>
 
     </LinearLayout>
 

@@ -36,7 +36,7 @@
             android:gravity="center"
             android:text="Qual é o preço de venda do caranguejo (vivo e beneficiado) por tipo de comprador ao longo do ano na Alta e Baixa temporada."/>
 
-        <TableLayout
+        <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout
             android:paddingTop="15dp"
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -533,7 +533,7 @@
                     android:textAppearance="@style/style_resposta"/>
 
             </TableRow>
-        </TableLayout>
+        </TableLayout></HorizontalScrollView>
 
     </LinearLayout>
 

@@ -1,5 +1,8 @@
 package br.org.unesco.appesca.control;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -32,6 +35,13 @@ public class QuestaoDetailFragment extends Fragment {
     public QuestaoDetailFragment() {
     }
 
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        view.setBackgroundColor(Color.WHITE);
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +57,7 @@ public class QuestaoDetailFragment extends Fragment {
         if (getArguments().containsKey(ARG_FORMULARIO_ID)) {
             idformulario = getArguments().getInt(ARG_FORMULARIO_ID);
         }
+
     }
 
     @Override

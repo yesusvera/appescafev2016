@@ -307,7 +307,7 @@
         </LinearLayout>
 
 
-        <TableLayout
+        <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -318,6 +318,7 @@
             android:paddingRight="50dp"
             android:paddingTop="15dp"
             android:stretchColumns="*">
+
 
             <TableRow
                 android:layout_width="match_parent"
@@ -1928,7 +1929,8 @@
                     android:textAppearance="@style/style_resposta" />
 
             </TableRow>
-        </TableLayout>
+        </TableLayout></HorizontalScrollView>
+
 
 
         <LinearLayout
@@ -1941,7 +1943,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
-                android:text="Qual é a proporção da “quebra” (beneficiamento)"
+                android:text="1.3) Qual é a proporção da “quebra” (beneficiamento)"
                 android:textAppearance="@style/style_questao" />
         </LinearLayout>
 
@@ -1998,7 +2000,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
-                android:text="O senhor armazena o camarão branco?  "
+                android:text="1.4) O senhor armazena o camarão branco?  "
                 android:textAppearance="@style/style_questao" />
 
 
@@ -2038,7 +2040,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
-                android:text="Como o senhor armazena o camarao piticaia? "
+                android:text="1.5) Como o senhor armazena o camarao piticaia? "
                 android:textAppearance="@style/style_questao" />
 
             <!-- CONDICAO E RESPOSTA 2 -->
@@ -2057,36 +2059,36 @@
                     android:paddingLeft="30dp">
 
 
-                    <RadioButton
-                        android:id="@+id/perg30_rb_resp1"
+                    <CheckBox
+                        android:id="@+id/perg30_cb_resp1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="geladeira"
                         android:textAppearance="@style/style_resposta" />
 
-                    <RadioButton
-                        android:id="@+id/perg30_rb_resp2"
+                    <CheckBox
+                        android:id="@+id/perg30_cb_resp2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="freezer"
                         android:textAppearance="@style/style_resposta" />
 
-                    <RadioButton
-                        android:id="@+id/perg30_rb_resp3"
+                    <CheckBox
+                        android:id="@+id/perg30_cb_resp3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="câmara fria"
                         android:textAppearance="@style/style_resposta" />
 
-                    <RadioButton
-                        android:id="@+id/perg30_rb_resp4"
+                    <CheckBox
+                        android:id="@+id/perg30_cb_resp4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="sacos"
                         android:textAppearance="@style/style_resposta" />
 
-                    <RadioButton
-                        android:id="@+id/perg30_rb_resp5"
+                    <CheckBox
+                        android:id="@+id/perg30_cb_resp5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="caixas"
@@ -2097,8 +2099,8 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <RadioButton
-                            android:id="@+id/perg30_rb_resp6"
+                        <CheckBox
+                            android:id="@+id/perg30_cb_resp6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Outros:"
@@ -2128,7 +2130,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
-                android:text="Por quanto tempo, em média o camarao piticaia fica armazenado?"
+                android:text="1.6) Por quanto tempo, em média o camarao piticaia fica armazenado?"
                 android:textAppearance="@style/style_questao" />
 
             <!-- CONDICAO E RESPOSTA 2 -->
@@ -2225,7 +2227,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
-                android:text="Como ocorre a venda? (pode marcar mais de uma)"
+                android:text="1.7) Como ocorre a venda? (pode marcar mais de uma)"
                 android:textAppearance="@style/style_questao" />
 
         </LinearLayout>
@@ -2285,7 +2287,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
-                android:text="Para quem se vende o camarão piticaia? (pode marcar mais de uma)"
+                android:text="1.8) Para quem se vende o camarão piticaia? (pode marcar mais de uma)"
                 android:textAppearance="@style/style_questao" />
 
         </LinearLayout>
@@ -2552,7 +2554,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
-                android:text="Desses compradores/consumidores quais são os três principais?  "
+                android:text="1.9) Desses compradores/consumidores quais são os três principais?  "
                 android:textAppearance="@style/style_questao" />
         </LinearLayout>
 
@@ -2646,10 +2648,11 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:paddingBottom="5dp"
-            android:text="Qual é o preço de venda do camarão piticaia pelos principais compradores ao longo do ano? (R$/kg) inverno e verão."
+            android:text="10) Qual é o preço de venda do camarão piticaia pelos principais compradores ao longo do ano? (R$/kg) inverno e verão."
             android:textAppearance="@style/style_questao" />
 
-        <TableLayout
+
+        <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -4062,7 +4065,7 @@
                     android:textAppearance="@style/style_resposta" />
 
             </TableRow>
-        </TableLayout>
+        </TableLayout></HorizontalScrollView>
 
 
     </LinearLayout>

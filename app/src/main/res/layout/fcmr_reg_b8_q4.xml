@@ -44,7 +44,7 @@
                         android:textAppearance="@style/style_questao"
                         android:text=" Normalmente, quais são os gastos que ocorrem frequentemente? Qual é o valor gasto ou correspondente para 2015?"/>
 
-                        <TableLayout
+                        <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout
                             android:paddingTop="15dp"
                             android:orientation="vertical"
                             android:layout_width="match_parent"
@@ -80,7 +80,7 @@
                                             android:textAppearance="@style/style_questao"
                                             android:gravity="center"
                                             android:layout_gravity="center_horizontal"
-                                            android:text="Valor (R$)" />
+                                            android:text="Valor Total no Período (R$)" />
                                         <TextView
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
@@ -1257,7 +1257,7 @@
 
                             </TableRow>
 
-                        </TableLayout>
+                        </TableLayout></HorizontalScrollView>
 
 
 

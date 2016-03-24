@@ -71,27 +71,24 @@
             android:paddingBottom="10dp"
             android:paddingLeft="30dp">
 
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
 
-                <RadioButton
-                    android:id="@+id/perg1_rb_resp1"
+
+                <CheckBox
+                    android:id="@+id/perg1_cb_resp1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingRight="15dp"
                     android:text="Verão"
                     android:textAppearance="@style/style_resposta" />
 
-                <RadioButton
-                    android:id="@+id/perg1_rb_resp2"
+                <CheckBox
+                    android:id="@+id/perg1_cb_resp2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingRight="15dp"
                     android:text="Inverno"
                     android:textAppearance="@style/style_resposta" />
-            </RadioGroup>
+
         </LinearLayout>
 
 
@@ -120,13 +117,9 @@
             android:paddingBottom="10dp"
             android:paddingLeft="30dp">
 
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
 
-                <RadioButton
-                    android:id="@+id/perg2_rb_resp1"
+                <CheckBox
+                    android:id="@+id/perg2_cb_resp1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingRight="15dp"
@@ -134,15 +127,14 @@
 
                     android:textAppearance="@style/style_resposta" />
 
-                <RadioButton
-                    android:id="@+id/perg2_rb_resp2"
+                <CheckBox
+                    android:id="@+id/perg2_cb_resp2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingRight="15dp"
                     android:text="alta/grande/lançante"
 
                     android:textAppearance="@style/style_resposta" />
-            </RadioGroup>
         </LinearLayout>
 
 
@@ -157,7 +149,7 @@
             android:textAppearance="@style/style_questao" />
 
         <!--INVERNO -->
-        <TableLayout
+        <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -1042,13 +1034,13 @@
             </TableRow>
 
 
-        </TableLayout>
+        </TableLayout></HorizontalScrollView>
 
 
         <!-- VERAO -->
 
 
-        <TableLayout
+        <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -1933,7 +1925,7 @@
             </TableRow>
 
 
-        </TableLayout>
+        </TableLayout></HorizontalScrollView>
 
 
 

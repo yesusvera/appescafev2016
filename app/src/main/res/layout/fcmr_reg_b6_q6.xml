@@ -41,7 +41,7 @@
             android:text="Qual é quantidade média capturada/dia nas marés alta e baixa, nos períodos de inverno e verão, por arte de pesca?  Quanto tempo é gasto? Quantos dias são trabalhados? ( O dia de pesca se refere tanto ao período diurno quanto noturno)"/>
 
         <!--INVERNO -->
-        <TableLayout
+        <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout
             android:paddingTop="15dp"
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -573,13 +573,13 @@
             </TableRow>
 
 
-        </TableLayout>
+        </TableLayout></HorizontalScrollView>
 
 
 
         <!-- VERAO -->
 
-        <TableLayout
+        <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout
             android:paddingTop="15dp"
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -1111,7 +1111,7 @@
             </TableRow>
 
 
-        </TableLayout>
+        </TableLayout></HorizontalScrollView>
 
 
 
@@ -1134,7 +1134,7 @@
 
 
 
-        <TableLayout
+        <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout
             android:paddingTop="15dp"
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -1182,7 +1182,7 @@
                 android:paddingBottom="5dp"
                 android:gravity="center"
                 android:layout_gravity="center_horizontal"
-                android:text="Viagens/Semana"
+                android:text="Dias Trabalhados/Semana"
                 android:layout_span="2" />
         </TableRow>
 
@@ -1538,7 +1538,7 @@
             </TableRow>
 
 
-        </TableLayout>
+        </TableLayout></HorizontalScrollView>
     </LinearLayout>
 
 </ScrollView>

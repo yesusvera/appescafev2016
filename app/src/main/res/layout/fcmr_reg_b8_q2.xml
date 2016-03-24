@@ -523,7 +523,7 @@
                         android:text="Quanto custaram os equipamentos para pesca e beneficiamento? Com qual recursos foram adquiridos? Quando foram comprados e serão substituídos? (inserir os bens marcados na questão 1 do bloco 8)"/>
 
 
-                        <TableLayout
+                        <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout
                             android:paddingTop="15dp"
                             android:orientation="vertical"
                             android:layout_width="match_parent"
@@ -885,7 +885,7 @@
                                                 <RadioButton
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
-                                                    android:text="Financiada"
+                                                    android:text="Doação"
                                                     android:textAppearance="@style/style_resposta"
                                                     android:id="@+id/perg6_rb_resp15"
                                                     android:checked="false" />
@@ -922,7 +922,7 @@
                                                 <RadioButton
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
-                                                    android:text="Financiada"
+                                                    android:text="Doação"
                                                     android:textAppearance="@style/style_resposta"
                                                     android:id="@+id/perg6_rb_resp18"
                                                     android:checked="false" />
@@ -959,7 +959,7 @@
                                                 <RadioButton
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
-                                                    android:text="Financiada"
+                                                    android:text="Doação"
                                                     android:textAppearance="@style/style_resposta"
                                                     android:id="@+id/perg6_rb_resp21"
                                                     android:checked="false" />
@@ -1315,7 +1315,7 @@
                                         <RadioButton
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="Financiada"
+                                            android:text="Doação"
                                             android:textAppearance="@style/style_resposta"
                                             android:id="@+id/perg7_rb_resp15"
                                             android:checked="false" />
@@ -1352,7 +1352,7 @@
                                         <RadioButton
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="Financiada"
+                                            android:text="Doação"
                                             android:textAppearance="@style/style_resposta"
                                             android:id="@+id/perg7_rb_resp18"
                                             android:checked="false" />
@@ -1389,7 +1389,7 @@
                                         <RadioButton
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="Financiada"
+                                            android:text="Doação"
                                             android:textAppearance="@style/style_resposta"
                                             android:id="@+id/perg7_rb_resp21"
                                             android:checked="false" />
@@ -1745,7 +1745,7 @@
                                         <RadioButton
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="Financiada"
+                                            android:text="Doação"
                                             android:textAppearance="@style/style_resposta"
                                             android:id="@+id/perg8_rb_resp15"
                                             android:checked="false" />
@@ -1782,7 +1782,7 @@
                                         <RadioButton
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="Financiada"
+                                            android:text="Doação"
                                             android:textAppearance="@style/style_resposta"
                                             android:id="@+id/perg8_rb_resp18"
                                             android:checked="false" />
@@ -1819,7 +1819,7 @@
                                         <RadioButton
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="Financiada"
+                                            android:text="Doação"
                                             android:textAppearance="@style/style_resposta"
                                             android:id="@+id/perg8_rb_resp21"
                                             android:checked="false" />
@@ -2174,7 +2174,7 @@
                                         <RadioButton
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="Financiada"
+                                            android:text="Doação"
                                             android:textAppearance="@style/style_resposta"
                                             android:id="@+id/perg9_rb_resp15"
                                             android:checked="false" />
@@ -2211,7 +2211,7 @@
                                         <RadioButton
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="Financiada"
+                                            android:text="Doação"
                                             android:textAppearance="@style/style_resposta"
                                             android:id="@+id/perg9_rb_resp18"
                                             android:checked="false" />
@@ -2248,7 +2248,7 @@
                                         <RadioButton
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="Financiada"
+                                            android:text="Doação"
                                             android:textAppearance="@style/style_resposta"
                                             android:id="@+id/perg9_rb_resp21"
                                             android:checked="false" />
@@ -2604,7 +2604,7 @@
                                         <RadioButton
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="Financiada"
+                                            android:text="Doação"
                                             android:textAppearance="@style/style_resposta"
                                             android:id="@+id/perg10_rb_resp15"
                                             android:checked="false" />
@@ -2641,7 +2641,7 @@
                                         <RadioButton
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="Financiada"
+                                            android:text="Doação"
                                             android:textAppearance="@style/style_resposta"
                                             android:id="@+id/perg10_rb_resp18"
                                             android:checked="false" />
@@ -2678,7 +2678,7 @@
                                         <RadioButton
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="Financiada"
+                                            android:text="Doação"
                                             android:textAppearance="@style/style_resposta"
                                             android:id="@+id/perg10_rb_resp21"
                                             android:checked="false" />
@@ -3036,7 +3036,7 @@
                                         <RadioButton
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="Financiada"
+                                            android:text="Doação"
                                             android:textAppearance="@style/style_resposta"
                                             android:id="@+id/perg11_rb_resp15"
                                             android:checked="false" />
@@ -3073,7 +3073,7 @@
                                         <RadioButton
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="Financiada"
+                                            android:text="Doação"
                                             android:textAppearance="@style/style_resposta"
                                             android:id="@+id/perg11_rb_resp18"
                                             android:checked="false" />
@@ -3110,7 +3110,7 @@
                                         <RadioButton
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="Financiada"
+                                            android:text="Doação"
                                             android:textAppearance="@style/style_resposta"
                                             android:id="@+id/perg11_rb_resp21"
                                             android:checked="false" />
@@ -3467,7 +3467,7 @@
                                         <RadioButton
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="Financiada"
+                                            android:text="Doação"
                                             android:textAppearance="@style/style_resposta"
                                             android:id="@+id/perg12_rb_resp15"
                                             android:checked="false" />
@@ -3504,7 +3504,7 @@
                                         <RadioButton
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="Financiada"
+                                            android:text="Doação"
                                             android:textAppearance="@style/style_resposta"
                                             android:id="@+id/perg12_rb_resp18"
                                             android:checked="false" />
@@ -3541,7 +3541,7 @@
                                         <RadioButton
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="Financiada"
+                                            android:text="Doação"
                                             android:textAppearance="@style/style_resposta"
                                             android:id="@+id/perg12_rb_resp21"
                                             android:checked="false" />
@@ -3897,7 +3897,7 @@
                                         <RadioButton
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="Financiada"
+                                            android:text="Doação"
                                             android:textAppearance="@style/style_resposta"
                                             android:id="@+id/perg13_rb_resp15"
                                             android:checked="false" />
@@ -3934,7 +3934,7 @@
                                         <RadioButton
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="Financiada"
+                                            android:text="Doação"
                                             android:textAppearance="@style/style_resposta"
                                             android:id="@+id/perg13_rb_resp18"
                                             android:checked="false" />
@@ -3971,7 +3971,7 @@
                                         <RadioButton
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="Financiada"
+                                            android:text="Doação"
                                             android:textAppearance="@style/style_resposta"
                                             android:id="@+id/perg13_rb_resp21"
                                             android:checked="false" />
@@ -4326,7 +4326,7 @@
                                         <RadioButton
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="Financiada"
+                                            android:text="Doação"
                                             android:textAppearance="@style/style_resposta"
                                             android:id="@+id/perg14_rb_resp15"
                                             android:checked="false" />
@@ -4363,7 +4363,7 @@
                                         <RadioButton
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="Financiada"
+                                            android:text="Doação"
                                             android:textAppearance="@style/style_resposta"
                                             android:id="@+id/perg14_rb_resp18"
                                             android:checked="false" />
@@ -4400,7 +4400,7 @@
                                         <RadioButton
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="Financiada"
+                                            android:text="Doação"
                                             android:textAppearance="@style/style_resposta"
                                             android:id="@+id/perg14_rb_resp21"
                                             android:checked="false" />
@@ -4755,7 +4755,7 @@
                                         <RadioButton
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="Financiada"
+                                            android:text="Doação"
                                             android:textAppearance="@style/style_resposta"
                                             android:id="@+id/perg15_rb_resp15"
                                             android:checked="false" />
@@ -4792,7 +4792,7 @@
                                         <RadioButton
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="Financiada"
+                                            android:text="Doação"
                                             android:textAppearance="@style/style_resposta"
                                             android:id="@+id/perg15_rb_resp18"
                                             android:checked="false" />
@@ -4829,7 +4829,7 @@
                                         <RadioButton
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="Financiada"
+                                            android:text="Doação"
                                             android:textAppearance="@style/style_resposta"
                                             android:id="@+id/perg15_rb_resp21"
                                             android:checked="false" />
@@ -4974,7 +4974,7 @@
                                         <RadioButton
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="Financiada"
+                                            android:text="Doação"
                                             android:textAppearance="@style/style_resposta"
                                             android:id="@+id/perg16_rb_resp3"
                                             android:checked="false" />
@@ -5011,7 +5011,7 @@
                                         <RadioButton
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="Financiada"
+                                            android:text="Doação"
                                             android:textAppearance="@style/style_resposta"
                                             android:id="@+id/perg16_rb_resp6"
                                             android:checked="false" />
@@ -5048,7 +5048,7 @@
                                         <RadioButton
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="Financiada"
+                                            android:text="Doação"
                                             android:textAppearance="@style/style_resposta"
                                             android:id="@+id/perg16_rb_resp9"
                                             android:checked="false" />
@@ -5081,7 +5081,7 @@
 
                             </TableRow>
 
-                        </TableLayout>
+                        </TableLayout></HorizontalScrollView>
 
 
 

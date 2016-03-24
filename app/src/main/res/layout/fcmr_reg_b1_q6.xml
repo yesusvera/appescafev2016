@@ -86,6 +86,12 @@
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg1_rb_resp4"
                       />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="20dp"
+                        android:id="@+id/perg1_et_resp5"
+                        android:textAppearance="@style/style_resposta"/>
             </RadioGroup>
         </LinearLayout>
 

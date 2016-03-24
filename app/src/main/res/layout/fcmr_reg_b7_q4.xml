@@ -36,7 +36,7 @@
             android:textAppearance="@style/style_questao"
             android:text="Dos produtos selecionados e/ou beneficiados, qual é quantidade média vendida por dia ou por semana?"/>
 
-        <TableLayout
+        <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout
             android:paddingTop="15dp"
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -1050,7 +1050,7 @@
                     android:textAppearance="@style/style_resposta"/>
 
             </TableRow>
-        </TableLayout>
+        </TableLayout></HorizontalScrollView>
 
     </LinearLayout>
 

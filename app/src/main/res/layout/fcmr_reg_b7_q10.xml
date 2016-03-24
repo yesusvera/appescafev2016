@@ -90,6 +90,20 @@
                     android:id="@+id/perg1_rb_resp4"
                     android:paddingRight="15dp"
                     android:checked="false" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="20dp"
+                    android:textAppearance="@style/style_questao"
+                    android:text="Outro:"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg1_et_resp5"
+                    android:textAppearance="@style/style_resposta"/>
+
 
             </RadioGroup>
 
@@ -141,6 +155,19 @@
                     android:id="@+id/perg2_rb_resp4"
                     android:paddingRight="15dp"
                     android:checked="false" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="20dp"
+                    android:textAppearance="@style/style_questao"
+                    android:text="Outro:"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg2_et_resp5"
+                    android:textAppearance="@style/style_resposta"/>
 
             </RadioGroup>
 
@@ -194,21 +221,23 @@
                     android:paddingRight="15dp"
                     android:checked="false" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="20dp"
+                    android:textAppearance="@style/style_questao"
+                    android:text="Outro:"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg3_et_resp5"
+                    android:textAppearance="@style/style_resposta"/>
+
             </RadioGroup>
             
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingBottom="5dp"
-                android:paddingTop="20dp"
-                android:textAppearance="@style/style_questao"
-                android:text="Outro:"
-                />
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/perg4_et_resp1"
-                android:textAppearance="@style/style_resposta"/>
+
 
 
         </LinearLayout>

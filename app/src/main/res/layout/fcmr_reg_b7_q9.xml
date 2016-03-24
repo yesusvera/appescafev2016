@@ -34,9 +34,9 @@
             android:textAppearance="@style/style_questao"
             android:paddingBottom="5dp"
             android:gravity="center"
-            android:text="Qual é o preço é pago, em 2015, pelos principais compradores/consumidores por quilo?"/>
+            android:text="Qual foi o preço médio pago pelo quilo do camarão, em 2015, pelos principais compradores/consumidores indicados na questão anterior"/>
 
-        <TableLayout
+        <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout
             android:paddingTop="15dp"
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -943,7 +943,7 @@
                     android:textAppearance="@style/style_resposta"/>
 
             </TableRow>
-        </TableLayout>
+        </TableLayout></HorizontalScrollView>
 
     </LinearLayout>
 

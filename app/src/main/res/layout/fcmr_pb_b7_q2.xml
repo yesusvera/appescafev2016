@@ -307,7 +307,7 @@
         </LinearLayout>
 
 
-        <TableLayout
+        <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -1928,7 +1928,7 @@
                     android:textAppearance="@style/style_resposta" />
 
             </TableRow>
-        </TableLayout>
+        </TableLayout></HorizontalScrollView>
 
 
         <LinearLayout
@@ -2645,7 +2645,7 @@
             android:text="Qual é o preço de venda do camarão Branco pelos principais compradores ao longo do ano? (R$/kg) inverno e verão."
             android:textAppearance="@style/style_questao" />
 
-        <TableLayout
+        <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -4058,7 +4058,7 @@
                     android:textAppearance="@style/style_resposta" />
 
             </TableRow>
-        </TableLayout>
+        </TableLayout></HorizontalScrollView>
 
 
     </LinearLayout>
