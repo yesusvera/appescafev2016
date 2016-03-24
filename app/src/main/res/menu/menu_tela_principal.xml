@@ -59,7 +59,7 @@
         <menu>
             <item
                 android:icon="@android:drawable/btn_star_big_off"
-                android:title="Versão de homologação 1.0.3" />
+                android:title="Versão de homologação 1.0.4" />
 
         </menu>
     </item>

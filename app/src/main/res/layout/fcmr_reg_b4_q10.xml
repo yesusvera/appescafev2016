@@ -24,7 +24,7 @@
                 android:layout_height="match_parent"
                 android:text="Bloco 4 - Questão 10"
                 android:textColor="@android:color/white"
-                android:textSize="40dp"
+                android:textSize="20dp"
                 android:gravity="center"
                 android:textStyle="bold" />
         </LinearLayout>
