@@ -39,15 +39,19 @@ public class FormularioListDetailFragment extends Fragment {
                 switch (situacaoFormulario){
                     case 0: //TODOS
                         mFormularioList = formularioDAO.listarTodosPorUsuario(Identity.getUsuarioLogado().getId());
-                        titulo = "Lista - Todos os Formulários";
+                        titulo = "Todos os Formulários (Locais e Enviados)";
                         break;
-                    case 1: //ENVIADOS
+                    case 1: //PARA APROVACAO
                         mFormularioList = formularioDAO.listarPorSituacaoUsuario(1, Identity.getUsuarioLogado().getId());
-                        titulo = "Lista - Formulários Enviados";
+                        titulo = "Formulários Enviados para Aprovação (ONLINE)";
                         break;
                     case 2: //NÃO ENVIADOS
                         mFormularioList = formularioDAO.listarPorSituacaoUsuario(0, Identity.getUsuarioLogado().getId());
-                        titulo = "Lista - Formulários Não Enviados";
+                        titulo = "Formulários Não Enviados (OFFLINE)";
+                        break;
+                    case 3: //APROVADOS
+                       //IMPLEMENTAR AQUI FORMULARIOS SOMENTE ONLINE, COM INTERNET.
+                        titulo = "Formulários Finalizados (ONLINE)";
                         break;
                 }
 

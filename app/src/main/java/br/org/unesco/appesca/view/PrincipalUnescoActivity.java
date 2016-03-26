@@ -223,13 +223,17 @@ public class PrincipalUnescoActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.nav_enviados) {
+        if (id == R.id.nav_enviados_para_aprovacao) {
             listarFormularios(1);
         } else if (id == R.id.nav_nao_enviados) {
             listarFormularios(2);
         }else if (id == R.id.nav_todos) {
             listarFormularios(0);
-        }else if(id == R.id.novoCamaraoRegional ){
+        }else if (id == R.id.nav_enviados_aprovados) {
+            listarFormularios(3);
+        }
+
+        else if(id == R.id.novoCamaraoRegional ){
             abrirFormulario("Camarão Regional", 1);
         }else if(id == R.id.novoCamaraoECaranguejo){
             abrirFormulario("Caranguejo", 2);

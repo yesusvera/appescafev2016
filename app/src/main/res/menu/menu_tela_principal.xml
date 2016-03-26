@@ -4,9 +4,13 @@
     <group android:checkableBehavior="single" >
 
         <item
-            android:id="@+id/nav_enviados"
+            android:id="@+id/nav_enviados_aprovados"
             android:icon="@drawable/enviado_icone"
-            android:title="Enviados (Online)" />
+            android:title="Finalizados (Online)" />
+        <item
+            android:id="@+id/nav_enviados_para_aprovacao"
+            android:icon="@drawable/equipe_icon"
+            android:title="Em aprovação(Online)" />
         <item
             android:id="@+id/nav_nao_enviados"
             android:icon="@drawable/nao_enviado_icone"

@@ -18,6 +18,7 @@ import br.org.unesco.appesca.R;
 import br.org.unesco.appesca.dao.QuestaoDAO;
 import br.org.unesco.appesca.model.Formulario;
 import br.org.unesco.appesca.model.Questao;
+import br.org.unesco.appesca.model.Resposta;
 import br.org.unesco.appesca.util.AppescaUtil;
 import br.org.unesco.appesca.util.ConstantesIdsFormularios;
 import br.org.unesco.appesca.util.ConstantesUNESCO;
@@ -37,6 +38,8 @@ public class FormularioListAdapter extends RecyclerView.Adapter<FormularioListAd
 //        public TextView txtFuncao;
         public TextView txtTipoFormulario;
         public TextView txtDataFormulario;
+        public TextView txtSituacao;
+        public TextView txtIdSincronizacao;
         public ImageView imgSituacaoFormulario;
         public ImageView imgVisualizarFormulario;
         public ProgressBar progressBar;
@@ -51,6 +54,8 @@ public class FormularioListAdapter extends RecyclerView.Adapter<FormularioListAd
             txtTipoFormulario = (TextView) v.findViewById(R.id.txtTipoFormulario);
             txtDataFormulario = (TextView) v.findViewById(R.id.txtDataFormulario);
             imgSituacaoFormulario = (ImageView) v.findViewById(R.id.imgSituacaoFormulario);
+            txtSituacao = (TextView) v.findViewById(R.id.txtSituacao);
+            txtIdSincronizacao = (TextView) v.findViewById(R.id.txtIdSincronizacao);
             imgVisualizarFormulario = (ImageView) v.findViewById(R.id.imgVisualizar);
             progressBar = (ProgressBar)v.findViewById(R.id.progressBarRespostas);
             txtTextoResposta = (TextView)v.findViewById(R.id.txtTextoResposta);
@@ -92,11 +97,23 @@ public class FormularioListAdapter extends RecyclerView.Adapter<FormularioListAd
 //        holder.txtUfMunicipio.setText("");
 //        holder.txtFuncao.setText("");
 
-        if(formulario.getSituacao()==0) {
-            holder.imgSituacaoFormulario.setImageResource(R.drawable.nao_enviado_icone);
-        }else if (formulario.getSituacao()==1){
-            holder.imgSituacaoFormulario.setImageResource(R.drawable.nao_enviado_icone);
+        switch(formulario.getSituacao()){
+            case 0:
+                holder.imgSituacaoFormulario.setImageResource(R.drawable.nao_enviado_icone);
+                holder.txtSituacao.setText("Não enviado");
+                break;
+            case 1:
+                holder.imgSituacaoFormulario.setImageResource(R.drawable.equipe_icon);
+                holder.txtSituacao.setText("Em aprovação");
+                holder.txtIdSincronizacao.setText(formulario.getIdSincronizacao());
+                break;
+            case 2:
+                holder.imgSituacaoFormulario.setImageResource(R.drawable.enviado_icone);
+                holder.txtSituacao.setText("Finalizado");
+                holder.txtIdSincronizacao.setText(formulario.getIdSincronizacao());
+                break;
         }
+
 
         int[] arraysIdsMenuLateral = new int[]{};
         int[] arrayIdsQuestoes = new int[]{};
@@ -121,10 +138,18 @@ public class FormularioListAdapter extends RecyclerView.Adapter<FormularioListAd
 
         try {
             holder.txtNomeEntrevistado.setText(questao.getListaPerguntas().get(0).getListaRespostas().get(0).getTexto());
-            String ufMunicipio = questao.getListaPerguntas().get(3).getListaRespostas().get(0).getTexto() +
-                    "/" +
-                    questao.getListaPerguntas().get(2).getListaRespostas().get(0).getTexto();
-            holder.txtUfMunicipio.setText(ufMunicipio);
+
+            Resposta respUF = questao.getListaPerguntas().get(3).getListaRespostas().get(0);
+            Resposta respMun = questao.getListaPerguntas().get(4).getListaRespostas().get(0);
+
+            String texto = "";
+            if(respUF!=null && respUF.getTexto()!=null){
+                texto += respUF.getTexto();
+            }
+            if(respMun!=null && respMun.getTexto()!=null){
+                texto += "/" + respMun.getTexto();
+            }
+            holder.txtUfMunicipio.setText(texto);
         }catch(Exception e){
             Log.i("Erro", "teste");
         }

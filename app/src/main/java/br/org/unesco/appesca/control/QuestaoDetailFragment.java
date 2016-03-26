@@ -14,7 +14,9 @@ import android.widget.RadioButton;
 
 import java.util.List;
 
+import br.org.unesco.appesca.dao.FormularioDAO;
 import br.org.unesco.appesca.dao.QuestaoDAO;
+import br.org.unesco.appesca.model.Formulario;
 import br.org.unesco.appesca.model.Pergunta;
 import br.org.unesco.appesca.model.Questao;
 import br.org.unesco.appesca.model.Resposta;
@@ -31,6 +33,7 @@ public class QuestaoDetailFragment extends Fragment {
     private int idformulario;
 
     private QuestaoDAO questaoDAO;
+    private FormularioDAO formularioDAO;
 
     public QuestaoDetailFragment() {
     }
@@ -47,6 +50,8 @@ public class QuestaoDetailFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         questaoDAO = new QuestaoDAO(QuestaoDetailFragment.this.getContext());
+
+        formularioDAO = new FormularioDAO(QuestaoDetailFragment.this.getContext());
 
         if (getArguments().containsKey(ARG_ITEM_ID)) {
             id_layout_inflate = getArguments().getString(ARG_ITEM_ID);
@@ -79,6 +84,7 @@ public class QuestaoDetailFragment extends Fragment {
      */
     private void carregaRespostas(){
         Questao questao = questaoDAO.findQuestaoByOrdemIdFormulario(ordemQuestao, idformulario);
+        Formulario formulario = formularioDAO.findById(idformulario);
 
         if(questao!=null){
             List<Pergunta> listaPerguntas = questao.getListaPerguntas();
@@ -112,10 +118,45 @@ public class QuestaoDetailFragment extends Fragment {
                 }
             }
         }
+
+        //Tratamento para questões específicas
+        switch (ordemQuestao)
+        {
+            case 0: configuraIdentificacaoEntrevisado(formulario.getIdTipoFormulario());break;
+            default:
+        }
     }
 
     public View findViewByStringId(String id){
         return getActivity().findViewById(getResources().getIdentifier(id, "id", getActivity().getPackageName()));
     }
+
+    public void configuraIdentificacaoEntrevisado(int idTipoFormulario){
+        RadioButton rbMA = (RadioButton) findViewByStringId("perg3_rb_resp1");
+        RadioButton rbAP = (RadioButton) findViewByStringId("perg3_rb_resp2");
+        RadioButton rbPA = (RadioButton) findViewByStringId("perg3_rb_resp3");
+
+        if(rbMA!=null && rbAP!=null && rbPA!=null) {
+             switch (idTipoFormulario) {
+                case 1: //Camarão Regional
+                    rbMA.setEnabled(false);
+                    rbAP.setEnabled(true);
+                    rbPA.setEnabled(true);
+                    break;
+                case 2: //Caranguejo
+                    rbMA.setEnabled(false);
+                    rbAP.setEnabled(false);
+                    rbPA.setEnabled(true);
+                    break;
+                case 3: //Piticaia e Branco
+                    rbMA.setEnabled(true);
+                    rbAP.setEnabled(false);
+                    rbPA.setEnabled(false);
+                    break;
+            }
+        }
+    }
+
+
 
 }

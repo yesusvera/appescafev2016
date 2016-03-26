@@ -1,6 +1,11 @@
 package br.org.unesco.appesca.bo;
 
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
@@ -10,13 +15,17 @@ import com.thoughtworks.xstream.io.xml.DomDriver;
 
 import java.util.List;
 
+import br.org.unesco.appesca.dao.FormularioDAO;
+import br.org.unesco.appesca.dao.UsuarioDAO;
 import br.org.unesco.appesca.model.Formulario;
 import br.org.unesco.appesca.model.Identity;
 import br.org.unesco.appesca.model.Pergunta;
 import br.org.unesco.appesca.model.Questao;
 import br.org.unesco.appesca.model.Resposta;
 import br.org.unesco.appesca.rest.model.FormularioREST;
+import br.org.unesco.appesca.rest.model.RespEnvioFormulario;
 import br.org.unesco.appesca.util.ConstantesREST;
+import br.org.unesco.appesca.view.PrincipalUnescoActivity;
 import cz.msebera.android.httpclient.Header;
 
 /**
@@ -47,13 +56,13 @@ public class FormularioBO {
         }
     }
 
-    public void enviarFormulario(Formulario formulario){
+    public void enviarFormulario(Formulario formTemp,final Formulario formularioOriginal, final Context context){
 
-//        Log.i("FORMULARIO", formulario.toString());
+//        Log.i("FORMULARIO", formTemp.toString());
 
-        prepararObjetoFormulario(formulario);
+        prepararObjetoFormulario(formTemp);
 
-        FormularioREST formularioREST = new FormularioREST(formulario);
+        FormularioREST formularioREST = new FormularioREST(formTemp);
 
         XStream xStream = new XStream(new DomDriver());
         String xmlFormularioRest = xStream.toXML(formularioREST);
@@ -71,12 +80,34 @@ public class FormularioBO {
             @Override
             public void onStart() {
 //                showProgress(true);
+                Toast.makeText(context, "Enviando o formulário.", Toast.LENGTH_LONG).show();
             }
 
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] response) {
                 String xmlRetorno = new String(response).toString();
-//                showProgress(false);
+                XStream xStream = new XStream(new DomDriver());
+
+                RespEnvioFormulario respEnvioFormulario = (RespEnvioFormulario) xStream.fromXML(xmlRetorno);
+
+                if(!respEnvioFormulario.isErro()) { //LOGIN CORRETO
+                    FormularioDAO formularioDAO = new FormularioDAO(context);
+                    formularioOriginal.setIdSincronizacao(respEnvioFormulario.getIdSincronizacao());
+                    formularioOriginal.setSituacao(1);
+                    formularioDAO.save(formularioOriginal);
+                }
+
+                new AlertDialog.Builder(context)
+                        .setTitle("Appesca")
+                        .setMessage(respEnvioFormulario.getMensagemErro())
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setPositiveButton(android.R.string.ok, null).show();
+
+                try{
+                    ((Activity)context).finish();
+                }catch(Exception e){
+                    e.printStackTrace();
+                }
             }
 
             @Override

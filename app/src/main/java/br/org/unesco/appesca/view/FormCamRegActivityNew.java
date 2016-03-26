@@ -132,14 +132,12 @@ public class FormCamRegActivityNew extends AppCompatActivity
         perguntaDAO = new PerguntaDAO(FormCamRegActivityNew.this);
         questaoBO = new QuestaoBO(FormCamRegActivityNew.this);
 
-
-
         FloatingActionButton fabRevert = (FloatingActionButton) findViewById(R.id.float_button_menu_back);
 
         fabRevert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                AppescaUtil.limparMemoria();
                 if (posAtual == 0) {
                     new AlertDialog.Builder(FormCamRegActivityNew.this)
                             .setTitle("Appesca")
@@ -197,13 +195,21 @@ public class FormCamRegActivityNew extends AppCompatActivity
         //}else{//TODO Update{
         //}
         openFragment(R.layout.localizacao_residencia_form);
+
+        configurarAcoesConformeSituacao(fabRevert, fab);
+    }
+
+    private void configurarAcoesConformeSituacao(FloatingActionButton fabRevert, FloatingActionButton fab) {
+        if(formulario!=null && formulario.getSituacao()>0){
+            fab.setVisibility(View.INVISIBLE);
+            fabRevert.setVisibility(View.INVISIBLE);
+        }
     }
 
 
     private void salvarQuestaoAtual(boolean redirecionar){
         int ordemQuestao = posAtual - 1;
         Questao questao = questaoDAO.findQuestaoByOrdemIdFormulario(ordemQuestao, formulario.getId());
-
 
         //PRIMEIRO EXCLUIR TUDO EM CASCATA: RESPOSTAS, PERGUNTAS E QUESTAO. DEPOIS RE-INSERIR.
         if (questao != null) {
@@ -258,9 +264,6 @@ public class FormCamRegActivityNew extends AppCompatActivity
         if(formulario==null) {
             formulario = new Formulario();
 
-//            formulario.setIdTipoFormulario(1);
-//            formulario.setNome("Camarão Regional");
-            
             formulario.setIdTipoFormulario(tipoFormulario);
             formulario.setNome(nomeFormulario);
 
@@ -452,15 +455,27 @@ public class FormCamRegActivityNew extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.itemEnviarFormulario) {
-            List<Questao> listaQuestoes = questaoDAO.getQuestoesRespostasByFormulario(formulario.getId());
-            formulario.setListaQuestoes(listaQuestoes);
+            if(formulario!=null && formulario.getSituacao()==0) {
+                List<Questao> listaQuestoes = questaoDAO.getQuestoesRespostasByFormulario(formulario.getId());
+                formulario.setListaQuestoes(listaQuestoes);
 
-//            new FormularioBO().enviarFormulario(formulario);
-//
-//            Toast.makeText(getApplicationContext(), "Formulário enviado com sucesso!.", Toast.LENGTH_LONG).show();
-//
-//            finish();
-            enviarFormulario();
+                FormularioDAO formularioDAO = new FormularioDAO(FormCamRegActivityNew.this);
+
+                Formulario formTmp = formularioDAO.findById(formulario.getId());
+                formTmp.setListaQuestoes(listaQuestoes);
+                new FormularioBO().enviarFormulario(formTmp, formulario, FormCamRegActivityNew.this);
+
+
+                //Toast.makeText(getApplicationContext(), "Enviando o formulário.", Toast.LENGTH_LONG).show();
+                //   finish();
+
+                // enviarFormulario();
+            }else{
+                Toast.makeText(getApplicationContext(), "Este formulário já está online, não pode ser enviado.", Toast.LENGTH_LONG).show();
+
+            }
+
+
         }
             if (id == R.id.itemClose) {
                 encerrarFormulario();
@@ -504,14 +519,8 @@ public class FormCamRegActivityNew extends AppCompatActivity
 
                             Formulario formTmp = formularioDAO.findById(formulario.getId());
                             formTmp.setListaQuestoes(listaQuestoes);
-                            new FormularioBO().enviarFormulario(formTmp);
+                            new FormularioBO().enviarFormulario(formTmp, formulario, getApplicationContext());
 
-                            Toast.makeText(getApplicationContext(), "Formulário enviado com sucesso!.", Toast.LENGTH_LONG).show();
-
-//                            formulario.setSituacao(1);
-//                            FormularioDAO formularioDAO = new FormularioDAO(FormCamRegActivityNew.this);
-//                            formulario = formularioDAO.insertFormulario(formulario);
-//                            Toast.makeText(getApplicationContext(), "Formulário salvo na base local.", Toast.LENGTH_LONG).show();Toast.makeText(getApplicationContext(), "Formulário enviado com sucesso!.", Toast.LENGTH_LONG).show();
                             finish();
                         }
                     }
@@ -519,17 +528,23 @@ public class FormCamRegActivityNew extends AppCompatActivity
     }
 
     private void encerrarFormulario() {
-        new AlertDialog.Builder(this)
-                .setTitle("Appesca")
-                .setMessage("As últimas mudanças não salvas serão perdidadas. Deseja encerrar o formulário?")
-                .setIcon(android.R.drawable.ic_dialog_alert)
-                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        finish();
-                    }
-                })
-                .setNegativeButton(android.R.string.no, null).show();
+        if(formulario!=null && formulario.getSituacao()>0){
+            finish();
+        }else {
+
+            new AlertDialog.Builder(this)
+                    .setTitle("Appesca")
+                    .setMessage("As últimas mudanças não salvas serão perdidadas. Deseja encerrar o formulário?")
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            finish();
+                        }
+                    })
+                    .setNegativeButton(android.R.string.no, null).show();
+
+        }
     }
 
 
