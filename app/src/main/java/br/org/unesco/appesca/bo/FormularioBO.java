@@ -3,8 +3,7 @@ package br.org.unesco.appesca.bo;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
-import android.content.Intent;
-import android.util.Log;
+import android.content.DialogInterface;
 import android.widget.Toast;
 
 import com.loopj.android.http.AsyncHttpClient;
@@ -13,10 +12,7 @@ import com.loopj.android.http.RequestParams;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 
-import java.util.List;
-
 import br.org.unesco.appesca.dao.FormularioDAO;
-import br.org.unesco.appesca.dao.UsuarioDAO;
 import br.org.unesco.appesca.model.Formulario;
 import br.org.unesco.appesca.model.Identity;
 import br.org.unesco.appesca.model.Pergunta;
@@ -25,7 +21,6 @@ import br.org.unesco.appesca.model.Resposta;
 import br.org.unesco.appesca.rest.model.FormularioREST;
 import br.org.unesco.appesca.rest.model.RespEnvioFormulario;
 import br.org.unesco.appesca.util.ConstantesREST;
-import br.org.unesco.appesca.view.PrincipalUnescoActivity;
 import cz.msebera.android.httpclient.Header;
 
 /**
@@ -57,8 +52,6 @@ public class FormularioBO {
     }
 
     public void enviarFormulario(Formulario formTemp,final Formulario formularioOriginal, final Context context){
-
-//        Log.i("FORMULARIO", formTemp.toString());
 
         prepararObjetoFormulario(formTemp);
 
@@ -97,17 +90,8 @@ public class FormularioBO {
                     formularioDAO.save(formularioOriginal);
                 }
 
-                new AlertDialog.Builder(context)
-                        .setTitle("Appesca")
-                        .setMessage(respEnvioFormulario.getMensagemErro())
-                        .setIcon(android.R.drawable.ic_dialog_alert)
-                        .setPositiveButton(android.R.string.ok, null).show();
 
-                try{
-                    ((Activity)context).finish();
-                }catch(Exception e){
-                    e.printStackTrace();
-                }
+                Toast.makeText(context, respEnvioFormulario.getMensagemErro(), Toast.LENGTH_LONG).show();
             }
 
             @Override

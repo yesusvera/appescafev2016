@@ -45,6 +45,28 @@ public class FormularioDAO extends BaseDAO<Formulario> {
                                     String.valueOf(idUsuario)});
     }
 
+    public List<Formulario> listarTodosOffLine(int idUsuario) {
+        return listByRawQuery(SELECT_FROM_TABLE()
+                        +   " WHERE " + AppescaHelper.COL_FORMULARIO_SITUACAO + " in (-1, 0) " +
+                        " AND " + AppescaHelper.COL_FORMULARIO_ID_USUARIO + " = ? " +
+                        " ORDER BY " + AppescaHelper.COL_FORMULARIO_DATA_APLICACAO +  " DESC " ,
+                new String[]{String.valueOf(idUsuario)});
+    }
+
+
+    public Formulario getFormularioPorIdSincronizacao(String idSincronizacao) {
+        List<Formulario> lstTmp = listByRawQuery(SELECT_FROM_TABLE()
+                        +   " WHERE " + AppescaHelper.COL_FORMULARIO_ID_SINCRONIZACAO + " = ? ",
+                new String[]{idSincronizacao});
+
+        if(lstTmp!=null && lstTmp.size()>0){
+            return lstTmp.get(0);
+        }
+
+        return null;
+    }
+
+
     public List<Formulario> listarPorSituacaoTipoUsuario(int situacao, int tipoFormulario, int idUsuario) {
 
        return listByRawQuery(SELECT_FROM_TABLE()

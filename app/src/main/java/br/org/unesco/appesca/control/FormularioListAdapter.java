@@ -98,6 +98,11 @@ public class FormularioListAdapter extends RecyclerView.Adapter<FormularioListAd
 //        holder.txtFuncao.setText("");
 
         switch(formulario.getSituacao()){
+            case -1:
+                holder.imgSituacaoFormulario.setImageResource(R.drawable.questao_icon_devolvido);
+                holder.txtSituacao.setText("Devolvido");
+                holder.txtIdSincronizacao.setText(formulario.getIdSincronizacao());
+                break;
             case 0:
                 holder.imgSituacaoFormulario.setImageResource(R.drawable.nao_enviado_icone);
                 holder.txtSituacao.setText("Não enviado");

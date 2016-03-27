@@ -41,6 +41,7 @@ import br.org.unesco.appesca.model.Pergunta;
 import br.org.unesco.appesca.model.Questao;
 import br.org.unesco.appesca.model.Resposta;
 import br.org.unesco.appesca.util.AppescaUtil;
+import br.org.unesco.appesca.util.ConnectionNetwork;
 import br.org.unesco.appesca.util.ConstantesIdsFormularios;
 import cz.msebera.android.httpclient.entity.SerializableEntity;
 
@@ -456,20 +457,17 @@ public class FormCamRegActivityNew extends AppCompatActivity
         //noinspection SimplifiableIfStatement
         if (id == R.id.itemEnviarFormulario) {
             if(formulario!=null && formulario.getSituacao()==0) {
-                List<Questao> listaQuestoes = questaoDAO.getQuestoesRespostasByFormulario(formulario.getId());
-                formulario.setListaQuestoes(listaQuestoes);
+//                List<Questao> listaQuestoes = questaoDAO.getQuestoesRespostasByFormulario(formulario.getId());
+//                formulario.setListaQuestoes(listaQuestoes);
+//
+//                FormularioDAO formularioDAO = new FormularioDAO(FormCamRegActivityNew.this);
+//
+//                Formulario formTmp = formularioDAO.findById(formulario.getId());
+//                formTmp.setListaQuestoes(listaQuestoes);
+//                new FormularioBO().enviarFormulario(formTmp, formulario, FormCamRegActivityNew.this);
 
-                FormularioDAO formularioDAO = new FormularioDAO(FormCamRegActivityNew.this);
 
-                Formulario formTmp = formularioDAO.findById(formulario.getId());
-                formTmp.setListaQuestoes(listaQuestoes);
-                new FormularioBO().enviarFormulario(formTmp, formulario, FormCamRegActivityNew.this);
-
-
-                //Toast.makeText(getApplicationContext(), "Enviando o formulário.", Toast.LENGTH_LONG).show();
-                //   finish();
-
-                // enviarFormulario();
+                 enviarFormulario();
             }else{
                 Toast.makeText(getApplicationContext(), "Este formulário já está online, não pode ser enviado.", Toast.LENGTH_LONG).show();
 
@@ -485,6 +483,14 @@ public class FormCamRegActivityNew extends AppCompatActivity
     }
 
     private void enviarFormulario() {
+
+        if(!ConnectionNetwork.verifiedInternetConnection(this)){
+            String mensagemErro = "Seu aparelho está sem conectividade com a internet. Por favor habilite seu Wifi ou rede de celular.";
+            Toast toast = Toast.makeText(FormCamRegActivityNew.this, mensagemErro, Toast.LENGTH_LONG);
+            toast.show();
+            return;
+        }
+
         new AlertDialog.Builder(this)
                 .setTitle("Appesca")
                 .setMessage("Este formulário será enviado para aprovação, confirma o envio?")
@@ -494,15 +500,18 @@ public class FormCamRegActivityNew extends AppCompatActivity
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
 
+                        boolean enviarSomenteCompleto = false;
+
+
                         List<Questao> listaQuestoes = questaoDAO.getQuestoesRespostasByFormulario(formulario.getId());
 
                         //VALIDACOES QUE IMPEDEM O ENVIO DO FORMULARIO
-                        if (listaQuestoes == null || listaQuestoes.size() == 0) {
+                        if ((listaQuestoes == null || listaQuestoes.size() == 0 ) && enviarSomenteCompleto) {
 
                             Toast.makeText(getApplicationContext(), "Não foi possível enviar. Nenhuma questão foi respondida.", Toast.LENGTH_LONG).show();
 
                             return;
-                        } else if (listaQuestoes.size() < arrayIdsQuestoes.length) {
+                        } else if (listaQuestoes.size() < arrayIdsQuestoes.length  && enviarSomenteCompleto) {
 
                             new AlertDialog.Builder(FormCamRegActivityNew.this)
                                     .setTitle("Appesca")
@@ -513,7 +522,7 @@ public class FormCamRegActivityNew extends AppCompatActivity
                                     .setPositiveButton(android.R.string.ok, null).show();
 
                             return;
-                        } else if (listaQuestoes.size() == arrayIdsQuestoes.length) {
+                        } else if (listaQuestoes.size() == arrayIdsQuestoes.length || !enviarSomenteCompleto) {
 
                             FormularioDAO formularioDAO = new FormularioDAO(FormCamRegActivityNew.this);
 

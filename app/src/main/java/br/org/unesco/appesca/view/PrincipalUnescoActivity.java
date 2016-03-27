@@ -13,6 +13,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -20,18 +21,30 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.AsyncHttpResponseHandler;
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.DomDriver;
+
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
+import java.text.Normalizer;
+import java.util.List;
 
 import br.org.unesco.appesca.R;
 import br.org.unesco.appesca.control.FormularioListDetailFragment;
+import br.org.unesco.appesca.dao.FormularioDAO;
 import br.org.unesco.appesca.dao.UsuarioDAO;
+import br.org.unesco.appesca.model.Formulario;
 import br.org.unesco.appesca.model.Identity;
+import br.org.unesco.appesca.rest.model.RespAutenticacaoREST;
+import br.org.unesco.appesca.rest.model.RespFormularioREST;
 import br.org.unesco.appesca.util.AppescaUtil;
 import br.org.unesco.appesca.util.ConnectionNetwork;
 import br.org.unesco.appesca.util.ConstantesREST;
 import br.org.unesco.appesca.util.DBBitmapUtil;
+import cz.msebera.android.httpclient.Header;
 
 /**
  * @author yesus
@@ -168,7 +181,8 @@ public class PrincipalUnescoActivity extends AppCompatActivity
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Identity.setUsuarioLogado(null);recreate();
+                        Identity.setUsuarioLogado(null);
+                        //recreate();
                         LoginUnescoActivity.ENCERRAR_APP = true;
                         finish();
                         Toast.makeText(getApplicationContext(), "Appesca Encerrado!", Toast.LENGTH_LONG).show();
@@ -266,7 +280,74 @@ public class PrincipalUnescoActivity extends AppCompatActivity
 
     }
 
-    private void listarFormularios(int value) {
+
+    private void listarFormularios(final int value) {
+
+        if(!ConnectionNetwork.verifiedInternetConnection(this)){
+            String mensagemErro = "Para sincronizar os formulários enviados, habilite sua conexão com a internet.";
+            Toast toast = Toast.makeText(PrincipalUnescoActivity.this, mensagemErro, Toast.LENGTH_LONG);
+            toast.show();
+
+            carregaLista(value);
+            return;
+        }
+
+        String strURL = ConstantesREST.getURLService(ConstantesREST.FORMULARIO_LISTA) +
+                "?login=" + Identity.getUsuarioLogado().getLogin() + "&senha=" + Identity.getUsuarioLogado().getSenha();
+
+        AsyncHttpClient client = new AsyncHttpClient();
+        client.get(strURL, new AsyncHttpResponseHandler() {
+            @Override
+            public void onStart() {
+            }
+
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, byte[] response) {
+                String xmlRetorno = new String(response).toString();
+                XStream xStream = new XStream(new DomDriver());
+
+                RespFormularioREST respFormularioREST = (RespFormularioREST) xStream.fromXML(xmlRetorno);
+                List<Formulario> listaFormularios = respFormularioREST.getListaFormularios();
+
+                FormularioDAO formularioDAO = new FormularioDAO(PrincipalUnescoActivity.this);
+                for(Formulario form: listaFormularios){
+                    Formulario formBD = formularioDAO.getFormularioPorIdSincronizacao(form.getIdSincronizacao());
+                    if(formBD!=null) {
+                        form.setId(formBD.getId());
+                        form.setIdUsuario(formBD.getIdUsuario());
+
+                        formularioDAO.save(form);
+                    }
+                }
+                carregaLista(value);
+            }
+
+            @Override
+            public void onFinish() {
+                super.onFinish();
+            }
+
+            @Override
+            public void onCancel() {
+                super.onCancel();
+            }
+
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, byte[] errorResponse, Throwable e) {
+                carregaLista(value);
+            }
+
+            @Override
+            public void onRetry(int retryNo) {
+            }
+        });
+
+
+
+    }
+
+    private void carregaLista(int value) {
         Bundle arguments = new Bundle();
         arguments.putInt(FormularioListDetailFragment.ARG_ITEM_ID, value);
         FormularioListDetailFragment fragment = new FormularioListDetailFragment();
