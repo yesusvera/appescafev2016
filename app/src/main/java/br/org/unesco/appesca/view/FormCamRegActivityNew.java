@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -281,6 +282,30 @@ public class FormCamRegActivityNew extends AppCompatActivity
             chekListQuestoes();
         }
 
+        TextView txtStatus = (TextView) cabecalhoNavigationView.findViewById(R.id.txtStatus);
+        ImageView imgSituacaoFormulario = (ImageView) cabecalhoNavigationView.findViewById(R.id.imgSituacaoFormulario);
+
+        String idSync = formulario.getIdSincronizacao()!=null?formulario.getIdSincronizacao():"";
+        switch(formulario.getSituacao()){
+            case -1:
+                imgSituacaoFormulario.setImageResource(R.drawable.questao_icon_devolvido);
+                txtStatus.setText("Devolvido (" + idSync + ")");
+                break;
+            case 0:
+                imgSituacaoFormulario.setImageResource(R.drawable.nao_enviado_icone);
+                txtStatus.setText("Não enviado");
+                break;
+            case 1:
+                imgSituacaoFormulario.setImageResource(R.drawable.equipe_icon);
+                txtStatus.setText("Em aprovação (" + idSync + ")");
+                break;
+            case 2:
+                imgSituacaoFormulario.setImageResource(R.drawable.enviado_icone);
+                txtStatus.setText("Finalizado (" + idSync + ")");
+                break;
+        }
+
+
         TextView txtPesquisador = (TextView) cabecalhoNavigationView.findViewById(R.id.txtPesquisador);
         if (Identity.getUsuarioLogado() != null && Identity.getUsuarioLogado().getNome() != null) {
             txtPesquisador.setText(Identity.getUsuarioLogado().getNome());
@@ -456,24 +481,7 @@ public class FormCamRegActivityNew extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.itemEnviarFormulario) {
-            if(formulario!=null && formulario.getSituacao()==0) {
-//                List<Questao> listaQuestoes = questaoDAO.getQuestoesRespostasByFormulario(formulario.getId());
-//                formulario.setListaQuestoes(listaQuestoes);
-//
-//                FormularioDAO formularioDAO = new FormularioDAO(FormCamRegActivityNew.this);
-//
-//                Formulario formTmp = formularioDAO.findById(formulario.getId());
-//                formTmp.setListaQuestoes(listaQuestoes);
-//                new FormularioBO().enviarFormulario(formTmp, formulario, FormCamRegActivityNew.this);
-
-
                  enviarFormulario();
-            }else{
-                Toast.makeText(getApplicationContext(), "Este formulário já está online, não pode ser enviado.", Toast.LENGTH_LONG).show();
-
-            }
-
-
         }
             if (id == R.id.itemClose) {
                 encerrarFormulario();
@@ -484,6 +492,17 @@ public class FormCamRegActivityNew extends AppCompatActivity
 
     private void enviarFormulario() {
 
+        if(formulario!=null ) {
+            if(formulario.getSituacao()==1) {
+                Toast.makeText(getApplicationContext(), "Este formulário está em fase de aprovação. Peça para um coordenador validar no ambiente WEB.", Toast.LENGTH_LONG).show();
+                return;
+            }else if(formulario.getSituacao() == 2) {
+                Toast.makeText(getApplicationContext(), "Este formulário já foi enviado e finalizado, não pode ser enviado novamente.", Toast.LENGTH_LONG).show();
+                return;
+            }
+        }
+
+
         if(!ConnectionNetwork.verifiedInternetConnection(this)){
             String mensagemErro = "Seu aparelho está sem conectividade com a internet. Por favor habilite seu Wifi ou rede de celular.";
             Toast toast = Toast.makeText(FormCamRegActivityNew.this, mensagemErro, Toast.LENGTH_LONG);
@@ -491,27 +510,34 @@ public class FormCamRegActivityNew extends AppCompatActivity
             return;
         }
 
+        String msgConfirmacao="Este formulário será enviado para aprovação, confirma o envio?";
+
+        if(formulario.getSituacao()==-1){
+            msgConfirmacao = "Este formulário devolvido está sendo enviado novamente para a aprovação do coordenador." +
+                    "Já realizou todas as correções apontadas pelo coordenador? Confirma o envio?";
+        }
+
         new AlertDialog.Builder(this)
                 .setTitle("Appesca")
-                .setMessage("Este formulário será enviado para aprovação, confirma o envio?")
+                .setMessage(msgConfirmacao)
                 .setIcon(android.R.drawable.ic_dialog_alert)
 
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
 
-                        boolean enviarSomenteCompleto = false;
+                        boolean enviarSomenteCompleto = true;
 
 
                         List<Questao> listaQuestoes = questaoDAO.getQuestoesRespostasByFormulario(formulario.getId());
 
                         //VALIDACOES QUE IMPEDEM O ENVIO DO FORMULARIO
-                        if ((listaQuestoes == null || listaQuestoes.size() == 0 ) && enviarSomenteCompleto) {
+                        if ((listaQuestoes == null || listaQuestoes.size() == 0) && enviarSomenteCompleto) {
 
                             Toast.makeText(getApplicationContext(), "Não foi possível enviar. Nenhuma questão foi respondida.", Toast.LENGTH_LONG).show();
 
                             return;
-                        } else if (listaQuestoes.size() < arrayIdsQuestoes.length  && enviarSomenteCompleto) {
+                        } else if (listaQuestoes.size() < arrayIdsQuestoes.length && enviarSomenteCompleto) {
 
                             new AlertDialog.Builder(FormCamRegActivityNew.this)
                                     .setTitle("Appesca")
@@ -528,9 +554,8 @@ public class FormCamRegActivityNew extends AppCompatActivity
 
                             Formulario formTmp = formularioDAO.findById(formulario.getId());
                             formTmp.setListaQuestoes(listaQuestoes);
-                            new FormularioBO().enviarFormulario(formTmp, formulario, getApplicationContext());
+                            new FormularioBO().enviarFormulario(formTmp, formulario, getApplicationContext(), FormCamRegActivityNew.this);
 
-                            finish();
                         }
                     }
                 }). setNegativeButton(android.R.string.no, null). show();

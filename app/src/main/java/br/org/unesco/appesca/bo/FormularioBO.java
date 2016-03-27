@@ -51,7 +51,7 @@ public class FormularioBO {
         }
     }
 
-    public void enviarFormulario(Formulario formTemp,final Formulario formularioOriginal, final Context context){
+    public void enviarFormulario(Formulario formTemp,final Formulario formularioOriginal, final Context context, final Activity activity){
 
         prepararObjetoFormulario(formTemp);
 
@@ -92,6 +92,12 @@ public class FormularioBO {
 
 
                 Toast.makeText(context, respEnvioFormulario.getMensagemErro(), Toast.LENGTH_LONG).show();
+
+                try {
+                    activity.finish();
+                }catch (Exception e){
+
+                }
             }
 
             @Override

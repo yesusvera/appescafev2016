@@ -49,7 +49,7 @@ public class FormularioDAO extends BaseDAO<Formulario> {
         return listByRawQuery(SELECT_FROM_TABLE()
                         +   " WHERE " + AppescaHelper.COL_FORMULARIO_SITUACAO + " in (-1, 0) " +
                         " AND " + AppescaHelper.COL_FORMULARIO_ID_USUARIO + " = ? " +
-                        " ORDER BY " + AppescaHelper.COL_FORMULARIO_DATA_APLICACAO +  " DESC " ,
+                        " ORDER BY " + AppescaHelper.COL_FORMULARIO_SITUACAO +  " ASC " ,
                 new String[]{String.valueOf(idUsuario)});
     }
 
