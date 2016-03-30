@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
                 android:textAppearance="@style/style_questao"
-                android:text="Qual é a sua principal ocupação no momento?"/>
+                android:text="1. Qual é a sua principal ocupação no momento?"/>
 
             <!-- RESPOSTA + TABULACAO DAS OPCOES -->
             <LinearLayout

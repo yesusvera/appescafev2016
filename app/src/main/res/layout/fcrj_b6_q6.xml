@@ -55,27 +55,27 @@
             android:orientation="horizontal"
             android:paddingBottom="10dp">
 
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+            <!--<RadioGroup-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="vertical">-->
 
-                <RadioButton
-                    android:id="@+id/perg1_rb_resp1"
+                <CheckBox
+                    android:id="@+id/perg1_cb_resp1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingRight="15dp"
                     android:text="Maré Morta, Mortinha ou de Quarta."
                     android:textAppearance="@style/style_resposta" />
 
-                <RadioButton
-                    android:id="@+id/perg1_rb_resp2"
+                <CheckBox
+                    android:id="@+id/perg1_cb_resp2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingRight="15dp"
                     android:text="Maré de Lanço ou Lançante."
                     android:textAppearance="@style/style_resposta" />
-            </RadioGroup>
+            <!--</RadioGroup>-->
 
 
         </LinearLayout>

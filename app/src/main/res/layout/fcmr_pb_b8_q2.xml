@@ -36,14 +36,12 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="20dp">
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
                 android:text="Este tipo de pesca o senhor realiza...:(I)"
                 android:textAppearance="@style/style_questao" />
-
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -56,20 +54,18 @@
                     android:layout_height="wrap_content"
                     android:paddingRight="15dp"
                     android:text="Com embarcação"
+                    android:tag="perg2_rg->true"
                     android:textAppearance="@style/style_resposta" />
-
-
                 <RadioButton
                     android:id="@+id/perg1_rb_resp2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="false"
                     android:paddingRight="15dp"
+                    android:tag="perg2_rg->false"
                     android:text="Sem embarcação. (pule para 3)"
                     android:textAppearance="@style/style_resposta" />
-
             </RadioGroup>
-
         </LinearLayout>
 
         <LinearLayout
@@ -89,6 +85,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:id="@+id/perg2_rg"
                 android:paddingLeft="30dp">
 
                 <RadioButton
@@ -256,6 +253,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:id="@+id/perg5_rg"
                 android:paddingLeft="30dp">
 
                 <RadioButton

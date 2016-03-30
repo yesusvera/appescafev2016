@@ -42,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
                 android:textAppearance="@style/style_questao"
-                android:text="Quais são os principais problemas que atingem a comunidade hoje?"/>
+                android:text="1. Quais são os principais problemas que atingem a comunidade hoje?"/>
 
             <!-- RESPOSTA + TABULACAO DAS OPCOES -->
             <LinearLayout

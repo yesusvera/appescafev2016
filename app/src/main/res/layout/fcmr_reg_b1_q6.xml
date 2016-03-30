@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
                 android:textAppearance="@style/style_questao"
-                android:text="Como é tratada a água para beber na sua casa?"/>
+                android:text="1. Como é tratada a água para beber na sua casa?"/>
 
         </LinearLayout>
 

@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
                 android:textAppearance="@style/style_questao"
-                android:text="Você é proprietário do terreno onde mora?"/>
+                android:text="1. Você é proprietário do terreno onde mora?"/>
             
             <LinearLayout
                 android:orientation="horizontal"
@@ -51,23 +51,24 @@
                 <RadioGroup
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                     Button="@+id/perg1_rb_resp3">
+                    android:orientation="horizontal">
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Sim"
                         android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg1_rb_resp3"
-                        android:paddingRight="15dp"/>
+                        android:id="@+id/perg1_rb_resp1"
+                        android:paddingRight="15dp"
+                        android:tag="perg2_rg->true,perg3_rg->false" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Não"
                         android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg1_rb_resp3"
-                        android:paddingRight="15dp"/>
+                        android:id="@+id/perg1_rb_resp2"
+                        android:paddingRight="15dp"
+                        android:tag="perg2_rg->false,perg3_rg->true" />
                 </RadioGroup>
 
             </LinearLayout>
@@ -83,7 +84,7 @@
                     android:id="@+id/perg2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Se sim, qual foi a forma de aquisição?"
+                    android:text="2. Se sim, qual foi a forma de aquisição?"
                     android:textAppearance="@style/style_questao"
                     android:paddingBottom="5dp"/>
 
@@ -97,48 +98,55 @@
                     <RadioGroup
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:id="@+id/perg2_rg">
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Compra"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg2_rb_resp1" />
+                            android:id="@+id/perg2_rb_resp1"
+                            android:enabled="false" />
 
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Herança"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg2_rb_resp2" />
+                            android:id="@+id/perg2_rb_resp2"
+                            android:enabled="false" />
 
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Doação"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg2_rb_resp3" />
+                            android:id="@+id/perg2_rb_resp3"
+                            android:enabled="false" />
 
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Proveniente de assentamento"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg2_rb_resp4" />
+                            android:id="@+id/perg2_rb_resp4"
+                            android:enabled="false" />
 
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Ocupação"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg2_rb_resp5" />
+                            android:id="@+id/perg2_rb_resp5"
+                            android:enabled="false" />
 
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Não Sabe"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg2_rb_resp6" />
+                            android:id="@+id/perg2_rb_resp6"
+                            android:enabled="false" />
 
                         <RadioButton
                             android:layout_width="wrap_content"
@@ -146,7 +154,7 @@
                             android:text="Outra"
                             android:textAppearance="@style/style_resposta"
                             android:id="@+id/perg2_rb_resp7"
-                          />
+                            android:enabled="false" />
                     </RadioGroup>
                 </LinearLayout>
             </LinearLayout>
@@ -162,7 +170,7 @@
                     android:id="@+id/perg3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Se não, qual é o seu vínculo com o proprietário do terreno?"
+                    android:text="3. Se não, qual é o seu vínculo com o proprietário do terreno?"
                     android:textAppearance="@style/style_questao"
                     android:paddingBottom="5dp"/>
 
@@ -176,70 +184,80 @@
                     <RadioGroup
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:id="@+id/perg3_rg">
 
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Filho"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg3_rb_resp1" />
+                            android:id="@+id/perg3_rb_resp1"
+                            android:enabled="false" />
 
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Cônjuge"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg3_rb_resp2" />
+                            android:id="@+id/perg3_rb_resp2"
+                            android:enabled="false" />
 
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Genro/Nora"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg3_rb_resp3" />
+                            android:id="@+id/perg3_rb_resp3"
+                            android:enabled="false" />
 
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Cunhado(a)"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg3_rb_resp4" />
+                            android:id="@+id/perg3_rb_resp4"
+                            android:enabled="false" />
 
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Sogro(a)"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg3_rb_resp5" />
+                            android:id="@+id/perg3_rb_resp5"
+                            android:enabled="false" />
 
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Locatário"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg3_rb_resp6" />
+                            android:id="@+id/perg3_rb_resp6"
+                            android:enabled="false" />
 
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Arrendatário"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg3_rb_resp7" />
+                            android:id="@+id/perg3_rb_resp7"
+                            android:enabled="false" />
 
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Meeiro, terça ou quarta"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg3_rb_resp8" />
+                            android:id="@+id/perg3_rb_resp8"
+                            android:enabled="false" />
 
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Não sei"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg3_rb_resp9" />
+                            android:id="@+id/perg3_rb_resp9"
+                            android:enabled="false" />
                     </RadioGroup>
                 </LinearLayout>
             </LinearLayout>

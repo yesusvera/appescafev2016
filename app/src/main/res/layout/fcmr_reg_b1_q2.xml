@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
                 android:textAppearance="@style/style_questao"
-                android:text="Algum dos seus filhos/irmãos não vive mais na comunidade?"/>
+                android:text="1. Algum dos seus filhos/irmãos não vive mais na comunidade?"/>
 
             <!-- RESPOSTA + TABULACAO DAS OPCOES -->
             <LinearLayout
@@ -59,7 +59,8 @@
                         android:text="Sim"
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg1_rb_resp1"
-                        android:paddingRight="15dp"/>
+                        android:paddingRight="15dp"
+                        android:tag="perg2_et_resp1->true,perg3_rg->true" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -67,7 +68,8 @@
                         android:text="Não"
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg1_rb_resp2"
-                        android:paddingRight="15dp"/>
+                        android:paddingRight="15dp"
+                        android:tag="perg3_et_resp7->false,perg2_et_resp1->false,perg3_rg->false" />
                 </RadioGroup>
 
             </LinearLayout>
@@ -82,12 +84,13 @@
                     android:id="@+id/perg2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Se sim, quantos?"
+                    android:text="2. Se sim, quantos?"
                     android:textAppearance="@style/style_questao"/>
                 <EditText
                     android:layout_width="140dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg2_et_resp1"/>
+                    android:id="@+id/perg2_et_resp1"
+                    android:enabled="false" />
             </LinearLayout>
 
             <!-- CONDICAO E RESPOSTA 2 -->
@@ -101,7 +104,7 @@
                     android:id="@+id/perg3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Se sim, por que?"
+                    android:text="3. Se sim, por que?"
                     android:textAppearance="@style/style_questao"
                     android:paddingBottom="5dp"/>
 
@@ -115,56 +118,70 @@
                     <RadioGroup
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:id="@+id/perg3_rg">
 
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Para estudar"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg3_rb_resp1" />
+                            android:id="@+id/perg3_rb_resp1"
+                            android:tag="perg3_et_resp7->false"
+                            android:enabled="false" />
 
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Para buscar oportunidades de trabalho"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg3_rb_resp2" />
+                            android:id="@+id/perg3_rb_resp2"
+                            android:tag="perg3_et_resp7->false"
+                            android:enabled="false" />
 
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Para ter acesso a serviços básicos (saúde, moradia, segurança)"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg3_rb_resp3" />
+                            android:id="@+id/perg3_rb_resp3"
+                            android:tag="perg3_et_resp7->false"
+                            android:enabled="false" />
 
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Casou-se com alguém de fora"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg3_rb_resp4" />
+                            android:id="@+id/perg3_rb_resp4"
+                            android:tag="perg3_et_resp7->false"
+                            android:enabled="false" />
 
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Aposentou-se"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg3_rb_resp5" />
+                            android:id="@+id/perg3_rb_resp5"
+                            android:tag="perg3_et_resp7->false"
+                            android:enabled="false" />
 
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Outro. Qual?"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg3_rb_resp6" />
+                            android:id="@+id/perg3_rb_resp6"
+                            android:tag="perg3_et_resp7->true"
+                            android:enabled="false" />
 
                         <EditText
-                            android:layout_width="241dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:id="@+id/perg3_et_resp7"
                             android:textAppearance="@style/style_resposta"
-                            android:lines="2" />
+                            android:lines="2"
+                            android:enabled="false" />
 
                     </RadioGroup>
 

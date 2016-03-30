@@ -42,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
                 android:textAppearance="@style/style_questao"
-                android:text="Você já fez algum curso ou capacitação fora da comunidade?"/>
+                android:text="1. Você já fez algum curso ou capacitação fora da comunidade?"/>
 
             <!-- RESPOSTA + TABULACAO DAS OPCOES -->
             <LinearLayout
@@ -93,7 +93,7 @@
                     android:id="@+id/perg2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Se sim, qual foi o tema do curso?"
+                    android:text="2. Se sim, qual foi o tema do curso?"
                     android:textAppearance="@style/style_questao"
                     android:paddingBottom="5dp"/>
 

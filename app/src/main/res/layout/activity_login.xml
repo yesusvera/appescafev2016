@@ -11,6 +11,13 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".view.LoginUnescoActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/versaoAPP"
+        android:gravity="center"
+        android:textSize="12dp" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,10 +25,11 @@
         android:layout_marginTop="10dp"
         tools:ignore="WebViewLayout">
 
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Entrar no Appesca (1.0.4)"
+            android:text="Entrar no Appesca"
             android:textSize="16dp"
             android:id="@+id/txtMensagemQuantidade"
             android:gravity="center"

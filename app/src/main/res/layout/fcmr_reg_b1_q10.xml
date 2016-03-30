@@ -42,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
                 android:textAppearance="@style/style_questao"
-                android:text="Você faz parte de algum grupo ou organização (associação, sindicato, cooperativa colônia)?"/>
+                android:text="1. Você faz parte de algum grupo ou organização (associação, sindicato, cooperativa colônia)?"/>
         </LinearLayout>
 
         <LinearLayout
@@ -92,7 +92,7 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
                 android:textAppearance="@style/style_questao"
-                android:text="Qual(is) organização (ões)? (Pode haver mais de uma resposta)"/>
+                android:text="2. Qual(is) organização (ões)? (Pode haver mais de uma resposta)"/>
 
         </LinearLayout>
 
@@ -190,7 +190,7 @@
                 android:padding="20dp"
                 android:gravity="center"
                 android:textAppearance="@style/style_questao"
-                android:text="Outra pessoa da sua família também faz parte de algum grupo ou organização (associação, sindicato, cooperativa, colônia)?"/>
+                android:text="3. Outra pessoa da sua família também faz parte de algum grupo ou organização (associação, sindicato, cooperativa, colônia)?"/>
 
         </LinearLayout>
 

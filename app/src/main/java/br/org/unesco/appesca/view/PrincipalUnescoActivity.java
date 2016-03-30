@@ -311,12 +311,14 @@ public class PrincipalUnescoActivity extends AppCompatActivity
 
                 FormularioDAO formularioDAO = new FormularioDAO(PrincipalUnescoActivity.this);
                 for(Formulario form: listaFormularios){
-                    Formulario formBD = formularioDAO.getFormularioPorIdSincronizacao(form.getIdSincronizacao());
-                    if(formBD!=null) {
-                        form.setId(formBD.getId());
-                        form.setIdUsuario(formBD.getIdUsuario());
+                    if(form.getIdSincronizacao()!=null) {
+                        Formulario formBD = formularioDAO.getFormularioPorIdSincronizacao(form.getIdSincronizacao());
+                        if (formBD != null) {
+                            form.setId(formBD.getId());
+                            form.setIdUsuario(formBD.getIdUsuario());
 
-                        formularioDAO.save(form);
+                            formularioDAO.save(form);
+                        }
                     }
                 }
                 carregaLista(value);

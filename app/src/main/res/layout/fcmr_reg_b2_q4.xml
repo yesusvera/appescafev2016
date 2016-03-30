@@ -66,7 +66,15 @@
                     android:textAppearance="@style/style_questao"
                     android:paddingBottom="5dp"
                     android:gravity="center"
-                    android:text="Parentesco/Vinculo"/>
+                    android:text="Pergunta"/>
+                <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/style_questao"
+                android:paddingBottom="5dp"
+                    android:padding="10dp"
+                android:gravity="center"
+                android:text="Parentesco/Vinculo"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -89,6 +97,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="1."/>
+
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -133,6 +149,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="2."/>
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -178,6 +200,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="3."/>
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -224,6 +252,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="4."/>
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -266,6 +300,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="5."/>
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -309,6 +349,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="6."/>
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

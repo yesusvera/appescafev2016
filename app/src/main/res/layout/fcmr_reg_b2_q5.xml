@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
                 android:textAppearance="@style/style_questao"
-                android:text="Quanto é a renda da sua família hoje (sem contar os benefícios do governo)?"/>
+                android:text="1. Quanto é a renda da sua família hoje (sem contar os benefícios do governo)?"/>
 
             <!-- RESPOSTA + TABULACAO DAS OPCOES -->
             <LinearLayout

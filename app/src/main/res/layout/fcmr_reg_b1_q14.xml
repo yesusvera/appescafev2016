@@ -42,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
                 android:textAppearance="@style/style_questao"
-                android:text="Quais cursos você acha que poderiam ser realizados na comunidade?"/>
+                android:text="1. Quais cursos você acha que poderiam ser realizados na comunidade?"/>
 
         </LinearLayout>
 

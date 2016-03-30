@@ -11,7 +11,10 @@ import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import br.org.unesco.appesca.dao.FormularioDAO;
@@ -38,7 +41,6 @@ public class QuestaoDetailFragment extends Fragment {
     public QuestaoDetailFragment() {
     }
 
-
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -50,7 +52,6 @@ public class QuestaoDetailFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         questaoDAO = new QuestaoDAO(QuestaoDetailFragment.this.getContext());
-
         formularioDAO = new FormularioDAO(QuestaoDetailFragment.this.getContext());
 
         if (getArguments().containsKey(ARG_ITEM_ID)) {
@@ -68,6 +69,8 @@ public class QuestaoDetailFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
+
+        configuraRadioButtons();
         carregaRespostas();
     }
 
@@ -76,9 +79,81 @@ public class QuestaoDetailFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(Integer.valueOf(id_layout_inflate), container, false);
         return rootView;
-
     }
 
+    public void configuraRadioButtons(){
+        for(int seqPergunta=1; seqPergunta<=59; seqPergunta++) {
+            String currentPergunta = ConstantesIdsFormularios.PERGUNTA.concat(String.valueOf(seqPergunta));
+
+            /** RADIOBUTTON **/
+            for (int x = 1; x <= 30; x++) { //
+                String currentRadioButton = currentPergunta.concat(ConstantesIdsFormularios.TYPE_RADIO_BUTTON + x);
+                RadioButton radioButton = (RadioButton) findViewByStringId(currentRadioButton);
+
+                if (radioButton != null){
+                    String tag = (String)radioButton.getTag();
+                    if(tag!=null && !tag.isEmpty()){
+                        try {
+                            final String[] tagComandos;
+                            if(tag.contains(",")) {
+                                tagComandos = tag.split(",");
+                            }else{
+                                tagComandos = new String[]{tag};
+                            }
+
+                            radioButton.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+
+                                    for(String comando :tagComandos) {
+                                        final String[] tagSpl = comando.split("->");
+                                        if (tagSpl != null && tagSpl.length == 2) {
+                                            if(tagSpl[0].contains("_rg")) {
+                                                RadioGroup rgTmp = (RadioGroup) findViewByStringId(tagSpl[0]);
+                                                Boolean enabledParam = new Boolean(tagSpl[1]);
+
+                                                if (rgTmp != null && enabledParam != null) {
+                                                    int count = rgTmp.getChildCount();
+                                                    ArrayList<RadioButton> listOfRadioButtons = new ArrayList<RadioButton>();
+                                                    for (int i = 0; i < count; i++) {
+                                                        View o = rgTmp.getChildAt(i);
+                                                        if (o instanceof RadioButton) {
+                                                            listOfRadioButtons.add((RadioButton) o);
+                                                        }
+                                                    }
+                                                    for (RadioButton rb : listOfRadioButtons) {
+                                                        if (!enabledParam) {
+                                                            rb.setChecked(false);
+                                                        }
+                                                        rb.setEnabled(enabledParam);
+                                                    }
+                                                    rgTmp.setEnabled(enabledParam);
+                                                }
+                                            }else if(tagSpl[0].contains(ConstantesIdsFormularios.TYPE_EDIT_TEXT)){
+                                                TextView textView = (TextView) findViewByStringId(tagSpl[0]);
+                                                Boolean enabledParam = new Boolean(tagSpl[1]);
+                                                if (textView != null && enabledParam != null) {
+                                                    if(!enabledParam){
+                                                        textView.setText("");
+                                                    }
+                                                    textView.setEnabled(enabledParam);
+                                                }
+                                            }
+
+                                        }
+                                    }
+                                }
+                            });
+
+
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+            }
+        }
+    }
     /**
      * Carregar automaticamente qualquer resposta.
      */
@@ -100,6 +175,7 @@ public class QuestaoDetailFragment extends Fragment {
                         RadioButton radioButton = (RadioButton) findViewByStringId(currentRadioButton);
                         if (radioButton != null) {
                             radioButton.setChecked(true);
+                            radioButton.callOnClick();
                         }
 
                          /** CHECKBOX **/
@@ -119,16 +195,49 @@ public class QuestaoDetailFragment extends Fragment {
             }
         }
 
-        //Tratamento para questões específicas
+        //Tratamento e validações para questões específicas
         switch (ordemQuestao)
         {
             case 0: configuraIdentificacaoEntrevisado(formulario.getIdTipoFormulario());break;
+            case 56: validaQ56(formulario.getIdTipoFormulario());break;
             default:
         }
     }
 
     public View findViewByStringId(String id){
         return getActivity().findViewById(getResources().getIdentifier(id, "id", getActivity().getPackageName()));
+    }
+
+    public void validaQ56(int idTipoFormulario){
+//        switch (idTipoFormulario) {
+//            case 1: //Camarão Regional
+//
+//                break;
+//            case 2: //Caranguejo
+//
+//                break;
+//            case 3: //Piticaia e Branco
+//                RadioButton rbTmp = (RadioButton) findViewByStringId("perg1_rb_resp1");
+//                rbTmp.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        RadioGroup rgTmp = (RadioGroup) findViewByStringId("perg2_rg");
+//                        rgTmp.setEnabled(true);
+//                    }
+//                });
+//
+//
+//                RadioButton rbTmp2 = (RadioButton) findViewByStringId("perg1_rb_resp2");
+//                rbTmp.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        RadioGroup rgTmp = (RadioGroup) findViewByStringId("perg2_rg");
+//                        rgTmp.setEnabled(false);
+//                    }
+//                });
+//
+//                break;
+//        }
     }
 
     public void configuraIdentificacaoEntrevisado(int idTipoFormulario){

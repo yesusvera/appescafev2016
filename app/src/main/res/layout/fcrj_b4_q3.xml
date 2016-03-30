@@ -1,4 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="center">
@@ -20,7 +22,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Bloco 2 - Questão 02"
+                android:text="Bloco 4 - Questão 03"
                 android:textColor="@android:color/white"
                 android:textSize="20dp"
                 android:gravity="center"
@@ -40,7 +42,8 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
                 android:textAppearance="@style/style_questao"
-                android:text="1. Além da ocupação principal, você tem outra fonte de renda?"/>
+                android:text="Existem pessoas da comunidade que prejudicam o meio
+ambiente aqui na região?"/>
 
             <!-- RESPOSTA + TABULACAO DAS OPCOES -->
             <LinearLayout
@@ -52,15 +55,13 @@
                 <RadioGroup
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                     Button="@+id/perg1_rb_resp3">
+                    android:orientation="horizontal">
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Sim"
                         android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg1_rb_resp3"
-
+                        android:id="@+id/perg1_rb_resp1"
                         android:paddingRight="15dp"/>
 
                     <RadioButton
@@ -69,7 +70,6 @@
                         android:text="Não"
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg1_rb_resp2"
-
                         android:paddingRight="15dp"/>
                 </RadioGroup>
             </LinearLayout>
@@ -87,7 +87,7 @@
                     android:id="@+id/perg2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="2. Se sim, qual? (Pode haver mais de uma resposta)"
+                    android:text="Se sim, de que forma? (Pode haver mais de uma resposta)"
                     android:textAppearance="@style/style_questao"
                     android:paddingBottom="5dp"/>
 
@@ -101,96 +101,59 @@
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Pesca"
+                        android:text="Desmatando a floresta"
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg2_cb_resp1" />
 
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Pesca de camarão / caranguejo"
+                        android:text="Usando zangaria para a pesca do camarão"
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg2_cb_resp2" />
 
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Agricultura familiar / Trabalho rural"
+                        android:text="Usando tapagem nos igarapés/rios"
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg2_cb_resp3" />
 
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Extrativismo – Açaí"
+                        android:text="Jogando lixo no rio"
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg2_cb_resp4" />
 
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Extrativismo (castanha, castanha de andiroba, buriti, pracaxi, bacaba, taperebá, etc.)"
+                        android:text="Criando gado/búfalo"
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg2_cb_resp5" />
 
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Criação de gado"
+                        android:text="Pescando caranguejo pequeno"
                         android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg2_cb_resp6" />
+                        android:id="@+id/perg2_cb_resp6"
+                        android:checked="false" />
 
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Criação de animais (pato, galinha, porco, boi)"
+                        android:text="Outro. Qual?"
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg2_cb_resp7" />
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Artesanato"
-                        android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg2_cb_resp8" />
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Atividades de ensino"
-                        android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg2_cb_resp9" />
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Aposentadoria"
-                        android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg2_cb_resp10" />
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Comércio"
-                        android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg2_cb_resp11" />
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Emprego público"
-                        android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg2_cb_resp12" />
 
-                    <CheckBox
-                        android:layout_width="wrap_content"
+                    <EditText
+                        android:layout_width="241dp"
                         android:layout_height="wrap_content"
-                        android:text="Emprego privado"
+                        android:id="@+id/perg2_et_resp8"
                         android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg2_cb_resp13" />
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Outra"
-                        android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg2_cb_resp14"
-                      />
-
+                        android:lines="2" />
                 </LinearLayout>
             </LinearLayout>
 

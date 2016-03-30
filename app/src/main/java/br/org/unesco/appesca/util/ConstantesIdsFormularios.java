@@ -51,8 +51,8 @@ public class ConstantesIdsFormularios {
                 R.layout.fcmr_reg_b3_q4,R.layout.fcmr_reg_b3_q5,R.layout.fcmr_reg_b3_q6,
                 R.layout.fcmr_reg_b3_q7,R.layout.fcmr_reg_b3_q8,R.layout.fcmr_reg_b3_q9,
 
-                R.layout.fcmr_reg_b4_q1, R.layout.fcmr_reg_b4_q2, R.layout.fcmr_reg_b4_q3,
-                R.layout.fcmr_reg_b4_q4, R.layout.fcmr_reg_b4_q5, R.layout.fcmr_reg_b4_q6,
+                R.layout.fcrj_b4_q1, R.layout.fcmr_reg_b4_q2, R.layout.fcrj_b4_q3,
+                R.layout.fcrj_b4_q4, R.layout.fcmr_reg_b4_q5, R.layout.fcmr_reg_b4_q6,
                 R.layout.fcmr_reg_b4_q7, R.layout.fcmr_reg_b4_q8,R.layout.fcmr_reg_b4_q9,
                 R.layout.fcmr_reg_b4_q10, R.layout.fcmr_reg_b4_q11,
 
@@ -127,7 +127,7 @@ public class ConstantesIdsFormularios {
             R.layout.fcmr_pb_b7_q1, R.layout.fcmr_pb_b7_q2,
 
             R.layout.fcmr_pb_b8_q1, R.layout.fcmr_pb_b8_q2, R.layout.fcmr_pb_b8_q3, R.layout.fcmr_pb_b8_q4,
-              R.layout.fcmr_pb_b8_q5, R.layout.fcmr_pb_b8_q6,
+            R.layout.fcmr_pb_b8_q5, R.layout.fcmr_pb_b8_q6,
 
             R.layout.fcmr_pb_b9_q1
 

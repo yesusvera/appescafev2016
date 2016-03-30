@@ -17,7 +17,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Titulo da lista de formulários"
+            android:text="Lista de Formulários"
             android:textSize="25dp"
             android:id="@+id/txtTituloListaFormularios"
             android:gravity="center"
@@ -35,7 +35,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="x formulários encontrados"
+            android:text="Carregando formulários, aguarde..."
             android:textSize="12dp"
             android:id="@+id/txtMensagemQuantidade"
             android:gravity="center"

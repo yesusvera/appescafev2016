@@ -39,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
                 android:textAppearance="@style/style_questao"
-                android:text="O que é feito com o lixo da casa?"/>
+                android:text="1. O que é feito com o lixo da casa?"/>
 
             <!-- RESPOSTA + TABULACAO DAS OPCOES -->
             <LinearLayout

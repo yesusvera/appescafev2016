@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
                 android:textAppearance="@style/style_questao"
-                android:text="Quais programas sociais (benefícios do governo) atendem a sua família? (Pode haver mais de uma resposta)"/>
+                android:text="1. Quais programas sociais (benefícios do governo) atendem a sua família? (Pode haver mais de uma resposta)"/>
 
         </LinearLayout>
 

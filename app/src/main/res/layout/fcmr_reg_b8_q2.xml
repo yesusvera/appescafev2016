@@ -511,7 +511,7 @@
 
             <LinearLayout
                 android:orientation="vertical"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="20dp">
 
@@ -523,7 +523,7 @@
                         android:text="Quanto custaram os equipamentos para pesca e beneficiamento? Com qual recursos foram adquiridos? Quando foram comprados e serão substituídos? (inserir os bens marcados na questão 1 do bloco 8)"/>
 
 
-                        <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout
+                        <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="match_parent"             android:layout_height="fill_parent"> <TableLayout
                             android:paddingTop="15dp"
                             android:orientation="vertical"
                             android:layout_width="match_parent"

@@ -7,4 +7,5 @@
     <color name="black_overlay">#FFFFFF</color>
     <color name="colorList">#F3FFF7</color>
     <color name="colorListaPrincipal">#F6F9FF</color>
+    <color name="cinzaLista">#F8F7F7</color>
 </resources>

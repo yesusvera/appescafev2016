@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
                 android:textAppearance="@style/style_questao"
-                android:text="A sua família tem outra fonte de renda?"/>
+                android:text="1. A sua família tem outra fonte de renda?"/>
 
             <!-- RESPOSTA + TABULACAO DAS OPCOES -->
             <LinearLayout
@@ -84,7 +84,7 @@
                     android:id="@+id/perg2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Se Sim, Qual? (Pode haver mais de uma resposta)"
+                    android:text="2. Se Sim, Qual? (Pode haver mais de uma resposta)"
                     android:textAppearance="@style/style_questao"
                     android:paddingBottom="5dp"/>
 
