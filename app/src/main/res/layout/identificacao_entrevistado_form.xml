@@ -282,13 +282,14 @@
                         android:text="Outros"
                         android:id="@+id/perg6_cb_resp7"
                         android:textAppearance="@style/style_resposta"
-                        />
+                        android:tag="perg6_et_resp7->this" />
 
                     <EditText
                         android:layout_width="241dp"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg6_et_resp7"
-                        android:textAppearance="@style/style_resposta" />
+                        android:textAppearance="@style/style_resposta"
+                        android:enabled="false" />
 
                 </LinearLayout>
 
@@ -320,7 +321,8 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/perg7_et_resp1"
                     android:textAppearance="@style/style_resposta"
-                    android:lines="1" />
+                    android:lines="1"
+                    android:inputType="number" />
             </LinearLayout>
 
         </LinearLayout>
@@ -399,7 +401,8 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/perg9_et_resp1"
                     android:textAppearance="@style/style_resposta"
-                    android:lines="1" />
+                    android:lines="1"
+                    android:inputType="phone" />
             </LinearLayout>
 
         </LinearLayout>

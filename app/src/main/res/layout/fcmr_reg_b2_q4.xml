@@ -140,7 +140,8 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg1_et_resp4"/>
+                    android:id="@+id/perg1_et_resp4"
+                    android:inputType="number" />
             </TableRow>
 
 
@@ -190,7 +191,8 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg2_et_resp4"/>
+                    android:id="@+id/perg2_et_resp4"
+                    android:inputType="number" />
             </TableRow>
 
 
@@ -241,7 +243,8 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg3_et_resp4"/>
+                    android:id="@+id/perg3_et_resp4"
+                    android:inputType="number" />
             </TableRow>
 
 
@@ -293,7 +296,8 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg4_et_resp4"/>
+                    android:id="@+id/perg4_et_resp4"
+                    android:inputType="number" />
             </TableRow>
 
             <TableRow
@@ -341,7 +345,8 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg5_et_resp4"/>
+                    android:id="@+id/perg5_et_resp4"
+                    android:inputType="number" />
             </TableRow>
 
 
@@ -390,7 +395,8 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg6_et_resp4"/>
+                    android:id="@+id/perg6_et_resp4"
+                    android:inputType="number" />
             </TableRow>
 
         </TableLayout></HorizontalScrollView>

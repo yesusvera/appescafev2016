@@ -1,9 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical">
 
     <!-- CONTAINER GERAL -->
     <LinearLayout
@@ -60,7 +59,8 @@
                         android:text="Sim"
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg1_rb_resp1"
-                        android:paddingRight="15dp"/>
+                        android:paddingRight="15dp"
+                        android:tag="perg2_rg->true" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -68,7 +68,8 @@
                         android:text="Não"
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg1_rb_resp2"
-                        android:paddingRight="15dp"/>
+                        android:paddingRight="15dp"
+                        android:tag="perg2_rg->false" />
                 </RadioGroup>
             </LinearLayout>
 
@@ -99,14 +100,16 @@
                     <RadioGroup
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:id="@+id/perg2_rg">
                             <RadioButton
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Entre marés"
                                 android:textAppearance="@style/style_resposta"
                                 android:id="@+id/perg2_rb_resp1"
-                              />
+                                android:tag="perg2_et_resp8->false"
+                                android:enabled="false" />
         
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -114,7 +117,8 @@
                                 android:text="Maré solidária"
                                 android:textAppearance="@style/style_resposta"
                                 android:id="@+id/perg2_rb_resp2"
-                              />
+                                android:tag="perg2_et_resp8->false"
+                                android:enabled="false" />
         
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -122,7 +126,8 @@
                                 android:text="Conservação Internacional"
                                 android:textAppearance="@style/style_resposta"
                                 android:id="@+id/perg2_rb_resp3"
-                              />
+                                android:tag="perg2_et_resp8->false"
+                                android:enabled="false" />
         
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -130,7 +135,8 @@
                                 android:text="Unesco"
                                 android:textAppearance="@style/style_resposta"
                                 android:id="@+id/perg2_rb_resp4"
-                              />
+                                android:tag="perg2_et_resp8->false"
+                                android:enabled="false" />
         
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -138,7 +144,8 @@
                                 android:text="Manguezais do Brasil"
                                 android:textAppearance="@style/style_resposta"
                                 android:id="@+id/perg2_rb_resp5"
-                              />
+                                android:tag="perg2_et_resp8->false"
+                                android:enabled="false" />
         
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -146,7 +153,8 @@
                                 android:text="Feiras do governo do Estado"
                                 android:textAppearance="@style/style_resposta"
                                 android:id="@+id/perg2_rb_resp6"
-                              />
+                                android:tag="perg2_et_resp8->false"
+                                android:enabled="false" />
         
         
                             <RadioButton
@@ -155,14 +163,16 @@
                                 android:text="Outro. Qual?"
                                 android:textAppearance="@style/style_resposta"
                                 android:id="@+id/perg2_rb_resp7"
-                              />
+                                android:tag="perg2_et_resp8->true"
+                                android:enabled="false" />
         
                             <EditText
                                 android:layout_width="241dp"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/perg2_et_resp8"
                                 android:textAppearance="@style/style_resposta"
-                                android:lines="2" />
+                                android:lines="2"
+                                android:enabled="false" />
                     </RadioGroup>
                 </LinearLayout>
 
@@ -170,4 +180,4 @@
 
             </LinearLayout>
 
-</LinearLayout>
+</ScrollView>

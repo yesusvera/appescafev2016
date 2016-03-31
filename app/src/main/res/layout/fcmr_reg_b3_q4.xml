@@ -223,12 +223,14 @@
                             android:layout_height="wrap_content"
                             android:text="Outras. Quais?"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg1_cb_resp23" />
+                            android:id="@+id/perg1_cb_resp23"
+                            android:tag="perg1_et_resp24->this" />
                         <EditText
                             android:layout_width="241dp"
                             android:layout_height="wrap_content"
                             android:id="@+id/perg1_et_resp24"
-                            android:textAppearance="@style/style_resposta"/>
+                            android:textAppearance="@style/style_resposta"
+                            android:enabled="false" />
 
                     </LinearLayout>
 

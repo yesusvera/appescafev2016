@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -87,11 +88,18 @@ public class QuestaoDetailFragment extends Fragment {
 
             /** RADIOBUTTON **/
             for (int x = 1; x <= 30; x++) { //
-                String currentRadioButton = currentPergunta.concat(ConstantesIdsFormularios.TYPE_RADIO_BUTTON + x);
-                RadioButton radioButton = (RadioButton) findViewByStringId(currentRadioButton);
+                String currentCompoundButton = currentPergunta.concat(ConstantesIdsFormularios.TYPE_RADIO_BUTTON + x);
+                View viewComponentTemp = (View) findViewByStringId(currentCompoundButton);
 
-                if (radioButton != null){
-                    String tag = (String)radioButton.getTag();
+                if(viewComponentTemp==null){
+                    currentCompoundButton = currentPergunta.concat(ConstantesIdsFormularios.TYPE_CHECK_BOX + x);
+                    viewComponentTemp = (View) findViewByStringId(currentCompoundButton);
+                }
+
+                final View viewComponent = viewComponentTemp;
+
+                if (viewComponent != null){
+                    final String tag = (String)viewComponent.getTag();
                     if(tag!=null && !tag.isEmpty()){
                         try {
                             final String[] tagComandos;
@@ -101,14 +109,13 @@ public class QuestaoDetailFragment extends Fragment {
                                 tagComandos = new String[]{tag};
                             }
 
-                            radioButton.setOnClickListener(new View.OnClickListener() {
+                            viewComponent.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
-
-                                    for(String comando :tagComandos) {
+                                    for (String comando : tagComandos) {
                                         final String[] tagSpl = comando.split("->");
-                                        if (tagSpl != null && tagSpl.length == 2) {
-                                            if(tagSpl[0].contains("_rg")) {
+                                        if (tagSpl != null && tagSpl.length == 2) { //RADIOGROUPS
+                                            if (tagSpl[0].contains("_rg")) {
                                                 RadioGroup rgTmp = (RadioGroup) findViewByStringId(tagSpl[0]);
                                                 Boolean enabledParam = new Boolean(tagSpl[1]);
 
@@ -129,22 +136,98 @@ public class QuestaoDetailFragment extends Fragment {
                                                     }
                                                     rgTmp.setEnabled(enabledParam);
                                                 }
-                                            }else if(tagSpl[0].contains(ConstantesIdsFormularios.TYPE_EDIT_TEXT)){
-                                                TextView textView = (TextView) findViewByStringId(tagSpl[0]);
-                                                Boolean enabledParam = new Boolean(tagSpl[1]);
-                                                if (textView != null && enabledParam != null) {
-                                                    if(!enabledParam){
-                                                        textView.setText("");
+                                            } else if (tagSpl[0].contains(ConstantesIdsFormularios.TYPE_EDIT_TEXT)) { //EDITTEXT
+                                                EditText editText = (EditText) findViewByStringId(tagSpl[0]);
+                                                if(tagSpl[1]!=null) {
+                                                    if(tagSpl[1].equalsIgnoreCase("true") || tagSpl[1].equalsIgnoreCase("false")) {
+                                                        Boolean enabledParam = new Boolean(tagSpl[1]);
+                                                        if (editText != null && enabledParam != null) {
+                                                            if (!enabledParam) {
+                                                                editText.setText("");
+                                                            }
+                                                            editText.setEnabled(enabledParam);
+                                                        }
+                                                    } else if(tagSpl[1].equalsIgnoreCase("this")){
+                                                        if (editText != null && viewComponent instanceof CompoundButton) {
+                                                            Boolean enabledParam= ((CompoundButton) viewComponent).isChecked();
+                                                            if (!enabledParam) {
+                                                                editText.setText("");
+                                                            }
+                                                            editText.setEnabled(enabledParam);
+                                                        }
                                                     }
-                                                    textView.setEnabled(enabledParam);
                                                 }
-                                            }
+                                            }else if (tagSpl[0].contains("_cb_")) { //CHECKBOX
+                                                if(tagSpl[0].contains("ˆ")){
+                                                    String comandoComposto = tagSpl[0];// EXEMPLO: perg2_cb_1ˆ10->false
+                                                    String [] splitComandoComposto = comandoComposto.split("_");
 
+                                                    if(splitComandoComposto.length==3){ //1|10ˆ
+                                                        String [] range = splitComandoComposto[2].split("ˆ");
+                                                        if(range.length==2){
+                                                            try {
+                                                                int i = Integer.valueOf(range[0]);
+                                                                int max = Integer.valueOf(range[1]);
+
+                                                                for( ; i<=max; i++){
+                                                                    try {
+                                                                        CheckBox checkBox = (CheckBox) findViewByStringId(splitComandoComposto[0] + "_" + splitComandoComposto[1] + "_resp" + i);
+                                                                        if (tagSpl[1].equalsIgnoreCase("true") || tagSpl[1].equalsIgnoreCase("false")) {
+                                                                            Boolean enabledParam = new Boolean(tagSpl[1]);
+                                                                            if (checkBox != null && enabledParam != null) {
+                                                                                if(!enabledParam){
+                                                                                    checkBox.setChecked(false);
+                                                                                    checkBox.callOnClick();
+                                                                                }
+                                                                                checkBox.setEnabled(enabledParam);
+                                                                            }
+                                                                        } else if (tagSpl[1].equalsIgnoreCase("this")) {
+                                                                            if (checkBox != null && viewComponent instanceof CompoundButton) {
+                                                                                Boolean enabledParam = ((CompoundButton) viewComponent).isChecked();
+                                                                                if(!enabledParam){
+                                                                                    checkBox.setChecked(false);
+                                                                                    checkBox.callOnClick();
+                                                                                }
+                                                                                checkBox.setEnabled(enabledParam);
+                                                                            }
+                                                                        }
+                                                                    }catch(Exception e){
+                                                                        e.printStackTrace();
+                                                                    }
+                                                                }
+                                                            }catch (NumberFormatException nfe){
+                                                                nfe.printStackTrace();
+                                                            }
+                                                        }
+                                                    }
+                                                }else{
+                                                    CheckBox checkBox = (CheckBox) findViewByStringId(tagSpl[0]);
+                                                    if(tagSpl[1].equalsIgnoreCase("true") || tagSpl[1].equalsIgnoreCase("false")) {
+                                                        Boolean enabledParam = new Boolean(tagSpl[1]);
+                                                        if (checkBox != null && enabledParam != null) {
+                                                            if(!enabledParam){
+                                                                checkBox.setChecked(false);
+                                                                checkBox.callOnClick();
+                                                            }
+                                                            checkBox.setEnabled(enabledParam);
+                                                        }
+                                                    } else if(tagSpl[1].equalsIgnoreCase("this")){
+                                                        if (checkBox != null && viewComponent instanceof CompoundButton) {
+                                                            Boolean enabledParam= ((CompoundButton) viewComponent).isChecked();
+                                                            if(!enabledParam){
+                                                                checkBox.setChecked(false);
+                                                                checkBox.callOnClick();
+                                                            }
+                                                            checkBox.setEnabled(enabledParam);
+                                                        }
+                                                    }
+                                                }
+
+                                            }
                                         }
                                     }
                                 }
                             });
-
 
                         } catch (Exception e) {
                             e.printStackTrace();
@@ -154,6 +237,8 @@ public class QuestaoDetailFragment extends Fragment {
             }
         }
     }
+
+
     /**
      * Carregar automaticamente qualquer resposta.
      */
@@ -183,6 +268,7 @@ public class QuestaoDetailFragment extends Fragment {
                         CheckBox checkBox = (CheckBox) findViewByStringId(currentCheckBox);
                         if (checkBox != null) {
                             checkBox.setChecked(true);
+                            checkBox.callOnClick();
                         }
 
                          /** EDITTEXT **/

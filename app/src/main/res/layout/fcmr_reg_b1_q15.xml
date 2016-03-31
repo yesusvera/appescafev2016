@@ -173,13 +173,14 @@
                             android:text="Outros. Quais?"
                             android:textAppearance="@style/style_resposta"
                             android:id="@+id/perg1_cb_resp15"
-                          />
+                            android:tag="perg1_et_resp16->this" />
                         <EditText
                             android:layout_width="241dp"
                             android:layout_height="wrap_content"
                             android:id="@+id/perg1_et_resp16"
                             android:textAppearance="@style/style_resposta"
-                            android:lines="2" />
+                            android:lines="2"
+                            android:enabled="false" />
                     <!--</RadioGroup>-->
                 </LinearLayout>
             </LinearLayout>

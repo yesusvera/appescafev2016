@@ -61,7 +61,8 @@
                         android:text="Sim"
                         android:textAppearance="@style/style_resposta"
                         android:paddingRight="15dp"
-                        android:id="@+id/perg1_rb_resp1" />
+                        android:id="@+id/perg1_rb_resp1"
+                        android:tag="perg2_cb_1ˆ12->true" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -70,7 +71,8 @@
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg1_rb_resp2"
 
-                        android:paddingRight="15dp"/>
+                        android:paddingRight="15dp"
+                        android:tag="perg2_cb_1ˆ12->false,perg2_et_resp13->false" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -78,7 +80,8 @@
                         android:text="Não Lembra"
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg1_rb_resp3"
-                        android:paddingRight="15dp"/>
+                        android:paddingRight="15dp"
+                        android:tag="perg2_cb_1ˆ12->false,perg2_et_resp13->false" />
                 </RadioGroup>
             </LinearLayout>
 
@@ -113,77 +116,88 @@
                                 android:layout_height="wrap_content"
                                 android:text="Organização, associativismo e cooperativismo"
                                 android:textAppearance="@style/style_resposta"
-                                android:id="@+id/perg2_cb_resp1" />
+                                android:id="@+id/perg2_cb_resp1"
+                                android:enabled="false" />
 
                             <CheckBox
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Comercialização e acesso ao mercado"
                                 android:textAppearance="@style/style_resposta"
-                                android:id="@+id/perg2_cb_resp2" />
+                                android:id="@+id/perg2_cb_resp2"
+                                android:enabled="false" />
 
                             <CheckBox
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Gerenciamento de projetos"
                                 android:textAppearance="@style/style_resposta"
-                                android:id="@+id/perg2_cb_resp3" />
+                                android:id="@+id/perg2_cb_resp3"
+                                android:enabled="false" />
 
                             <CheckBox
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Educação ambiental"
                                 android:textAppearance="@style/style_resposta"
-                                android:id="@+id/perg2_cb_resp4" />
+                                android:id="@+id/perg2_cb_resp4"
+                                android:enabled="false" />
 
                             <CheckBox
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Segurança no trabalho da pesca"
                                 android:textAppearance="@style/style_resposta"
-                                android:id="@+id/perg2_cb_resp5" />
+                                android:id="@+id/perg2_cb_resp5"
+                                android:enabled="false" />
 
                             <CheckBox
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Técnicas de pesca"
                                 android:textAppearance="@style/style_resposta"
-                                android:id="@+id/perg2_cb_resp6" />
+                                android:id="@+id/perg2_cb_resp6"
+                                android:enabled="false" />
 
                             <CheckBox
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Manejo do pescado"
                                 android:textAppearance="@style/style_resposta"
-                                android:id="@+id/perg2_cb_resp7" />
+                                android:id="@+id/perg2_cb_resp7"
+                                android:enabled="false" />
 
                             <CheckBox
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Manutenção de embarcação"
                                 android:textAppearance="@style/style_resposta"
-                                android:id="@+id/perg2_cb_resp8" />
+                                android:id="@+id/perg2_cb_resp8"
+                                android:enabled="false" />
 
                             <CheckBox
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Confecção de apetrechos de pesca"
                                 android:textAppearance="@style/style_resposta"
-                                android:id="@+id/perg2_cb_resp9" />
+                                android:id="@+id/perg2_cb_resp9"
+                                android:enabled="false" />
 
                             <CheckBox
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Manejo de produtos extrativistas"
                                 android:textAppearance="@style/style_resposta"
-                                android:id="@+id/perg2_cb_resp10"/>
+                                android:id="@+id/perg2_cb_resp10"
+                                android:enabled="false" />
 
                             <CheckBox
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Produção agrícola"
                                 android:textAppearance="@style/style_resposta"
-                                android:id="@+id/perg2_cb_resp11"/>
+                                android:id="@+id/perg2_cb_resp11"
+                                android:enabled="false" />
 
                             <LinearLayout
                                 android:orientation="horizontal"
@@ -195,13 +209,16 @@
                                     android:layout_height="wrap_content"
                                     android:text="Outros. Quais?"
                                     android:textAppearance="@style/style_resposta"
-                                    android:id="@+id/perg2_cb_resp12" />
+                                    android:id="@+id/perg2_cb_resp12"
+                                    android:enabled="false"
+                                    android:tag="perg2_et_resp13->this" />
 
                                 <EditText
                                     android:layout_width="241dp"
                                     android:layout_height="wrap_content"
                                     android:id="@+id/perg2_et_resp13"
-                                    android:textAppearance="@style/style_resposta" />
+                                    android:textAppearance="@style/style_resposta"
+                                    android:enabled="false" />
 
                             </LinearLayout>
                     <!--</RadioGroup>-->

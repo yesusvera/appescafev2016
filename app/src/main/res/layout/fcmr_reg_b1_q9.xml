@@ -85,12 +85,15 @@
                     android:text="Bolsa Família"
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg1_cb_resp1"
-                  />
+                    android:tag="perg1_et_resp2->this" />
 
                 <EditText
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg1_et_resp2" />
+                    android:id="@+id/perg1_et_resp2"
+                    android:enabled="false"
+                    android:inputType="numberDecimal"
+                    android:hint="R$ 0,00" />
             </TableRow>
 
             <TableRow
@@ -103,12 +106,15 @@
                     android:text="Luz para Todos"
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg2_cb_resp1"
-                  />
+                    android:tag="perg2_et_resp2->this" />
 
                 <EditText
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg2_et_resp2" />
+                    android:id="@+id/perg2_et_resp2"
+                    android:enabled="false"
+                    android:inputType="numberDecimal"
+                    android:hint="R$ 0,00" />
             </TableRow>
 
             <TableRow
@@ -121,11 +127,14 @@
                     android:text="Bolsa Verde"
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg3_cb_resp1"
-                  />
+                    android:tag="perg3_et_resp2->this" />
                 <EditText
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg3_et_resp2" />
+                    android:id="@+id/perg3_et_resp2"
+                    android:enabled="false"
+                    android:inputType="numberDecimal"
+                    android:hint="R$ 0,00" />
             </TableRow>
 
             <TableRow
@@ -137,11 +146,15 @@
                     android:layout_height="wrap_content"
                     android:text="Seguro defeso"
                     android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg4_cb_resp1" />
+                    android:id="@+id/perg4_cb_resp1"
+                    android:tag="perg4_et_resp2->this" />
                 <EditText
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg4_et_resp2" />
+                    android:id="@+id/perg4_et_resp2"
+                    android:enabled="false"
+                    android:inputType="numberDecimal"
+                    android:hint="R$ 0,00" />
             </TableRow>
 
             <TableRow
@@ -153,11 +166,15 @@
                     android:layout_height="wrap_content"
                     android:text="Seguro desemprego"
                     android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg5_cb_resp1" />
+                    android:id="@+id/perg5_cb_resp1"
+                    android:tag="perg5_et_resp2->this" />
                 <EditText
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg5_et_resp2" />
+                    android:id="@+id/perg5_et_resp2"
+                    android:enabled="false"
+                    android:inputType="numberDecimal"
+                    android:hint="R$ 0,00" />
             </TableRow>
 
             <TableRow
@@ -169,11 +186,15 @@
                     android:layout_height="wrap_content"
                     android:text="Aposentadoria"
                     android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg6_cb_resp1" />
+                    android:id="@+id/perg6_cb_resp1"
+                    android:tag="perg6_et_resp2->this" />
                 <EditText
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg6_et_resp2" />
+                    android:id="@+id/perg6_et_resp2"
+                    android:enabled="false"
+                    android:inputType="numberDecimal"
+                    android:hint="R$ 0,00" />
             </TableRow>
 
             <TableRow
@@ -185,11 +206,15 @@
                     android:layout_height="wrap_content"
                     android:text="Auxílio-doença"
                     android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg7_cb_resp1" />
+                    android:id="@+id/perg7_cb_resp1"
+                    android:tag="perg7_et_resp2->this" />
                 <EditText
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg7_et_resp2" />
+                    android:id="@+id/perg7_et_resp2"
+                    android:enabled="false"
+                    android:inputType="numberDecimal"
+                    android:hint="R$ 0,00" />
             </TableRow>
 
             <TableRow
@@ -201,11 +226,15 @@
                     android:layout_height="wrap_content"
                     android:text="Seguro maternidade"
                     android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg8_cb_resp1" />
+                    android:id="@+id/perg8_cb_resp1"
+                    android:tag="perg8_et_resp2->this" />
                 <EditText
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg8_et_resp2" />
+                    android:id="@+id/perg8_et_resp2"
+                    android:enabled="false"
+                    android:inputType="numberDecimal"
+                    android:hint="R$ 0,00" />
             </TableRow>
 
             <TableRow
@@ -217,11 +246,15 @@
                     android:layout_height="wrap_content"
                     android:text="Minha casa, minha vida"
                     android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg9_cb_resp1" />
+                    android:id="@+id/perg9_cb_resp1"
+                    android:tag="perg9_et_resp2->this" />
                 <EditText
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg9_et_resp2" />
+                    android:id="@+id/perg9_et_resp2"
+                    android:enabled="false"
+                    android:inputType="numberDecimal"
+                    android:hint="R$ 0,00" />
             </TableRow>
 
             <TableRow
@@ -233,12 +266,16 @@
                     android:layout_height="wrap_content"
                     android:text="Outros. Quais?"
                     android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg10_cb_resp1" />
+                    android:id="@+id/perg10_cb_resp1"
+                    android:tag="perg10_et_resp2->this,perg10_et_resp3->this" />
 
                 <EditText
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg10_et_resp2" />
+                    android:id="@+id/perg10_et_resp2"
+                    android:enabled="false"
+                    android:inputType="numberDecimal"
+                    android:hint="R$ 0,00" />
             </TableRow>
 
 
@@ -248,8 +285,10 @@
                 android:layout_gravity="center_horizontal">
                 <EditText
                     android:layout_width="200dp"
+                    android:lines="2"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg10_et_resp3" />
+                    android:id="@+id/perg10_et_resp3"
+                    android:enabled="false" />
 
             </TableRow>
         </TableLayout></HorizontalScrollView>

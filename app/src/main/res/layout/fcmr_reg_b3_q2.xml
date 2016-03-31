@@ -62,7 +62,8 @@
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg1_rb_resp1"
                         
-                        android:paddingRight="15dp"/>
+                        android:paddingRight="15dp"
+                        android:tag="perg2_rg->true" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -71,7 +72,8 @@
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg1_rb_resp2"
                         
-                        android:paddingRight="15dp"/>
+                        android:paddingRight="15dp"
+                        android:tag="perg2_rg->false,perg2_et_resp9->false" />
                 </RadioGroup>
             </LinearLayout>
 
@@ -102,14 +104,16 @@
                 <RadioGroup
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:id="@+id/perg2_rg">
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Católica"
                             android:textAppearance="@style/style_resposta"
                             android:id="@+id/perg2_rb_resp1"
-                             />
+                            android:enabled="false"
+                            android:tag="perg2_et_resp9->false" />
 
                         <RadioButton
                             android:layout_width="wrap_content"
@@ -117,7 +121,8 @@
                             android:text="Protestante"
                             android:textAppearance="@style/style_resposta"
                             android:id="@+id/perg2_rb_resp2"
-                             />
+                            android:enabled="false"
+                            android:tag="perg2_et_resp9->false" />
 
                         <RadioButton
                             android:layout_width="wrap_content"
@@ -125,7 +130,8 @@
                             android:text="Evangélica"
                             android:textAppearance="@style/style_resposta"
                             android:id="@+id/perg2_rb_resp3"
-                             />
+                            android:enabled="false"
+                            android:tag="perg2_et_resp9->false" />
 
                         <RadioButton
                             android:layout_width="wrap_content"
@@ -133,7 +139,8 @@
                             android:text="Espírita"
                             android:textAppearance="@style/style_resposta"
                             android:id="@+id/perg2_rb_resp4"
-                             />
+                            android:enabled="false"
+                            android:tag="perg2_et_resp9->false" />
 
                         <RadioButton
                             android:layout_width="wrap_content"
@@ -141,7 +148,8 @@
                             android:text="Umbanda"
                             android:textAppearance="@style/style_resposta"
                             android:id="@+id/perg2_rb_resp5"
-                             />
+                            android:enabled="false"
+                            android:tag="perg2_et_resp9->false" />
 
                         <RadioButton
                             android:layout_width="wrap_content"
@@ -149,33 +157,33 @@
                             android:text="Candomblé"
                             android:textAppearance="@style/style_resposta"
                             android:id="@+id/perg2_rb_resp6"
-                            />
+                            android:enabled="false"
+                            android:tag="perg2_et_resp9->false" />
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Tambor de Mina"
                             android:textAppearance="@style/style_resposta"
                             android:id="@+id/perg2_rb_resp7"
-                            />
+                            android:enabled="false"
+                            android:tag="perg2_et_resp9->false" />
 
-                        <LinearLayout
-                            android:orientation="horizontal"
+                        <RadioButton
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Outra:"
-                                android:textAppearance="@style/style_resposta"
-                                android:id="@+id/perg2_rb_resp8"
-                                 />
+                            android:layout_height="wrap_content"
+                            android:text="Outra:"
+                            android:textAppearance="@style/style_resposta"
+                            android:id="@+id/perg2_rb_resp8"
+                            android:enabled="false"
+                            android:tag="perg2_et_resp9->true" />
 
-                            <EditText
-                                android:layout_width="241dp"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/perg2_et_resp9"
-                                android:textAppearance="@style/style_resposta"/>
-                        </LinearLayout>
+                        <EditText
+                            android:layout_width="241dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/perg2_et_resp9"
+                            android:textAppearance="@style/style_resposta"
+                            android:enabled="false" />
+
                 </RadioGroup>
             </LinearLayout>
 

@@ -63,7 +63,8 @@
                         android:text="Sim"
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg1_rb_resp1"
-                        android:paddingRight="15dp"/>
+                        android:paddingRight="15dp"
+                        android:tag="perg2_et_resp1->true" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -71,14 +72,16 @@
                         android:text="Não"
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg1_rb_resp2"
-                        android:paddingRight="15dp"/>
+                        android:paddingRight="15dp"
+                        android:tag="perg2_et_resp1->false" />
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Não se aplica"
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg1_rb_resp3"
-                        android:paddingRight="15dp"/>
+                        android:paddingRight="15dp"
+                        android:tag="perg2_et_resp1->false" />
                 </RadioGroup>
             </LinearLayout>
             <!--QUESTÃO-->
@@ -105,7 +108,8 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/perg2_et_resp1"
                     android:textAppearance="@style/style_resposta"
-                    android:lines="2" />
+                    android:lines="2"
+                    android:enabled="false" />
 
             </LinearLayout>
 

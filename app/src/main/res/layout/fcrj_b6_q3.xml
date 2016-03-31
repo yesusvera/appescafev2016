@@ -54,9 +54,10 @@
                 <CheckBox
                     android:id="@+id/perg1_cb_resp1"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Vai e volta no mesmo dia (“bate e volta”) – Nesta categoria, quantos dias por semana realiza a pesca? "
-                    android:textAppearance="@style/style_resposta" />
+                    android:layout_height="43dp"
+                    android:text="Vai e volta no mesmo dia (“bate e volta”)\nNesta categoria, quantos dias por semana realiza a pesca? "
+                    android:textAppearance="@style/style_resposta"
+                    android:checked="false" />
 
                 <EditText
                     android:id="@+id/perg1_et_resp2"
@@ -73,9 +74,10 @@
                 <CheckBox
                     android:id="@+id/perg1_cb_resp3"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Pesca de decida ou de baixada (pesca que dura mais de um dia fora de casa) Quantas vezes realiza a pesca por Semana?"
-                    android:textAppearance="@style/style_resposta" />
+                    android:layout_height="54dp"
+                    android:text="Pesca de decida ou de baixada\n(pesca que dura mais de um dia fora de casa)\nQuantas vezes realiza a pesca por Semana?"
+                    android:textAppearance="@style/style_resposta"
+                    android:checked="false" />
 
                 <EditText
                     android:id="@+id/perg1_et_resp4"

@@ -126,14 +126,15 @@
                 android:text="Outro. Qual?"
                 android:textAppearance="@style/style_resposta"
                 android:id="@+id/perg1_cb_resp9"
-              />
+                android:tag="perg1_et_resp10->this" />
 
             <EditText
                 android:layout_width="241dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/perg1_et_resp10"
                 android:textAppearance="@style/style_resposta"
-                android:lines="2" />
+                android:lines="2"
+                android:enabled="false" />
 
 
             <CheckBox

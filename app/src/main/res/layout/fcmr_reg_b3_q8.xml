@@ -146,12 +146,14 @@
                             android:layout_height="wrap_content"
                             android:text="Outro. Quais?"
                             android:textAppearance="@style/style_resposta"
-                            android:id="@+id/perg1_cb_resp12" />
+                            android:id="@+id/perg1_cb_resp12"
+                            android:tag="perg1_et_resp13->this" />
 
                         <EditText
                             android:layout_width="140dp"
                             android:layout_height="wrap_content"
-                            android:id="@+id/perg1_et_resp13"/>
+                            android:id="@+id/perg1_et_resp13"
+                            android:enabled="false" />
                         </LinearLayout>
 
                 </LinearLayout>

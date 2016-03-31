@@ -62,7 +62,8 @@
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg1_rb_resp1"
                         
-                        android:paddingRight="15dp"/>
+                        android:paddingRight="15dp"
+                        android:tag="perg2_et_resp1->false,perg3_et_resp1->false,perg3_et_resp2->false" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -71,7 +72,8 @@
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg1_rb_resp2"
                         
-                        android:paddingRight="15dp"/>
+                        android:paddingRight="15dp"
+                        android:tag="perg2_et_resp1->true,perg3_et_resp1->true,perg3_et_resp2->true" />
                 </RadioGroup>
 
             </LinearLayout>
@@ -91,7 +93,9 @@
                 <EditText
                     android:layout_width="140dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg2_et_resp1"/>
+                    android:id="@+id/perg2_et_resp1"
+                    android:enabled="false"
+                    android:inputType="number" />
             </LinearLayout>
 
             <!-- CONDICAO E RESPOSTA 2 -->
@@ -123,7 +127,8 @@
                     <EditText
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
-                        android:id="@+id/perg3_et_resp1"/>
+                        android:id="@+id/perg3_et_resp1"
+                        android:enabled="false" />
                 </LinearLayout>
                 <LinearLayout
                     android:orientation="horizontal"
@@ -138,7 +143,8 @@
                     <EditText
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
-                        android:id="@+id/perg3_et_resp2"/>
+                        android:id="@+id/perg3_et_resp2"
+                        android:enabled="false" />
                 </LinearLayout>
             </LinearLayout>
 

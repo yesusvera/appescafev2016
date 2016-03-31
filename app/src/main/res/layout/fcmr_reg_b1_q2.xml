@@ -90,7 +90,8 @@
                     android:layout_width="140dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg2_et_resp1"
-                    android:enabled="false" />
+                    android:enabled="false"
+                    android:inputType="number" />
             </LinearLayout>
 
             <!-- CONDICAO E RESPOSTA 2 -->

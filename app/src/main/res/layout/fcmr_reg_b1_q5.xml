@@ -111,7 +111,6 @@
                                 android:id="@+id/perg1_rb_resp5"
                                 android:tag="perg1_et_resp6->true" />
 
-
                             <EditText
                                 android:layout_width="241dp"
                                 android:layout_height="wrap_content"

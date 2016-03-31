@@ -59,7 +59,8 @@
                         android:text="Sim"
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg1_rb_resp3"
-                        android:paddingRight="15dp"/>
+                        android:paddingRight="15dp"
+                        android:tag="perg2_cb_1ˆ14->true" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -67,7 +68,8 @@
                         android:text="Não"
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg1_rb_resp2"
-                        android:paddingRight="15dp"/>
+                        android:paddingRight="15dp"
+                        android:tag="perg2_cb_1ˆ14->false,perg2_et_resp15->false" />
                 </RadioGroup>
             </LinearLayout>
 
@@ -100,98 +102,113 @@
                         android:layout_height="wrap_content"
                         android:text="Pesca"
                         android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg2_cb_resp1" />
+                        android:id="@+id/perg2_cb_resp1"
+                        android:enabled="false" />
 
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Pesca de camarão / caranguejo"
                         android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg2_cb_resp2" />
+                        android:id="@+id/perg2_cb_resp2"
+                        android:enabled="false" />
 
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Agricultura familiar / Trabalho rural"
                         android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg2_cb_resp3" />
+                        android:id="@+id/perg2_cb_resp3"
+                        android:enabled="false" />
 
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Extrativismo – Açaí"
                         android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg2_cb_resp4" />
+                        android:id="@+id/perg2_cb_resp4"
+                        android:enabled="false" />
 
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Extrativismo (castanha, castanha de andiroba, buriti, pracaxi, bacaba, taperebá, etc.)"
                         android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg2_cb_resp5" />
+                        android:id="@+id/perg2_cb_resp5"
+                        android:enabled="false" />
 
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Criação de gado"
                         android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg2_cb_resp6" />
+                        android:id="@+id/perg2_cb_resp6"
+                        android:enabled="false" />
 
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Criação de animais (pato, galinha, porco, boi)"
                         android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg2_cb_resp7" />
+                        android:id="@+id/perg2_cb_resp7"
+                        android:enabled="false" />
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Artesanato"
                         android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg2_cb_resp8" />
+                        android:id="@+id/perg2_cb_resp8"
+                        android:enabled="false" />
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Atividades de ensino"
                         android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg2_cb_resp9" />
+                        android:id="@+id/perg2_cb_resp9"
+                        android:enabled="false" />
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Aposentadoria"
                         android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg2_cb_resp10" />
+                        android:id="@+id/perg2_cb_resp10"
+                        android:enabled="false" />
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Comércio"
                         android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg2_cb_resp11" />
+                        android:id="@+id/perg2_cb_resp11"
+                        android:enabled="false" />
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Emprego público"
                         android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg2_cb_resp12" />
+                        android:id="@+id/perg2_cb_resp12"
+                        android:enabled="false" />
 
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Emprego privado"
                         android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg2_cb_resp13" />
+                        android:id="@+id/perg2_cb_resp13"
+                        android:enabled="false" />
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Outra"
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg2_cb_resp14"
-                      />
+                        android:enabled="false"
+                        android:tag="perg2_et_resp15->this" />
                     <EditText
                         android:layout_width="241dp"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg2_et_resp15"
-                        android:textAppearance="@style/style_resposta" />
+                        android:textAppearance="@style/style_resposta"
+                        android:enabled="false" />
 
                 </LinearLayout>
             </LinearLayout>

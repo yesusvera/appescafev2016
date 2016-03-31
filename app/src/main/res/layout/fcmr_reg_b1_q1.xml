@@ -48,7 +48,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/perg1_et_resp1"
                 android:textAppearance="@style/style_resposta"
-                android:lines="1" />
+                android:lines="1"
+                android:inputType="number" />
 
         </LinearLayout>
 
@@ -173,7 +174,8 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg2_et_resp4"/>
+                    android:id="@+id/perg2_et_resp4"
+                    android:inputType="number" />
 
                 <EditText
                     android:layout_width="wrap_content"
@@ -196,14 +198,15 @@
                                 android:text="Sim"
                                 android:textAppearance="@style/style_resposta"
                                 android:id="@+id/perg2_rb_resp6"
-                                />
+                                android:tag="perg2_et_resp8->true" />
 
                             <RadioButton
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Não"
                                 android:textAppearance="@style/style_resposta"
-                                android:id="@+id/perg2_rb_resp7"/>
+                                android:id="@+id/perg2_rb_resp7"
+                                android:tag="perg2_et_resp8->false" />
                         </RadioGroup>
                     </TableRow>
                 </TableLayout></HorizontalScrollView>
@@ -211,7 +214,9 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg2_et_resp8"/>
+                    android:id="@+id/perg2_et_resp8"
+                    android:inputType="number"
+                    android:enabled="false" />
 
                 <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content">
                     <TableRow
@@ -287,7 +292,8 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg3_et_resp4"/>
+                    android:id="@+id/perg3_et_resp4"
+                    android:inputType="number" />
 
                 <EditText
                     android:layout_width="wrap_content"
@@ -310,14 +316,15 @@
                                 android:text="Sim"
                                 android:textAppearance="@style/style_resposta"
                                 android:id="@+id/perg3_rb_resp6"
-                                />
+                                android:tag="perg3_et_resp8->true" />
 
                             <RadioButton
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Não"
                                 android:textAppearance="@style/style_resposta"
-                                android:id="@+id/perg3_rb_resp7"/>
+                                android:id="@+id/perg3_rb_resp7"
+                                android:tag="perg3_et_resp8->false" />
                         </RadioGroup>
                     </TableRow>
                 </TableLayout></HorizontalScrollView>
@@ -325,7 +332,9 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg3_et_resp8"/>
+                    android:id="@+id/perg3_et_resp8"
+                    android:inputType="number"
+                    android:enabled="false" />
 
                 <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content">
                     <TableRow
@@ -406,7 +415,8 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg4_et_resp4"/>
+                    android:id="@+id/perg4_et_resp4"
+                    android:inputType="number" />
 
                 <EditText
                     android:layout_width="wrap_content"
@@ -429,14 +439,15 @@
                                 android:text="Sim"
                                 android:textAppearance="@style/style_resposta"
                                 android:id="@+id/perg4_rb_resp6"
-                                />
+                                android:tag="perg4_et_resp8->true" />
 
                             <RadioButton
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Não"
                                 android:textAppearance="@style/style_resposta"
-                                android:id="@+id/perg4_rb_resp7"/>
+                                android:id="@+id/perg4_rb_resp7"
+                                android:tag="perg4_et_resp8->false" />
                         </RadioGroup>
                     </TableRow>
                 </TableLayout></HorizontalScrollView>
@@ -444,7 +455,9 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg4_et_resp8"/>
+                    android:id="@+id/perg4_et_resp8"
+                    android:inputType="number"
+                    android:enabled="false" />
 
                 <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content">
                     <TableRow
@@ -520,7 +533,8 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg5_et_resp4"/>
+                    android:id="@+id/perg5_et_resp4"
+                    android:inputType="number" />
 
                 <EditText
                     android:layout_width="wrap_content"
@@ -543,14 +557,15 @@
                                 android:text="Sim"
                                 android:textAppearance="@style/style_resposta"
                                 android:id="@+id/perg5_rb_resp6"
-                                />
+                                android:tag="perg5_et_resp8->true" />
 
                             <RadioButton
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Não"
                                 android:textAppearance="@style/style_resposta"
-                                android:id="@+id/perg5_rb_resp7"/>
+                                android:id="@+id/perg5_rb_resp7"
+                                android:tag="perg5_et_resp8->false" />
                         </RadioGroup>
                     </TableRow>
                 </TableLayout></HorizontalScrollView>
@@ -558,7 +573,9 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg5_et_resp8"/>
+                    android:id="@+id/perg5_et_resp8"
+                    android:inputType="number"
+                    android:enabled="false" />
 
                 <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content">
                     <TableRow
@@ -633,7 +650,8 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg6_et_resp4"/>
+                    android:id="@+id/perg6_et_resp4"
+                    android:inputType="number" />
 
                 <EditText
                     android:layout_width="wrap_content"
@@ -656,14 +674,15 @@
                                 android:text="Sim"
                                 android:textAppearance="@style/style_resposta"
                                 android:id="@+id/perg6_rb_resp6"
-                                />
+                                android:tag="perg6_et_resp8->true" />
 
                             <RadioButton
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Não"
                                 android:textAppearance="@style/style_resposta"
-                                android:id="@+id/perg6_rb_resp7"/>
+                                android:id="@+id/perg6_rb_resp7"
+                                android:tag="perg6_et_resp8->false" />
                         </RadioGroup>
                     </TableRow>
                 </TableLayout></HorizontalScrollView>
@@ -671,7 +690,9 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg6_et_resp8"/>
+                    android:id="@+id/perg6_et_resp8"
+                    android:inputType="number"
+                    android:enabled="false" />
 
                 <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content">
                     <TableRow
@@ -746,7 +767,8 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg7_et_resp4"/>
+                    android:id="@+id/perg7_et_resp4"
+                    android:inputType="number" />
 
                 <EditText
                     android:layout_width="wrap_content"
@@ -769,7 +791,7 @@
                                 android:text="Sim"
                                 android:textAppearance="@style/style_resposta"
                                 android:id="@+id/perg7_rb_resp6"
-                                />
+                                android:tag="perg7_et_resp8->true" />
 
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -777,7 +799,7 @@
                                 android:text="Não"
                                 android:textAppearance="@style/style_resposta"
                                 android:id="@+id/perg7_rb_resp7"
-                                />
+                                android:tag="perg7_et_resp8->false" />
                         </RadioGroup>
                     </TableRow>
                 </TableLayout></HorizontalScrollView>
@@ -785,7 +807,9 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg7_et_resp8"/>
+                    android:id="@+id/perg7_et_resp8"
+                    android:inputType="number"
+                    android:enabled="false" />
 
                 <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content">
                     <TableRow
@@ -861,7 +885,8 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg8_et_resp4"/>
+                    android:id="@+id/perg8_et_resp4"
+                    android:inputType="number" />
 
                 <EditText
                     android:layout_width="wrap_content"
@@ -884,14 +909,15 @@
                                 android:text="Sim"
                                 android:textAppearance="@style/style_resposta"
                                 android:id="@+id/perg8_rb_resp6"
-                                />
+                                android:tag="perg8_et_resp8->true" />
 
                             <RadioButton
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Não"
                                 android:textAppearance="@style/style_resposta"
-                                android:id="@+id/perg8_rb_resp7"/>
+                                android:id="@+id/perg8_rb_resp7"
+                                android:tag="perg8_et_resp8->false" />
                         </RadioGroup>
                     </TableRow>
                 </TableLayout></HorizontalScrollView>
@@ -899,7 +925,9 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg8_et_resp8"/>
+                    android:id="@+id/perg8_et_resp8"
+                    android:inputType="number"
+                    android:enabled="false" />
 
                 <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content">
                     <TableRow
@@ -975,7 +1003,8 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg9_et_resp4"/>
+                    android:id="@+id/perg9_et_resp4"
+                    android:inputType="number" />
 
                 <EditText
                     android:layout_width="wrap_content"
@@ -998,14 +1027,15 @@
                                 android:text="Sim"
                                 android:textAppearance="@style/style_resposta"
                                 android:id="@+id/perg9_rb_resp6"
-                                />
+                                android:tag="perg9_et_resp8->true" />
 
                             <RadioButton
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Não"
                                 android:textAppearance="@style/style_resposta"
-                                android:id="@+id/perg9_rb_resp7"/>
+                                android:id="@+id/perg9_rb_resp7"
+                                android:tag="perg9_et_resp8->false" />
                         </RadioGroup>
                     </TableRow>
                 </TableLayout></HorizontalScrollView>
@@ -1013,7 +1043,9 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg9_et_resp8"/>
+                    android:id="@+id/perg9_et_resp8"
+                    android:inputType="number"
+                    android:enabled="false" />
 
                 <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content">
                     <TableRow
@@ -1089,7 +1121,8 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg10_et_resp4"/>
+                    android:id="@+id/perg10_et_resp4"
+                    android:inputType="number" />
 
                 <EditText
                     android:layout_width="wrap_content"
@@ -1112,14 +1145,15 @@
                                 android:text="Sim"
                                 android:textAppearance="@style/style_resposta"
                                 android:id="@+id/perg10_rb_resp6"
-                                />
+                                android:tag="perg10_et_resp8->true" />
 
                             <RadioButton
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Não"
                                 android:textAppearance="@style/style_resposta"
-                                android:id="@+id/perg10_rb_resp7"/>
+                                android:id="@+id/perg10_rb_resp7"
+                                android:tag="perg10_et_resp8->false" />
                         </RadioGroup>
                     </TableRow>
                 </TableLayout></HorizontalScrollView>
@@ -1127,7 +1161,9 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg10_et_resp8"/>
+                    android:id="@+id/perg10_et_resp8"
+                    android:inputType="number"
+                    android:enabled="false" />
 
                 <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content">
                     <TableRow
@@ -1202,7 +1238,8 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg11_et_resp4"/>
+                    android:id="@+id/perg11_et_resp4"
+                    android:inputType="number" />
 
                 <EditText
                     android:layout_width="wrap_content"
@@ -1225,14 +1262,15 @@
                                 android:text="Sim"
                                 android:textAppearance="@style/style_resposta"
                                 android:id="@+id/perg11_rb_resp6"
-                                />
+                                android:tag="perg11_et_resp8->true" />
 
                             <RadioButton
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Não"
                                 android:textAppearance="@style/style_resposta"
-                                android:id="@+id/perg11_rb_resp7"/>
+                                android:id="@+id/perg11_rb_resp7"
+                                android:tag="perg11_et_resp8->false" />
                         </RadioGroup>
                     </TableRow>
                 </TableLayout></HorizontalScrollView>
@@ -1240,7 +1278,9 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg11_et_resp8"/>
+                    android:id="@+id/perg11_et_resp8"
+                    android:inputType="number"
+                    android:enabled="false" />
 
                 <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content">
                     <TableRow

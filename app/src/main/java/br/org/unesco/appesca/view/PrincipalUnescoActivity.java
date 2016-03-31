@@ -332,6 +332,7 @@ public class PrincipalUnescoActivity extends AppCompatActivity
             @Override
             public void onCancel() {
                 super.onCancel();
+                carregaLista(value);
             }
 
 
