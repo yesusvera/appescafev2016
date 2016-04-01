@@ -51,14 +51,16 @@
                     android:text="Embarcação (se marcado, responda as questões 2 em diante). Quantas possui?"
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg1_cb_resp1"
-                    android:paddingRight="15dp"/>
+                    android:paddingRight="15dp"
+                    android:tag="perg1_et_resp2->this" />
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:id="@+id/perg1_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:enabled="false" />
 
 
 
@@ -70,14 +72,16 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg1_cb_resp3"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg1_et_resp4->this" />
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:id="@+id/perg1_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:enabled="false" />
 
 
 
@@ -88,14 +92,16 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg1_cb_resp5"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg1_et_resp6->this" />
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:id="@+id/perg1_et_resp6"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:enabled="false" />
 
 
 
@@ -106,14 +112,16 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg1_cb_resp7"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg1_et_resp8->this" />
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:id="@+id/perg1_et_resp8"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:enabled="false" />
 
 
 
@@ -124,14 +132,16 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg1_cb_resp9"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg1_et_resp10->this" />
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:id="@+id/perg1_et_resp10"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:enabled="false" />
 
 
 
@@ -142,14 +152,16 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg1_cb_resp11"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg1_et_resp12->this" />
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:id="@+id/perg1_et_resp12"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:enabled="false" />
 
                 <CheckBox
                     android:layout_width="wrap_content"
@@ -158,14 +170,16 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg1_cb_resp13"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg1_et_resp14->this" />
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:id="@+id/perg1_et_resp14"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:enabled="false" />
 
 
 
@@ -176,14 +190,16 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg1_cb_resp15"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg1_et_resp16->this" />
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:id="@+id/perg1_et_resp16"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:enabled="false" />
 
 
                 <CheckBox
@@ -193,14 +209,16 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg1_cb_resp17"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg1_et_resp18->this,perg1_et_resp19->this" />
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:id="@+id/perg1_et_resp18"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:enabled="false" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -215,7 +233,8 @@
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:id="@+id/perg1_et_resp19"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:enabled="false" />
         </LinearLayout>
 
     </LinearLayout>

@@ -300,7 +300,7 @@
         <!-- QUESTAO 7 -->
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="match_parent"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:padding="3dp">
 
@@ -397,7 +397,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg9_et_resp1"
                     android:textAppearance="@style/style_resposta"

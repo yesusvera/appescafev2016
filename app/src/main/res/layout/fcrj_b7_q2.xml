@@ -33,8 +33,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:paddingLeft="50dp"
-            android:paddingRight="50dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
             android:paddingBottom="10dp"
             android:layout_gravity="center_vertical"
             android:stretchColumns="*">
@@ -56,7 +56,6 @@
                             android:textAppearance="@style/style_questao"
                             android:paddingBottom="5dp"
                             android:gravity="center"
-                            android:background="@drawable/border"
                             android:text="Período"/>
                         <TextView
                             android:layout_width="match_parent"
@@ -145,17 +144,23 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg1_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Verão Média\nKg/dia"
+                    android:inputType="numberDecimal" />
                 <EditText
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg1_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Inverno Média\nKg/dia"
+                    android:inputType="numberDecimal" />
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="190dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg1_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="3"
+                    android:hint="Observações" />
 
             </TableRow>
 
@@ -201,17 +206,23 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg2_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Verão Média\nKg/dia"
+                    android:inputType="numberDecimal" />
                 <EditText
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg2_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Inverno Média\nKg/dia"
+                    android:inputType="numberDecimal" />
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="190dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg2_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="3"
+                    android:hint="Observações" />
 
             </TableRow>
 
@@ -256,17 +267,23 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg3_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Verão Média\nKg/dia"
+                    android:inputType="numberDecimal" />
                 <EditText
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg3_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Inverno Média\nKg/dia"
+                    android:inputType="numberDecimal" />
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="190dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg3_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="3"
+                    android:hint="Observações" />
 
             </TableRow>
 
@@ -282,7 +299,7 @@
                     android:textAppearance="@style/style_questao"
                     android:paddingBottom="5dp"
                     android:gravity="center"
-                    android:text="Esquartejado (Pequeno/medio/grande)"/>
+                    android:text="Esquartejado\n(Pequeno/medio/grande)"/>
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
@@ -313,17 +330,23 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg4_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Verão Média\nKg/dia"
+                    android:inputType="numberDecimal" />
                 <EditText
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg4_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Inverno Média\nKg/dia"
+                    android:inputType="numberDecimal" />
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="190dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg4_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="3"
+                    android:hint="Observações" />
 
             </TableRow>
 
@@ -369,17 +392,23 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg5_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Verão Média\nKg/dia"
+                    android:inputType="numberDecimal" />
                 <EditText
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg5_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Inverno Média\nKg/dia"
+                    android:inputType="numberDecimal" />
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="190dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg5_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="3"
+                    android:hint="Observações" />
 
             </TableRow>
 
@@ -427,17 +456,23 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg6_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Verão Média\nKg/dia"
+                    android:inputType="numberDecimal" />
                 <EditText
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg6_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Inverno Média\nKg/dia"
+                    android:inputType="numberDecimal" />
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="190dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg6_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="3"
+                    android:hint="Observações" />
 
             </TableRow>
 
@@ -483,17 +518,23 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg7_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Verão Média\nKg/dia"
+                    android:inputType="numberDecimal" />
                 <EditText
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg7_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Inverno Média\nKg/dia"
+                    android:inputType="numberDecimal" />
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="190dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg7_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="3"
+                    android:hint="Observações" />
 
             </TableRow>
         </TableLayout></HorizontalScrollView>

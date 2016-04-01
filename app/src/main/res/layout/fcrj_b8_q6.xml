@@ -39,16 +39,19 @@
             android:padding="20dp">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingBottom="5dp"
-                android:text="Quais atividades são as realizadas antes ou depois da pescaria?  Quanto tempo essas atividades gastam? Quais são os recursos utilizados? "
-                android:textAppearance="@style/style_questao" />
-
-            <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
+                android:paddingBottom="5dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="Quais atividades são as realizadas antes ou depois da pescaria? \nQuanto tempo essas atividades gastam? Quais são os recursos utilizados? "
+                android:textAppearance="@style/style_questao" />
+
+            <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="match_parent"             android:layout_height="fill_parent">
+                <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:paddingBottom="10dp"
@@ -61,6 +64,8 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:paddingTop="40dp"
+
                     android:layout_gravity="center_horizontal">
 
                     <TextView
@@ -68,6 +73,7 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:text="Atividade"
+                        android:paddingRight="20dp"
                         android:textAppearance="@style/style_questao" />
 
                     <TextView
@@ -75,6 +81,7 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:text="Tempo Gasto"
+                        android:paddingRight="20dp"
 
                         android:textAppearance="@style/style_questao" />
 
@@ -84,6 +91,8 @@
                         android:layout_gravity="center_horizontal"
                         android:gravity="center"
                         android:text="Custo R$/ano"
+                        android:paddingLeft="25dp"
+
                         android:textAppearance="@style/style_questao" />
 
                 </TableRow>
@@ -92,21 +101,21 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@drawable/border">
+                    android:paddingTop="40dp"
+                    android:paddingRight="20dp"
+                    android:layout_gravity="center_horizontal">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/border"
-                        android:gravity="center"
+                        android:gravity="center|top"
                         android:text="Preparo de laço"
-                        android:textAppearance="@style/style_questao" />
+                        android:textAppearance="@style/style_questao"
+                        android:paddingRight="25dp" />
 
                     <RadioGroup
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/border"
                         android:orientation="vertical">
 
                         <EditText
@@ -131,6 +140,7 @@
                             android:layout_height="wrap_content"
                             android:checked="false"
                             android:text="dias/semana"
+
                             android:textAppearance="@style/style_resposta" />
 
 
@@ -141,7 +151,7 @@
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:paddingLeft="20dp"
+                        android:gravity="top"
                         android:textAppearance="@style/style_resposta" />
 
                 </TableRow>
@@ -150,21 +160,21 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:paddingTop="40dp"
+                    android:paddingRight="20dp"
                     android:layout_gravity="center_horizontal"
-                    android:background="@drawable/border">
+                    >
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/border"
-                        android:gravity="center"
+                        android:gravity="center|top"
                         android:text="Lavagem da Roupa"
                         android:textAppearance="@style/style_questao" />
 
                     <RadioGroup
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/border"
                         android:orientation="vertical">
 
                         <EditText
@@ -188,9 +198,9 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/border"
                         android:gravity="center"
                         android:text="Não se aplica"
+                        android:paddingLeft="25dp"
                         android:textAppearance="@style/style_questao" />
 
                 </TableRow>
@@ -199,21 +209,20 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@drawable/border">
+                    android:paddingTop="40dp"
+                    android:paddingRight="20dp"
+                    android:layout_gravity="center_horizontal">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/border"
-                        android:gravity="center"
+                        android:gravity="center|top"
                         android:text="Recolher e lavar a embarcação"
                         android:textAppearance="@style/style_questao" />
 
                     <RadioGroup
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/border"
                         android:orientation="vertical">
 
                         <EditText
@@ -237,9 +246,9 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/border"
                         android:gravity="center"
                         android:text="Não se aplica"
+                        android:paddingLeft="25dp"
                         android:textAppearance="@style/style_questao" />
 
                 </TableRow>
@@ -248,13 +257,13 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@drawable/border">
+                    android:paddingTop="40dp"
+                    android:paddingRight="20dp"
+                    android:layout_gravity="center_horizontal">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/border"
                         android:gravity="center"
                         android:text="Outros"
                         android:textAppearance="@style/style_questao" />

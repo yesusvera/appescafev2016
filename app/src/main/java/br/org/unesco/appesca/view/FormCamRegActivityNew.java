@@ -1,8 +1,11 @@
 package br.org.unesco.appesca.view;
 
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -154,13 +157,18 @@ public class FormCamRegActivityNew extends AppCompatActivity
                             .setPositiveButton("Ir para a questão anterior sem salvar.", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
+
                                     openFragment(arrayIdsQuestoes[--posAtual]);
                                 }
                             }).setNegativeButton("Salvar a atual e ir para a anterior.", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
+
+
                                     salvarQuestaoAtual(false);
                                     openFragment(arrayIdsQuestoes[--posAtual]);
+
+
                                 }
                             }).show();
                 }
@@ -209,51 +217,69 @@ public class FormCamRegActivityNew extends AppCompatActivity
     }
 
 
-    private void salvarQuestaoAtual(boolean redirecionar){
-        int ordemQuestao = posAtual - 1;
-        Questao questao = questaoDAO.findQuestaoByOrdemIdFormulario(ordemQuestao, formulario.getId());
+    private void salvarQuestaoAtual(final boolean redirecionar){
 
-        //PRIMEIRO EXCLUIR TUDO EM CASCATA: RESPOSTAS, PERGUNTAS E QUESTAO. DEPOIS RE-INSERIR.
-        if (questao != null) {
-            questaoBO.excluirQuestao(questao);
-            questao = null;
-        }
+//        final ProgressDialog ringProgressDialog = ProgressDialog.show(FormCamRegActivityNew.this, "Aguarde ...", "Salvando questão ...", true);
+//
+//        ringProgressDialog.setCancelable(true);
+//
+//        new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//                try {
 
-        if (questao == null) {
-            questao = new Questao();
-            questao.setOrdem(ordemQuestao);
-            questao.getFormulario().setId(formulario.getId());
-            questao.setTitulo("Questão " + ordemQuestao);
-            questao = questaoDAO.insertQuestao(questao);
+                    int ordemQuestao = posAtual - 1;
+                    Questao questao = questaoDAO.findQuestaoByOrdemIdFormulario(ordemQuestao, formulario.getId());
 
-            questao.setListaPerguntas(buildPerguntaList(questao));
-
-            if (questao.getListaPerguntas() != null && !questao.getListaPerguntas().isEmpty()) {
-                questaoDAO.updateQuestao(questao);
-            }
-
-            if(!questaoBO.temAlgumaResposta(questao)){
-                questaoBO.excluirQuestao(questao);
-
-                new AlertDialog.Builder(FormCamRegActivityNew.this)
-                        .setTitle("Appesca")
-                        .setMessage("Esta questão não pode ser salva, uma resposta é necessária.")
-                        .setIcon(android.R.drawable.ic_dialog_alert)
-
-                        .setPositiveButton(android.R.string.ok, null).show();
-
-            }else{
-                Toast.makeText(getApplicationContext(), "Questão salva na base local.", Toast.LENGTH_LONG).show();
-                chekListQuestoes();
-
-                if(redirecionar) {
-                    if (posAtual == arrayIdsQuestoes.length - 1) {
-                        posAtual = -1;
+                    //PRIMEIRO EXCLUIR TUDO EM CASCATA: RESPOSTAS, PERGUNTAS E QUESTAO. DEPOIS RE-INSERIR.
+                    if (questao != null) {
+                        questaoBO.excluirQuestao(questao);
+                        questao = null;
                     }
-                    openFragment(arrayIdsQuestoes[++posAtual]);
-                }
-            }
-        }
+
+                    if (questao == null) {
+                        questao = new Questao();
+                        questao.setOrdem(ordemQuestao);
+                        questao.getFormulario().setId(formulario.getId());
+                        questao.setTitulo("Questão " + ordemQuestao);
+                        questao = questaoDAO.insertQuestao(questao);
+
+                        questao.setListaPerguntas(buildPerguntaList(questao));
+
+                        if (questao.getListaPerguntas() != null && !questao.getListaPerguntas().isEmpty()) {
+                            questaoDAO.updateQuestao(questao);
+                        }
+
+                        if(!questaoBO.temAlgumaResposta(questao)){
+                            questaoBO.excluirQuestao(questao);
+
+                            new AlertDialog.Builder(FormCamRegActivityNew.this)
+                                    .setTitle("Appesca")
+                                    .setMessage("Esta questão não pode ser salva, uma resposta é necessária.")
+                                    .setIcon(android.R.drawable.ic_dialog_alert)
+
+                                    .setPositiveButton(android.R.string.ok, null).show();
+
+                        }else{
+                            Toast.makeText(getApplicationContext(), "Questão salva na base local.", Toast.LENGTH_LONG).show();
+                            chekListQuestoes();
+
+                            if(redirecionar) {
+                                if (posAtual == arrayIdsQuestoes.length - 1) {
+                                    posAtual = -1;
+                                }
+                                openFragment(arrayIdsQuestoes[++posAtual]);
+                            }
+                        }
+                    }
+//                } catch (Exception e) {
+//                    e.printStackTrace();
+//                }
+//                ringProgressDialog.dismiss();
+//            }
+//
+//
+//        }).start();
     }
 
     public void inicializaFormulario(){
@@ -381,7 +407,6 @@ public class FormCamRegActivityNew extends AppCompatActivity
         }
     }
 
-
     private List<Pergunta> buildPerguntaList(Questao questao){
         List<Pergunta> perguntas = new ArrayList<Pergunta>();
 
@@ -403,6 +428,8 @@ public class FormCamRegActivityNew extends AppCompatActivity
                         Resposta resp = new Resposta();
                         resp.setOpcao(x);
                         resp.setOrdem(x);
+                        resp.setTipoComponente("rb");
+                        resp.setTexto(radioButton.getText().toString());
                         respostas.add(resp);
                     }else{
                      /** CHECKBOX **/
@@ -413,6 +440,8 @@ public class FormCamRegActivityNew extends AppCompatActivity
                             Resposta resp = new Resposta();
                             resp.setOpcao(x);
                             resp.setOrdem(x);
+                            resp.setTipoComponente("cb");
+                            resp.setTexto(checkBox.getText().toString());
                             respostas.add(resp);
                         }else{
                             /** EDITTEXT **/
@@ -423,6 +452,8 @@ public class FormCamRegActivityNew extends AppCompatActivity
                                 Resposta resp = new Resposta();
                                 resp.setTexto(editText.getText().toString());
                                 resp.setOrdem(x);
+                                resp.setTipoComponente("et");
+                                resp.setTexto(editText.getText().toString());
                                 respostas.add(resp);
                             }
                         }

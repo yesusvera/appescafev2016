@@ -43,7 +43,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
-                android:text="Quanto tempo se gasta para chegar ao local de pesca (pesqueiro) mais distante? "
+                android:text="Quanto tempo se gasta\npara chegar ao local de pesca\n(pesqueiro) mais distante? "
                 android:textAppearance="@style/style_questao" />
 
             <EditText
@@ -124,7 +124,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
-                android:text="Quanto tempo gasta para chegar ao local de pesca (pesqueiro) mais perto? "
+                android:text="Quanto tempo gasta\npara chegar ao local de pesca\n(pesqueiro) mais perto? "
                 android:textAppearance="@style/style_questao" />
 
             <EditText

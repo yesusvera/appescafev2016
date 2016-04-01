@@ -9,6 +9,7 @@ public class Resposta extends BaseModel {
 	private String texto;
 	private byte[] audio;
 	private int ordem;
+	private String tipoComponente; // cb ou rb ou et
 	private Pergunta pergunta = new Pergunta();
 
 
@@ -58,5 +59,13 @@ public class Resposta extends BaseModel {
 
 	public void setOrdem(int ordem) {
 		this.ordem = ordem;
+	}
+
+	public String getTipoComponente() {
+		return tipoComponente;
+	}
+
+	public void setTipoComponente(String tipoComponente) {
+		this.tipoComponente = tipoComponente;
 	}
 }

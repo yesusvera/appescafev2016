@@ -163,7 +163,8 @@
                     android:id="@+id/perg2_et_resp2"
                     android:enabled="false"
                     android:hint="R$0.00"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:textSize="12dp" />
             </TableRow>
 
             <TableRow
@@ -186,7 +187,8 @@
                     android:id="@+id/perg3_et_resp2"
                     android:enabled="false"
                     android:hint="R$0.00"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:textSize="12dp" />
             </TableRow>
 
             <TableRow
@@ -208,7 +210,8 @@
                     android:id="@+id/perg4_et_resp2"
                     android:enabled="false"
                     android:hint="R$0.00"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:textSize="12dp" />
             </TableRow>
 
             <TableRow
@@ -230,7 +233,8 @@
                     android:id="@+id/perg5_et_resp2"
                     android:enabled="false"
                     android:hint="R$0.00"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:textSize="12dp" />
             </TableRow>
 
             <TableRow
@@ -253,7 +257,8 @@
                     android:id="@+id/perg6_et_resp2"
                     android:enabled="false"
                     android:hint="R$0.00"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:textSize="12dp" />
             </TableRow>
 
             <TableRow
@@ -277,7 +282,8 @@
                     android:id="@+id/perg7_et_resp2"
                     android:enabled="false"
                     android:hint="R$0.00"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:textSize="12dp" />
             </TableRow>
 
             <TableRow
@@ -287,19 +293,22 @@
 
                 <CheckBox
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="Programa de Organização\nProdutiva de Mulheres Rurais – POPMR"
+                    android:layout_height="wrap_content"
+                    android:text="Programa de Organização\nProdutiva de Mulheres Rurais\nPOPMR"
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg8_cb_resp1"
                     android:enabled="false"
-                    android:tag="perg8_et_resp2->this" />
+                    android:tag="perg8_et_resp2->this"
+                    android:checked="false"
+                    android:paddingBottom="15dp" />
                 <EditText
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg8_et_resp2"
                     android:enabled="false"
                     android:hint="R$0.00"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:textSize="12dp" />
             </TableRow>
 
             <TableRow
@@ -322,7 +331,8 @@
                     android:id="@+id/perg9_et_resp3"
                     android:enabled="false"
                     android:hint="R$0.00"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:textSize="12dp" />
             </TableRow>
 
             <TableRow

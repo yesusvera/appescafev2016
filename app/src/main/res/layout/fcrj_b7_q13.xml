@@ -55,7 +55,8 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg1_rb_resp1"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg1_et_resp3->false,perg1_et_resp4->false" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
@@ -64,7 +65,8 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg1_rb_resp2"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg1_et_resp3->true,perg1_et_resp4->true" />
 
             </RadioGroup>
 
@@ -72,7 +74,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/perg1_et_resp3"
-                android:textAppearance="@style/style_resposta"/>
+                android:textAppearance="@style/style_resposta"
+                android:enabled="false" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -87,7 +90,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/perg1_et_resp4"
-                android:textAppearance="@style/style_resposta"/>
+                android:textAppearance="@style/style_resposta"
+                android:enabled="false"
+                android:inputType="numberDecimal" />
 
 
         </LinearLayout>

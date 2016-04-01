@@ -58,7 +58,6 @@
                             android:textAppearance="@style/style_questao"
                             android:paddingBottom="5dp"
                             android:gravity="center"
-                            android:background="@drawable/border"
                             android:text="Produtos"/>
                         <TextView
                             android:layout_width="match_parent"
@@ -67,7 +66,6 @@
                             android:paddingBottom="5dp"
                             android:gravity="center"
                             android:layout_span="2"
-                            android:background="@drawable/border"
                             android:text="Preço (R$)/kg do 1º."/>
                         <TextView
                             android:layout_width="match_parent"
@@ -85,7 +83,6 @@
                             android:paddingBottom="5dp"
                             android:gravity="center"
                             android:layout_span="2"
-                            android:background="@drawable/border"
                             android:layout_gravity="center_horizontal"
                             android:text="Preço (R$)/kg do 3º"/>
             </TableRow>
@@ -170,33 +167,45 @@
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg1_et_resp1"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Inverno\nkg do 1º" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg1_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Verão\nkg do 1º" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg1_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Inverno\nkg do 2º" />
 
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg1_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Verão\nkg do 2º" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg1_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Inverno\nkg do 3º" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg1_et_resp6"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Verão\nkg do 3º" />
 
             </TableRow>
 
@@ -217,33 +226,45 @@
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg2_et_resp1"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Inverno\nkg do 1º" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg2_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Verão\nkg do 1º" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg2_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Inverno\nkg do 2º" />
 
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg2_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Verão\nkg do 2º" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg2_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Inverno\nkg do 3º" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg2_et_resp6"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Verão\nkg do 3º" />
             </TableRow>
 
             <TableRow
@@ -262,33 +283,45 @@
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg3_et_resp1"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Inverno\nkg do 1º" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg3_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Verão\nkg do 1º" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg3_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Inverno\nkg do 2º" />
 
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg3_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Verão\nkg do 2º" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg3_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Inverno\nkg do 3º" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg3_et_resp6"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Verão\nkg do 3º" />
             </TableRow>
 
 
@@ -309,33 +342,45 @@
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg4_et_resp1"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Inverno\nkg do 1º" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg4_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Verão\nkg do 1º" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg4_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Inverno\nkg do 2º" />
 
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg4_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Verão\nkg do 2º" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg4_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Inverno\nkg do 3º" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg4_et_resp6"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Verão\nkg do 3º" />
 
             </TableRow>
 
@@ -356,33 +401,45 @@
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg5_et_resp1"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Inverno\nkg do 1º" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg5_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Verão\nkg do 1º" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg5_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Inverno\nkg do 2º" />
 
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg5_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Verão\nkg do 2º" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg5_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Inverno\nkg do 3º" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg5_et_resp6"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Verão\nkg do 3º" />
 
             </TableRow>
 
@@ -405,33 +462,45 @@
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg6_et_resp1"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Inverno\nkg do 1º" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg6_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Verão\nkg do 1º" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg6_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Inverno\nkg do 2º" />
 
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg6_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Verão\nkg do 2º" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg6_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Inverno\nkg do 3º" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg6_et_resp6"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Verão\nkg do 3º" />
 
             </TableRow>
 
@@ -458,33 +527,45 @@
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg7_et_resp1"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Inverno\nkg do 1º" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg7_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Verão\nkg do 1º" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg7_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Inverno\nkg do 2º" />
 
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg7_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Verão\nkg do 2º" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg7_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Inverno\nkg do 3º" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg7_et_resp6"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Verão\nkg do 3º" />
 
             </TableRow>
 
@@ -504,33 +585,45 @@
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg8_et_resp1"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Inverno\nkg do 1º" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg8_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Verão\nkg do 1º" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg8_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Inverno\nkg do 2º" />
 
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg8_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Verão\nkg do 2º" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg8_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Inverno\nkg do 3º" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg8_et_resp6"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal"
+                    android:hint="Verão\nkg do 3º" />
 
             </TableRow>
         </TableLayout></HorizontalScrollView>

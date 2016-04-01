@@ -83,7 +83,7 @@ public class FormularioBO {
 
                 RespEnvioFormulario respEnvioFormulario = (RespEnvioFormulario) xStream.fromXML(xmlRetorno);
 
-                if(!respEnvioFormulario.isErro()) { //LOGIN CORRETO
+                if (!respEnvioFormulario.isErro()) { //LOGIN CORRETO
                     FormularioDAO formularioDAO = new FormularioDAO(context);
                     formularioOriginal.setIdSincronizacao(respEnvioFormulario.getIdSincronizacao());
                     formularioOriginal.setSituacao(1);
@@ -95,7 +95,7 @@ public class FormularioBO {
 
                 try {
                     activity.finish();
-                }catch (Exception e){
+                } catch (Exception e) {
 
                 }
             }
@@ -121,6 +121,73 @@ public class FormularioBO {
                 //showProgress(false);
             }
         });
+    }
+
+
+
+
+
+    public Resposta getResposta(int ordemQuestao, int ordemPergunta, int ordemResposta, Formulario formulario){
+        Questao questao = getQuestaoPorOrdem(ordemQuestao, formulario);
+        Pergunta pergunta = getPerguntaPorOrdem(ordemPergunta, questao);
+        Resposta resposta = getRespostaPorOrdem(ordemResposta, pergunta);
+
+        return resposta;
+    }
+
+    public Resposta getResposta(Questao questao, int ordemPergunta, int ordemResposta){
+        Pergunta pergunta = getPerguntaPorOrdem(ordemPergunta, questao);
+        Resposta resposta = getRespostaPorOrdem(ordemResposta, pergunta);
+
+        return resposta;
+    }
+
+    public String getRespostaTexto(int ordemQuestao, int ordemPergunta, int ordemResposta, Formulario formulario){
+        Questao questao = getQuestaoPorOrdem(ordemQuestao, formulario);
+        Pergunta pergunta = getPerguntaPorOrdem(ordemPergunta, questao);
+        Resposta resposta = getRespostaPorOrdem(ordemResposta, pergunta);
+
+        if(resposta != null){
+            return resposta.getTexto();
+        }
+
+        return "";
+    }
+
+    public Questao getQuestaoPorOrdem(int ordem, Formulario formulario){
+        if(formulario!=null && formulario.getListaQuestoes()!=null && formulario.getListaQuestoes().size() > 0){
+            for(Questao questao: formulario.getListaQuestoes()){
+                if(questao.getOrdem() == ordem){
+                    return questao;
+                }
+            }
+        }
+
+        return null;
+    }
+
+    public Pergunta getPerguntaPorOrdem(int ordem, Questao questao){
+        if(questao!=null && questao.getListaPerguntas()!=null && questao.getListaPerguntas().size()>0){
+            for(Pergunta pergunta: questao.getListaPerguntas()){
+                if(pergunta.getOrdem()==ordem){
+                    return pergunta;
+                }
+            }
+        }
+
+        return null;
+    }
+
+    public Resposta getRespostaPorOrdem(int ordem, Pergunta pergunta){
+        if(pergunta!=null && pergunta.getListaRespostas()!=null && pergunta.getListaRespostas().size() > 0 ){
+            for(Resposta resposta: pergunta.getListaRespostas()){
+                if(resposta.getOrdem()== ordem){
+                    return resposta;
+                }
+            }
+        }
+
+        return null;
     }
 
 }

@@ -10,7 +10,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:background="@drawable/layout_questao">
+        android:background="@drawable/layout_questao"
+        android:paddingBottom="50dp">
 
         <!-- TITULO -->
         <LinearLayout
@@ -48,12 +49,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:paddingLeft="50dp"
-            android:paddingRight="50dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
             android:paddingBottom="10dp"
             android:layout_gravity="center_vertical"
             android:stretchColumns="*"
-            android:background="@drawable/border">
+            android:background="@drawable/border"
+                android:id="@+id/tb_inverno">
 
 
             <TableRow
@@ -106,27 +108,39 @@
                 android:layout_gravity="center_horizontal">
                 <TextView android:text="Quant.\nde\ncaranguejos"
                     android:layout_gravity="center"
-                    android:layout_column="2" />
+                    android:layout_column="2"
+                    android:textSize="12dp"
+                    android:paddingRight="5dp"
+                    android:textColor="#4c4c4c" />
                 <TextView android:text="N. tocas\n acessadas"
                     android:layout_gravity="center"
-                    android:layout_column="3" />
+                    android:layout_column="3"
+                    android:textSize="12dp"
+                    android:paddingRight="5dp"
+                    android:textColor="#4c4c4c" />
                 <TextView android:text="Tocas\nPescadas"
                     android:layout_gravity="center"
-                    android:layout_column="4" />
+                    android:layout_column="4"
+                    android:textSize="12dp"
+                    android:paddingRight="5dp"
+                    android:textColor="#4c4c4c" />
                 <TextView android:text="Tempo\ngasto\nHoras/dia "
                     android:layout_gravity="center"
-                    android:layout_column="5" />
+                    android:layout_column="5"
+                    android:textSize="12dp"
+                    android:paddingRight="5dp"
+                    android:textColor="#4c4c4c" />
             </TableRow>
 
             <TableRow
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_1">
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="80dp"
                     android:textAppearance="@style/style_questao"
-                    android:paddingBottom="10dp"
                     android:gravity="center"
                     android:text="Mortinha\nMaré de quarta\n Maré Morta "/>
 
@@ -137,35 +151,50 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg1_cb_resp1"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:layout_gravity="bottom"
+                    android:tag="perg1_et_1ˆ5->this" />
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg1_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde\nCaranguejos"
+                    android:layout_gravity="bottom"
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg1_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tocas\nAcess."
+                    android:layout_gravity="bottom"
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg1_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tocas\nPesc."
+                    android:layout_gravity="bottom"
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg1_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tempo\nH/D"
+                    android:layout_gravity="bottom"
+                    android:enabled="false" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_2">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -181,35 +210,45 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg2_cb_resp1"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg2_et_1ˆ5->this" />
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg2_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde\nCaranguejos"
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg2_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tocas\nAcess."
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg2_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tocas\nPesc."
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg2_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tempo\nH/D"
+                    android:enabled="false" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_3">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -225,35 +264,45 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg3_cb_resp1"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg3_et_1ˆ5->this" />
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg3_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde\nCaranguejos"
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg3_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tocas\nAcess."
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg3_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tocas\nPesc."
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg3_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tempo\nH/D"
+                    android:enabled="false" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_4">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -269,35 +318,45 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg4_cb_resp1"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg4_et_1ˆ5->this" />
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg4_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde\nCaranguejos"
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg4_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tocas\nAcess."
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg4_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tocas\nPesc."
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg4_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tempo\nH/D"
+                    android:enabled="false" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_5">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -313,28 +372,37 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg5_cb_resp1"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg5_et_1ˆ5->this" />
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg5_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde\nCaranguejos"
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg5_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tocas\nAcess."
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg5_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tocas\nPesc."
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg5_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tempo\nH/D"
+                    android:enabled="false" />
 
             </TableRow>
 
@@ -344,7 +412,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:paddingTop="15dp"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_6">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -360,35 +429,45 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg6_cb_resp1"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg6_et_1ˆ5->this" />
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg6_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde\nCaranguejos"
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg6_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tocas\nAcess."
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg6_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tocas\nPesc."
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg6_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tempo\nH/D"
+                    android:enabled="false" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_7">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -404,35 +483,45 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg7_cb_resp1"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg7_et_1ˆ5->this" />
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg7_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde\nCaranguejos"
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg7_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tocas\nAcess."
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg7_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tocas\nPesc."
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg7_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tempo\nH/D"
+                    android:enabled="false" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_8">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -448,35 +537,45 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg8_cb_resp1"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg8_et_1ˆ5->this" />
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg8_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde\nCaranguejos"
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg8_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tocas\nAcess."
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg8_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tocas\nPesc."
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg8_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tempo\nH/D"
+                    android:enabled="false" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_9">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -492,35 +591,45 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg9_cb_resp1"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg9_et_1ˆ5->this" />
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg9_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde\nCaranguejos"
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg9_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tocas\nAcess."
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg9_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tocas\nPesc."
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg9_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tempo\nH/D"
+                    android:enabled="false" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_10">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -536,35 +645,45 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg10_cb_resp1"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg10_et_1ˆ5->this" />
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg10_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde\nCaranguejos"
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg10_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tocas\nAcess."
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg10_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tocas\nPesc."
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg10_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tempo\nH/D"
+                    android:enabled="false" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_11">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -580,35 +699,45 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg11_cb_resp1"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg11_et_1ˆ5->this" />
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg11_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde\nCaranguejos"
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg11_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tocas\nAcess."
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg11_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tocas\nPesc."
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg11_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tempo\nH/D"
+                    android:enabled="false" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_12">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -624,35 +753,45 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg12_cb_resp1"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg12_et_1ˆ5->this" />
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg12_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde\nCaranguejos"
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg12_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tocas\nAcess."
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg12_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tocas\nPesc."
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg12_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tempo\nH/D"
+                    android:enabled="false" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_13">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -668,28 +807,37 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg13_cb_resp1"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg13_et_1ˆ5->this" />
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg13_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde\nCaranguejos"
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg13_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tocas\nAcess."
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg13_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tocas\nPesc."
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg13_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tempo\nH/D"
+                    android:enabled="false" />
 
             </TableRow>
 
@@ -699,7 +847,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:paddingTop="15dp"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_14">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -715,35 +864,45 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg14_cb_resp1"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg14_et_1ˆ5->this" />
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg14_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde\nCaranguejos"
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg14_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tocas\nAcess."
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg14_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tocas\nPesc."
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg14_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tempo\nH/D"
+                    android:enabled="false" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_15">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -759,35 +918,45 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg15_cb_resp1"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg15_et_1ˆ5->this" />
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg15_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde\nCaranguejos"
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg15_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tocas\nAcess."
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg15_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tocas\nPesc."
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg15_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tempo\nH/D"
+                    android:enabled="false" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_16">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -803,28 +972,37 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg16_cb_resp1"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg16_et_1ˆ5->this" />
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg16_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde\nCaranguejos"
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg16_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tocas\nAcess."
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg16_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tocas\nPesc."
+                    android:enabled="false" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg16_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tempo\nH/D"
+                    android:enabled="false" />
 
             </TableRow>
 
@@ -850,12 +1028,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:paddingLeft="50dp"
-                android:paddingRight="50dp"
-                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="4dp"
                 android:layout_gravity="center_vertical"
                 android:stretchColumns="*"
-                android:background="@drawable/border">
+                android:background="@drawable/border"
+                android:id="@+id/tb_verao">
 
 
                 <TableRow
@@ -908,29 +1087,42 @@
                     android:layout_gravity="center_horizontal">
                     <TextView android:text="Quant.\nde\ncaranguejos"
                         android:layout_gravity="center"
-                        android:layout_column="2" />
+                        android:layout_column="2"
+                        android:paddingRight="5dp"
+                        android:textSize="12dp"
+                        android:textColor="#4c4c4c" />
                     <TextView android:text="N. tocas\n acessadas"
                         android:layout_gravity="center"
-                        android:layout_column="3" />
+                        android:layout_column="3"
+                        android:paddingRight="5dp"
+                        android:textSize="12dp"
+                        android:textColor="#4c4c4c" />
                     <TextView android:text="Tocas\nPescadas"
                         android:layout_gravity="center"
-                        android:layout_column="4" />
+                        android:layout_column="4"
+                        android:paddingRight="5dp"
+                        android:textSize="12dp"
+                        android:textColor="#4c4c4c" />
                     <TextView android:text="Tempo\ngasto\nHoras/dia "
                         android:layout_gravity="center"
-                        android:layout_column="5" />
+                        android:layout_column="5"
+                        android:paddingRight="5dp"
+                        android:textSize="12dp"
+                        android:textColor="#4c4c4c" />
                 </TableRow>
 
                 <TableRow
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_gravity="center_horizontal">
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/tbrow_17">
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="80dp"
                         android:textAppearance="@style/style_questao"
-                        android:paddingBottom="10dp"
                         android:gravity="center"
                         android:text="Mortinha\nMaré de quarta\n Maré Morta "/>
+
 
                     <CheckBox
                         android:layout_width="wrap_content"
@@ -939,35 +1131,50 @@
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg17_cb_resp1"
                         android:paddingRight="15dp"
-                        android:checked="false" />
+                        android:checked="false"
+                        android:layout_gravity="bottom"
+                        android:tag="perg17_et_1ˆ5->this" />
 
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg17_et_resp2"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Qtde\nCaranguejos"
+                        android:layout_gravity="bottom"
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg17_et_resp3"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tocas\nAcess."
+                        android:layout_gravity="bottom"
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg17_et_resp4"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tocas\nPesc."
+                        android:layout_gravity="bottom"
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg17_et_resp5"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tempo\nH/D"
+                        android:layout_gravity="bottom"
+                        android:enabled="false" />
 
                 </TableRow>
 
                 <TableRow
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_gravity="center_horizontal">
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/tbrow_18">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -983,35 +1190,45 @@
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg18_cb_resp1"
                         android:paddingRight="15dp"
-                        android:checked="false" />
+                        android:checked="false"
+                        android:tag="perg18_et_1ˆ5->this" />
 
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg18_et_resp2"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Qtde\nCaranguejos"
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg18_et_resp3"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tocas\nAcess."
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg18_et_resp4"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tocas\nPesc."
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg18_et_resp5"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tempo\nH/D"
+                        android:enabled="false" />
 
                 </TableRow>
 
                 <TableRow
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_gravity="center_horizontal">
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/tbrow_19">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -1027,35 +1244,45 @@
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg19_cb_resp1"
                         android:paddingRight="15dp"
-                        android:checked="false" />
+                        android:checked="false"
+                        android:tag="perg19_et_1ˆ5->this" />
 
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg19_et_resp2"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Qtde\nCaranguejos"
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg19_et_resp3"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tocas\nAcess."
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg19_et_resp4"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tocas\nPesc."
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg19_et_resp5"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tempo\nH/D"
+                        android:enabled="false" />
 
                 </TableRow>
 
                 <TableRow
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_gravity="center_horizontal">
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/tbrow_20">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -1071,35 +1298,45 @@
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg20_cb_resp1"
                         android:paddingRight="15dp"
-                        android:checked="false" />
+                        android:checked="false"
+                        android:tag="perg20_et_1ˆ5->this" />
 
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg20_et_resp2"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Qtde\nCaranguejos"
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg20_et_resp3"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tocas\nAcess."
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg20_et_resp4"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tocas\nPesc."
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg20_et_resp5"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tempo\nH/D"
+                        android:enabled="false" />
 
                 </TableRow>
 
                 <TableRow
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_gravity="center_horizontal">
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/tbrow_21">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -1115,28 +1352,37 @@
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg21_cb_resp1"
                         android:paddingRight="15dp"
-                        android:checked="false" />
+                        android:checked="false"
+                        android:tag="perg21_et_1ˆ5->this" />
 
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg21_et_resp2"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Qtde\nCaranguejos"
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg21_et_resp3"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tocas\nAcess."
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg21_et_resp4"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tocas\nPesc."
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg21_et_resp5"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tempo\nH/D"
+                        android:enabled="false" />
 
                 </TableRow>
 
@@ -1144,7 +1390,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:paddingTop="15dp"
-                    android:layout_gravity="center_horizontal">
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/tbrow_22">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -1160,35 +1407,45 @@
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg22_cb_resp1"
                         android:paddingRight="15dp"
-                        android:checked="false" />
+                        android:checked="false"
+                        android:tag="perg22_et_1ˆ5->this" />
 
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg22_et_resp2"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Qtde\nCaranguejos"
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg22_et_resp3"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tocas\nAcess."
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg22_et_resp4"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tocas\nPesc."
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg22_et_resp5"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tempo\nH/D"
+                        android:enabled="false" />
 
                 </TableRow>
 
                 <TableRow
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_gravity="center_horizontal">
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/tbrow_23">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -1204,35 +1461,45 @@
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg23_cb_resp1"
                         android:paddingRight="15dp"
-                        android:checked="false" />
+                        android:checked="false"
+                        android:tag="perg23_et_1ˆ5->this" />
 
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg23_et_resp2"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Qtde\nCaranguejos"
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg23_et_resp3"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tocas\nAcess."
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg23_et_resp4"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tocas\nPesc."
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg23_et_resp5"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tempo\nH/D"
+                        android:enabled="false" />
 
                 </TableRow>
 
                 <TableRow
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_gravity="center_horizontal">
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/tbrow_24">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -1248,35 +1515,45 @@
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg24_cb_resp1"
                         android:paddingRight="15dp"
-                        android:checked="false" />
+                        android:checked="false"
+                        android:tag="perg24_et_1ˆ5->this" />
 
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg24_et_resp2"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Qtde\nCaranguejos"
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg24_et_resp3"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tocas\nAcess."
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg24_et_resp4"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tocas\nPesc."
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg24_et_resp5"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tempo\nH/D"
+                        android:enabled="false" />
 
                 </TableRow>
 
                 <TableRow
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_gravity="center_horizontal">
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/tbrow_25">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -1292,35 +1569,45 @@
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg25_cb_resp1"
                         android:paddingRight="15dp"
-                        android:checked="false" />
+                        android:checked="false"
+                        android:tag="perg25_et_1ˆ5->this" />
 
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg25_et_resp2"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Qtde\nCaranguejos"
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg25_et_resp3"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tocas\nAcess."
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg25_et_resp4"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tocas\nPesc."
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg25_et_resp5"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tempo\nH/D"
+                        android:enabled="false" />
 
                 </TableRow>
 
                 <TableRow
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_gravity="center_horizontal">
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/tbrow_26">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -1336,35 +1623,45 @@
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg26_cb_resp1"
                         android:paddingRight="15dp"
-                        android:checked="false" />
+                        android:checked="false"
+                        android:tag="perg26_et_1ˆ5->this" />
 
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg26_et_resp2"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Qtde\nCaranguejos"
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg26_et_resp3"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tocas\nAcess."
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg26_et_resp4"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tocas\nPesc."
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg26_et_resp5"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tempo\nH/D"
+                        android:enabled="false" />
 
                 </TableRow>
 
                 <TableRow
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_gravity="center_horizontal">
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/tbrow_27">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -1380,35 +1677,45 @@
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg27_cb_resp1"
                         android:paddingRight="15dp"
-                        android:checked="false" />
+                        android:checked="false"
+                        android:tag="perg27_et_1ˆ5->this" />
 
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg27_et_resp2"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Qtde\nCaranguejos"
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg27_et_resp3"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tocas\nAcess."
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg27_et_resp4"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tocas\nPesc."
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg27_et_resp5"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tempo\nH/D"
+                        android:enabled="false" />
 
                 </TableRow>
 
                 <TableRow
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_gravity="center_horizontal">
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/tbrow_28">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -1424,42 +1731,52 @@
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg28_cb_resp1"
                         android:paddingRight="15dp"
-                        android:checked="false" />
+                        android:checked="false"
+                        android:tag="perg28_et_1ˆ5->this" />
 
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg28_et_resp2"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Qtde\nCaranguejos"
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg28_et_resp3"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tocas\nAcess."
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg28_et_resp4"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tocas\nPesc."
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg28_et_resp5"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tempo\nH/D"
+                        android:enabled="false" />
 
                 </TableRow>
 
                 <TableRow
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_gravity="center_horizontal">
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/tbrow_29">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="@style/style_questao"
                         android:paddingBottom="5dp"
                         android:gravity="center"
-                        android:text=""/>
+                        android:text="" />
 
                     <CheckBox
                         android:layout_width="wrap_content"
@@ -1468,28 +1785,37 @@
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg29_cb_resp1"
                         android:paddingRight="15dp"
-                        android:checked="false" />
+                        android:checked="false"
+                        android:tag="perg29_et_1ˆ5->this" />
 
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg29_et_resp2"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Qtde\nCaranguejos"
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg29_et_resp3"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tocas\nAcess."
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg29_et_resp4"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tocas\nPesc."
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg29_et_resp5"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tempo\nH/D"
+                        android:enabled="false" />
 
                 </TableRow>
 
@@ -1497,7 +1823,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:paddingTop="15dp"
-                    android:layout_gravity="center_horizontal">
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/tbrow_30">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -1513,35 +1840,45 @@
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg30_cb_resp1"
                         android:paddingRight="15dp"
-                        android:checked="false" />
+                        android:checked="false"
+                        android:tag="perg30_et_1ˆ5->this" />
 
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg30_et_resp2"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Qtde\nCaranguejos"
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg30_et_resp3"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tocas\nAcess."
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg30_et_resp4"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tocas\nPesc."
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg30_et_resp5"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tempo\nH/D"
+                        android:enabled="false" />
 
                 </TableRow>
 
                 <TableRow
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_gravity="center_horizontal">
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/tbrow_31">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -1557,35 +1894,45 @@
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg31_cb_resp1"
                         android:paddingRight="15dp"
-                        android:checked="false" />
+                        android:checked="false"
+                        android:tag="perg31_et_1ˆ5->this" />
 
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg31_et_resp2"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Qtde\nCaranguejos"
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg31_et_resp3"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tocas\nAcess."
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg31_et_resp4"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tocas\nPesc."
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg31_et_resp5"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tempo\nH/D"
+                        android:enabled="false" />
 
                 </TableRow>
 
                 <TableRow
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_gravity="center_horizontal">
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/tbrow_32">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -1601,28 +1948,37 @@
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg32_cb_resp1"
                         android:paddingRight="15dp"
-                        android:checked="false" />
+                        android:checked="false"
+                        android:tag="perg32_et_1ˆ5->this" />
 
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg32_et_resp2"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Qtde\nCaranguejos"
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg32_et_resp3"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tocas\nAcess."
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg32_et_resp4"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tocas\nPesc."
+                        android:enabled="false" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg32_et_resp5"
-                        android:textAppearance="@style/style_resposta"/>
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tempo\nH/D"
+                        android:enabled="false" />
 
                 </TableRow>
 

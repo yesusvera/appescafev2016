@@ -69,39 +69,39 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="geladeira"
-                        android:textAppearance="@style/style_resposta" />
+                        android:textAppearance="@style/style_resposta"
+                        android:tag="perg1_et_resp5->false" />
 
                     <RadioButton
                         android:id="@+id/perg1_rb_resp2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="freezer"
-                        android:textAppearance="@style/style_resposta" />
+                        android:textAppearance="@style/style_resposta"
+                        android:tag="perg1_et_resp5->false" />
 
                     <RadioButton
                         android:id="@+id/perg1_rb_resp3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="câmara fria"
-                        android:textAppearance="@style/style_resposta" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:textAppearance="@style/style_resposta"
+                        android:tag="perg1_et_resp5->false" />
 
                         <RadioButton
                             android:id="@+id/perg1_rb_resp4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Outros:"
-                            android:textAppearance="@style/style_resposta" />
+                            android:textAppearance="@style/style_resposta"
+                            android:tag="perg1_et_resp5->true" />
 
                         <EditText
                             android:id="@+id/perg1_et_resp5"
                             android:layout_width="240dp"
-                            android:layout_height="wrap_content" />
-                    </LinearLayout>
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+
                 </RadioGroup>
                 </LinearLayout>
 

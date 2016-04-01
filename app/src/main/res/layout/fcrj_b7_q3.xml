@@ -52,9 +52,9 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:paddingBottom="5dp"
-                    android:text="Quantos Kilos de caranguejo é preciso para produzir 1Kg de massa de caranguejo?"
+                    android:text="Quantos Kilos de caranguejo é preciso\npara produzir 1Kg de massa de caranguejo?"
                     android:textAppearance="@style/style_resposta" />
 
 
@@ -62,7 +62,8 @@
                     android:id="@+id/perg1_et_resp1"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:textAppearance="@style/style_resposta" />
+                    android:textAppearance="@style/style_resposta"
+                    android:inputType="numberDecimal" />
 
             </LinearLayout>
 

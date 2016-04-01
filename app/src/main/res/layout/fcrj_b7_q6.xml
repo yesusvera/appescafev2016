@@ -62,7 +62,8 @@
                     <EditText
                         android:id="@+id/perg1_et_resp1"
                         android:layout_width="80dp"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -83,7 +84,8 @@
                     <EditText
                         android:id="@+id/perg1_et_resp2"
                         android:layout_width="80dp"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -110,7 +112,8 @@
                     <EditText
                         android:id="@+id/perg1_et_resp3"
                         android:layout_width="80dp"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal" />
 
                     <TextView
                         android:layout_width="wrap_content"

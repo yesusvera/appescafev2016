@@ -50,21 +50,16 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:paddingBottom="10dp">
-
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
                 <CheckBox
                     android:id="@+id/perg1_cb_resp1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingRight="15dp"
                     android:text="Vivo em cambada ou saca:"
-                    android:textAppearance="@style/style_resposta" />
+                    android:textAppearance="@style/style_resposta"
+                    android:tag="perg1_cb_2ˆ4->this" />
 
                 <CheckBox
                     android:id="@+id/perg1_cb_resp2"
@@ -72,7 +67,9 @@
                     android:layout_height="wrap_content"
                     android:paddingRight="15dp"
                     android:text="graúdo"
-                    android:textAppearance="@style/style_resposta" />
+                    android:textAppearance="@style/style_resposta"
+                    android:paddingLeft="40dp"
+                    android:enabled="false" />
 
                 <CheckBox
                     android:id="@+id/perg1_cb_resp3"
@@ -80,7 +77,9 @@
                     android:layout_height="wrap_content"
                     android:paddingRight="15dp"
                     android:text="médio"
-                    android:textAppearance="@style/style_resposta" />
+                    android:textAppearance="@style/style_resposta"
+                    android:paddingLeft="40dp"
+                    android:enabled="false" />
 
                 <CheckBox
                     android:id="@+id/perg1_cb_resp4"
@@ -88,7 +87,9 @@
                     android:layout_height="wrap_content"
                     android:paddingRight="15dp"
                     android:text="pequeno"
-                    android:textAppearance="@style/style_resposta" />
+                    android:textAppearance="@style/style_resposta"
+                    android:paddingLeft="40dp"
+                    android:enabled="false" />
 
                 <CheckBox
                     android:id="@+id/perg1_cb_resp5"
@@ -97,20 +98,6 @@
                     android:paddingRight="15dp"
                     android:text="misturado"
                     android:textAppearance="@style/style_resposta" />
-            </RadioGroup>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingBottom="10dp">
-
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
 
                 <CheckBox
                     android:id="@+id/perg1_cb_resp6"
@@ -135,7 +122,6 @@
                     android:paddingRight="15dp"
                     android:text="Pata"
                     android:textAppearance="@style/style_resposta" />
-            </RadioGroup>
 
         </LinearLayout>
 
