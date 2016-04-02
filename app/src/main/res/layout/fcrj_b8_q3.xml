@@ -220,11 +220,13 @@
 
                     <EditText
                         android:id="@+id/perg1_et_resp7"
-                        android:layout_width="50dp"
+                        android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:paddingLeft="20dp"
-                        android:textAppearance="@style/style_resposta" />
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Preço\nUn(R$)"
+                        android:inputType="numberDecimal" />
                 </TableRow>
 
 
@@ -336,11 +338,13 @@
 
                     <EditText
                         android:id="@+id/perg2_et_resp7"
-                        android:layout_width="50dp"
+                        android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:paddingLeft="20dp"
-                        android:textAppearance="@style/style_resposta" />
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Preço\nUn(R$)"
+                        android:inputType="numberDecimal" />
                 </TableRow>
 
 
@@ -452,11 +456,13 @@
 
                     <EditText
                         android:id="@+id/perg3_et_resp7"
-                        android:layout_width="50dp"
+                        android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:paddingLeft="20dp"
-                        android:textAppearance="@style/style_resposta" />
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Preço\nUn(R$)"
+                        android:inputType="numberDecimal" />
                 </TableRow>
 
 
@@ -568,11 +574,13 @@
 
                     <EditText
                         android:id="@+id/perg4_et_resp7"
-                        android:layout_width="50dp"
+                        android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:paddingLeft="20dp"
-                        android:textAppearance="@style/style_resposta" />
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Preço\nUn(R$)"
+                        android:inputType="numberDecimal" />
                 </TableRow>
 
 
@@ -684,11 +692,13 @@
 
                     <EditText
                         android:id="@+id/perg5_et_resp7"
-                        android:layout_width="50dp"
+                        android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:paddingLeft="20dp"
-                        android:textAppearance="@style/style_resposta" />
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Preço\nUn(R$)"
+                        android:inputType="numberDecimal" />
                 </TableRow>
 
 
@@ -800,11 +810,13 @@
 
                     <EditText
                         android:id="@+id/perg6_et_resp7"
-                        android:layout_width="50dp"
+                        android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:paddingLeft="20dp"
-                        android:textAppearance="@style/style_resposta" />
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Preço\nUn(R$)"
+                        android:inputType="numberDecimal" />
                 </TableRow>
 
 
@@ -916,11 +928,13 @@
 
                     <EditText
                         android:id="@+id/perg7_et_resp7"
-                        android:layout_width="50dp"
+                        android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:paddingLeft="20dp"
-                        android:textAppearance="@style/style_resposta" />
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Preço\nUn(R$)"
+                        android:inputType="numberDecimal" />
                 </TableRow>
 
 
@@ -1032,11 +1046,13 @@
 
                     <EditText
                         android:id="@+id/perg8_et_resp7"
-                        android:layout_width="50dp"
+                        android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:paddingLeft="20dp"
-                        android:textAppearance="@style/style_resposta" />
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Preço\nUn(R$)"
+                        android:inputType="numberDecimal" />
                 </TableRow>
 
 
@@ -1148,11 +1164,13 @@
 
                     <EditText
                         android:id="@+id/perg9_et_resp7"
-                        android:layout_width="50dp"
+                        android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:paddingLeft="20dp"
-                        android:textAppearance="@style/style_resposta" />
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Preço\nUn(R$)"
+                        android:inputType="numberDecimal" />
                 </TableRow>
 
 
@@ -1264,11 +1282,13 @@
 
                     <EditText
                         android:id="@+id/perg10_et_resp7"
-                        android:layout_width="50dp"
+                        android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:paddingLeft="20dp"
-                        android:textAppearance="@style/style_resposta" />
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Preço\nUn(R$)"
+                        android:inputType="numberDecimal" />
                 </TableRow>
 
 
@@ -1380,11 +1400,13 @@
 
                     <EditText
                         android:id="@+id/perg11_et_resp7"
-                        android:layout_width="50dp"
+                        android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:paddingLeft="20dp"
-                        android:textAppearance="@style/style_resposta" />
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Preço\nUn(R$)"
+                        android:inputType="numberDecimal" />
                 </TableRow>
 
 
@@ -1496,11 +1518,13 @@
 
                     <EditText
                         android:id="@+id/perg12_et_resp7"
-                        android:layout_width="50dp"
+                        android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:paddingLeft="20dp"
-                        android:textAppearance="@style/style_resposta" />
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Preço\nUn(R$)"
+                        android:inputType="numberDecimal" />
                 </TableRow>
 
 
@@ -1612,11 +1636,13 @@
 
                     <EditText
                         android:id="@+id/perg13_et_resp7"
-                        android:layout_width="50dp"
+                        android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:paddingLeft="20dp"
-                        android:textAppearance="@style/style_resposta" />
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Preço\nUn(R$)"
+                        android:inputType="numberDecimal" />
                 </TableRow>
 
 
@@ -1777,11 +1803,13 @@
 
                     <EditText
                         android:id="@+id/perg14_et_resp11"
-                        android:layout_width="50dp"
+                        android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:paddingLeft="20dp"
-                        android:textAppearance="@style/style_resposta" />
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Preço\nUn(R$)"
+                        android:inputType="numberDecimal" />
                 </TableRow>
 
 
@@ -1942,11 +1970,13 @@
 
                     <EditText
                         android:id="@+id/perg15_et_resp11"
-                        android:layout_width="50dp"
+                        android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:paddingLeft="20dp"
-                        android:textAppearance="@style/style_resposta" />
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Preço\nUn(R$)"
+                        android:inputType="numberDecimal" />
                 </TableRow>
 
 
@@ -2107,11 +2137,13 @@
 
                     <EditText
                         android:id="@+id/perg16_et_resp11"
-                        android:layout_width="50dp"
+                        android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:paddingLeft="20dp"
-                        android:textAppearance="@style/style_resposta" />
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Preço\nUn(R$)"
+                        android:inputType="numberDecimal" />
                 </TableRow>
 
 
@@ -2234,11 +2266,13 @@
 
                     <EditText
                         android:id="@+id/perg17_et_resp7"
-                        android:layout_width="50dp"
+                        android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:paddingLeft="20dp"
-                        android:textAppearance="@style/style_resposta" />
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Preço\nUn(R$)"
+                        android:inputType="numberDecimal" />
                 </TableRow>
 
 

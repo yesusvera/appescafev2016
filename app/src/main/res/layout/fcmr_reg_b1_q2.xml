@@ -173,7 +173,7 @@
                             android:text="Outro. Qual?"
                             android:textAppearance="@style/style_resposta"
                             android:id="@+id/perg3_rb_resp6"
-                            android:tag="perg3_et_resp7->true"
+                            android:tag="perg3_et_resp7->this"
                             android:enabled="false" />
 
                         <EditText

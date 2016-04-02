@@ -85,24 +85,19 @@
                 </RadioGroup>
             </LinearLayout>
 
-            <!-- CONDICAO E RESPOSTA 1 -->
-            <LinearLayout
-                android:orientation="horizontal"
+
+            <TextView
+                android:id="@+id/perg2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingBottom="10dp">
-                <TextView
-                    android:id="@+id/perg2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="2. Se sim, qual foi o tema do curso?"
-                    android:textAppearance="@style/style_questao"/>
-                <EditText
-                    android:layout_width="140dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/perg2_et_resp1"
-                    android:enabled="false" />
-            </LinearLayout>
+                android:text="2. Se sim, qual foi o tema do curso?"
+                android:textAppearance="@style/style_questao"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/perg2_et_resp1"
+                android:enabled="false" />
+
 
         </LinearLayout>
 

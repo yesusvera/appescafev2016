@@ -80,10 +80,11 @@
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Pescador(a) de camarão / caranguejo"
+                        android:text="Pescador(a) de camarão / caranguejo\n[FILTRO – se marcar esta opção,\nseguir o questionário a partir do Bloco 5]"
                         android:textAppearance="@style/style_resposta"
+                        android:textColor="#9d08fa"
                         android:id="@+id/perg1_rb_resp2"
-                      />
+                        android:checked="false" />
 
                     <RadioButton
                         android:layout_width="wrap_content"

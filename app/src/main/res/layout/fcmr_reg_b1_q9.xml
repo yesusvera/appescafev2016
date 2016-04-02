@@ -93,7 +93,7 @@
                     android:id="@+id/perg1_et_resp2"
                     android:enabled="false"
                     android:inputType="numberDecimal"
-                    android:hint="R$ 0,00" />
+                    android:hint="R$ 0.00" />
             </TableRow>
 
             <TableRow
@@ -114,7 +114,7 @@
                     android:id="@+id/perg2_et_resp2"
                     android:enabled="false"
                     android:inputType="numberDecimal"
-                    android:hint="R$ 0,00" />
+                    android:hint="R$ 0.00" />
             </TableRow>
 
             <TableRow
@@ -134,7 +134,7 @@
                     android:id="@+id/perg3_et_resp2"
                     android:enabled="false"
                     android:inputType="numberDecimal"
-                    android:hint="R$ 0,00" />
+                    android:hint="R$ 0.00" />
             </TableRow>
 
             <TableRow
@@ -154,7 +154,7 @@
                     android:id="@+id/perg4_et_resp2"
                     android:enabled="false"
                     android:inputType="numberDecimal"
-                    android:hint="R$ 0,00" />
+                    android:hint="R$ 0.00" />
             </TableRow>
 
             <TableRow
@@ -174,7 +174,7 @@
                     android:id="@+id/perg5_et_resp2"
                     android:enabled="false"
                     android:inputType="numberDecimal"
-                    android:hint="R$ 0,00" />
+                    android:hint="R$ 0.00" />
             </TableRow>
 
             <TableRow
@@ -194,7 +194,7 @@
                     android:id="@+id/perg6_et_resp2"
                     android:enabled="false"
                     android:inputType="numberDecimal"
-                    android:hint="R$ 0,00" />
+                    android:hint="R$ 0.00" />
             </TableRow>
 
             <TableRow
@@ -214,7 +214,7 @@
                     android:id="@+id/perg7_et_resp2"
                     android:enabled="false"
                     android:inputType="numberDecimal"
-                    android:hint="R$ 0,00" />
+                    android:hint="R$ 0.00" />
             </TableRow>
 
             <TableRow
@@ -234,7 +234,7 @@
                     android:id="@+id/perg8_et_resp2"
                     android:enabled="false"
                     android:inputType="numberDecimal"
-                    android:hint="R$ 0,00" />
+                    android:hint="R$ 0.00" />
             </TableRow>
 
             <TableRow
@@ -254,7 +254,7 @@
                     android:id="@+id/perg9_et_resp2"
                     android:enabled="false"
                     android:inputType="numberDecimal"
-                    android:hint="R$ 0,00" />
+                    android:hint="R$ 0.00" />
             </TableRow>
 
             <TableRow
@@ -275,7 +275,7 @@
                     android:id="@+id/perg10_et_resp2"
                     android:enabled="false"
                     android:inputType="numberDecimal"
-                    android:hint="R$ 0,00" />
+                    android:hint="R$ 0.00" />
             </TableRow>
 
 

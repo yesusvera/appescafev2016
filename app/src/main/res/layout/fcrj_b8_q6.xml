@@ -124,7 +124,8 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:paddingLeft="20dp"
-                            android:textAppearance="@style/style_resposta" />
+                            android:textAppearance="@style/style_resposta"
+                            android:inputType="numberDecimal" />
 
                         <RadioButton
                             android:id="@+id/perg1_rb_resp2"
@@ -152,7 +153,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:gravity="top"
-                        android:textAppearance="@style/style_resposta" />
+                        android:textAppearance="@style/style_resposta"
+                        android:inputType="numberDecimal" />
 
                 </TableRow>
 
@@ -183,7 +185,8 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:paddingLeft="20dp"
-                            android:textAppearance="@style/style_resposta" />
+                            android:textAppearance="@style/style_resposta"
+                            android:inputType="numberDecimal" />
 
                         <RadioButton
                             android:id="@+id/perg2_rb_resp2"
@@ -231,7 +234,8 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:paddingLeft="20dp"
-                            android:textAppearance="@style/style_resposta" />
+                            android:textAppearance="@style/style_resposta"
+                            android:inputType="numberDecimal" />
 
                         <RadioButton
                             android:id="@+id/perg3_rb_resp2"

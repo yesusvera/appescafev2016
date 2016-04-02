@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
@@ -219,63 +220,161 @@ public class FormCamRegActivityNew extends AppCompatActivity
 
     private void salvarQuestaoAtual(final boolean redirecionar){
 
-//        final ProgressDialog ringProgressDialog = ProgressDialog.show(FormCamRegActivityNew.this, "Aguarde ...", "Salvando questão ...", true);
-//
-//        ringProgressDialog.setCancelable(true);
+        final ProgressDialog ringProgressDialog = ProgressDialog.show(FormCamRegActivityNew.this, "Aguarde ...", "Salvando questão ...", true);
+
+        ringProgressDialog.setCancelable(true);
+
+
+        new AsyncTask<Void,Void,Integer>(){
+
+            @Override
+            protected Integer doInBackground(Void... params) {
+                int ordemQuestao = posAtual - 1;
+                Questao questao = questaoDAO.findQuestaoByOrdemIdFormulario(ordemQuestao, formulario.getId());
+
+                //PRIMEIRO EXCLUIR TUDO EM CASCATA: RESPOSTAS, PERGUNTAS E QUESTAO. DEPOIS RE-INSERIR.
+                if (questao != null) {
+                    questaoBO.excluirQuestao(questao);
+                    questao = null;
+                }
+
+                if (questao == null) {
+                    questao = new Questao();
+                    questao.setOrdem(ordemQuestao);
+                    questao.getFormulario().setId(formulario.getId());
+                    questao.setTitulo("Questão " + ordemQuestao);
+                    questao = questaoDAO.insertQuestao(questao);
+
+                    questao.setListaPerguntas(buildPerguntaList(questao));
+
+                    if (questao.getListaPerguntas() != null && !questao.getListaPerguntas().isEmpty()) {
+                        questaoDAO.updateQuestao(questao);
+                    }
+
+                    if(!questaoBO.temAlgumaResposta(questao)){
+                        questaoBO.excluirQuestao(questao);
+                        return 1;
+
+                    }else{
+                        return 0;
+                    }
+                }
+                return 0;
+            }
+
+            private void abrirBloco5(String message) {
+                new AlertDialog.Builder(FormCamRegActivityNew.this)
+                        .setTitle(getString(R.string.app_name))
+                        .setMessage(message)
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setPositiveButton(R.string.pular_bloco_5, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                if(redirecionar) {
+                                    switch (tipoFormulario){
+                                        case 1://Formulário Camarão Regional
+                                            posAtual = getPosicaoPorIdLayout(R.layout.fcmr_reg_b5_q1);
+                                            break;
+                                        case 2://Formulário Caranguejo
+                                            posAtual = getPosicaoPorIdLayout(R.layout.fcrj_b5_q1);
+                                            break;
+                                        case 3://Formulário Camarão Piticaia e Branco
+                                            posAtual = getPosicaoPorIdLayout(R.layout.fcmr_reg_b5_q1);
+                                            break;
+                                    }
+                                    openFragment(arrayIdsQuestoes[posAtual]);
+                                }
+                            }
+                        })
+                        .setNegativeButton(getString(R.string.nao_ir_proxima), new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                abrirProximaQuestao();
+                            }
+                        })
+                        .show();
+            }
+
+            private void abrirProximaQuestao() {
+                if(redirecionar) {
+                    if (posAtual == arrayIdsQuestoes.length - 1) {
+                        posAtual = -1;
+                    }
+                    openFragment(arrayIdsQuestoes[++posAtual]);
+                }
+            }
+
+            @Override
+            protected void onPostExecute(Integer result) {
+                super.onPostExecute(result);
+
+                if(result ==0){
+                    Toast.makeText(getApplicationContext(), "Questão salva na base local.", Toast.LENGTH_LONG).show();
+                    chekListQuestoes();
+
+                    //Se estou na identificação do entrevistado
+                    if(posAtual==getPosicaoPorIdLayout(R.layout.identificacao_entrevistado_form)){
+                        Questao questao = questaoDAO.findQuestaoByOrdemIdFormulario(posAtual-1, formulario.getId());
+                        FormularioBO formularioBO = new FormularioBO();
+
+                        Resposta responsavelFamiliar = formularioBO.getResposta(questao,14,1);
+                        if(responsavelFamiliar!=null){
+                            abrirBloco5(getString(R.string.pular_bloco5_responsavel_familiar));
+                        }else{
+                            abrirProximaQuestao();
+                        }
+                    }else if(posAtual==getPosicaoPorIdLayout(R.layout.fcmr_reg_b2_q1)){
+                        Questao questao = questaoDAO.findQuestaoByOrdemIdFormulario(posAtual-1, formulario.getId());
+                        FormularioBO formularioBO = new FormularioBO();
+
+                        Resposta pescadorCamarao = formularioBO.getResposta(questao, 1,2);
+
+                        if(pescadorCamarao!=null){
+                            abrirBloco5(getString(R.string.pular_bloco_5_ocupacao_principal));
+                        }else{
+                            abrirProximaQuestao();
+                        }
+
+                    }else if(posAtual==getPosicaoPorIdLayout(R.layout.fcmr_reg_b2_q2)){
+                        Questao questao = questaoDAO.findQuestaoByOrdemIdFormulario(posAtual-1, formulario.getId());
+                        FormularioBO formularioBO = new FormularioBO();
+
+                        Resposta pescadorCamarao = formularioBO.getResposta(questao, 2,2);
+
+                        if(pescadorCamarao!=null){
+                            abrirBloco5(getString(R.string.pular_bloco5_ocupacao));
+                        }else{
+                            abrirProximaQuestao();
+                        }
+
+                    }else{
+                        abrirProximaQuestao();
+                    }
+
+                }else if(result ==1){
+                    new AlertDialog.Builder(FormCamRegActivityNew.this)
+                            .setTitle(getString(R.string.app_name))
+                            .setMessage("Esta questão não pode ser salva, uma resposta é necessária.")
+                            .setIcon(android.R.drawable.ic_dialog_alert)
+                            .setPositiveButton(android.R.string.ok, null).show();
+                }
+
+                if(ringProgressDialog!=null && ringProgressDialog.isShowing()) {
+                    ringProgressDialog.dismiss();
+                }
+            }
+        }.execute();
 //
 //        new Thread(new Runnable() {
 //            @Override
 //            public void run() {
 //                try {
 
-                    int ordemQuestao = posAtual - 1;
-                    Questao questao = questaoDAO.findQuestaoByOrdemIdFormulario(ordemQuestao, formulario.getId());
 
-                    //PRIMEIRO EXCLUIR TUDO EM CASCATA: RESPOSTAS, PERGUNTAS E QUESTAO. DEPOIS RE-INSERIR.
-                    if (questao != null) {
-                        questaoBO.excluirQuestao(questao);
-                        questao = null;
-                    }
-
-                    if (questao == null) {
-                        questao = new Questao();
-                        questao.setOrdem(ordemQuestao);
-                        questao.getFormulario().setId(formulario.getId());
-                        questao.setTitulo("Questão " + ordemQuestao);
-                        questao = questaoDAO.insertQuestao(questao);
-
-                        questao.setListaPerguntas(buildPerguntaList(questao));
-
-                        if (questao.getListaPerguntas() != null && !questao.getListaPerguntas().isEmpty()) {
-                            questaoDAO.updateQuestao(questao);
-                        }
-
-                        if(!questaoBO.temAlgumaResposta(questao)){
-                            questaoBO.excluirQuestao(questao);
-
-                            new AlertDialog.Builder(FormCamRegActivityNew.this)
-                                    .setTitle("Appesca")
-                                    .setMessage("Esta questão não pode ser salva, uma resposta é necessária.")
-                                    .setIcon(android.R.drawable.ic_dialog_alert)
-
-                                    .setPositiveButton(android.R.string.ok, null).show();
-
-                        }else{
-                            Toast.makeText(getApplicationContext(), "Questão salva na base local.", Toast.LENGTH_LONG).show();
-                            chekListQuestoes();
-
-                            if(redirecionar) {
-                                if (posAtual == arrayIdsQuestoes.length - 1) {
-                                    posAtual = -1;
-                                }
-                                openFragment(arrayIdsQuestoes[++posAtual]);
-                            }
-                        }
-                    }
 //                } catch (Exception e) {
 //                    e.printStackTrace();
 //                }
-//                ringProgressDialog.dismiss();
+
 //            }
 //
 //
@@ -662,5 +761,17 @@ public class FormCamRegActivityNew extends AppCompatActivity
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.questao_detail_container, fragment)
                 .commit();
+    }
+
+
+    private int getPosicaoPorIdLayout(int idLayout){
+        if(arrayIdsQuestoes!=null){
+            for(int i=0;i<=arrayIdsQuestoes.length;i++){
+                if(arrayIdsQuestoes[i]==idLayout){
+                    return i;
+                }
+            }
+        }
+        return -1;
     }
 }

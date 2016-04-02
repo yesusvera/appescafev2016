@@ -18,6 +18,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TableLayout;
 import android.widget.TableRow;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -368,7 +369,10 @@ public class QuestaoDetailFragment extends Fragment {
                     switch (ordemQuestao)
                     {
                         case 53: configuraTabelaB6Q7(formulario);break;
-                        case 63: configuraTabelaB6Q9(formulario);break;
+                        case 63: configuraTabelaB7Q9(formulario);break;
+                        case 64: configuraTabelaB7Q10(formulario);break;
+                        case 65: configuraB7Q11(formulario);break;
+
                         default:
                     }
                     break;
@@ -474,7 +478,7 @@ public class QuestaoDetailFragment extends Fragment {
      * Na lista dos compradores marcados na questão anterior,
      * deve vir descrito se é da comunidade ou fora)
      */
-    public void configuraTabelaB6Q9(final Formulario formulario){
+    public void configuraTabelaB7Q9(final Formulario formulario){
 
         for(int i=1; i<=3;i++) {
 
@@ -540,6 +544,53 @@ public class QuestaoDetailFragment extends Fragment {
 
         }
 
+    }
+
+    public void configuraTabelaB7Q10(Formulario formulario) {
+
+        Questao q63 = questaoDAO.findQuestaoByOrdemIdFormulario(63, formulario.getId());
+
+        Resposta resp1 = formularioBO.getResposta(q63, 1, 1);
+        Resposta resp2 = formularioBO.getResposta(q63,1,2);
+        Resposta resp3 = formularioBO.getResposta(q63,1,3);
+
+        if(resp1!=null){
+            TextView comprador1Txt = (TextView)findViewByStringId("comprador1Txt");
+            comprador1Txt.setText(resp1.getTexto());
+        }
+        if(resp2!=null){
+            TextView comprador2Txt = (TextView)findViewByStringId("comprador2Txt");
+            comprador2Txt.setText(resp2.getTexto());
+        }
+        if(resp3!=null){
+            TextView comprador3Txt = (TextView)findViewByStringId("comprador3Txt");
+            comprador3Txt.setText(resp3.getTexto());
+        }
+    }
+
+
+    public void configuraB7Q11(Formulario formulario) {
+
+        Questao q63 = questaoDAO.findQuestaoByOrdemIdFormulario(63, formulario.getId());
+
+        Resposta resp1 = formularioBO.getResposta(q63, 1, 1);
+        Resposta resp2 = formularioBO.getResposta(q63,1,2);
+        Resposta resp3 = formularioBO.getResposta(q63,1,3);
+
+        if(resp1!=null){
+            TextView comprador1Txt = (TextView)findViewByStringId("comprador1Txt");
+            comprador1Txt.setText("1º Comprador - "+  resp1.getTexto() + ":");
+
+        }
+        if(resp2!=null){
+            TextView comprador2Txt = (TextView)findViewByStringId("comprador2Txt");
+            comprador2Txt.setText("2º Comprador - " +  resp2.getTexto() + ":");
+
+        }
+        if(resp3!=null){
+            TextView comprador3Txt = (TextView)findViewByStringId("comprador3Txt");
+            comprador3Txt.setText("3º Comprador - "+  resp3.getTexto() + ":");
+        }
     }
 
 

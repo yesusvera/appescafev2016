@@ -58,7 +58,7 @@ pesca e/ou catação de caranguejo?"/>
                     android:id="@+id/perg1_et_resp1"
                     android:textAppearance="@style/style_resposta"
                     android:lines="2"
-                    android:inputType="number" />
+                    android:inputType="numberDecimal" />
 
             </LinearLayout>
         </LinearLayout>

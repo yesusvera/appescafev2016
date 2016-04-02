@@ -108,10 +108,12 @@
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Pesca de camarão / caranguejo"
+                        android:text="Pesca de camarão / caranguejo\n[FILTRO – se marcar esta opção,\nseguir o questionário a partir do Bloco 5]"
                         android:textAppearance="@style/style_resposta"
+                        android:textColor="#9d08fa"
                         android:id="@+id/perg2_cb_resp2"
-                        android:enabled="false" />
+                        android:enabled="false"
+                        android:checked="false" />
 
                     <CheckBox
                         android:layout_width="wrap_content"

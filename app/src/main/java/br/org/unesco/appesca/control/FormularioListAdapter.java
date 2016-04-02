@@ -15,6 +15,7 @@ import java.text.SimpleDateFormat;
 import java.util.List;
 
 import br.org.unesco.appesca.R;
+import br.org.unesco.appesca.bo.FormularioBO;
 import br.org.unesco.appesca.dao.QuestaoDAO;
 import br.org.unesco.appesca.model.Formulario;
 import br.org.unesco.appesca.model.Questao;
@@ -138,14 +139,21 @@ public class FormularioListAdapter extends RecyclerView.Adapter<FormularioListAd
                 break;
         }
 
-        //QUESTAO ORDEM 0 (ZERO) -> IDENTIFICACAO FORMULARIO
         Questao questao = questaoDAO.findQuestaoByOrdemIdFormulario(0, formulario.getId());
 
-        try {
-            holder.txtNomeEntrevistado.setText(questao.getListaPerguntas().get(0).getListaRespostas().get(0).getTexto());
+        FormularioBO formularioBO = new FormularioBO();
 
-            Resposta respUF = questao.getListaPerguntas().get(3).getListaRespostas().get(0);
-            Resposta respMun = questao.getListaPerguntas().get(4).getListaRespostas().get(0);
+        Resposta nomeEntrevistado = formularioBO.getResposta(questao, 1, 1);
+
+        try {
+
+            if(nomeEntrevistado!=null && nomeEntrevistado.getTexto()!=null) {
+                holder.txtNomeEntrevistado.setText(nomeEntrevistado.getTexto());
+            }
+
+            Resposta respUF = formularioBO.getResposta(questao, 4, 1);
+            Resposta respMun = formularioBO.getResposta(questao, 3, 1);
+
 
             String texto = "";
             if(respUF!=null && respUF.getTexto()!=null){

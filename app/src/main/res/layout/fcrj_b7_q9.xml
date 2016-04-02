@@ -81,7 +81,8 @@
                 <EditText
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg1_et_resp1"/>
+                    android:id="@+id/perg1_et_resp1"
+                    android:editable="false" />
 
                 <ImageView
                     android:layout_width="40dp"
@@ -105,7 +106,8 @@
                 <EditText
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg1_et_resp2"/>
+                    android:id="@+id/perg1_et_resp2"
+                    android:editable="false" />
 
 
                 <ImageView
@@ -131,7 +133,8 @@
                     <EditText
                         android:layout_width="300dp"
                         android:layout_height="wrap_content"
-                        android:id="@+id/perg1_et_resp3"/>
+                        android:id="@+id/perg1_et_resp3"
+                        android:editable="false" />
 
                     <ImageView
                         android:layout_width="40dp"

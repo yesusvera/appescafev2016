@@ -29,4 +29,11 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
 
 
+    <string name="pular_bloco_5">Sim. Pular para o Bloco 5</string>
+    <string name="nao_ir_proxima">Não. Apenas ir para próxima.</string>
+    <string name="pular_bloco5_responsavel_familiar">Foi respondido que o entrevistado é responsável pela unidade familiar, deseja pular para o bloco 5?</string>
+    <string name="pular_bloco_5_ocupacao_principal">Foi respondido que a principal ocupação no momento é Pescador(a) de camarão / Caranguejo, deseja pular para o bloco 5?</string>
+    <string name="pular_bloco5_ocupacao">Foi respondido que uma das ocupações no momento é Pescador(a) de camarão / Caranguejo, deseja pular para o bloco 5?</string>
+
+
 </resources>

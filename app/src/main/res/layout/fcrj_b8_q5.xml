@@ -44,7 +44,8 @@
                         android:textAppearance="@style/style_questao"
                         android:text="Quais os gastos mensal ou anual o senhor realizou para continuar a pesca do caranguejo?"/>
 
-                        <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout
+                        <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content"     android:layout_height="fill_parent">
+                            <TableLayout
                             android:paddingTop="15dp"
                             android:orientation="vertical"
                             android:layout_width="match_parent"
@@ -72,13 +73,14 @@
                                             android:layout_height="match_parent"
                                             android:textAppearance="@style/style_questao"
                                             android:gravity="center"
-
+                                            android:paddingLeft="30dp"
                                             android:text="Frequência do gasto"/>
                                         <TextView
                                             android:layout_width="match_parent"
                                             android:layout_height="match_parent"
                                             android:textAppearance="@style/style_questao"
                                             android:gravity="center"
+                                            android:paddingLeft="30dp"
                                             android:layout_gravity="center_horizontal"
                                             android:text="Valor por período(R$)" />
                                         <TextView
@@ -86,6 +88,7 @@
                                             android:layout_height="wrap_content"
                                             android:textAppearance="@style/style_questao"
                                             android:gravity="center"
+                                            android:paddingLeft="30dp"
                                             android:layout_gravity="center_horizontal"
                                             android:text="Observação"/>
 
@@ -95,20 +98,18 @@
                             <TableRow
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:background="@drawable/border"
+                                android:paddingBottom="30dp"
                                 android:layout_gravity="center_horizontal">
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:textAppearance="@style/style_questao"
-                                    android:background="@drawable/border"
                                     android:gravity="center"
                                     android:text="Calafetação"/>
 
                                 <RadioGroup
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:background="@drawable/border"
                                     android:orientation="vertical">
 
                                     <RadioButton
@@ -177,13 +178,13 @@
                                     android:layout_gravity="center_vertical"
                                     android:id="@+id/perg1_et_resp9"
                                     android:textAppearance="@style/style_resposta"
-                                    android:inputType="numberDecimal" />
+                                    android:inputType="numberDecimal"
+                                    android:hint="Valor por\nPeríodo(R$)" />
 
                                 <RadioGroup
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:layout_gravity="center_vertical"
-                                    android:background="@drawable/border"
                                     android:orientation="vertical">
 
                                     <RadioButton
@@ -216,20 +217,18 @@
                             <TableRow
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:background="@drawable/border"
+                                android:paddingBottom="30dp"
                                 android:layout_gravity="center_horizontal">
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:textAppearance="@style/style_questao"
-                                    android:background="@drawable/border"
                                     android:gravity="center"
                                     android:text="Pintura"/>
 
                                 <RadioGroup
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:background="@drawable/border"
                                     android:orientation="vertical">
 
                                     <RadioButton
@@ -298,13 +297,13 @@
                                     android:layout_gravity="center_vertical"
                                     android:id="@+id/perg2_et_resp9"
                                     android:textAppearance="@style/style_resposta"
-                                    android:inputType="numberDecimal" />
+                                    android:inputType="numberDecimal"
+                                    android:hint="Valor por\nPeríodo(R$)" />
 
                                 <RadioGroup
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:layout_gravity="center_vertical"
-                                    android:background="@drawable/border"
                                     android:orientation="vertical">
 
                                     <RadioButton
@@ -338,20 +337,18 @@
                             <TableRow
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:background="@drawable/border"
+                                android:paddingBottom="30dp"
                                 android:layout_gravity="center_horizontal">
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:textAppearance="@style/style_questao"
-                                    android:background="@drawable/border"
                                     android:gravity="center"
                                     android:text="Retífica de motor"/>
 
                                 <RadioGroup
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:background="@drawable/border"
                                     android:orientation="vertical">
 
                                     <RadioButton
@@ -420,13 +417,13 @@
                                     android:layout_gravity="center_vertical"
                                     android:id="@+id/perg3_et_resp9"
                                     android:textAppearance="@style/style_resposta"
-                                    android:inputType="numberDecimal" />
+                                    android:inputType="numberDecimal"
+                                    android:hint="Valor por\nPeríodo(R$)" />
 
                                 <RadioGroup
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:layout_gravity="center_vertical"
-                                    android:background="@drawable/border"
                                     android:orientation="vertical">
 
                                     <RadioButton
@@ -458,20 +455,18 @@
                             <TableRow
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:background="@drawable/border"
+                                android:paddingBottom="30dp"
                                 android:layout_gravity="center_horizontal">
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:textAppearance="@style/style_questao"
-                                    android:background="@drawable/border"
                                     android:gravity="center"
                                     android:text="Trocas de peças"/>
 
                                 <RadioGroup
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:background="@drawable/border"
                                     android:orientation="vertical">
 
                                     <RadioButton
@@ -540,13 +535,13 @@
                                     android:layout_gravity="center_vertical"
                                     android:id="@+id/perg4_et_resp9"
                                     android:textAppearance="@style/style_resposta"
-                                    android:inputType="numberDecimal" />
+                                    android:inputType="numberDecimal"
+                                    android:hint="Valor por\nPeríodo(R$)" />
 
                                 <RadioGroup
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:layout_gravity="center_vertical"
-                                    android:background="@drawable/border"
                                     android:orientation="vertical">
 
                                     <RadioButton
@@ -578,20 +573,18 @@
                             <TableRow
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:background="@drawable/border"
+                                android:paddingBottom="30dp"
                                 android:layout_gravity="center_horizontal">
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:textAppearance="@style/style_questao"
-                                    android:background="@drawable/border"
                                     android:gravity="center"
                                     android:text="Outros:"/>
 
                                 <RadioGroup
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:background="@drawable/border"
                                     android:orientation="vertical">
 
                                     <RadioButton
@@ -659,7 +652,8 @@
                                     android:paddingLeft="20dp"
                                     android:layout_gravity="center_vertical"
                                     android:id="@+id/perg5_et_resp9"
-                                    android:textAppearance="@style/style_resposta"/>
+                                    android:textAppearance="@style/style_resposta"
+                                    android:hint="Valor por\nPeríodo(R$)" />
 
 
                             </TableRow>

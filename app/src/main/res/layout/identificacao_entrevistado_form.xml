@@ -57,7 +57,8 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/perg1_et_resp1"
                     android:textAppearance="@style/style_resposta"
-                    android:lines="1" />
+                    android:lines="1"
+                    android:hint="Nome Completo" />
             </LinearLayout>
 
         </LinearLayout>
@@ -87,7 +88,8 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/perg2_et_resp1"
                     android:textAppearance="@style/style_resposta"
-                    android:lines="1" />
+                    android:lines="1"
+                    android:hint="Apelido" />
             </LinearLayout>
 
         </LinearLayout>
@@ -173,7 +175,8 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/perg4_et_resp1"
                     android:textAppearance="@style/style_resposta"
-                    android:lines="1" />
+                    android:lines="1"
+                    android:hint="Município" />
             </LinearLayout>
 
         </LinearLayout>
@@ -203,7 +206,8 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/perg5_et_resp1"
                     android:textAppearance="@style/style_resposta"
-                    android:lines="1" />
+                    android:lines="1"
+                    android:hint="Comunidade" />
             </LinearLayout>
 
         </LinearLayout>
@@ -322,7 +326,8 @@
                     android:id="@+id/perg7_et_resp1"
                     android:textAppearance="@style/style_resposta"
                     android:lines="1"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:hint="Idade" />
             </LinearLayout>
 
         </LinearLayout>
@@ -402,7 +407,8 @@
                     android:id="@+id/perg9_et_resp1"
                     android:textAppearance="@style/style_resposta"
                     android:lines="1"
-                    android:inputType="phone" />
+                    android:inputType="phone"
+                    android:hint="Telefone ou contato" />
             </LinearLayout>
 
         </LinearLayout>
@@ -476,7 +482,8 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/perg11_et_resp1"
                     android:textAppearance="@style/style_resposta"
-                    android:lines="1" />
+                    android:lines="1"
+                    android:hint="Distância do município mais próximo" />
             </LinearLayout>
 
         </LinearLayout>
@@ -666,11 +673,13 @@
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Sim"
+                        android:text="Sim [FILTRO – Apenas quem marcar SIM\nresponderá as questões a partir do Bloco 5]"
                         android:textSize="15dp"
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg14_rb_resp1"
-                        android:paddingRight="15dp"/>
+                        android:paddingRight="15dp"
+                        android:checked="false"
+                        android:textColor="#9d08fa" />
 
                     <RadioButton
                         android:layout_width="wrap_content"

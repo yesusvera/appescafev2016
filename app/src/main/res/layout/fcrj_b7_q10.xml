@@ -53,6 +53,50 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/border">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:text=""/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:layout_span="2"
+                    android:id="@+id/comprador1Txt"
+                    android:text="(1º Comprador)"
+                    android:lines="3" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_span="2"
+                    android:id="@+id/comprador2Txt"
+                    android:text="(2º Comprador)"
+                    android:lines="3" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:layout_span="2"
+                    android:id="@+id/comprador3Txt"
+                    android:layout_gravity="center_horizontal"
+                    android:text="(3º Comprador)"
+                    android:lines="3" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border">
                         <TextView
                             android:layout_width="match_parent"
                             android:textAppearance="@style/style_questao"
@@ -66,7 +110,7 @@
                             android:paddingBottom="5dp"
                             android:gravity="center"
                             android:layout_span="2"
-                            android:text="Preço (R$)/kg do 1º."/>
+                            android:text="Preço (R$)/kg do"/>
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -75,7 +119,7 @@
                             android:gravity="center"
                             android:layout_gravity="center_horizontal"
                             android:layout_span="2"
-                            android:text="Preço (R$)/kg do 2º" />
+                            android:text="Preço (R$)/kg" />
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -84,8 +128,10 @@
                             android:gravity="center"
                             android:layout_span="2"
                             android:layout_gravity="center_horizontal"
-                            android:text="Preço (R$)/kg do 3º"/>
+                            android:text="Preço (R$)/kg"/>
             </TableRow>
+
+
 
             <TableRow
                 android:layout_width="match_parent"
