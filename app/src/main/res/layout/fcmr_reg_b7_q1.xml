@@ -60,15 +60,15 @@
                 android:layout_height="wrap_content"
                 android:text="inteiro resfriado (no gelo)    "
                 android:textAppearance="@style/style_resposta"
-                android:id="@+id/perg1_cb_resp2"
-                android:paddingRight="15dp"/>
+                android:paddingRight="15dp"
+                android:checked="false" />
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="inteiro cozido e salgado (bafo/frito)"
                 android:textAppearance="@style/style_resposta"
-                android:id="@+id/perg1_cb_resp3"
-                android:paddingRight="15dp"/>
+                android:paddingRight="15dp"
+                android:checked="false" />
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -111,7 +111,7 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
                 android:textAppearance="@style/style_questao"
-                android:text="Grande/Médio"/>
+                android:text="Graúdo (grande/médio)"/>
 
             <CheckBox
                 android:layout_width="wrap_content"
@@ -175,7 +175,7 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
                 android:textAppearance="@style/style_questao"
-                android:text="Pequeno/Médio"/>
+                android:text="Pequeno (pequeno/médio)"/>
 
             <CheckBox
                 android:layout_width="wrap_content"

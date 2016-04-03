@@ -51,24 +51,22 @@
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:background="@drawable/border">
+                android:layout_gravity="center_horizontal">
                         <TextView
                             android:layout_width="match_parent"
                             android:textAppearance="@style/style_questao"
                             android:paddingBottom="5dp"
                             android:gravity="center"
-                            android:background="@drawable/border"
                             android:text="Produto"/>
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:textAppearance="@style/style_questao"
                             android:paddingBottom="5dp"
                             android:gravity="center"
                             android:layout_span="2"
-                            android:background="@drawable/border"
-                            android:text="Preço (R$)/kg do 1º."/>
+                            android:text="Preço (R$)/kg\ndo\n"
+                            android:textSize="11dp" />
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -77,7 +75,8 @@
                             android:gravity="center"
                             android:layout_gravity="center_horizontal"
                             android:layout_span="2"
-                            android:text="Preço (R$)/kg do 2º" />
+                            android:text="Preço (R$)/kg\ndo"
+                            android:textSize="11dp" />
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -85,16 +84,59 @@
                             android:paddingBottom="5dp"
                             android:gravity="center"
                             android:layout_span="2"
-                            android:background="@drawable/border"
                             android:layout_gravity="center_horizontal"
-                            android:text="Preço (R$)/kg do 3º"/>
+                            android:text="Preço (R$)/kg\ndo"
+                            android:textSize="11dp" />
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:background="@drawable/border">
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:text=""/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:layout_span="2"
+                    android:text="1º"
+                    android:textSize="11dp"
+                    android:id="@+id/comprador1Txt" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_span="2"
+                    android:text="2º"
+                    android:textSize="11dp"
+                    android:id="@+id/comprador2Txt" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:layout_span="2"
+                    android:layout_gravity="center_horizontal"
+                    android:text="3º"
+                    android:textSize="11dp"
+                    android:id="@+id/comprador3Txt" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -103,7 +145,8 @@
                     android:gravity="center"
                     android:layout_column="1"
                     android:layout_gravity="center_horizontal"
-                    android:text="Verão"/>
+                    android:text="Verão"
+                    android:textSize="12dp" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -112,7 +155,8 @@
                     android:gravity="center"
                     android:layout_column="2"
                     android:layout_gravity="center_horizontal"
-                    android:text="Inverno"/>
+                    android:text="Inverno"
+                    android:textSize="12dp" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -121,7 +165,8 @@
                     android:gravity="center"
                     android:layout_column="3"
                     android:layout_gravity="center_horizontal"
-                    android:text="Verão"/>
+                    android:text="Verão"
+                    android:textSize="12dp" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -130,7 +175,8 @@
                     android:gravity="center"
                     android:layout_column="4"
                     android:layout_gravity="center_horizontal"
-                    android:text="Inverno"/>
+                    android:text="Inverno"
+                    android:textSize="12dp" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -139,7 +185,8 @@
                     android:gravity="center"
                     android:layout_column="5"
                     android:layout_gravity="center_horizontal"
-                    android:text="Verão"/>
+                    android:text="Verão"
+                    android:textSize="12dp" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -148,7 +195,8 @@
                     android:gravity="center"
                     android:layout_column="6"
                     android:layout_gravity="center_horizontal"
-                    android:text="Inverno"/>
+                    android:text="Inverno"
+                    android:textSize="12dp" />
 
             </TableRow>
 
@@ -157,46 +205,52 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/border">
+                android:id="@+id/tbrow_1">
                 <TextView
                     android:layout_width="match_parent"
                     android:textAppearance="@style/style_questao"
-                    android:paddingBottom="5dp"
+                    android:paddingBottom="20dp"
                     android:gravity="center"
-                    android:text="Misturado Inteiro Fresco"/>
+                    android:text="Misturado\nInteiro Fresco"/>
 
 
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg1_et_resp1"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nVerão" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg1_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nInverno" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg1_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nVerão" />
 
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg1_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nInverno" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg1_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nVerão" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg1_et_resp6"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nInverno" />
 
             </TableRow>
 
@@ -205,292 +259,311 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/border">
+                android:id="@+id/tbrow_2">
                 <TextView
                     android:layout_width="match_parent"
                     android:textAppearance="@style/style_questao"
-                    android:paddingBottom="5dp"
+                    android:paddingBottom="20dp"
                     android:gravity="center"
-                    android:text="Misturado inteiro resfriado (no gelo)"/>
+                    android:text="Misturado\ninteiro resfriado (no gelo)"/>
 
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg2_et_resp1"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nVerão" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg2_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nInverno" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg2_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nVerão" />
 
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg2_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nInverno" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg2_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nVerão" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg2_et_resp6"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nInverno" />
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/border">
+                android:id="@+id/tbrow_3">
                 <TextView
                     android:layout_width="match_parent"
                     android:textAppearance="@style/style_questao"
-                    android:paddingBottom="5dp"
+                    android:paddingBottom="20dp"
                     android:gravity="center"
-                    android:text="Misturado inteiro congelado"/>
+                    android:text="Misturado\ninteiro cozido\ne salgado (bafo/frito)"/>
 
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg3_et_resp1"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nVerão" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg3_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nInverno" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg3_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nVerão" />
 
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg3_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nInverno" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg3_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nVerão" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg3_et_resp6"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nInverno" />
             </TableRow>
-
-
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/border">
+                android:id="@+id/tbrow_4">
                 <TextView
                     android:layout_width="match_parent"
                     android:textAppearance="@style/style_questao"
-                    android:paddingBottom="5dp"
+                    android:paddingBottom="20dp"
                     android:gravity="center"
-                    android:text="Misturado descascado fresco"/>
+                    android:text="Misturado\ninteiro congelado"/>
 
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg4_et_resp1"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nVerão" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg4_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nInverno" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg4_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nVerão" />
 
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg4_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nInverno" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg4_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nVerão" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg4_et_resp6"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nInverno" />
 
             </TableRow>
-
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/border">
+                android:id="@+id/tbrow_5">
                 <TextView
                     android:layout_width="match_parent"
                     android:textAppearance="@style/style_questao"
-                    android:paddingBottom="5dp"
+                    android:paddingBottom="20dp"
                     android:gravity="center"
-                    android:text="Misturado descascado salgado"/>
+                    android:text="Misturado\nDescascado fresco"/>
 
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg5_et_resp1"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nVerão" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg5_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nInverno" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg5_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nVerão" />
 
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg5_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nInverno" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg5_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nVerão" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg5_et_resp6"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nInverno" />
 
             </TableRow>
-
-
-
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/border">
+                android:id="@+id/tbrow_6">
                 <TextView
                     android:layout_width="match_parent"
                     android:textAppearance="@style/style_questao"
-                    android:paddingBottom="5dp"
+                    android:paddingBottom="20dp"
                     android:gravity="center"
-                    android:text="Graúdo inteiro fresco"/>
+                    android:text="Misturado\nDescascado Cozido\nE salgado (salgadinho)"/>
 
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg6_et_resp1"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nVerão" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg6_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nInverno" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg6_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nVerão" />
 
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg6_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nInverno" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg6_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nVerão" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg6_et_resp6"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nInverno" />
 
             </TableRow>
-
-
-
-
-
-
-
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/border">
+                android:id="@+id/tbrow_7">
                 <TextView
                     android:layout_width="match_parent"
                     android:textAppearance="@style/style_questao"
-                    android:paddingBottom="5dp"
+                    android:paddingBottom="20dp"
                     android:gravity="center"
-                    android:text="Graúdo inteiro resfriado (no gelo)"/>
+                    android:text="Misturado\nDescascado congelado"/>
 
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg7_et_resp1"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nVerão" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg7_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nInverno" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg7_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nVerão" />
 
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg7_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nInverno" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg7_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nVerão" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg7_et_resp6"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nInverno" />
 
             </TableRow>
-
-
-
-
 
 
 
@@ -498,97 +571,104 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/border">
+                android:id="@+id/tbrow_8">
                 <TextView
                     android:layout_width="match_parent"
                     android:textAppearance="@style/style_questao"
-                    android:paddingBottom="5dp"
+                    android:paddingBottom="20dp"
                     android:gravity="center"
-                    android:text="Graúdo inteiro congelado"/>
+                    android:text="Graúdo\nInteiro Fresco"/>
 
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg8_et_resp1"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nVerão" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg8_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nInverno" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg8_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nVerão" />
 
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg8_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nInverno" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg8_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nVerão" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg8_et_resp6"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nInverno" />
 
             </TableRow>
-
-
-
-
-
 
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/border">
+                android:id="@+id/tbrow_9">
                 <TextView
                     android:layout_width="match_parent"
                     android:textAppearance="@style/style_questao"
-                    android:paddingBottom="5dp"
+                    android:paddingBottom="20dp"
                     android:gravity="center"
-                    android:text="Graúdo descascado fresco"/>
+                    android:text=" Graúdo\ninteiro resfriado (no gelo)"/>
 
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg9_et_resp1"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nVerão" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg9_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nInverno" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg9_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nVerão" />
 
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg9_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nInverno" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg9_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nVerão" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg9_et_resp6"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nInverno" />
             </TableRow>
 
 
@@ -601,45 +681,51 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/border">
+                android:id="@+id/tbrow_10">
                 <TextView
                     android:layout_width="match_parent"
                     android:textAppearance="@style/style_questao"
-                    android:paddingBottom="5dp"
+                    android:paddingBottom="20dp"
                     android:gravity="center"
-                    android:text="Graúdo descascado salgado"/>
+                    android:text="Graúdo\ninteiro cozido\ne salgado (bafo/frito)"/>
 
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg10_et_resp1"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nVerão" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg10_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nInverno" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg10_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nVerão" />
 
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg10_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nInverno" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg10_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nVerão" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg10_et_resp6"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nInverno" />
 
             </TableRow>
 
@@ -652,45 +738,51 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/border">
+                android:id="@+id/tbrow_11">
                 <TextView
                     android:layout_width="match_parent"
                     android:textAppearance="@style/style_questao"
-                    android:paddingBottom="5dp"
+                    android:paddingBottom="20dp"
                     android:gravity="center"
-                    android:text="Médio inteiro fresco"/>
+                    android:text="Graúdo\ninteiro congelado"/>
 
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg11_et_resp1"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nVerão" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg11_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nInverno" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg11_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nVerão" />
 
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg11_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nInverno" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg11_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nVerão" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg11_et_resp6"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nInverno" />
 
             </TableRow>
 
@@ -702,45 +794,51 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/border">
+                android:id="@+id/tbrow_12">
                 <TextView
                     android:layout_width="match_parent"
                     android:textAppearance="@style/style_questao"
-                    android:paddingBottom="5dp"
+                    android:paddingBottom="20dp"
                     android:gravity="center"
-                    android:text="Médio inteiro resfriado (no gelo)"/>
+                    android:text="Graúdo\nDescascado fresco"/>
 
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg12_et_resp1"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nVerão" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg12_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nInverno" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg12_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nVerão" />
 
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg12_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nInverno" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg12_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nVerão" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg12_et_resp6"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nInverno" />
 
             </TableRow>
 
@@ -752,45 +850,51 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/border">
+                android:id="@+id/tbrow_13">
                 <TextView
                     android:layout_width="match_parent"
                     android:textAppearance="@style/style_questao"
-                    android:paddingBottom="5dp"
+                    android:paddingBottom="20dp"
                     android:gravity="center"
-                    android:text="Médio inteiro congelado"/>
+                    android:text="Graúdo\nDescascado Cozido\nE salgado (salgadinho)"/>
 
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg13_et_resp1"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nVerão" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg13_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nInverno" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg13_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nVerão" />
 
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg13_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nInverno" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg13_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nVerão" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg13_et_resp6"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nInverno" />
 
             </TableRow>
 
@@ -801,45 +905,51 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/border">
+                android:id="@+id/tbrow_14">
                 <TextView
                     android:layout_width="match_parent"
                     android:textAppearance="@style/style_questao"
-                    android:paddingBottom="5dp"
+                    android:paddingBottom="20dp"
                     android:gravity="center"
-                    android:text="Pequeno descascado fresco"/>
+                    android:text="Graúdo\nDescascado congelado"/>
 
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg14_et_resp1"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nVerão" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg14_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nInverno" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg14_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nVerão" />
 
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg14_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nInverno" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg14_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nVerão" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg14_et_resp6"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nInverno" />
             </TableRow>
 
 
@@ -851,45 +961,51 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/border">
+                android:id="@+id/tbrow_15">
                 <TextView
                     android:layout_width="match_parent"
                     android:textAppearance="@style/style_questao"
-                    android:paddingBottom="5dp"
+                    android:paddingBottom="20dp"
                     android:gravity="center"
-                    android:text="Pequeno descascado salgado"/>
+                    android:text="Pequeno\nInteiro Fresco"/>
 
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg15_et_resp1"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nVerão" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg15_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nInverno" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg15_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nVerão" />
 
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg15_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nInverno" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg15_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nVerão" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg15_et_resp6"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nInverno" />
 
             </TableRow>
 
@@ -902,45 +1018,366 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/border">
+                android:id="@+id/tbrow_16">
                 <TextView
                     android:layout_width="match_parent"
                     android:textAppearance="@style/style_questao"
-                    android:paddingBottom="5dp"
+                    android:paddingBottom="20dp"
+                    android:gravity="center"
+                    android:text="Pequeno\ninteiro resfriado (no gelo)"/>
+
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg16_et_resp1"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nVerão" />
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg16_et_resp2"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nInverno" />
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg16_et_resp3"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nVerão" />
+
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg16_et_resp4"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nInverno" />
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg16_et_resp5"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nVerão" />
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg16_et_resp6"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nInverno" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_17">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="20dp"
+                    android:gravity="center"
+                    android:text="Pequeno\ninteiro cozido\ne salgado (bafo/frito)"/>
+
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg17_et_resp1"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nVerão" />
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg17_et_resp2"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nInverno" />
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg17_et_resp3"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nVerão" />
+
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg17_et_resp4"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nInverno" />
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg17_et_resp5"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nVerão" />
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg17_et_resp6"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nInverno" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_18">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="20dp"
+                    android:gravity="center"
+                    android:text="Pequeno\ninteiro congelado"/>
+
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg18_et_resp1"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nVerão" />
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg18_et_resp2"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nInverno" />
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg18_et_resp3"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nVerão" />
+
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg18_et_resp4"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nInverno" />
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg18_et_resp5"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nVerão" />
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg18_et_resp6"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nInverno" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_19">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="20dp"
+                    android:gravity="center"
+                    android:text="Pequeno\nDescascado fresco"/>
+
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg19_et_resp1"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nVerão" />
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg19_et_resp2"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nInverno" />
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg19_et_resp3"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nVerão" />
+
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg19_et_resp4"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nInverno" />
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg19_et_resp5"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nVerão" />
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg19_et_resp6"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nInverno" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_20">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="20dp"
+                    android:gravity="center"
+                    android:text="Pequeno\nDescascado Cozido\nE salgado (salgadinho)"/>
+
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg20_et_resp1"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nVerão" />
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg20_et_resp2"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nInverno" />
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg20_et_resp3"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nVerão" />
+
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg20_et_resp4"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nInverno" />
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg20_et_resp5"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nVerão" />
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg20_et_resp6"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nInverno" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_21">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="20dp"
+                    android:gravity="center"
+                    android:text="Pequeno\nDescascado congelado"/>
+
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg21_et_resp1"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nVerão" />
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg21_et_resp2"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nInverno" />
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg21_et_resp3"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nVerão" />
+
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg21_et_resp4"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nInverno" />
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg21_et_resp5"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nVerão" />
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg21_et_resp6"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nInverno" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_22">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="20dp"
                     android:gravity="center"
                     android:text="Outros:"/>
 
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg16_et_resp1"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:id="@+id/perg22_et_resp1"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nVerão" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg16_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:id="@+id/perg22_et_resp2"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 1º\nInverno" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg16_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:id="@+id/perg22_et_resp3"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nVerão" />
 
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg16_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:id="@+id/perg22_et_resp4"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 2º\nInverno" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg16_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:id="@+id/perg22_et_resp5"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nVerão" />
                 <EditText
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg16_et_resp6"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:id="@+id/perg22_et_resp6"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Preço(R$)\nDo 3º\nInverno" />
 
             </TableRow>
         </TableLayout></HorizontalScrollView>

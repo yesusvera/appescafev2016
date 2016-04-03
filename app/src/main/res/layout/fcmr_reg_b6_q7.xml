@@ -61,7 +61,8 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg1_rb_resp1"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg2_et_resp1->false,perg3_et_resp1->false,perg4_cb_1ˆ6->true" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
@@ -69,7 +70,8 @@
                     android:text="Sim. Responda:"
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg1_rb_resp2"
-                    android:paddingRight="15dp"/>
+                    android:paddingRight="15dp"
+                    android:tag="perg2_et_resp1->true,perg3_et_resp1->true,perg4_cb_1ˆ6->false" />
            </RadioGroup>
 
         </LinearLayout>
@@ -90,7 +92,8 @@
             <EditText
                 android:layout_width="241dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/perg2_et_resp1"/>
+                android:id="@+id/perg2_et_resp1"
+                android:enabled="false" />
 
         </LinearLayout>
 
@@ -111,7 +114,8 @@
             <EditText
                 android:layout_width="241dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/perg3_et_resp1"/>
+                android:id="@+id/perg3_et_resp1"
+                android:enabled="false" />
 
         </LinearLayout>
 
@@ -136,7 +140,8 @@
                 android:textAppearance="@style/style_resposta"
                 android:id="@+id/perg4_cb_resp1"
                 android:paddingTop="10dp"
-                android:paddingRight="15dp"/>
+                android:paddingRight="15dp"
+                android:enabled="false" />
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -148,12 +153,15 @@
                     android:text="É vendido. Por qual preço (R$/kg)? "
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg4_cb_resp2"
-                    android:paddingRight="15dp"/>
+                    android:paddingRight="15dp"
+                    android:enabled="false"
+                    android:tag="perg4_et_resp3->this" />
 
                 <EditText
                     android:layout_width="241dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg4_et_resp3"/>
+                    android:id="@+id/perg4_et_resp3"
+                    android:enabled="false" />
             </LinearLayout>
 
             <CheckBox
@@ -162,14 +170,16 @@
                 android:text="Devolvido para água (vivo)"
                 android:textAppearance="@style/style_resposta"
                 android:id="@+id/perg4_cb_resp4"
-                android:paddingRight="15dp"/>
+                android:paddingRight="15dp"
+                android:enabled="false" />
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Descartado (morto)"
                 android:textAppearance="@style/style_resposta"
                 android:id="@+id/perg4_cb_resp5"
-                android:paddingRight="15dp"/>
+                android:paddingRight="15dp"
+                android:enabled="false" />
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
@@ -180,12 +190,15 @@
                     android:text="Outro:"
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg4_cb_resp6"
-                    android:paddingRight="15dp"/>
+                    android:paddingRight="15dp"
+                    android:enabled="false"
+                    android:tag="perg4_et_resp7->this" />
 
                 <EditText
                     android:layout_width="241dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg4_et_resp7"/>
+                    android:id="@+id/perg4_et_resp7"
+                    android:enabled="false" />
             </LinearLayout>
 
         </LinearLayout>

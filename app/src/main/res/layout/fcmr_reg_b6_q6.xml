@@ -41,17 +41,18 @@
             android:text="Qual é quantidade média capturada/dia nas marés alta e baixa, nos períodos de inverno e verão, por arte de pesca?  Quanto tempo é gasto? Quantos dias são trabalhados? ( O dia de pesca se refere tanto ao período diurno quanto noturno)"/>
 
         <!--INVERNO -->
-        <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout
+        <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="match_parent"             android:layout_height="fill_parent"> <TableLayout
             android:paddingTop="15dp"
             android:orientation="vertical"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:paddingLeft="50dp"
-            android:paddingRight="50dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
             android:paddingBottom="10dp"
-            android:layout_gravity="center_vertical"
-            android:stretchColumns="*">
+            android:layout_gravity="center"
+            android:stretchColumns="*"
+            android:id="@+id/tb_inverno">
 
 
             <TableRow
@@ -108,30 +109,50 @@
                 android:layout_gravity="center_horizontal">
                 <TextView android:text="Quilos\nPescado/\ndia"
                     android:layout_gravity="center"
-                    android:layout_column="2" />
+                    android:layout_column="2"
+                    android:textSize="11dp"
+                    android:paddingLeft="20dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="15dp" />
                 <TextView android:text="Nº\nLances ou\nde Pesca\n/dia"
                     android:layout_gravity="center"
-                    android:layout_column="3" />
+                    android:layout_column="3"
+                    android:textSize="11dp"
+                    android:paddingLeft="20dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="15dp" />
                 <TextView android:text="Tempo\ngasto\n(horas/ Dia)"
                     android:layout_gravity="center"
-                    android:layout_column="4" />
-                <TextView android:text="Quilos\nPescado/\ndia"
+                    android:layout_column="4"
+                    android:textSize="11dp"
+                    android:paddingLeft="20dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="15dp" />
+                <TextView android:text="Dias\ntrabalhados\n/semana"
                     android:layout_gravity="center"
-                    android:layout_column="5" />
+                    android:layout_column="5"
+                    android:textSize="11dp"
+                    android:paddingLeft="20dp"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="15dp" />
             </TableRow>
 
             <TableRow
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_1">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="@style/style_questao"
                     android:paddingBottom="5dp"
                     android:gravity="center"
-                    android:text="Baixa/Morta"/>
+                    android:text="Baixa/Morta"
+                    android:textSize="12dp"
+                    android:paddingLeft="15dp" />
 
                 <CheckBox
                     android:layout_width="wrap_content"
@@ -140,28 +161,46 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg1_cb_resp1"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg1_et_1ˆ5->this" />
 
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg1_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Quilos\nPescado\ndia"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg1_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Nº Lances\nPesca\nDia"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg1_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tempo\nGasto\n(horas/dia)"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg1_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:paddingRight="20dp"
+                    android:hint="Dias\nTrabalhados\nSemana"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
 
             </TableRow>
 
@@ -169,7 +208,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_2">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -185,28 +225,46 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg2_cb_resp1"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg2_et_1ˆ5->this" />
 
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg2_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Quilos\nPescado\ndia"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg2_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Nº Lances\nPesca\nDia"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg2_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tempo\nGasto\n(horas/dia)"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg2_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:paddingRight="20dp"
+                    android:hint="Dias\nTrabalhados\nSemana"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
 
             </TableRow>
 
@@ -214,7 +272,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_3">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -230,28 +289,46 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg3_cb_resp1"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg3_et_1ˆ5->this" />
 
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg3_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Quilos\nPescado\ndia"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg3_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Nº Lances\nPesca\nDia"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg3_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tempo\nGasto\n(horas/dia)"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg3_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:paddingRight="20dp"
+                    android:hint="Dias\nTrabalhados\nSemana"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
 
             </TableRow>
 
@@ -259,7 +336,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_4">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -275,28 +353,46 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg4_cb_resp1"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg4_et_1ˆ5->this" />
 
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg4_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Quilos\nPescado\ndia"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg4_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Nº Lances\nPesca\nDia"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg4_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tempo\nGasto\n(horas/dia)"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg4_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:paddingRight="20dp"
+                    android:hint="Dias\nTrabalhados\nSemana"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
 
             </TableRow>
 
@@ -304,7 +400,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_5">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -320,28 +417,46 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg5_cb_resp1"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg5_et_1ˆ5->this" />
 
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg5_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Quilos\nPescado\ndia"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg5_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Nº Lances\nPesca\nDia"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg5_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tempo\nGasto\n(horas/dia)"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg5_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:paddingRight="20dp"
+                    android:hint="Dias\nTrabalhados\nSemana"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
 
             </TableRow>
 
@@ -351,14 +466,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_6">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="@style/style_questao"
                     android:paddingBottom="5dp"
                     android:gravity="center"
-                    android:text="Grande/ Alta"/>
+                    android:text="Grande/ Alta"
+                    android:textSize="12dp"
+                    android:paddingLeft="15dp" />
 
                 <CheckBox
                     android:layout_width="wrap_content"
@@ -367,28 +485,46 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg6_cb_resp1"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg6_et_1ˆ5->this" />
 
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg6_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Quilos\nPescado\ndia"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg6_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Nº Lances\nPesca\nDia"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg6_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tempo\nGasto\n(horas/dia)"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg6_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:paddingRight="20dp"
+                    android:hint="Dias\nTrabalhados\nSemana"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
 
             </TableRow>
 
@@ -396,7 +532,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_7">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -412,28 +549,46 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg7_cb_resp1"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg7_et_1ˆ5->this" />
 
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg7_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Quilos\nPescado\ndia"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg7_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Nº Lances\nPesca\nDia"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg7_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tempo\nGasto\n(horas/dia)"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg7_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:paddingRight="20dp"
+                    android:hint="Dias\nTrabalhados\nSemana"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
 
             </TableRow>
 
@@ -441,7 +596,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_8">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -457,28 +613,46 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg8_cb_resp1"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg8_et_1ˆ5->this" />
 
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg8_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Quilos\nPescado\ndia"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg8_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Nº Lances\nPesca\nDia"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg8_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tempo\nGasto\n(horas/dia)"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg8_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:paddingRight="20dp"
+                    android:hint="Dias\nTrabalhados\nSemana"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
 
             </TableRow>
 
@@ -486,7 +660,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_9">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -502,28 +677,46 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg9_cb_resp1"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg9_et_1ˆ5->this" />
 
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg9_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Quilos\nPescado\ndia"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg9_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Nº Lances\nPesca\nDia"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg9_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tempo\nGasto\n(horas/dia)"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg9_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:paddingRight="20dp"
+                    android:hint="Dias\nTrabalhados\nSemana"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
 
             </TableRow>
 
@@ -531,7 +724,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_10">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -547,28 +741,46 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg10_cb_resp1"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg10_et_1ˆ5->this" />
 
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg10_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Quilos\nPescado\ndia"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg10_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Nº Lances\nPesca\nDia"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg10_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tempo\nGasto\n(horas/dia)"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg10_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:paddingRight="20dp"
+                    android:hint="Dias\nTrabalhados\nSemana"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
 
             </TableRow>
 
@@ -582,14 +794,15 @@
         <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout
             android:paddingTop="15dp"
             android:orientation="vertical"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:paddingLeft="50dp"
-            android:paddingRight="50dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
             android:paddingBottom="10dp"
             android:layout_gravity="center_vertical"
-            android:stretchColumns="*">
+            android:stretchColumns="*"
+            android:id="@+id/tb_verao">
 
 
             <TableRow
@@ -646,30 +859,50 @@
                 android:layout_gravity="center_horizontal">
                 <TextView android:text="Quilos\nPescado/\ndia"
                     android:layout_gravity="center"
-                    android:layout_column="2" />
+                    android:layout_column="2"
+                    android:textSize="11dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="15dp"
+                    android:paddingLeft="20dp" />
                 <TextView android:text="Nº\nLances ou\nde Pesca\n/dia"
                     android:layout_gravity="center"
-                    android:layout_column="3" />
+                    android:layout_column="3"
+                    android:textSize="11dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="15dp"
+                    android:paddingLeft="20dp" />
                 <TextView android:text="Tempo\ngasto\n(horas/ Dia)"
                     android:layout_gravity="center"
-                    android:layout_column="4" />
-                <TextView android:text="Quilos\nPescado/\ndia"
+                    android:layout_column="4"
+                    android:textSize="11dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="15dp"
+                    android:paddingLeft="20dp" />
+                <TextView android:text="Dias\ntrabalhados\n/semana"
                     android:layout_gravity="center"
-                    android:layout_column="5" />
+                    android:layout_column="5"
+                    android:textSize="11dp"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="15dp"
+                    android:paddingLeft="20dp" />
             </TableRow>
 
             <TableRow
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_11">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="@style/style_questao"
                     android:paddingBottom="5dp"
                     android:gravity="center"
-                    android:text="Baixa/Morta"/>
+                    android:text="Baixa/Morta"
+                    android:textSize="12dp"
+                    android:paddingLeft="15dp" />
 
                 <CheckBox
                     android:layout_width="wrap_content"
@@ -678,28 +911,46 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg11_cb_resp1"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg11_et_1ˆ5->this" />
 
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg11_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Quilos\nPescado\ndia"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg11_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Nº Lances\nPesca\nDia"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg11_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tempo\nGasto\n(horas/dia)"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg11_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:paddingRight="20dp"
+                    android:hint="Dias\nTrabalhados\nSemana"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
 
             </TableRow>
 
@@ -707,7 +958,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_12">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -723,28 +975,46 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg12_cb_resp1"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg12_et_1ˆ5->this" />
 
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg12_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Quilos\nPescado\ndia"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg12_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Nº Lances\nPesca\nDia"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg12_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tempo\nGasto\n(horas/dia)"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg12_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:paddingRight="20dp"
+                    android:hint="Dias\nTrabalhados\nSemana"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
 
             </TableRow>
 
@@ -752,7 +1022,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_13">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -768,28 +1039,46 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg13_cb_resp1"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg13_et_1ˆ5->this" />
 
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg13_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Quilos\nPescado\ndia"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg13_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Nº Lances\nPesca\nDia"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg13_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tempo\nGasto\n(horas/dia)"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg13_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:paddingRight="20dp"
+                    android:hint="Dias\nTrabalhados\nSemana"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
 
             </TableRow>
 
@@ -797,7 +1086,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_14">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -813,28 +1103,46 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg14_cb_resp1"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg14_et_1ˆ5->this" />
 
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg14_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Quilos\nPescado\ndia"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg14_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Nº Lances\nPesca\nDia"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg14_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tempo\nGasto\n(horas/dia)"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg14_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:paddingRight="20dp"
+                    android:hint="Dias\nTrabalhados\nSemana"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
 
             </TableRow>
 
@@ -842,7 +1150,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_15">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -858,28 +1167,46 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg15_cb_resp1"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg15_et_1ˆ5->this" />
 
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg15_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Quilos\nPescado\ndia"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg15_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Nº Lances\nPesca\nDia"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg15_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tempo\nGasto\n(horas/dia)"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg15_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:paddingRight="20dp"
+                    android:hint="Dias\nTrabalhados\nSemana"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
 
             </TableRow>
 
@@ -889,14 +1216,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_16">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="@style/style_questao"
                     android:paddingBottom="5dp"
                     android:gravity="center"
-                    android:text="Grande/ Alta"/>
+                    android:text="Grande/ Alta"
+                    android:textSize="12dp"
+                    android:paddingLeft="15dp" />
 
                 <CheckBox
                     android:layout_width="wrap_content"
@@ -905,28 +1235,46 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg16_cb_resp1"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg16_et_1ˆ5->this" />
 
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg16_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Quilos\nPescado\ndia"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg16_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Nº Lances\nPesca\nDia"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg16_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tempo\nGasto\n(horas/dia)"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg16_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:paddingRight="20dp"
+                    android:hint="Dias\nTrabalhados\nSemana"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
 
             </TableRow>
 
@@ -934,7 +1282,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_17">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -950,28 +1299,46 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg17_cb_resp1"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg17_et_1ˆ5->this" />
 
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg17_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Quilos\nPescado\ndia"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg17_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Nº Lances\nPesca\nDia"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg17_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tempo\nGasto\n(horas/dia)"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg17_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:paddingRight="20dp"
+                    android:hint="Dias\nTrabalhados\nSemana"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
 
             </TableRow>
 
@@ -979,7 +1346,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_18">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -995,28 +1363,46 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg18_cb_resp1"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg18_et_1ˆ5->this" />
 
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg18_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Quilos\nPescado\ndia"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg18_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Nº Lances\nPesca\nDia"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg18_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tempo\nGasto\n(horas/dia)"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg18_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:paddingRight="20dp"
+                    android:hint="Dias\nTrabalhados\nSemana"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
 
             </TableRow>
 
@@ -1024,7 +1410,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_19">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -1040,28 +1427,46 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg19_cb_resp1"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg19_et_1ˆ5->this" />
 
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg19_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Quilos\nPescado\ndia"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg19_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Nº Lances\nPesca\nDia"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg19_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tempo\nGasto\n(horas/dia)"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg19_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:paddingRight="20dp"
+                    android:hint="Dias\nTrabalhados\nSemana"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
 
             </TableRow>
 
@@ -1069,7 +1474,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_20">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -1085,28 +1491,46 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg20_cb_resp1"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg20_et_1ˆ5->this" />
 
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg20_et_resp2"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Quilos\nPescado\ndia"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg20_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Nº Lances\nPesca\nDia"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg20_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Tempo\nGasto\n(horas/dia)"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg20_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:paddingRight="20dp"
+                    android:hint="Dias\nTrabalhados\nSemana"
+                    android:textSize="12dp"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:enabled="false" />
 
             </TableRow>
 
@@ -1134,47 +1558,52 @@
 
 
 
-        <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout
+        <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="fill_parent">
+            <TableLayout
             android:paddingTop="15dp"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:paddingLeft="50dp"
-            android:paddingRight="50dp"
-            android:paddingBottom="50dp"
-            android:layout_gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="15dp"
+            android:layout_gravity="center"
             android:stretchColumns="*">
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:background="@drawable/border">
+            android:background="@drawable/border"
+            android:paddingLeft="25dp">
             <TextView
                 android:layout_width="match_parent"
                 android:textAppearance="@style/style_questao"
                 android:paddingBottom="5dp"
-                android:background="@drawable/border"
                 android:gravity="center"
-                android:text="Fases"/>
+                android:text="Fases"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textAppearance="@style/style_questao"
                 android:paddingBottom="5dp"
                 android:gravity="center"
-                android:background="@drawable/border"
-                android:text="Arte de Pesca"/>
+                android:text="Arte de Pesca"
+                android:paddingLeft="25dp"
+                android:paddingTop="10dp" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="@style/style_questao"
                 android:paddingBottom="5dp"
                 android:gravity="center"
-                android:background="@drawable/border"
                 android:text="Viagens/Dia"
-                android:layout_span="2" />
+                android:layout_span="2"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -1182,8 +1611,11 @@
                 android:paddingBottom="5dp"
                 android:gravity="center"
                 android:layout_gravity="center_horizontal"
-                android:text="Dias Trabalhados/Semana"
-                android:layout_span="2" />
+                android:text="Viagens/Semana"
+                android:layout_span="2"
+                android:paddingLeft="25dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp" />
         </TableRow>
 
         <TableRow
@@ -1193,16 +1625,36 @@
             android:layout_gravity="center_horizontal">
             <TextView android:text="Verão"
                 android:layout_gravity="center"
-                android:layout_column="2" />
+                android:layout_column="2"
+                android:textSize="11dp"
+                android:paddingLeft="25dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:id="@+id/cabecalhoVerao1" />
             <TextView android:text="Inverno"
                 android:layout_gravity="center"
-                android:layout_column="3" />
+                android:layout_column="3"
+                android:textSize="11dp"
+                android:paddingLeft="25dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:id="@+id/cabecalhoInverno1" />
             <TextView android:text="Verão"
                 android:layout_gravity="center"
-                android:layout_column="4" />
+                android:layout_column="4"
+                android:textSize="11dp"
+                android:paddingLeft="25dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:id="@+id/cabecalhoVerao2" />
             <TextView android:text="Inverno"
                 android:layout_gravity="center"
-                android:layout_column="5" />
+                android:layout_column="5"
+                android:textSize="11dp"
+                android:paddingLeft="25dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:id="@+id/cabecalhoInverno2" />
         </TableRow>
 
 
@@ -1210,37 +1662,52 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/border"
-            android:layout_gravity="center_horizontal">
-            <TextView android:text="Maré pequena/ baixa/ morta"
+            android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_21">
+            <TextView android:text="Maré pequena\nbaixa/ morta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="@style/style_questao"
                 android:paddingBottom="5dp"
                 android:gravity="center"
                 android:layout_gravity="center"
-                />
+                android:paddingLeft="15dp" />
             <TextView android:text="Matapi"
                 android:layout_gravity="center"
-                />
+                android:textSize="13dp"
+                android:paddingRight="15dp" />
 
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/perg21_et_resp1"/>
+                android:id="@+id/perg21_et_resp1"
+                android:inputType="number|numberDecimal|numberSigned"
+                android:hint="Verão\nViagens\nDia"
+                android:textSize="12dp" />
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/perg21_et_resp2"/>
+                android:id="@+id/perg21_et_resp2"
+
+                android:inputType="number|numberDecimal|numberSigned"
+                android:textSize="12dp"
+                android:hint="Inverno\n\Viagens\nDia" />
 
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/perg21_et_resp3"/>
+                android:id="@+id/perg21_et_resp3"
+                android:inputType="number|numberDecimal|numberSigned"
+                android:textSize="12dp"
+                android:hint="Verão\nViagens\nSemana" />
 
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/perg21_et_resp4"/>
+                android:id="@+id/perg21_et_resp4"
+                android:inputType="number|numberDecimal|numberSigned"
+                android:textSize="12dp"
+                android:hint="Inverno\nViagens\nSemana" />
 
         </TableRow>
 
@@ -1248,32 +1715,46 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_22">
                 <TextView android:text=""
                     android:layout_gravity="center"
                     />
                 <TextView android:text="Viveiro (retirada)"
                     android:layout_gravity="center"
-                    />
+                    android:textSize="13dp"
+                    android:paddingRight="15dp" />
 
                 <EditText
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg22_et_resp1"/>
+                    android:id="@+id/perg22_et_resp1"
+                    android:inputType="number|numberDecimal|numberSigned"
+                    android:hint="Verão\nViagens\nDia"
+                    android:textSize="12dp" />
                 <EditText
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg22_et_resp2"/>
+                    android:id="@+id/perg22_et_resp2"
+                    android:inputType="number|numberDecimal|numberSigned"
+                    android:textSize="12dp"
+                    android:hint="Inverno\n\Viagens\nDia" />
 
                 <EditText
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg22_et_resp3"/>
+                    android:id="@+id/perg22_et_resp3"
+                    android:inputType="number|numberDecimal|numberSigned"
+                    android:textSize="12dp"
+                    android:hint="Verão\nViagens\nSemana" />
 
                 <EditText
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg22_et_resp4"/>
+                    android:id="@+id/perg22_et_resp4"
+                    android:inputType="number|numberDecimal|numberSigned"
+                    android:textSize="12dp"
+                    android:hint="Inverno\nViagens\nSemana" />
 
             </TableRow>
 
@@ -1281,32 +1762,46 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_23">
                 <TextView android:text=""
                     android:layout_gravity="center"
                     />
                 <TextView android:text="Rede de arrasto"
                     android:layout_gravity="center"
-                    />
+                    android:textSize="13dp"
+                    android:paddingRight="15dp" />
 
                 <EditText
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg23_et_resp1"/>
+                    android:id="@+id/perg23_et_resp1"
+                    android:inputType="number|numberDecimal|numberSigned"
+                    android:hint="Verão\nViagens\nDia"
+                    android:textSize="12dp" />
                 <EditText
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg23_et_resp2"/>
+                    android:id="@+id/perg23_et_resp2"
+                    android:inputType="number|numberDecimal|numberSigned"
+                    android:textSize="12dp"
+                    android:hint="Inverno\n\Viagens\nDia" />
 
                 <EditText
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg23_et_resp3"/>
+                    android:id="@+id/perg23_et_resp3"
+                    android:inputType="number|numberDecimal|numberSigned"
+                    android:textSize="12dp"
+                    android:hint="Verão\nViagens\nSemana" />
 
                 <EditText
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg23_et_resp4"/>
+                    android:id="@+id/perg23_et_resp4"
+                    android:inputType="number|numberDecimal|numberSigned"
+                    android:textSize="12dp"
+                    android:hint="Inverno\nViagens\nSemana" />
 
             </TableRow>
 
@@ -1314,32 +1809,46 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_24">
                 <TextView android:text=""
                     android:layout_gravity="center"
                     />
                 <TextView android:text="Tarrafa"
                     android:layout_gravity="center"
-                    />
+                    android:textSize="13dp"
+                    android:paddingRight="15dp" />
 
                 <EditText
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg24_et_resp1"/>
+                    android:id="@+id/perg24_et_resp1"
+                    android:inputType="number|numberDecimal|numberSigned"
+                    android:hint="Verão\nViagens\nDia"
+                    android:textSize="12dp" />
                 <EditText
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg24_et_resp2"/>
+                    android:id="@+id/perg24_et_resp2"
+                    android:inputType="number|numberDecimal|numberSigned"
+                    android:textSize="12dp"
+                    android:hint="Inverno\n\Viagens\nDia" />
 
                 <EditText
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg24_et_resp3"/>
+                    android:id="@+id/perg24_et_resp3"
+                    android:inputType="number|numberDecimal|numberSigned"
+                    android:textSize="12dp"
+                    android:hint="Verão\nViagens\nSemana" />
 
                 <EditText
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg24_et_resp4"/>
+                    android:id="@+id/perg24_et_resp4"
+                    android:inputType="number|numberDecimal|numberSigned"
+                    android:textSize="12dp"
+                    android:hint="Inverno\nViagens\nSemana" />
 
             </TableRow>
 
@@ -1348,37 +1857,51 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
-                android:layout_gravity="center_horizontal">
-                <TextView android:text="Maré alta/ grande/ lançante"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_25">
+                <TextView android:text="Maré\nalta\ngrande/ lançante"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="@style/style_questao"
                     android:paddingBottom="5dp"
                     android:gravity="center"
                     android:layout_gravity="center"
-                    />
+                    android:paddingLeft="15dp" />
                 <TextView android:text="Matapi"
                     android:layout_gravity="center"
-                    />
+                    android:textSize="13dp"
+                    android:paddingRight="15dp" />
 
                 <EditText
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg25_et_resp1"/>
+                    android:id="@+id/perg25_et_resp1"
+                    android:inputType="number|numberDecimal|numberSigned"
+                    android:hint="Verão\nViagens\nDia"
+                    android:textSize="12dp" />
                 <EditText
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg25_et_resp2"/>
+                    android:id="@+id/perg25_et_resp2"
+                    android:inputType="number|numberDecimal|numberSigned"
+                    android:textSize="12dp"
+                    android:hint="Inverno\n\Viagens\nDia" />
 
                 <EditText
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg25_et_resp3"/>
+                    android:id="@+id/perg25_et_resp3"
+                    android:inputType="number|numberDecimal|numberSigned"
+                    android:textSize="12dp"
+                    android:hint="Verão\nViagens\nSemana" />
 
                 <EditText
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg25_et_resp4"/>
+                    android:id="@+id/perg25_et_resp4"
+                    android:inputType="number|numberDecimal|numberSigned"
+                    android:textSize="12dp"
+                    android:hint="Inverno\nViagens\nSemana" />
 
             </TableRow>
 
@@ -1386,32 +1909,46 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_26">
                 <TextView android:text=""
                     android:layout_gravity="center"
                     />
                 <TextView android:text="Viveiro (retirada)"
                     android:layout_gravity="center"
-                    />
+                    android:textSize="13dp"
+                    android:paddingRight="15dp" />
 
                 <EditText
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg26_et_resp1"/>
+                    android:id="@+id/perg26_et_resp1"
+                    android:inputType="number|numberDecimal|numberSigned"
+                    android:hint="Verão\nViagens\nDia"
+                    android:textSize="12dp" />
                 <EditText
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg26_et_resp2"/>
+                    android:id="@+id/perg26_et_resp2"
+                    android:inputType="number|numberDecimal|numberSigned"
+                    android:textSize="12dp"
+                    android:hint="Inverno\n\Viagens\nDia" />
 
                 <EditText
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg26_et_resp3"/>
+                    android:id="@+id/perg26_et_resp3"
+                    android:inputType="number|numberDecimal|numberSigned"
+                    android:textSize="12dp"
+                    android:hint="Verão\nViagens\nSemana" />
 
                 <EditText
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg26_et_resp4"/>
+                    android:id="@+id/perg26_et_resp4"
+                    android:inputType="number|numberDecimal|numberSigned"
+                    android:textSize="12dp"
+                    android:hint="Inverno\nViagens\nSemana" />
 
             </TableRow>
 
@@ -1419,32 +1956,46 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_27">
                 <TextView android:text=""
                     android:layout_gravity="center"
                     />
                 <TextView android:text="Rede de arrasto"
                     android:layout_gravity="center"
-                    />
+                    android:textSize="13dp"
+                    android:paddingRight="15dp" />
 
                 <EditText
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg27_et_resp1"/>
+                    android:id="@+id/perg27_et_resp1"
+                    android:inputType="number|numberDecimal|numberSigned"
+                    android:hint="Verão\nViagens\nDia"
+                    android:textSize="12dp" />
                 <EditText
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg27_et_resp2"/>
+                    android:id="@+id/perg27_et_resp2"
+                    android:inputType="number|numberDecimal|numberSigned"
+                    android:textSize="12dp"
+                    android:hint="Inverno\n\Viagens\nDia" />
 
                 <EditText
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg27_et_resp3"/>
+                    android:id="@+id/perg27_et_resp3"
+                    android:inputType="number|numberDecimal|numberSigned"
+                    android:textSize="12dp"
+                    android:hint="Verão\nViagens\nSemana" />
 
                 <EditText
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg27_et_resp4"/>
+                    android:id="@+id/perg27_et_resp4"
+                    android:inputType="number|numberDecimal|numberSigned"
+                    android:textSize="12dp"
+                    android:hint="Inverno\nViagens\nSemana" />
 
             </TableRow>
 
@@ -1452,32 +2003,46 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_28">
                 <TextView android:text=""
                     android:layout_gravity="center"
                     />
                 <TextView android:text="Tarrafa"
                     android:layout_gravity="center"
-                    />
+                    android:textSize="13dp"
+                    android:paddingRight="15dp" />
 
                 <EditText
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg28_et_resp1"/>
+                    android:id="@+id/perg28_et_resp1"
+                    android:inputType="number|numberDecimal|numberSigned"
+                    android:hint="Verão\nViagens\nDia"
+                    android:textSize="12dp" />
                 <EditText
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg28_et_resp2"/>
+                    android:id="@+id/perg28_et_resp2"
+                    android:inputType="number|numberDecimal|numberSigned"
+                    android:textSize="12dp"
+                    android:hint="Inverno\n\Viagens\nDia" />
 
                 <EditText
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg28_et_resp3"/>
+                    android:id="@+id/perg28_et_resp3"
+                    android:inputType="number|numberDecimal|numberSigned"
+                    android:textSize="12dp"
+                    android:hint="Verão\nViagens\nSemana" />
 
                 <EditText
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg28_et_resp4"/>
+                    android:id="@+id/perg28_et_resp4"
+                    android:inputType="number|numberDecimal|numberSigned"
+                    android:textSize="12dp"
+                    android:hint="Inverno\nViagens\nSemana" />
 
             </TableRow>
 
@@ -1498,6 +2063,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_span="2"
+                    android:paddingBottom="20dp"
                     android:orientation="vertical">
                     <RadioButton
                         android:layout_width="wrap_content"

@@ -511,8 +511,9 @@ public class FormCamRegActivityNew extends AppCompatActivity
 
         /** PERGUNTAS **/
         for(int seqPergunta=1; seqPergunta<=59; seqPergunta++){
+            try {
 
-            String currentPergunta = ConstantesIdsFormularios.PERGUNTA.concat(String.valueOf(seqPergunta));
+                String currentPergunta = ConstantesIdsFormularios.PERGUNTA.concat(String.valueOf(seqPergunta));
 //            TextView perguntaTextView = (TextView) findViewById(getResources().getIdentifier(currentPergunta ,"id", getPackageName())); //perg1
 //
 //            if(perguntaTextView != null) {
@@ -530,8 +531,8 @@ public class FormCamRegActivityNew extends AppCompatActivity
                         resp.setTipoComponente("rb");
                         resp.setTexto(radioButton.getText().toString());
                         respostas.add(resp);
-                    }else{
-                     /** CHECKBOX **/
+                    } else {
+                        /** CHECKBOX **/
                         String currentCheckBox = currentPergunta.concat(ConstantesIdsFormularios.TYPE_CHECK_BOX + x);
                         CheckBox checkBox = (CheckBox) findViewById(getResources().getIdentifier(currentCheckBox, "id", getPackageName()));
 
@@ -542,7 +543,7 @@ public class FormCamRegActivityNew extends AppCompatActivity
                             resp.setTipoComponente("cb");
                             resp.setTexto(checkBox.getText().toString());
                             respostas.add(resp);
-                        }else{
+                        } else {
                             /** EDITTEXT **/
                             String currentEditText = currentPergunta.concat(ConstantesIdsFormularios.TYPE_EDIT_TEXT + x);
                             EditText editText = (EditText) findViewById(getResources().getIdentifier(currentEditText, "id", getPackageName()));
@@ -559,7 +560,7 @@ public class FormCamRegActivityNew extends AppCompatActivity
                     }
                 }
 
-                if(respostas!=null && respostas.size() > 0) {
+                if (respostas != null && respostas.size() > 0) {
                     Pergunta pergunta = perguntaDAO.findPerguntaByOrdemIdQuestao(seqPergunta, questao.getId());
 
                     if (pergunta == null) {
@@ -571,7 +572,7 @@ public class FormCamRegActivityNew extends AppCompatActivity
                         pergunta = perguntaDAO.insertPergunta(pergunta);
                     }
 
-                    for(Resposta resp: respostas){
+                    for (Resposta resp : respostas) {
                         resp.getPergunta().setId(pergunta.getId());
                         respostaDAO.save(resp);
                     }
@@ -579,6 +580,10 @@ public class FormCamRegActivityNew extends AppCompatActivity
                     pergunta.setListaRespostas(respostas);
                     perguntas.add(pergunta);
                 }
+
+            }catch (Exception e){
+                e.printStackTrace();
+            }
 
         }
         return perguntas;

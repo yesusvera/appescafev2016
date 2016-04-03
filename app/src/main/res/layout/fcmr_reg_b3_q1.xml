@@ -141,7 +141,7 @@
                         android:text="Cidade:"
                         android:textAppearance="@style/style_questao"/>
                     <EditText
-                        android:layout_width="140dp"
+                        android:layout_width="300dp"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg3_et_resp2"
                         android:enabled="false" />

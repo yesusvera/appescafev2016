@@ -62,7 +62,8 @@ ambiente aqui na região?"/>
                         android:text="Sim"
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg1_rb_resp1"
-                        android:paddingRight="15dp"/>
+                        android:paddingRight="15dp"
+                        android:tag="perg2_cb_1ˆ7->true" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -70,7 +71,8 @@ ambiente aqui na região?"/>
                         android:text="Não"
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg1_rb_resp2"
-                        android:paddingRight="15dp"/>
+                        android:paddingRight="15dp"
+                        android:tag="perg2_cb_1ˆ7->false" />
                 </RadioGroup>
             </LinearLayout>
 
@@ -103,56 +105,65 @@ ambiente aqui na região?"/>
                         android:layout_height="wrap_content"
                         android:text="Desmatando a floresta"
                         android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg2_cb_resp1" />
+                        android:id="@+id/perg2_cb_resp1"
+                        android:enabled="false" />
 
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Usando zangaria para a pesca do camarão"
                         android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg2_cb_resp2" />
+                        android:id="@+id/perg2_cb_resp2"
+                        android:enabled="false" />
 
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Usando tapagem nos igarapés/rios"
                         android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg2_cb_resp3" />
+                        android:id="@+id/perg2_cb_resp3"
+                        android:enabled="false" />
 
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Jogando lixo no rio"
                         android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg2_cb_resp4" />
+                        android:id="@+id/perg2_cb_resp4"
+                        android:enabled="false" />
 
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Criando gado/búfalo"
                         android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg2_cb_resp5" />
+                        android:id="@+id/perg2_cb_resp5"
+                        android:enabled="false" />
 
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Pescando camarão pequeno"
                         android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg2_cb_resp6" />
+                        android:id="@+id/perg2_cb_resp6"
+                        android:enabled="false" />
 
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Outro. Qual?"
                         android:textAppearance="@style/style_resposta"
-                        android:id="@+id/perg2_cb_resp7" />
+                        android:id="@+id/perg2_cb_resp7"
+                        android:enabled="false"
+                        android:tag="perg2_et_resp8->this" />
 
                     <EditText
                         android:layout_width="241dp"
                         android:layout_height="wrap_content"
                         android:id="@+id/perg2_et_resp8"
                         android:textAppearance="@style/style_resposta"
-                        android:lines="2" />
+                        android:lines="2"
+                        android:enabled="false" />
                 </LinearLayout>
             </LinearLayout>
 

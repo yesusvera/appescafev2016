@@ -23,6 +23,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.org.unesco.appesca.R;
 import br.org.unesco.appesca.bo.FormularioBO;
 import br.org.unesco.appesca.dao.FormularioDAO;
 import br.org.unesco.appesca.dao.QuestaoDAO;
@@ -363,6 +364,15 @@ public class QuestaoDetailFragment extends Fragment {
             switch (formulario.getIdTipoFormulario()){
                 case 1: //CAMARAO REGIONAL
 
+                    switch (ordemQuestao)
+                    {
+                        case  52: configuraTabelaB6Q6_REGIONAL(formulario); break;
+                        case  57: configuraTabelaB7Q4_REGIONAL(formulario); break;
+                        case  61: configuraTabelaB7Q8_REGIONAL(formulario); break;
+                        case  62: configuraTabelaB7Q9_REGIONAL(formulario); break;
+                        case  63: configuraTabelaB7Q10_REGIONAL(formulario); break;
+                        default:
+                    }
                     break;
                 case 2: //CARANGUEJO
 
@@ -386,6 +396,251 @@ public class QuestaoDetailFragment extends Fragment {
     public View findViewByStringId(String id){
         return getActivity().findViewById(getResources().getIdentifier(id, "id", getActivity().getPackageName()));
     }
+
+
+    public void configuraTabelaB7Q4_REGIONAL(Formulario formulario) {
+        Questao q54 = questaoDAO.findQuestaoByOrdemIdFormulario(54, formulario.getId());
+
+        int rowOrder = 1;
+        for(int i=1;i<=3;i++){
+            for(int j=1;j<=7;j++) {
+                boolean resp = formularioBO.getResposta(q54, i, j)!=null;
+
+                if(!resp){
+                    TableRow tbRow = (TableRow)findViewByStringId("tbrow_" + rowOrder);
+                    if(tbRow!=null){
+                        tbRow.setVisibility(View.GONE);
+                    }
+                }
+                rowOrder++;
+            }
+        }
+    }
+
+
+    public void configuraTabelaB7Q9_REGIONAL(Formulario formulario) {
+        Questao q54 = questaoDAO.findQuestaoByOrdemIdFormulario(54, formulario.getId());
+
+        int rowOrder = 1;
+        for(int i=1;i<=3;i++){
+            for(int j=1;j<=7;j++) {
+                boolean resp = formularioBO.getResposta(q54, i, j)!=null;
+
+                if(!resp){
+                    TableRow tbRow = (TableRow)findViewByStringId("tbrow_" + rowOrder);
+                    if(tbRow!=null){
+                        tbRow.setVisibility(View.GONE);
+                    }
+                }
+                rowOrder++;
+            }
+        }
+
+        Questao q61 = questaoDAO.findQuestaoByOrdemIdFormulario(61, formulario.getId());
+
+        Resposta resp1 = formularioBO.getResposta(q61, 1, 1);
+        Resposta resp2 = formularioBO.getResposta(q61,1,2);
+        Resposta resp3 = formularioBO.getResposta(q61,1,3);
+
+        if(resp1!=null){
+            TextView comprador1Txt = (TextView)findViewByStringId("comprador1Txt");
+            comprador1Txt.setText(resp1.getTexto());
+        }
+        if(resp2!=null){
+            TextView comprador2Txt = (TextView)findViewByStringId("comprador2Txt");
+            comprador2Txt.setText(resp2.getTexto());
+        }
+        if(resp3!=null){
+            TextView comprador3Txt = (TextView)findViewByStringId("comprador3Txt");
+            comprador3Txt.setText(resp3.getTexto());
+        }
+    }
+
+    public void configuraTabelaB7Q10_REGIONAL(Formulario formulario) {
+
+        Questao q61 = questaoDAO.findQuestaoByOrdemIdFormulario(61, formulario.getId());
+
+        Resposta resp1 = formularioBO.getResposta(q61, 1, 1);
+        Resposta resp2 = formularioBO.getResposta(q61,1,2);
+        Resposta resp3 = formularioBO.getResposta(q61,1,3);
+
+        if(resp1!=null){
+            TextView comprador1Txt = (TextView)findViewByStringId("comprador1Txt");
+            if(comprador1Txt!=null)
+                comprador1Txt.setText(resp1.getTexto() + ":");
+        }
+        if(resp2!=null){
+            TextView comprador2Txt = (TextView)findViewByStringId("comprador2Txt");
+            if(comprador2Txt!=null)
+                comprador2Txt.setText(resp2.getTexto() + ":");
+        }
+        if(resp3!=null){
+            TextView comprador3Txt = (TextView)findViewByStringId("comprador3Txt");
+            if(comprador3Txt!=null)
+                comprador3Txt.setText(resp3.getTexto() + ":");
+        }
+    }
+
+    public void configuraTabelaB6Q6_REGIONAL(Formulario formulario){
+
+
+        Questao q50 = questaoDAO.findQuestaoByOrdemIdFormulario(50, formulario.getId());
+        Questao q51 = questaoDAO.findQuestaoByOrdemIdFormulario(51, formulario.getId());
+
+        boolean verao = formularioBO.getResposta(q50, 1, 1)!=null;
+        boolean inverno = formularioBO.getResposta(q50, 1, 2)!=null;
+
+        boolean baixaMorta = formularioBO.getResposta(q51, 1, 1)!=null;
+        boolean grandeAlt = formularioBO.getResposta(q51, 1, 2)!=null;
+
+
+        if(!inverno){
+            //Primeira tabela
+            String[] strArray = new String[10];
+            for(int i=0,x=1;i<strArray.length;i++,x++){
+                strArray[i] = "perg"+(x)+"_cb_resp1->gone";
+            }
+            comandosPorComponente(strArray, null);
+
+            TableLayout tbInverno = (TableLayout)findViewByStringId("tb_inverno");
+            tbInverno.setVisibility(View.GONE);
+
+            //Cabeçalhos da terceira tabela
+            TextView cabecalhoInverno1 = (TextView)findViewByStringId("cabecalhoInverno1");
+            TextView cabecalhoInverno2 = (TextView)findViewByStringId("cabecalhoInverno2");
+
+            cabecalhoInverno1.setVisibility(View.INVISIBLE);
+            cabecalhoInverno2.setVisibility(View.INVISIBLE);
+        }
+
+
+        if(!verao){
+            String[] strArray = new String[10];
+            for(int i=0,x=11;i<strArray.length;i++,x++){
+                strArray[i] = "perg"+(x)+"_cb_resp1->gone";
+            }
+            comandosPorComponente(strArray, null);
+
+            TableLayout tbVerao = (TableLayout)findViewByStringId("tb_verao");
+            tbVerao.setVisibility(View.GONE);
+
+
+            //Cabeçalhos da terceira tabela
+            TextView cabecalhoVerao1 = (TextView)findViewByStringId("cabecalhoVerao1");
+            TextView cabecalhoVerao2 = (TextView)findViewByStringId("cabecalhoVerao2");
+
+            cabecalhoVerao1.setVisibility(View.INVISIBLE);
+            cabecalhoVerao2.setVisibility(View.INVISIBLE);
+        }
+
+
+        if(!baixaMorta){
+            String[] strArray = new String[5];
+            for(int i=0,x=1;i<5;i++,x++){
+                strArray[i] = "perg"+(x)+"_cb_resp1->false";
+
+                TableRow tbRow = (TableRow) findViewByStringId("tbrow_"+x);
+                tbRow.setVisibility(View.GONE);
+            }
+
+            comandosPorComponente(strArray, null);
+
+            for(int i=0,x=11;i<5;i++,x++){
+                strArray[i] = "perg"+(x)+"_cb_resp1->false";
+
+                TableRow tbRow = (TableRow) findViewByStringId("tbrow_"+x);
+                tbRow.setVisibility(View.GONE);
+            }
+
+            comandosPorComponente(strArray, null);
+
+        }
+//
+        if(!grandeAlt){
+            String[] strArray = new String[5];
+            for(int i=0,x=5;i<5;i++,x++){
+                strArray[i] = "perg"+(x)+"_cb_resp1->gone";
+                TableRow tbRow = (TableRow) findViewByStringId("tbrow_"+x);
+                tbRow.setVisibility(View.GONE);
+            }
+
+            comandosPorComponente(strArray, null);
+
+            for(int i=0,x=15;i<5;i++,x++){
+                strArray[i] = "perg"+(x)+"_cb_resp1->gone";
+                TableRow tbRow = (TableRow) findViewByStringId("tbrow_"+x);
+                tbRow.setVisibility(View.GONE);
+            }
+
+            comandosPorComponente(strArray, null);
+        }
+
+        //EditText's da terceira tabela
+        for(int i=21;i<=28;i++){
+            for(int j=1;j<=4;j++){
+                if((!verao && (j==1 || j==3)) ||
+                   (!inverno && (j==2 || j==4)) ){
+                    EditText editText = (EditText) findViewByStringId("perg"+i+"_et_resp"+j);
+                    if(editText!=null){
+                        editText.setText("");
+                        editText.setVisibility(View.INVISIBLE);
+                    }
+                }
+            }
+
+            if((!baixaMorta && (i>=21 && i<=24)) ||
+                    (!grandeAlt && (i>=25 && i<=28))
+                    ){
+                TableRow tbRow = (TableRow) findViewByStringId("tbrow_" + i);
+                if(tbRow!=null){
+                    tbRow.setVisibility(View.GONE);
+                }
+            }
+        }
+
+        //bloquear quando não selecionou matapi, viveiro, rede e tarrafa
+
+
+        Questao q49 = questaoDAO.findQuestaoByOrdemIdFormulario(49, formulario.getId());
+        boolean matapi   = formularioBO.getResposta(q49, 1, 1)!=null;
+        boolean viveiro  = formularioBO.getResposta(q49, 1, 2)!=null;
+        boolean rede     = formularioBO.getResposta(q49, 1, 3)!=null;
+        boolean tarrafa  = formularioBO.getResposta(q49, 1, 4)!=null;
+
+        boolean[] arrResp = new boolean[]{matapi, viveiro, rede, tarrafa};
+        for(int i=1,m=1;i<=20;i++,m++){
+           switch (m){
+               case 1: case 2:case 3: case 4:
+                   if(!arrResp[m-1]){
+                       CheckBox cbox = (CheckBox) findViewByStringId("perg"+i+"_cb_resp1");
+                       cbox.setChecked(false);
+                       cbox.setEnabled(false);
+                       cbox.callOnClick();
+                   }
+                   break;
+               default:
+           }
+            if(m==5) m=0;
+        }
+
+        for(int i=21,m=1;i<=28;i++,m++){
+
+            switch (m){
+                case 1: case 2:case 3: case 4:
+                    if(!arrResp[m-1]){
+                        for(int k=1;k<=4;k++) {
+                            EditText editText = (EditText) findViewByStringId("perg"+i+"_et_resp"+k);
+                            editText.setText("");
+                            editText.setVisibility(View.GONE);
+                        }
+                    }
+                    break;
+                default:
+            }
+            if(m==4) m=0;
+        }
+    }
+
 
     /**
      * 7. Qual é quantidade média capturada/dia nas marés alta e baixa, nos períodos de inverno e verão, por arte de pesca?
@@ -461,7 +716,7 @@ public class QuestaoDetailFragment extends Fragment {
             comandosPorComponente(strArray, null);
 
             for(int i=0,x=25;i<8;i++,x++){
-                strArray[i] = "perg"+(x)+"_cb_resp1->comandosPorComponente(strArray, null);";
+                strArray[i] = "perg"+(x)+"_cb_resp1->gone";
                 TableRow tbRow = (TableRow) findViewByStringId("tbrow_"+x);
                 tbRow.setVisibility(View.GONE);
             }
@@ -471,6 +726,80 @@ public class QuestaoDetailFragment extends Fragment {
 
     }
 
+
+    /**
+     * Desses compradores/consumidores quais são os três principais?
+     * (informar se é interno ou externo da comunidade.
+     * Na lista dos compradores marcados na questão anterior,
+     * deve vir descrito se é da comunidade ou fora)
+     */
+    public void configuraTabelaB7Q8_REGIONAL(final Formulario formulario){
+
+        for(int i=1; i<=3;i++) {
+
+            ImageView imgV = (ImageView) findViewByStringId("imgListaConsumidores" + i);
+
+            final int indexEditText = i;
+
+
+            if(imgV!=null) {
+                imgV.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        Questao q51 = questaoDAO.findQuestaoByOrdemIdFormulario(60, formulario.getId());
+
+                        Pergunta perg1 = formularioBO.getPerguntaPorOrdem(1, q51);//Na comunidade:
+                        Pergunta perg2 = formularioBO.getPerguntaPorOrdem(2, q51);//Fora:
+
+
+                        final ArrayList<String> consumidoresTexto = new ArrayList<String>();
+                        final ArrayList<String> consumidoresLabel = new ArrayList<String>();
+
+                        if(perg1!=null && perg1.getListaRespostas()!=null && perg1.getListaRespostas().size()>0){
+                            for(Resposta r: perg1.getListaRespostas()){
+
+                                if(r.getTexto()!=null && !r.getTexto().toLowerCase().contains("outro")) {
+                                    consumidoresTexto.add(r.getTexto());
+                                    consumidoresLabel.add(r.getTexto() + "(Comunidade)");
+                                }
+                            }
+                        }
+
+                        if(perg2!=null && perg2.getListaRespostas()!=null && perg2.getListaRespostas().size()>0){
+                            for(Resposta r: perg2.getListaRespostas()){
+
+                                if(r.getTexto()!=null && !r.getTexto().toLowerCase().contains("outro")) {
+                                    consumidoresTexto.add(r.getTexto());
+                                    consumidoresLabel.add(r.getTexto() + "(Fora)");
+                                }
+                            }
+                        }
+
+                        final String[] itemsBkp = new String[consumidoresLabel.size()];
+                        final String[] items = consumidoresLabel.toArray(itemsBkp);
+
+                        AlertDialog.Builder builder =
+                                new AlertDialog.Builder(getActivity());
+
+                        builder.setTitle("Consumidores (Questão 7 - Anterior)")
+                                .setItems(items, new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int item) {
+                                        EditText et = (EditText) findViewByStringId("perg1_et_resp" + indexEditText);
+                                        et.setText(consumidoresLabel.get(item));
+                                    }
+                                });
+
+
+                        builder.create().show();
+
+                    }
+                });
+            }
+
+        }
+
+    }
 
     /**
      * Desses compradores/consumidores quais são os três principais?

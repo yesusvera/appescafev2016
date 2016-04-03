@@ -65,7 +65,6 @@
                             android:textAppearance="@style/style_questao"
                             android:paddingBottom="5dp"
                             android:gravity="center"
-                            android:background="@drawable/border"
                             android:text="Período"/>
                         <TextView
                             android:layout_width="match_parent"
@@ -75,7 +74,7 @@
                             android:gravity="center"
                             android:layout_gravity="center_horizontal"
                             android:layout_span="2"
-                            android:text="Quantidade Média Vendida" />
+                            android:text="Quantidade Média\nVendida" />
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -117,13 +116,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/border">
+                android:id="@+id/tbrow_1">
                 <TextView
                     android:layout_width="match_parent"
                     android:textAppearance="@style/style_questao"
                     android:paddingBottom="5dp"
                     android:gravity="center"
-                    android:text="Misturado Inteiro Fresco"/>
+                    android:text="Misturado\nInteiro Fresco"/>
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
@@ -154,17 +153,23 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg1_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nVerão"
+                    android:inputType="numberDecimal" />
                 <EditText
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg1_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nInverno"
+                    android:inputType="numberDecimal" />
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg1_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="2"
+                    android:hint="Observações" />
 
             </TableRow>
 
@@ -173,13 +178,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/border">
+                android:id="@+id/tbrow_2">
                 <TextView
                     android:layout_width="match_parent"
                     android:textAppearance="@style/style_questao"
                     android:paddingBottom="5dp"
                     android:gravity="center"
-                    android:text="Misturado inteiro resfriado (no gelo)"/>
+                    android:text="Misturado\ninteiro resfriado (no gelo)" />
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
@@ -210,17 +215,23 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg2_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nVerão"
+                    android:inputType="numberDecimal" />
                 <EditText
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg2_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nInverno"
+                    android:inputType="numberDecimal" />
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg2_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="2"
+                    android:hint="Observações" />
 
             </TableRow>
 
@@ -228,13 +239,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/border">
+                android:id="@+id/tbrow_3">
                 <TextView
                     android:layout_width="match_parent"
                     android:textAppearance="@style/style_questao"
                     android:paddingBottom="5dp"
                     android:gravity="center"
-                    android:text="Misturado inteiro congelado"/>
+                    android:text="Misturado\ninteiro cozido\ne salgado (bafo/frito)"/>
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
@@ -265,33 +276,37 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg3_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nVerão"
+                    android:inputType="numberDecimal" />
                 <EditText
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg3_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nInverno"
+                    android:inputType="numberDecimal" />
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg3_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="2"
+                    android:hint="Observações" />
 
             </TableRow>
-
-
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/border">
+                android:id="@+id/tbrow_4">
                 <TextView
                     android:layout_width="match_parent"
                     android:textAppearance="@style/style_questao"
                     android:paddingBottom="5dp"
                     android:gravity="center"
-                    android:text="Misturado descascado fresco"/>
+                    android:text="Misturado\ninteiro congelado"/>
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
@@ -322,32 +337,37 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg4_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nVerão"
+                    android:inputType="numberDecimal" />
                 <EditText
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg4_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nInverno"
+                    android:inputType="numberDecimal" />
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg4_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="2"
+                    android:hint="Observações" />
 
             </TableRow>
-
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/border">
+                android:id="@+id/tbrow_5">
                 <TextView
                     android:layout_width="match_parent"
                     android:textAppearance="@style/style_questao"
                     android:paddingBottom="5dp"
                     android:gravity="center"
-                    android:text="Misturado descascado salgado"/>
+                    android:text="Misturado\nDescascado fresco"/>
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
@@ -378,34 +398,37 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg5_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nVerão"
+                    android:inputType="numberDecimal" />
                 <EditText
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg5_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nInverno"
+                    android:inputType="numberDecimal" />
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg5_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="2"
+                    android:hint="Observações" />
 
             </TableRow>
-
-
-
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/border">
+                android:id="@+id/tbrow_6">
                 <TextView
                     android:layout_width="match_parent"
                     android:textAppearance="@style/style_questao"
                     android:paddingBottom="5dp"
                     android:gravity="center"
-                    android:text="Graúdo inteiro fresco"/>
+                    android:text="Misturado\nDescascado Cozido\nE salgado (salgadinho)"/>
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
@@ -436,38 +459,37 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg6_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nVerão"
+                    android:inputType="numberDecimal" />
                 <EditText
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg6_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nInverno"
+                    android:inputType="numberDecimal" />
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg6_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="2"
+                    android:hint="Observações" />
 
             </TableRow>
-
-
-
-
-
-
-
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/border">
+                android:id="@+id/tbrow_7">
                 <TextView
                     android:layout_width="match_parent"
                     android:textAppearance="@style/style_questao"
                     android:paddingBottom="5dp"
                     android:gravity="center"
-                    android:text="Graúdo inteiro resfriado (no gelo)"/>
+                    android:text="Misturado\nDescascado congelado"/>
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
@@ -498,37 +520,37 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg7_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nVerão"
+                    android:inputType="numberDecimal" />
                 <EditText
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg7_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nInverno"
+                    android:inputType="numberDecimal" />
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg7_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="2"
+                    android:hint="Observações" />
 
             </TableRow>
-
-
-
-
-
-
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/border">
+                android:id="@+id/tbrow_8">
                 <TextView
                     android:layout_width="match_parent"
                     android:textAppearance="@style/style_questao"
                     android:paddingBottom="5dp"
                     android:gravity="center"
-                    android:text="Graúdo inteiro congelado"/>
+                    android:text="Graúdo\nInteiro Fresco"/>
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
@@ -559,17 +581,23 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg8_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nVerão"
+                    android:inputType="numberDecimal" />
                 <EditText
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg8_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nInverno"
+                    android:inputType="numberDecimal" />
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg8_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="2"
+                    android:hint="Observações" />
 
             </TableRow>
 
@@ -583,13 +611,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/border">
+                android:id="@+id/tbrow_9">
                 <TextView
                     android:layout_width="match_parent"
                     android:textAppearance="@style/style_questao"
                     android:paddingBottom="5dp"
                     android:gravity="center"
-                    android:text="Graúdo descascado fresco"/>
+                    android:text="Graúdo\ninteiro resfriado (no gelo)    "/>
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
@@ -620,17 +648,23 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg9_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nVerão"
+                    android:inputType="numberDecimal" />
                 <EditText
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg9_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nInverno"
+                    android:inputType="numberDecimal" />
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg9_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="2"
+                    android:hint="Observações" />
 
             </TableRow>
 
@@ -644,13 +678,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/border">
+                android:id="@+id/tbrow_10">
                 <TextView
                     android:layout_width="match_parent"
                     android:textAppearance="@style/style_questao"
                     android:paddingBottom="5dp"
                     android:gravity="center"
-                    android:text="Graúdo descascado salgado"/>
+                    android:text="Graúdo\ninteiro cozido\ne salgado (bafo/frito)"/>
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
@@ -681,17 +715,23 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg10_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nVerão"
+                    android:inputType="numberDecimal" />
                 <EditText
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg10_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nInverno"
+                    android:inputType="numberDecimal" />
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg10_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="2"
+                    android:hint="Observações" />
 
             </TableRow>
 
@@ -704,13 +744,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/border">
+                android:id="@+id/tbrow_11">
                 <TextView
                     android:layout_width="match_parent"
                     android:textAppearance="@style/style_questao"
                     android:paddingBottom="5dp"
                     android:gravity="center"
-                    android:text="Médio inteiro fresco"/>
+                    android:text="Graúdo\ninteiro congelado"/>
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
@@ -741,17 +781,23 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg11_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nVerão"
+                    android:inputType="numberDecimal" />
                 <EditText
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg11_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nInverno"
+                    android:inputType="numberDecimal" />
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg11_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="2"
+                    android:hint="Observações" />
 
             </TableRow>
 
@@ -763,13 +809,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/border">
+                android:id="@+id/tbrow_12">
                 <TextView
                     android:layout_width="match_parent"
                     android:textAppearance="@style/style_questao"
                     android:paddingBottom="5dp"
                     android:gravity="center"
-                    android:text="Médio inteiro resfriado (no gelo)"/>
+                    android:text="Graúdo\nDescascado fresco"/>
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
@@ -800,17 +846,23 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg12_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nVerão"
+                    android:inputType="numberDecimal" />
                 <EditText
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg12_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nInverno"
+                    android:inputType="numberDecimal" />
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg12_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="2"
+                    android:hint="Observações" />
 
             </TableRow>
 
@@ -822,13 +874,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/border">
+                android:id="@+id/tbrow_13">
                 <TextView
                     android:layout_width="match_parent"
                     android:textAppearance="@style/style_questao"
                     android:paddingBottom="5dp"
                     android:gravity="center"
-                    android:text="Médio inteiro congelado"/>
+                    android:text="Graúdo\nDescascado Cozido\nE salgado (salgadinho)"/>
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
@@ -859,17 +911,23 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg13_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nVerão"
+                    android:inputType="numberDecimal" />
                 <EditText
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg13_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nInverno"
+                    android:inputType="numberDecimal" />
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg13_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="2"
+                    android:hint="Observações" />
 
             </TableRow>
 
@@ -880,13 +938,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/border">
+                android:id="@+id/tbrow_14">
                 <TextView
                     android:layout_width="match_parent"
                     android:textAppearance="@style/style_questao"
                     android:paddingBottom="5dp"
                     android:gravity="center"
-                    android:text="Pequeno descascado fresco"/>
+                    android:text="Graúdo\nDescascado congelado"/>
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
@@ -917,17 +975,23 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg14_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nVerão"
+                    android:inputType="numberDecimal" />
                 <EditText
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg14_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nInverno"
+                    android:inputType="numberDecimal" />
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg14_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="2"
+                    android:hint="Observações" />
 
             </TableRow>
 
@@ -940,13 +1004,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/border">
+                android:id="@+id/tbrow_15">
                 <TextView
                     android:layout_width="match_parent"
                     android:textAppearance="@style/style_questao"
                     android:paddingBottom="5dp"
                     android:gravity="center"
-                    android:text="Pequeno descascado salgado"/>
+                    android:text="Pequeno\nInteiro Fresco"/>
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
@@ -977,36 +1041,37 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg15_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nVerão"
+                    android:inputType="numberDecimal" />
                 <EditText
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg15_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nInverno"
+                    android:inputType="numberDecimal" />
                 <EditText
-                    android:layout_width="100dp"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg15_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="2"
+                    android:hint="Observações" />
 
             </TableRow>
-
-
-
-
-
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/border">
+                android:id="@+id/tbrow_16">
                 <TextView
                     android:layout_width="match_parent"
                     android:textAppearance="@style/style_questao"
                     android:paddingBottom="5dp"
                     android:gravity="center"
-                    android:text="Outros:"/>
+                    android:text="Pequeno\ninteiro resfriado (no gelo)"/>
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
@@ -1037,17 +1102,390 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg16_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nVerão"
+                    android:inputType="numberDecimal" />
                 <EditText
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg16_et_resp4"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nInverno"
+                    android:inputType="numberDecimal" />
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg16_et_resp5"
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="2"
+                    android:hint="Observações" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_17">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:text="Pequeno\ninteiro cozido\ne salgado (bafo/frito)"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta"
+                            android:id="@+id/perg17_rb_resp1"
+                            android:paddingRight="15dp"/>
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta"
+                            android:id="@+id/perg17_rb_resp2"
+                            android:paddingRight="15dp"/>
+                    </RadioGroup>
+                </LinearLayout>
+
                 <EditText
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/perg16_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:id="@+id/perg17_et_resp3"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nVerão"
+                    android:inputType="numberDecimal" />
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg17_et_resp4"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nInverno"
+                    android:inputType="numberDecimal" />
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg17_et_resp5"
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="2"
+                    android:hint="Observações" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_18">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:text="Pequeno\ninteiro congelado"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta"
+                            android:id="@+id/perg18_rb_resp1"
+                            android:paddingRight="15dp"/>
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta"
+                            android:id="@+id/perg18_rb_resp2"
+                            android:paddingRight="15dp"/>
+                    </RadioGroup>
+                </LinearLayout>
+
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg18_et_resp3"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nVerão"
+                    android:inputType="numberDecimal" />
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg18_et_resp4"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nInverno"
+                    android:inputType="numberDecimal" />
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg18_et_resp5"
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="2"
+                    android:hint="Observações" />
+
+            </TableRow>
+
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_19">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:text="Pequeno\nDescascado fresco"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta"
+                            android:id="@+id/perg19_rb_resp1"
+                            android:paddingRight="15dp"/>
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta"
+                            android:id="@+id/perg19_rb_resp2"
+                            android:paddingRight="15dp"/>
+                    </RadioGroup>
+                </LinearLayout>
+
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg19_et_resp3"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nVerão"
+                    android:inputType="numberDecimal" />
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg19_et_resp4"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nInverno"
+                    android:inputType="numberDecimal" />
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg19_et_resp5"
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="2"
+                    android:hint="Observações" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_20">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:text="Pequeno\nDescascado Cozido\nE salgado (salgadinho)"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta"
+                            android:id="@+id/perg20_rb_resp1"
+                            android:paddingRight="15dp"/>
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta"
+                            android:id="@+id/perg20_rb_resp2"
+                            android:paddingRight="15dp"/>
+                    </RadioGroup>
+                </LinearLayout>
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg20_et_resp3"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nVerão"
+                    android:inputType="numberDecimal" />
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg20_et_resp4"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nInverno"
+                    android:inputType="numberDecimal" />
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg20_et_resp5"
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="2"
+                    android:hint="Observações" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_21">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:text="Pequeno\nDescascado congelado"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta"
+                            android:id="@+id/perg21_rb_resp1"
+                            android:paddingRight="15dp"/>
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta"
+                            android:id="@+id/perg21_rb_resp2"
+                            android:paddingRight="15dp"/>
+                    </RadioGroup>
+                </LinearLayout>
+
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg21_et_resp3"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nVerão"
+                    android:inputType="numberDecimal" />
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg21_et_resp4"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nInverno"
+                    android:inputType="numberDecimal" />
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg21_et_resp5"
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="2"
+                    android:hint="Observações" />
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tbrow_22">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:text="Outros:"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Por dia"
+                            android:textAppearance="@style/style_resposta"
+                            android:id="@+id/perg22_rb_resp1"
+                            android:paddingRight="15dp"/>
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Por Semana"
+                            android:textAppearance="@style/style_resposta"
+                            android:id="@+id/perg22_rb_resp2"
+                            android:paddingRight="15dp"/>
+                    </RadioGroup>
+                </LinearLayout>
+
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg22_et_resp3"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nVerão"
+                    android:inputType="numberDecimal" />
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg22_et_resp4"
+                    android:textAppearance="@style/style_resposta"
+                    android:hint="Qtde Média\nInverno"
+                    android:inputType="numberDecimal" />
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg22_et_resp5"
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="2"
+                    android:hint="Observações" />
 
             </TableRow>
         </TableLayout></HorizontalScrollView>

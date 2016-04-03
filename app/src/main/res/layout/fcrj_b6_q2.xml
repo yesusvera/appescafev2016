@@ -56,7 +56,8 @@
                     android:id="@+id/perg1_et_resp1"
                     android:layout_width="741dp"
                     android:layout_height="wrap_content"
-                    android:textAppearance="@style/style_resposta" />
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="4" />
 
             </LinearLayout>
 

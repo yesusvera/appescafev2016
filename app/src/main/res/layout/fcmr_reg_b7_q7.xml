@@ -141,12 +141,14 @@
                 android:textAppearance="@style/style_resposta"
                 android:id="@+id/perg1_cb_resp11"
                 android:paddingRight="15dp"
-                android:checked="false" />
+                android:checked="false"
+                android:tag="perg1_et_resp12->this" />
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/perg1_et_resp12"
-                android:textAppearance="@style/style_resposta"/>
+                android:textAppearance="@style/style_resposta"
+                android:enabled="false" />
 
 
 
@@ -247,12 +249,14 @@
                 android:textAppearance="@style/style_resposta"
                 android:id="@+id/perg2_cb_resp11"
                 android:paddingRight="15dp"
-                android:checked="false" />
+                android:checked="false"
+                android:tag="perg2_et_resp12->this" />
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/perg2_et_resp12"
-                android:textAppearance="@style/style_resposta"/>
+                android:textAppearance="@style/style_resposta"
+                android:enabled="false" />
 
         </LinearLayout>
 

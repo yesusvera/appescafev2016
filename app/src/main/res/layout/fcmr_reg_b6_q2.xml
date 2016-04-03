@@ -54,7 +54,7 @@
                     android:text="Local 1"/>
 
                 <EditText
-                    android:layout_width="240dp"
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg1_et_resp1"
                     android:textAppearance="@style/style_resposta"/>
@@ -67,7 +67,7 @@
                     android:text="Quanto tempo?"/>
 
                 <EditText
-                    android:layout_width="240dp"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg1_et_resp2"
                     android:textAppearance="@style/style_resposta"/>
@@ -87,7 +87,7 @@
                     android:text="Local 2"/>
 
                 <EditText
-                    android:layout_width="240dp"
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg2_et_resp1"
                     android:textAppearance="@style/style_resposta"/>
@@ -100,7 +100,7 @@
                     android:text="Quanto tempo?"/>
 
                 <EditText
-                    android:layout_width="240dp"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg2_et_resp2"
                     android:textAppearance="@style/style_resposta"/>
@@ -121,7 +121,7 @@
                     android:text="Local 3"/>
 
                 <EditText
-                    android:layout_width="240dp"
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg3_et_resp1"
                     android:textAppearance="@style/style_resposta"/>
@@ -134,7 +134,7 @@
                     android:text="Quanto tempo?"/>
 
                 <EditText
-                    android:layout_width="240dp"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg3_et_resp2"
                     android:textAppearance="@style/style_resposta"/>
@@ -155,7 +155,7 @@
                     android:text="Local 4"/>
 
                 <EditText
-                    android:layout_width="240dp"
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg4_et_resp1"
                     android:textAppearance="@style/style_resposta"/>
@@ -168,7 +168,7 @@
                     android:text="Quanto tempo?"/>
 
                 <EditText
-                    android:layout_width="240dp"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg4_et_resp2"
                     android:textAppearance="@style/style_resposta"/>

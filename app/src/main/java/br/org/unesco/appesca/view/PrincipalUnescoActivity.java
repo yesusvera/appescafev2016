@@ -292,62 +292,65 @@ public class PrincipalUnescoActivity extends AppCompatActivity
             return;
         }
 
-        String strURL = ConstantesREST.getURLService(ConstantesREST.FORMULARIO_LISTA) +
-                "?login=" + Identity.getUsuarioLogado().getLogin() + "&senha=" + Identity.getUsuarioLogado().getSenha();
+        if(Identity.getUsuarioLogado()!=null) {
 
-        AsyncHttpClient client = new AsyncHttpClient();
-        client.get(strURL, new AsyncHttpResponseHandler() {
-            @Override
-            public void onStart() {
-            }
+            String strURL = ConstantesREST.getURLService(ConstantesREST.FORMULARIO_LISTA) +
+                    "?login=" + Identity.getUsuarioLogado().getLogin() + "&senha=" + Identity.getUsuarioLogado().getSenha();
 
-            @Override
-            public void onSuccess(int statusCode, Header[] headers, byte[] response) {
-                String xmlRetorno = new String(response).toString();
-                XStream xStream = new XStream(new DomDriver());
+            AsyncHttpClient client = new AsyncHttpClient();
+            client.get(strURL, new AsyncHttpResponseHandler() {
+                @Override
+                public void onStart() {
+                }
 
-                RespFormularioREST respFormularioREST = (RespFormularioREST) xStream.fromXML(xmlRetorno);
-                List<Formulario> listaFormularios = respFormularioREST.getListaFormularios();
+                @Override
+                public void onSuccess(int statusCode, Header[] headers, byte[] response) {
+                    String xmlRetorno = new String(response).toString();
+                    XStream xStream = new XStream(new DomDriver());
 
-                FormularioDAO formularioDAO = new FormularioDAO(PrincipalUnescoActivity.this);
-                for(Formulario form: listaFormularios){
-                    if(form.getIdSincronizacao()!=null) {
-                        Formulario formBD = formularioDAO.getFormularioPorIdSincronizacao(form.getIdSincronizacao());
-                        if (formBD != null) {
-                            form.setId(formBD.getId());
-                            form.setIdUsuario(formBD.getIdUsuario());
+                    RespFormularioREST respFormularioREST = (RespFormularioREST) xStream.fromXML(xmlRetorno);
+                    List<Formulario> listaFormularios = respFormularioREST.getListaFormularios();
 
-                            formularioDAO.save(form);
+                    FormularioDAO formularioDAO = new FormularioDAO(PrincipalUnescoActivity.this);
+                    for (Formulario form : listaFormularios) {
+                        if (form.getIdSincronizacao() != null) {
+                            Formulario formBD = formularioDAO.getFormularioPorIdSincronizacao(form.getIdSincronizacao());
+                            if (formBD != null) {
+                                form.setId(formBD.getId());
+                                form.setIdUsuario(formBD.getIdUsuario());
+
+                                formularioDAO.save(form);
+                            }
                         }
                     }
+                    carregaLista(value);
                 }
-                carregaLista(value);
-            }
 
-            @Override
-            public void onFinish() {
-                super.onFinish();
-            }
+                @Override
+                public void onFinish() {
+                    super.onFinish();
+                }
 
-            @Override
-            public void onCancel() {
-                super.onCancel();
-                carregaLista(value);
-            }
+                @Override
+                public void onCancel() {
+                    super.onCancel();
+                    carregaLista(value);
+                }
 
 
-            @Override
-            public void onFailure(int statusCode, Header[] headers, byte[] errorResponse, Throwable e) {
-                carregaLista(value);
-            }
+                @Override
+                public void onFailure(int statusCode, Header[] headers, byte[] errorResponse, Throwable e) {
+                    carregaLista(value);
+                }
 
-            @Override
-            public void onRetry(int retryNo) {
-            }
-        });
+                @Override
+                public void onRetry(int retryNo) {
+                }
+            });
 
-
-
+        }else{
+            carregaLista(value);
+        }
     }
 
     private void carregaLista(int value) {
