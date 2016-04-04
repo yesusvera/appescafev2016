@@ -42,7 +42,8 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
                 android:text="Camarão Piticaia"
-                android:textAppearance="@style/style_questao" />
+                android:textAppearance="@style/style_questao"
+                android:textSize="16dp" />
 
         </LinearLayout>
 
@@ -286,7 +287,7 @@
                     android:layout_height="wrap_content"
                     android:checked="false"
                     android:paddingRight="15dp"
-                    android:text="Puca"
+                    android:text="Puça"
                     android:textAppearance="@style/style_resposta"
                     android:tag="perg3_et_1ˆ5->this"
                     android:enabled="true" />
@@ -788,7 +789,7 @@
                     android:layout_height="wrap_content"
                     android:checked="false"
                     android:paddingRight="15dp"
-                    android:text="Puca"
+                    android:text="Puça"
                     android:textAppearance="@style/style_resposta"
                     android:tag="perg11_et_1ˆ5->this"
                     android:enabled="true" />
@@ -1400,7 +1401,7 @@
                     android:layout_height="wrap_content"
                     android:checked="false"
                     android:paddingRight="15dp"
-                    android:text="Puca"
+                    android:text="Puça"
                     android:textAppearance="@style/style_resposta"
                     android:tag="perg19_et_1ˆ5->this"
                     android:enabled="true" />
@@ -1902,7 +1903,7 @@
                     android:layout_height="wrap_content"
                     android:checked="false"
                     android:paddingRight="15dp"
-                    android:text="Puca"
+                    android:text="Puça"
                     android:textAppearance="@style/style_resposta"
                     android:tag="perg27_et_1ˆ5->this"
                     android:enabled="true" />

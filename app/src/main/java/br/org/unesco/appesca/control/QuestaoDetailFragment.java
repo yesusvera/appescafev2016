@@ -2,10 +2,8 @@ package br.org.unesco.appesca.control;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,7 +21,6 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.org.unesco.appesca.R;
 import br.org.unesco.appesca.bo.FormularioBO;
 import br.org.unesco.appesca.dao.FormularioDAO;
 import br.org.unesco.appesca.dao.QuestaoDAO;
@@ -389,8 +386,13 @@ public class QuestaoDetailFragment extends Fragment {
                 case 3: //PITICAIA E BRANCO
                     switch (ordemQuestao)
                     {
-                        case 50: configuraTabelaB6Q4_PITICAIA(formulario); break;
+                        case 50: configuraTabelaB6Q4_PITICAIA(formulario);
+                                carregaRespostasB6Q4_PITICAIA(formulario);
+                                    break;
+                        case 51: configuraTabelaB6Q4_PITICAIA(formulario); //esta possui os mesmos componentes visuais.
+                                 carregaRespostasB6Q4_PITICAIA(formulario);
 
+                            break;
                         default:
                     }
                     break;
@@ -402,6 +404,29 @@ public class QuestaoDetailFragment extends Fragment {
         return getActivity().findViewById(getResources().getIdentifier(id, "id", getActivity().getPackageName()));
     }
 
+    public void carregaRespostasB6Q4_PITICAIA(Formulario formulario){
+        Questao q50 = questaoDAO.findQuestaoByOrdemIdFormulario(50, formulario.getId());
+
+        Resposta veraoResp = formularioBO.getResposta(q50, 1, 1);
+        Resposta invernoResp = formularioBO.getResposta(q50, 1, 2);
+        Resposta baixaMortaResp = formularioBO.getResposta(q50, 2, 1);
+        Resposta grandeAltaResp = formularioBO.getResposta(q50, 2, 2);
+
+        CheckBox veraoCheckBox = (CheckBox)findViewByStringId("perg1_cb_resp1");
+        CheckBox invernoCheckBox = (CheckBox)findViewByStringId("perg1_cb_resp2");
+        CheckBox baixaMorta = (CheckBox)findViewByStringId("perg2_cb_resp1");
+        CheckBox grandeAlta = (CheckBox)findViewByStringId("perg2_cb_resp2");
+
+        veraoCheckBox.setChecked(veraoResp!=null);
+        invernoCheckBox.setChecked(invernoResp!=null);
+        baixaMorta.setChecked(baixaMortaResp!=null);
+        grandeAlta.setChecked(grandeAltaResp!=null);
+
+        veraoCheckBox.callOnClick();
+        invernoCheckBox.callOnClick();
+        baixaMorta.callOnClick();
+        grandeAlta.callOnClick();
+    }
 
     public void configuraTabelaB6Q4_PITICAIA(Formulario formulario){
         final CheckBox veraoCheckBox = (CheckBox)findViewByStringId("perg1_cb_resp1");

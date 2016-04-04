@@ -61,8 +61,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingRight="15dp"
-                    android:text="Não (pule para C)"
-                    android:textAppearance="@style/style_resposta" />
+                    android:text="Não"
+                    android:textAppearance="@style/style_resposta"
+                    android:checked="false"
+                    android:tag="perg4_cb_1ˆ4->true,perg2_et_resp1->false,perg3_et_resp1->false" />
 
                 <RadioButton
                     android:id="@+id/perg1_rb_resp2"
@@ -70,7 +72,8 @@
                     android:layout_height="wrap_content"
                     android:paddingRight="15dp"
                     android:text="Sim. Responda:"
-                    android:textAppearance="@style/style_resposta" />
+                    android:textAppearance="@style/style_resposta"
+                    android:tag="perg4_cb_1ˆ4->false,perg2_et_resp1->true,perg3_et_resp1->true" />
             </RadioGroup>
 
         </LinearLayout>
@@ -91,7 +94,8 @@
             <EditText
                 android:id="@+id/perg2_et_resp1"
                 android:layout_width="241dp"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:enabled="false" />
 
         </LinearLayout>
 
@@ -112,7 +116,8 @@
             <EditText
                 android:id="@+id/perg3_et_resp1"
                 android:layout_width="241dp"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:enabled="false" />
 
         </LinearLayout>
 
@@ -136,7 +141,8 @@
                 android:paddingRight="15dp"
                 android:paddingTop="10dp"
                 android:text="Uso para consumo da família"
-                android:textAppearance="@style/style_resposta" />
+                android:textAppearance="@style/style_resposta"
+                android:enabled="false" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -149,12 +155,15 @@
                     android:layout_height="wrap_content"
                     android:paddingRight="15dp"
                     android:text="Vendido. Por qual preço (R$/kg)? "
-                    android:textAppearance="@style/style_resposta" />
+                    android:textAppearance="@style/style_resposta"
+                    android:tag="perg4_et_resp3->this"
+                    android:enabled="false" />
 
                 <EditText
                     android:id="@+id/perg4_et_resp3"
                     android:layout_width="241dp"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
             </LinearLayout>
 
 
@@ -169,12 +178,15 @@
                     android:layout_height="wrap_content"
                     android:paddingRight="15dp"
                     android:text="Outros:"
-                    android:textAppearance="@style/style_resposta" />
+                    android:textAppearance="@style/style_resposta"
+                    android:tag="perg4_et_resp5->this"
+                    android:enabled="false" />
 
                 <EditText
                     android:id="@+id/perg4_et_resp5"
                     android:layout_width="241dp"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
             </LinearLayout>
 
         </LinearLayout>
