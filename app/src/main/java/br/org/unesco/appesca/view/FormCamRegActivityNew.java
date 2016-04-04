@@ -513,8 +513,8 @@ public class FormCamRegActivityNew extends AppCompatActivity
         for(int seqPergunta=1; seqPergunta<=59; seqPergunta++){
             try {
 
-                String currentPergunta = ConstantesIdsFormularios.PERGUNTA.concat(String.valueOf(seqPergunta));
-//            TextView perguntaTextView = (TextView) findViewById(getResources().getIdentifier(currentPergunta ,"id", getPackageName())); //perg1
+             String currentPergunta = ConstantesIdsFormularios.PERGUNTA.concat(String.valueOf(seqPergunta));
+//           TextView perguntaTextView = (TextView) findViewById(getResources().getIdentifier(currentPergunta ,"id", getPackageName())); //perg1
 //
 //            if(perguntaTextView != null) {
                 List<Resposta> respostas = new ArrayList<Resposta>();
@@ -661,13 +661,13 @@ public class FormCamRegActivityNew extends AppCompatActivity
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
 
-                        boolean enviarSomenteCompleto = true;
+                        boolean enviarSomenteCompleto = false;
 
 
                         List<Questao> listaQuestoes = questaoDAO.getQuestoesRespostasByFormulario(formulario.getId());
 
                         //VALIDACOES QUE IMPEDEM O ENVIO DO FORMULARIO
-                        if ((listaQuestoes == null || listaQuestoes.size() == 0) && enviarSomenteCompleto) {
+                        if ((listaQuestoes == null || listaQuestoes.size() == 0)) {
 
                             Toast.makeText(getApplicationContext(), "Não foi possível enviar. Nenhuma questão foi respondida.", Toast.LENGTH_LONG).show();
 

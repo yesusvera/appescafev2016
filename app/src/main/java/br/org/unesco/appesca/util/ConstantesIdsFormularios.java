@@ -121,7 +121,7 @@ public class ConstantesIdsFormularios {
             R.layout.fcmr_reg_b5_q1, R.layout.fcmr_reg_b5_q2, R.layout.fcmr_reg_b5_q3,
             R.layout.fcmr_reg_b5_q4, R.layout.fcmr_reg_b5_q5,
 
-            R.layout.fcmr_pb_b6_q1, R.layout.fcmr_pb_b6_q2, R.layout.fcmr_pb_b6_q3,
+            R.layout.fcmr_reg_b6_q1, R.layout.fcmr_pb_b6_q2, R.layout.fcmr_pb_b6_q3,
             R.layout.fcmr_pb_b6_q4, R.layout.fcmr_pb_b6_q5, R.layout.fcmr_pb_b6_q6,
 
             R.layout.fcmr_pb_b7_q1, R.layout.fcmr_pb_b7_q2,

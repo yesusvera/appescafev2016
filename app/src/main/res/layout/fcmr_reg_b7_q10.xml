@@ -51,7 +51,8 @@
                 android:paddingTop="20dp"
                 android:textAppearance="@style/style_questao"
                 android:text="1º Comprador: "
-                android:id="@+id/comprador1Txt" />
+                android:id="@+id/comprador1Txt"
+                android:textColor="#ff0000" />
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -116,7 +117,8 @@
                 android:paddingBottom="5dp"
                 android:textAppearance="@style/style_questao"
                 android:text="2º Comprador: "
-                android:id="@+id/comprador2Txt" />
+                android:id="@+id/comprador2Txt"
+                android:textColor="#ff0000" />
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -181,7 +183,8 @@
                 android:paddingBottom="5dp"
                 android:textAppearance="@style/style_questao"
                 android:text="2º Comprador: "
-                android:id="@+id/comprador3Txt" />
+                android:id="@+id/comprador3Txt"
+                android:textColor="#ff0000" />
 
             <RadioGroup
                 android:layout_width="match_parent"

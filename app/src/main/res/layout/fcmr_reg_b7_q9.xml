@@ -108,7 +108,8 @@
                     android:layout_span="2"
                     android:text="1º"
                     android:textSize="11dp"
-                    android:id="@+id/comprador1Txt" />
+                    android:id="@+id/comprador1Txt"
+                    android:textColor="#ff0000" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -119,7 +120,8 @@
                     android:layout_span="2"
                     android:text="2º"
                     android:textSize="11dp"
-                    android:id="@+id/comprador2Txt" />
+                    android:id="@+id/comprador2Txt"
+                    android:textColor="#ff0000" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -130,7 +132,8 @@
                     android:layout_gravity="center_horizontal"
                     android:text="3º"
                     android:textSize="11dp"
-                    android:id="@+id/comprador3Txt" />
+                    android:id="@+id/comprador3Txt"
+                    android:textColor="#ff0000" />
             </TableRow>
 
             <TableRow

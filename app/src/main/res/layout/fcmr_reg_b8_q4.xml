@@ -176,7 +176,9 @@
                                     android:paddingLeft="20dp"
                                     android:layout_gravity="center_vertical"
                                     android:id="@+id/perg1_et_resp9"
-                                    android:textAppearance="@style/style_resposta"/>
+                                    android:textAppearance="@style/style_resposta"
+                                    android:hint="Valor Total\nNo período(R$)"
+                                    android:inputType="numberDecimal" />
 
                                 <RadioGroup
                                     android:layout_width="match_parent"
@@ -296,7 +298,9 @@
                                     android:paddingLeft="20dp"
                                     android:layout_gravity="center_vertical"
                                     android:id="@+id/perg2_et_resp9"
-                                    android:textAppearance="@style/style_resposta"/>
+                                    android:textAppearance="@style/style_resposta"
+                                    android:hint="Valor Total\nNo período(R$)"
+                                    android:inputType="numberDecimal" />
 
                                 <RadioGroup
                                     android:layout_width="match_parent"
@@ -417,7 +421,9 @@
                                     android:paddingLeft="20dp"
                                     android:layout_gravity="center_vertical"
                                     android:id="@+id/perg3_et_resp9"
-                                    android:textAppearance="@style/style_resposta"/>
+                                    android:textAppearance="@style/style_resposta"
+                                    android:hint="Valor Total\nNo período(R$)"
+                                    android:inputType="numberDecimal" />
 
                                 <RadioGroup
                                     android:layout_width="match_parent"
@@ -536,7 +542,9 @@
                                     android:paddingLeft="20dp"
                                     android:layout_gravity="center_vertical"
                                     android:id="@+id/perg4_et_resp9"
-                                    android:textAppearance="@style/style_resposta"/>
+                                    android:textAppearance="@style/style_resposta"
+                                    android:hint="Valor Total\nNo período(R$)"
+                                    android:inputType="numberDecimal" />
 
                                 <RadioGroup
                                     android:layout_width="match_parent"
@@ -655,7 +663,9 @@
                                     android:paddingLeft="20dp"
                                     android:layout_gravity="center_vertical"
                                     android:id="@+id/perg5_et_resp9"
-                                    android:textAppearance="@style/style_resposta"/>
+                                    android:textAppearance="@style/style_resposta"
+                                    android:hint="Valor Total\nNo período(R$)"
+                                    android:inputType="numberDecimal" />
 
                                 <RadioGroup
                                     android:layout_width="match_parent"
@@ -773,7 +783,9 @@
                                     android:paddingLeft="20dp"
                                     android:layout_gravity="center_vertical"
                                     android:id="@+id/perg6_et_resp9"
-                                    android:textAppearance="@style/style_resposta"/>
+                                    android:textAppearance="@style/style_resposta"
+                                    android:hint="Valor Total\nNo período(R$)"
+                                    android:inputType="numberDecimal" />
 
                                 <RadioGroup
                                     android:layout_width="match_parent"
@@ -892,7 +904,9 @@
                                     android:paddingLeft="20dp"
                                     android:layout_gravity="center_vertical"
                                     android:id="@+id/perg7_et_resp9"
-                                    android:textAppearance="@style/style_resposta"/>
+                                    android:textAppearance="@style/style_resposta"
+                                    android:hint="Valor Total\nNo período(R$)"
+                                    android:inputType="numberDecimal" />
 
                                 <RadioGroup
                                     android:layout_width="match_parent"
@@ -1012,7 +1026,9 @@
                                     android:paddingLeft="20dp"
                                     android:layout_gravity="center_vertical"
                                     android:id="@+id/perg8_et_resp9"
-                                    android:textAppearance="@style/style_resposta"/>
+                                    android:textAppearance="@style/style_resposta"
+                                    android:hint="Valor Total\nNo período(R$)"
+                                    android:inputType="numberDecimal" />
 
                                 <RadioGroup
                                     android:layout_width="match_parent"
@@ -1132,7 +1148,9 @@
                                     android:paddingLeft="20dp"
                                     android:layout_gravity="center_vertical"
                                     android:id="@+id/perg9_et_resp9"
-                                    android:textAppearance="@style/style_resposta"/>
+                                    android:textAppearance="@style/style_resposta"
+                                    android:hint="Valor Total\nNo período(R$)"
+                                    android:inputType="numberDecimal" />
 
                                 <RadioGroup
                                     android:layout_width="match_parent"
@@ -1252,7 +1270,9 @@
                                     android:paddingLeft="20dp"
                                     android:layout_gravity="center_vertical"
                                     android:id="@+id/perg10_et_resp9"
-                                    android:textAppearance="@style/style_resposta"/>
+                                    android:textAppearance="@style/style_resposta"
+                                    android:hint="Valor Total\nNo período(R$)"
+                                    android:inputType="numberDecimal" />
 
 
                             </TableRow>

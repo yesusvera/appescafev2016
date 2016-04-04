@@ -55,7 +55,8 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg1_rb_resp1"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg2_rg->false,perg2_et_resp3->false,perg2_et_resp5->false,perg2_et_resp7->false" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
@@ -64,7 +65,8 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg1_rb_resp2"
                     android:paddingRight="15dp"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:tag="perg2_rg->true" />
 
             </RadioGroup>
 
@@ -72,6 +74,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="20dp"
+                android:id="@+id/perg2_rg"
                 android:orientation="vertical">
                 <RadioButton
                     android:layout_width="wrap_content"
@@ -79,7 +82,9 @@
                     android:text="Consumo próprio"
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg2_rb_resp1"
-                    android:paddingRight="15dp" />
+                    android:paddingRight="15dp"
+                    android:enabled="false"
+                    android:tag="perg2_et_resp3->false,perg2_et_resp5->false,perg2_et_resp7->false" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
@@ -87,13 +92,16 @@
                     android:text="Comercializada de outra forma. Qual?"
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg2_rb_resp2"
-                    android:paddingRight="15dp"/>
+                    android:paddingRight="15dp"
+                    android:enabled="false"
+                    android:tag="perg2_et_resp3->true" />
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg2_et_resp3"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:enabled="false" />
 
 
                 <RadioButton
@@ -102,13 +110,16 @@
                     android:text="Comercializada de outra forma. Qual?"
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg2_rb_resp4"
-                    android:paddingRight="15dp" />
+                    android:paddingRight="15dp"
+                    android:enabled="false"
+                    android:tag="perg2_et_resp5->true" />
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg2_et_resp5"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:enabled="false" />
 
 
                 <RadioButton
@@ -117,14 +128,17 @@
                     android:text="Outros"
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg2_rb_resp6"
-                    android:paddingRight="15dp" />
+                    android:paddingRight="15dp"
+                    android:enabled="false"
+                    android:tag="perg2_et_resp7->true" />
 
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg2_et_resp7"
-                    android:textAppearance="@style/style_resposta"/>
+                    android:textAppearance="@style/style_resposta"
+                    android:enabled="false" />
 
 
 
@@ -134,7 +148,9 @@
                     android:text="Não Respondeu"
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg2_rb_resp7"
-                    android:paddingRight="15dp" />
+                    android:paddingRight="15dp"
+                    android:enabled="false"
+                    android:tag="perg2_et_resp3->false,perg2_et_resp5->false,perg2_et_resp7->false" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
@@ -142,7 +158,9 @@
                     android:text="Não sabe"
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg2_rb_resp8"
-                    android:paddingRight="15dp" />
+                    android:paddingRight="15dp"
+                    android:enabled="false"
+                    android:tag="perg2_et_resp3->false,perg2_et_resp5->false,perg2_et_resp7->false" />
 
             </RadioGroup>
 

@@ -351,7 +351,7 @@ public class QuestaoDetailFragment extends Fragment {
 
 
 
-        //Tratamento e validações para questões específicas
+        //Tratamento e validações para questões genérica
         switch (ordemQuestao)
         {
             case 0: configuraIdentificacaoEntrevisado(formulario.getIdTipoFormulario());break;
@@ -387,7 +387,12 @@ public class QuestaoDetailFragment extends Fragment {
                     }
                     break;
                 case 3: //PITICAIA E BRANCO
+                    switch (ordemQuestao)
+                    {
+                        case 50: configuraTabelaB6Q4_PITICAIA(formulario); break;
 
+                        default:
+                    }
                     break;
             }
         }
@@ -397,6 +402,108 @@ public class QuestaoDetailFragment extends Fragment {
         return getActivity().findViewById(getResources().getIdentifier(id, "id", getActivity().getPackageName()));
     }
 
+
+    public void configuraTabelaB6Q4_PITICAIA(Formulario formulario){
+        final CheckBox veraoCheckBox = (CheckBox)findViewByStringId("perg1_cb_resp1");
+        final CheckBox invernoCheckBox = (CheckBox)findViewByStringId("perg1_cb_resp2");
+        CheckBox baixaMorta = (CheckBox)findViewByStringId("perg2_cb_resp1");
+        CheckBox grandeAlta = (CheckBox)findViewByStringId("perg2_cb_resp2");
+
+        if(veraoCheckBox!=null){
+            veraoCheckBox.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    TableLayout tbVerao = (TableLayout)findViewByStringId("tb_verao");
+                    if(tbVerao!=null) {
+                        if (!((CheckBox) v).isChecked()) {
+                            tbVerao.setVisibility(View.GONE);
+                        } else {
+                            tbVerao.setVisibility(View.VISIBLE);
+                        }
+
+                    }
+                }
+            });
+        }
+        if(invernoCheckBox!=null){
+            invernoCheckBox.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    TableLayout tbInverno = (TableLayout)findViewByStringId("tb_inverno");
+                    if(tbInverno!=null) {
+                        if (!((CheckBox) v).isChecked()) {
+                            tbInverno.setVisibility(View.GONE);
+                        } else {
+                            tbInverno.setVisibility(View.VISIBLE);
+                        }
+                    }
+                }
+            });
+        }
+
+        if(baixaMorta!=null){
+            baixaMorta.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    boolean enabled = ((CheckBox) v).isChecked();
+
+                    for(int i=3;i<=10;i++){
+                        CheckBox checkArte = (CheckBox)findViewByStringId("perg"+i+"_cb_resp1");
+                        if(checkArte!=null){
+                            checkArte.setEnabled(enabled);
+                            if(!enabled){
+                                checkArte.setChecked(false);
+                            }
+                            checkArte.callOnClick();
+                        }
+                    }
+                    for(int i=19;i<=26;i++){
+                        CheckBox checkArte = (CheckBox)findViewByStringId("perg"+i+"_cb_resp1");
+                        if(checkArte!=null){
+                            checkArte.setEnabled(enabled);
+                            if(!enabled){
+                                checkArte.setChecked(false);
+                            }
+                            checkArte.callOnClick();
+                        }
+                    }
+                }
+            });
+        }
+
+
+        if(grandeAlta!=null){
+            grandeAlta.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    boolean enabled = ((CheckBox) v).isChecked();
+
+                    for(int i=11;i<=18;i++){
+                        CheckBox checkArte = (CheckBox)findViewByStringId("perg"+i+"_cb_resp1");
+                        if(checkArte!=null){
+                            checkArte.setEnabled(enabled);
+                            if(!enabled){
+                                checkArte.setChecked(false);
+                            }
+                            checkArte.callOnClick();
+                        }
+                    }
+
+                    for(int i=27;i<=34;i++){
+                        CheckBox checkArte = (CheckBox)findViewByStringId("perg"+i+"_cb_resp1");
+                        if(checkArte!=null){
+                            checkArte.setEnabled(enabled);
+                            if(!enabled){
+                                checkArte.setChecked(false);
+                            }
+                            checkArte.callOnClick();
+                        }
+                    }
+                }
+            });
+        }
+        
+    }
 
     public void configuraTabelaB7Q4_REGIONAL(Formulario formulario) {
         Questao q54 = questaoDAO.findQuestaoByOrdemIdFormulario(54, formulario.getId());

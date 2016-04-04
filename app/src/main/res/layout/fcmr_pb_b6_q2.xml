@@ -56,13 +56,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="46dp"
                     android:text="Vai e volta no mesmo dia (“ir e vir” ou “bate e volta”) –\n Nesta categoria, quantos dias por semana realiza a pesca? "
-                    android:textAppearance="@style/style_resposta" />
+                    android:textAppearance="@style/style_resposta"
+                    android:tag="perg1_et_resp2->this" />
 
                 <EditText
                     android:id="@+id/perg1_et_resp2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textAppearance="@style/style_resposta" />
+                    android:textAppearance="@style/style_resposta"
+                    android:enabled="false" />
 
             </LinearLayout>
 
@@ -76,13 +78,15 @@
                     android:layout_width="352dp"
                     android:layout_height="58dp"
                     android:text="Pesca de decida ou de baixada (pesca que dura mais de um dia fora de casa) \nQuantos dias dura em média a viagem?"
-                    android:textAppearance="@style/style_resposta" />
+                    android:textAppearance="@style/style_resposta"
+                    android:tag="perg1_et_resp4->this,perg1_et_resp5->this,perg1_et_resp6->this" />
 
                 <EditText
                     android:id="@+id/perg1_et_resp4"
                     android:layout_height="match_parent"
                     android:layout_width="214dp"
-                    android:textAppearance="@style/style_resposta" />
+                    android:textAppearance="@style/style_resposta"
+                    android:enabled="false" />
 
             </LinearLayout>
 
@@ -102,7 +106,8 @@
                     android:id="@+id/perg1_et_resp5"
                     android:layout_width="70dp"
                     android:layout_height="wrap_content"
-                    android:textAppearance="@style/style_resposta" />
+                    android:textAppearance="@style/style_resposta"
+                    android:enabled="false" />
 
             </LinearLayout>
 
@@ -122,7 +127,8 @@
                     android:id="@+id/perg1_et_resp6"
                     android:layout_width="70dp"
                     android:layout_height="wrap_content"
-                    android:textAppearance="@style/style_resposta" />
+                    android:textAppearance="@style/style_resposta"
+                    android:enabled="false" />
 
             </LinearLayout>
 
