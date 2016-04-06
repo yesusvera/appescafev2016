@@ -142,10 +142,11 @@
 
                         <EditText
                             android:id="@+id/perg1_et_resp1"
-                            android:layout_width="wrap_content"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:maxLength="6"
-                            android:textAppearance="@style/style_resposta" />
+                            android:textAppearance="@style/style_resposta"
+                            android:inputType="numberDecimal" />
                     </LinearLayout>
 
                     <RadioGroup
@@ -187,10 +188,11 @@
 
                         <EditText
                             android:id="@+id/perg1_et_resp4"
-                            android:layout_width="wrap_content"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:maxLength="6"
-                            android:textAppearance="@style/style_resposta" />
+                            android:textAppearance="@style/style_resposta"
+                            android:inputType="numberDecimal" />
                     </LinearLayout>
 
                     <RadioGroup
@@ -257,10 +259,11 @@
 
                         <EditText
                             android:id="@+id/perg2_et_resp1"
-                            android:layout_width="wrap_content"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:maxLength="6"
-                            android:textAppearance="@style/style_resposta" />
+                            android:textAppearance="@style/style_resposta"
+                            android:inputType="numberDecimal" />
                     </LinearLayout>
 
                     <RadioGroup
@@ -302,10 +305,11 @@
 
                         <EditText
                             android:id="@+id/perg2_et_resp4"
-                            android:layout_width="wrap_content"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:maxLength="6"
-                            android:textAppearance="@style/style_resposta" />
+                            android:textAppearance="@style/style_resposta"
+                            android:inputType="numberDecimal" />
                     </LinearLayout>
 
                     <RadioGroup
@@ -372,10 +376,11 @@
 
                         <EditText
                             android:id="@+id/perg3_et_resp1"
-                            android:layout_width="wrap_content"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:maxLength="6"
-                            android:textAppearance="@style/style_resposta" />
+                            android:textAppearance="@style/style_resposta"
+                            android:inputType="numberDecimal" />
                     </LinearLayout>
 
                     <RadioGroup
@@ -417,10 +422,11 @@
 
                         <EditText
                             android:id="@+id/perg3_et_resp4"
-                            android:layout_width="wrap_content"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:maxLength="6"
-                            android:textAppearance="@style/style_resposta" />
+                            android:textAppearance="@style/style_resposta"
+                            android:inputType="numberDecimal" />
                     </LinearLayout>
 
                     <RadioGroup
@@ -487,10 +493,11 @@
 
                         <EditText
                             android:id="@+id/perg4_et_resp1"
-                            android:layout_width="wrap_content"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:maxLength="6"
-                            android:textAppearance="@style/style_resposta" />
+                            android:textAppearance="@style/style_resposta"
+                            android:inputType="numberDecimal" />
                     </LinearLayout>
 
                     <RadioGroup
@@ -532,10 +539,11 @@
 
                         <EditText
                             android:id="@+id/perg4_et_resp4"
-                            android:layout_width="wrap_content"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:maxLength="6"
-                            android:textAppearance="@style/style_resposta" />
+                            android:textAppearance="@style/style_resposta"
+                            android:inputType="numberDecimal" />
                     </LinearLayout>
 
                     <RadioGroup
@@ -602,10 +610,11 @@
 
                         <EditText
                             android:id="@+id/perg5_et_resp1"
-                            android:layout_width="wrap_content"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:maxLength="6"
-                            android:textAppearance="@style/style_resposta" />
+                            android:textAppearance="@style/style_resposta"
+                            android:inputType="numberDecimal" />
                     </LinearLayout>
 
                     <RadioGroup
@@ -647,10 +656,11 @@
 
                         <EditText
                             android:id="@+id/perg5_et_resp4"
-                            android:layout_width="wrap_content"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:maxLength="6"
-                            android:textAppearance="@style/style_resposta" />
+                            android:textAppearance="@style/style_resposta"
+                            android:inputType="numberDecimal" />
                     </LinearLayout>
 
                     <RadioGroup
@@ -717,10 +727,11 @@
 
                         <EditText
                             android:id="@+id/perg6_et_resp1"
-                            android:layout_width="wrap_content"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:maxLength="6"
-                            android:textAppearance="@style/style_resposta" />
+                            android:textAppearance="@style/style_resposta"
+                            android:inputType="numberDecimal" />
                     </LinearLayout>
 
                     <RadioGroup
@@ -762,10 +773,11 @@
 
                         <EditText
                             android:id="@+id/perg6_et_resp4"
-                            android:layout_width="wrap_content"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:maxLength="6"
-                            android:textAppearance="@style/style_resposta" />
+                            android:textAppearance="@style/style_resposta"
+                            android:inputType="numberDecimal" />
                     </LinearLayout>
 
                     <RadioGroup
@@ -832,10 +844,11 @@
 
                         <EditText
                             android:id="@+id/perg7_et_resp1"
-                            android:layout_width="wrap_content"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:maxLength="6"
-                            android:textAppearance="@style/style_resposta" />
+                            android:textAppearance="@style/style_resposta"
+                            android:inputType="numberDecimal" />
                     </LinearLayout>
 
                     <RadioGroup
@@ -877,10 +890,11 @@
 
                         <EditText
                             android:id="@+id/perg7_et_resp4"
-                            android:layout_width="wrap_content"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:maxLength="6"
-                            android:textAppearance="@style/style_resposta" />
+                            android:textAppearance="@style/style_resposta"
+                            android:inputType="numberDecimal" />
                     </LinearLayout>
 
                     <RadioGroup
@@ -947,10 +961,11 @@
 
                         <EditText
                             android:id="@+id/perg8_et_resp1"
-                            android:layout_width="wrap_content"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:maxLength="6"
-                            android:textAppearance="@style/style_resposta" />
+                            android:textAppearance="@style/style_resposta"
+                            android:inputType="numberDecimal" />
                     </LinearLayout>
 
                     <RadioGroup
@@ -992,10 +1007,11 @@
 
                         <EditText
                             android:id="@+id/perg8_et_resp4"
-                            android:layout_width="wrap_content"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:maxLength="6"
-                            android:textAppearance="@style/style_resposta" />
+                            android:textAppearance="@style/style_resposta"
+                            android:inputType="numberDecimal" />
                     </LinearLayout>
 
                     <RadioGroup
@@ -1062,10 +1078,11 @@
 
                         <EditText
                             android:id="@+id/perg9_et_resp1"
-                            android:layout_width="wrap_content"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:maxLength="6"
-                            android:textAppearance="@style/style_resposta" />
+                            android:textAppearance="@style/style_resposta"
+                            android:inputType="numberDecimal" />
                     </LinearLayout>
 
                     <RadioGroup
@@ -1107,10 +1124,11 @@
 
                         <EditText
                             android:id="@+id/perg9_et_resp4"
-                            android:layout_width="wrap_content"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:maxLength="6"
-                            android:textAppearance="@style/style_resposta" />
+                            android:textAppearance="@style/style_resposta"
+                            android:inputType="numberDecimal" />
                     </LinearLayout>
 
                     <RadioGroup
@@ -1177,10 +1195,11 @@
 
                         <EditText
                             android:id="@+id/perg10_et_resp1"
-                            android:layout_width="wrap_content"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:maxLength="6"
-                            android:textAppearance="@style/style_resposta" />
+                            android:textAppearance="@style/style_resposta"
+                            android:inputType="numberDecimal" />
                     </LinearLayout>
 
                     <RadioGroup
@@ -1222,10 +1241,11 @@
 
                         <EditText
                             android:id="@+id/perg10_et_resp4"
-                            android:layout_width="wrap_content"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:maxLength="6"
-                            android:textAppearance="@style/style_resposta" />
+                            android:textAppearance="@style/style_resposta"
+                            android:inputType="numberDecimal" />
                     </LinearLayout>
 
                     <RadioGroup
@@ -1292,10 +1312,11 @@
 
                         <EditText
                             android:id="@+id/perg11_et_resp1"
-                            android:layout_width="wrap_content"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:maxLength="6"
-                            android:textAppearance="@style/style_resposta" />
+                            android:textAppearance="@style/style_resposta"
+                            android:inputType="numberDecimal" />
                     </LinearLayout>
 
                     <RadioGroup
@@ -1337,10 +1358,11 @@
 
                         <EditText
                             android:id="@+id/perg11_et_resp4"
-                            android:layout_width="wrap_content"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:maxLength="6"
-                            android:textAppearance="@style/style_resposta" />
+                            android:textAppearance="@style/style_resposta"
+                            android:inputType="numberDecimal" />
                     </LinearLayout>
 
                     <RadioGroup
@@ -1407,10 +1429,11 @@
 
                         <EditText
                             android:id="@+id/perg12_et_resp1"
-                            android:layout_width="wrap_content"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:maxLength="6"
-                            android:textAppearance="@style/style_resposta" />
+                            android:textAppearance="@style/style_resposta"
+                            android:inputType="numberDecimal" />
                     </LinearLayout>
 
                     <RadioGroup
@@ -1452,10 +1475,11 @@
 
                         <EditText
                             android:id="@+id/perg12_et_resp4"
-                            android:layout_width="wrap_content"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:maxLength="6"
-                            android:textAppearance="@style/style_resposta" />
+                            android:textAppearance="@style/style_resposta"
+                            android:inputType="numberDecimal" />
                     </LinearLayout>
 
                     <RadioGroup
@@ -1522,10 +1546,11 @@
 
                         <EditText
                             android:id="@+id/perg13_et_resp1"
-                            android:layout_width="wrap_content"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:maxLength="6"
-                            android:textAppearance="@style/style_resposta" />
+                            android:textAppearance="@style/style_resposta"
+                            android:inputType="numberDecimal" />
                     </LinearLayout>
 
                     <RadioGroup
@@ -1567,10 +1592,11 @@
 
                         <EditText
                             android:id="@+id/perg13_et_resp4"
-                            android:layout_width="wrap_content"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:maxLength="6"
-                            android:textAppearance="@style/style_resposta" />
+                            android:textAppearance="@style/style_resposta"
+                            android:inputType="numberDecimal" />
                     </LinearLayout>
 
                     <RadioGroup
@@ -1646,10 +1672,11 @@
 
                         <EditText
                             android:id="@+id/perg14_et_resp1"
-                            android:layout_width="wrap_content"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:maxLength="6"
-                            android:textAppearance="@style/style_resposta" />
+                            android:textAppearance="@style/style_resposta"
+                            android:inputType="numberDecimal" />
                     </LinearLayout>
 
                     <RadioGroup
@@ -1692,10 +1719,11 @@
 
                         <EditText
                             android:id="@+id/perg14_et_resp4"
-                            android:layout_width="wrap_content"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:maxLength="6"
-                            android:textAppearance="@style/style_resposta" />
+                            android:textAppearance="@style/style_resposta"
+                            android:inputType="numberDecimal" />
                     </LinearLayout>
 
                     <RadioGroup
@@ -1771,10 +1799,11 @@
 
                         <EditText
                             android:id="@+id/perg15_et_resp1"
-                            android:layout_width="wrap_content"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:maxLength="6"
-                            android:textAppearance="@style/style_resposta" />
+                            android:textAppearance="@style/style_resposta"
+                            android:inputType="numberDecimal" />
                     </LinearLayout>
 
                     <RadioGroup
@@ -1817,10 +1846,11 @@
 
                         <EditText
                             android:id="@+id/perg15_et_resp4"
-                            android:layout_width="wrap_content"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:maxLength="6"
-                            android:textAppearance="@style/style_resposta" />
+                            android:textAppearance="@style/style_resposta"
+                            android:inputType="numberDecimal" />
                     </LinearLayout>
 
                     <RadioGroup
@@ -1896,10 +1926,11 @@
 
                         <EditText
                             android:id="@+id/perg16_et_resp1"
-                            android:layout_width="wrap_content"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:maxLength="6"
-                            android:textAppearance="@style/style_resposta" />
+                            android:textAppearance="@style/style_resposta"
+                            android:inputType="numberDecimal" />
                     </LinearLayout>
 
                     <RadioGroup
@@ -1942,10 +1973,11 @@
 
                         <EditText
                             android:id="@+id/perg16_et_resp4"
-                            android:layout_width="wrap_content"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:maxLength="6"
-                            android:textAppearance="@style/style_resposta" />
+                            android:textAppearance="@style/style_resposta"
+                            android:inputType="numberDecimal" />
                     </LinearLayout>
 
                     <RadioGroup
@@ -2005,7 +2037,7 @@
 
                         <EditText
                             android:id="@+id/perg17_et_resp1"
-                            android:layout_width="wrap_content"
+                            android:layout_width="140dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:lines="3"
@@ -2029,10 +2061,11 @@
 
                         <EditText
                             android:id="@+id/perg17_et_resp2"
-                            android:layout_width="wrap_content"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:maxLength="6"
-                            android:textAppearance="@style/style_resposta" />
+                            android:textAppearance="@style/style_resposta"
+                            android:inputType="numberDecimal" />
                     </LinearLayout>
 
                     <RadioGroup
@@ -2075,10 +2108,11 @@
 
                         <EditText
                             android:id="@+id/perg17_et_resp5"
-                            android:layout_width="wrap_content"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:maxLength="6"
-                            android:textAppearance="@style/style_resposta" />
+                            android:textAppearance="@style/style_resposta"
+                            android:inputType="numberDecimal" />
                     </LinearLayout>
 
                     <RadioGroup

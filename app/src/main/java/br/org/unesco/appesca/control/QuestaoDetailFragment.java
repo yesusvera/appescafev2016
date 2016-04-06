@@ -298,6 +298,20 @@ public class QuestaoDetailFragment extends Fragment {
                         }
 
 
+                }else if(tagSpl[0].contains("tbrow")){
+                    TableRow tableRow = (TableRow) findViewByStringId(tagSpl[0]);
+                    if(tagSpl[1]!=null && tagSpl[1].equalsIgnoreCase("this")) {
+                        if (tableRow != null && viewComponent instanceof CompoundButton) {
+                            Boolean enabledParam = ((CompoundButton) viewComponent).isChecked();
+                            if (enabledParam != null) {
+                                if (enabledParam) {
+                                    tableRow.setVisibility(View.VISIBLE);
+                                }else{
+                                    tableRow.setVisibility(View.GONE);
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -387,12 +401,15 @@ public class QuestaoDetailFragment extends Fragment {
                     switch (ordemQuestao)
                     {
                         case 50: configuraTabelaB6Q4_PITICAIA(formulario);
-                                carregaRespostasB6Q4_PITICAIA(formulario);
+                                 carregaRespostasB6Q4_PITICAIA(formulario);
                                     break;
                         case 51: configuraTabelaB6Q4_PITICAIA(formulario); //esta possui os mesmos componentes visuais.
                                  carregaRespostasB6Q4_PITICAIA(formulario);
-
-                            break;
+                                     break;
+                        case 53:
+                        case 54:
+                                 configuraTabelaB7Q1_PITICAIA(formulario);
+                                 break;
                         default:
                     }
                     break;
@@ -426,6 +443,85 @@ public class QuestaoDetailFragment extends Fragment {
         invernoCheckBox.callOnClick();
         baixaMorta.callOnClick();
         grandeAlta.callOnClick();
+    }
+
+
+    public void configuraTabelaB7Q1_PITICAIA(Formulario formulario){
+
+
+        for(int i=1; i<=3;i++) {
+
+            ImageView imgV = (ImageView) findViewByStringId("imgListaConsumidores" + i);
+
+            final int indexEditText = i;
+
+
+            if(imgV!=null) {
+                imgV.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        final ArrayList<String> consumidoresTexto = new ArrayList<String>();
+                        final ArrayList<String> consumidoresLabel = new ArrayList<String>();
+
+
+                        for(int i=1;i<=12;i++){
+                            CheckBox cb = (CheckBox)findViewByStringId("perg33_cb_resp" + i);
+                            if(cb!=null && cb.isChecked()){
+                                if(cb.getText()!=null ) {
+                                    consumidoresTexto.add(cb.getText().toString());
+                                    consumidoresLabel.add(cb.getText().toString() + "(Comunidade)");
+                                }
+                            }
+                        }
+
+                        EditText et33resp14 = (EditText)findViewByStringId("perg33_et_resp14");
+                        if(et33resp14!=null && et33resp14.getText().toString()!=null && et33resp14.getText().length()>0){
+                            consumidoresTexto.add(et33resp14.getText().toString());
+                            consumidoresLabel.add(et33resp14.getText().toString() + "(Comunidade)");
+                        }
+
+
+
+                        for(int i=15;i<=24;i++){
+                            CheckBox cb = (CheckBox)findViewByStringId("perg33_cb_resp" + i);
+                            if(cb!=null && cb.isChecked()){
+                                if(cb.getText()!=null) {
+                                    consumidoresTexto.add(cb.getText().toString());
+                                    consumidoresLabel.add(cb.getText().toString() + "(Fora)");
+                                }
+                            }
+                        }
+
+                        EditText et33resp26 = (EditText)findViewByStringId("perg33_et_resp26");
+                        if(et33resp26!=null && et33resp26.getText().toString()!=null && et33resp26.getText().length()>0){
+                            consumidoresTexto.add(et33resp26.getText().toString());
+                            consumidoresLabel.add(et33resp26.getText().toString() + "(Fora)");
+                        }
+
+
+
+                        final String[] itemsBkp = new String[consumidoresLabel.size()];
+                        final String[] items = consumidoresLabel.toArray(itemsBkp);
+
+                        AlertDialog.Builder builder =
+                                new AlertDialog.Builder(getActivity());
+
+                        builder.setTitle("Consumidores (1.8 - Anterior)")
+                                .setItems(items, new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int item) {
+                                        EditText et = (EditText) findViewByStringId("perg34_et_resp" + indexEditText);
+                                        et.setText(consumidoresLabel.get(item));
+                                    }
+                                });
+
+
+                        builder.create().show();
+
+                    }
+                });
+            }
+
+        }
     }
 
     public void configuraTabelaB6Q4_PITICAIA(Formulario formulario){

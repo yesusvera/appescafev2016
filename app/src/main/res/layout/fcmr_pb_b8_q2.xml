@@ -54,7 +54,7 @@
                     android:layout_height="wrap_content"
                     android:paddingRight="15dp"
                     android:text="Com embarcação"
-                    android:tag="perg2_rg->true"
+                    android:tag="perg2_cb_1ˆ9->true"
                     android:textAppearance="@style/style_resposta" />
                 <RadioButton
                     android:id="@+id/perg1_rb_resp2"
@@ -62,8 +62,8 @@
                     android:layout_height="wrap_content"
                     android:checked="false"
                     android:paddingRight="15dp"
-                    android:tag="perg2_rg->false"
-                    android:text="Sem embarcação. (pule para 3)"
+                    android:tag="perg2_cb_1ˆ9->false"
+                    android:text="Sem embarcação."
                     android:textAppearance="@style/style_resposta" />
             </RadioGroup>
         </LinearLayout>
@@ -81,95 +81,92 @@
                 android:text="Qual tipo de embarcação utiliza?  "
                 android:textAppearance="@style/style_questao" />
 
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:id="@+id/perg2_rg"
-                android:paddingLeft="30dp">
-
-                <RadioButton
-                    android:id="@+id/perg2_rb_resp1"
+                <CheckBox
+                    android:id="@+id/perg2_cb_resp1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="false"
                     android:paddingRight="15dp"
                     android:text="Canoa a vela"
-                    android:textAppearance="@style/style_resposta" />
+                    android:textAppearance="@style/style_resposta"
+                    android:enabled="false" />
 
-                <RadioButton
-                    android:id="@+id/perg2_rb_resp2"
+                <CheckBox
+                    android:id="@+id/perg2_cb_resp2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingRight="15dp"
                     android:text="Canoa a remo"
-                    android:textAppearance="@style/style_resposta" />
+                    android:textAppearance="@style/style_resposta"
+                    android:enabled="false" />
 
-
-                <RadioButton
-                    android:id="@+id/perg2_rb_resp3"
+                <CheckBox
+                    android:id="@+id/perg2_cb_resp3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="false"
                     android:paddingRight="15dp"
                     android:text="Canoa a motor"
-                    android:textAppearance="@style/style_resposta" />
+                    android:textAppearance="@style/style_resposta"
+                    android:enabled="false" />
 
-                <RadioButton
-                    android:id="@+id/perg2_rb_resp4"
+                <CheckBox
+                    android:id="@+id/perg2_cb_resp4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="false"
                     android:paddingRight="15dp"
                     android:text="Biana a vela"
-                    android:textAppearance="@style/style_resposta" />
+                    android:textAppearance="@style/style_resposta"
+                    android:enabled="false" />
 
-                <RadioButton
-                    android:id="@+id/perg2_rb_resp5"
+                <CheckBox
+                    android:id="@+id/perg2_cb_resp5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="false"
                     android:paddingRight="15dp"
                     android:text="Biana a Motor"
-                    android:textAppearance="@style/style_resposta" />
+                    android:textAppearance="@style/style_resposta"
+                    android:enabled="false" />
 
-                <RadioButton
-                    android:id="@+id/perg2_rb_resp6"
+                <CheckBox
+                    android:id="@+id/perg2_cb_resp6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="false"
                     android:paddingRight="15dp"
                     android:text="Barco a vela"
-                    android:textAppearance="@style/style_resposta" />
+                    android:textAppearance="@style/style_resposta"
+                    android:enabled="false" />
 
-                <RadioButton
-                    android:id="@+id/perg2_rb_resp7"
+                <CheckBox
+                    android:id="@+id/perg2_cb_resp7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="false"
                     android:paddingRight="15dp"
                     android:text="Barco a motor"
-                    android:textAppearance="@style/style_resposta" />
+                    android:textAppearance="@style/style_resposta"
+                    android:enabled="false" />
 
-                <RadioButton
-                    android:id="@+id/perg2_rb_resp8"
+                <CheckBox
+                    android:id="@+id/perg2_cb_resp8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="false"
                     android:paddingRight="15dp"
                     android:text="Outro:"
-                    android:textAppearance="@style/style_resposta" />
+                    android:textAppearance="@style/style_resposta"
+                    android:enabled="false" />
 
                 <EditText
                     android:id="@+id/perg2_et_resp9"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
-                    android:textAppearance="@style/style_resposta" />
-
-
-            </RadioGroup>
-
+                    android:textAppearance="@style/style_resposta"
+                    android:enabled="false" />
 
         </LinearLayout>
 
@@ -220,8 +217,9 @@
                     android:layout_height="wrap_content"
                     android:checked="false"
                     android:paddingRight="15dp"
-                    android:text="Sim (pule para 2.7)"
-                    android:textAppearance="@style/style_resposta" />
+                    android:text="Sim"
+                    android:textAppearance="@style/style_resposta"
+                    android:tag="perg5_rg->false" />
 
                 <RadioButton
                     android:id="@+id/perg4_rb_resp2"
@@ -230,7 +228,8 @@
                     android:checked="false"
                     android:paddingRight="15dp"
                     android:text="Não"
-                    android:textAppearance="@style/style_resposta" />
+                    android:textAppearance="@style/style_resposta"
+                    android:tag="perg5_rg->true" />
             </RadioGroup>
 
         </LinearLayout>
@@ -263,7 +262,9 @@
                     android:checked="false"
                     android:paddingRight="15dp"
                     android:text="Emprestada gratuitamente pela família (pule para 2.7)"
-                    android:textAppearance="@style/style_resposta" />
+                    android:textAppearance="@style/style_resposta"
+                    android:enabled="false"
+                    android:tag="perg5_et_resp7->false" />
 
                 <RadioButton
                     android:id="@+id/perg5_rb_resp2"
@@ -272,7 +273,9 @@
                     android:checked="false"
                     android:paddingRight="15dp"
                     android:text="Emprestado gratuitamente por amigos (pule para 2.7)"
-                    android:textAppearance="@style/style_resposta" />
+                    android:textAppearance="@style/style_resposta"
+                    android:enabled="false"
+                    android:tag="perg5_et_resp7->false" />
 
                 <RadioButton
                     android:id="@+id/perg5_rb_resp3"
@@ -281,7 +284,9 @@
                     android:checked="false"
                     android:paddingRight="15dp"
                     android:text="Alugada de família ou amigos"
-                    android:textAppearance="@style/style_resposta" />
+                    android:textAppearance="@style/style_resposta"
+                    android:enabled="false"
+                    android:tag="perg5_et_resp7->false" />
 
                 <RadioButton
                     android:id="@+id/perg5_rb_resp4"
@@ -290,7 +295,9 @@
                     android:checked="false"
                     android:paddingRight="15dp"
                     android:text="Alugada do patrão de pesca."
-                    android:textAppearance="@style/style_resposta" />
+                    android:textAppearance="@style/style_resposta"
+                    android:enabled="false"
+                    android:tag="perg5_et_resp7->false" />
 
                 <RadioButton
                     android:id="@+id/perg5_rb_resp5"
@@ -299,7 +306,9 @@
                     android:checked="false"
                     android:paddingRight="15dp"
                     android:text="Carona"
-                    android:textAppearance="@style/style_resposta" />
+                    android:textAppearance="@style/style_resposta"
+                    android:enabled="false"
+                    android:tag="perg5_et_resp7->false" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -313,14 +322,17 @@
                         android:checked="false"
                         android:paddingRight="15dp"
                         android:text="Outros:"
-                        android:textAppearance="@style/style_resposta" />
+                        android:tag="perg5_et_resp7->true"
+                        android:textAppearance="@style/style_resposta"
+                        android:enabled="false" />
 
                     <EditText
                         android:id="@+id/perg5_et_resp7"
                         android:layout_width="300dp"
                         android:layout_height="wrap_content"
                         android:paddingLeft="20dp"
-                        android:textAppearance="@style/style_resposta" />
+                        android:textAppearance="@style/style_resposta"
+                        android:enabled="false" />
                 </LinearLayout>
             </RadioGroup>
 
@@ -342,10 +354,11 @@
 
             <EditText
                 android:id="@+id/perg6_et_resp1"
-                android:layout_width="60dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:paddingLeft="20dp"
-                android:textAppearance="@style/style_resposta" />
+                android:textAppearance="@style/style_resposta"
+                android:inputType="numberDecimal" />
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -438,15 +451,10 @@
                 android:paddingBottom="5dp"
                 android:text="Como é realizado o transporte do caranguejo na embarcação? "
                 android:textAppearance="@style/style_questao" />
+            
 
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingLeft="30dp">
-
-                <RadioButton
-                    android:id="@+id/perg8_rb_resp1"
+                <CheckBox
+                    android:id="@+id/perg8_cb_resp1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="false"
@@ -454,8 +462,8 @@
                     android:text="Soalho do Barco"
                     android:textAppearance="@style/style_resposta" />
 
-                <RadioButton
-                    android:id="@+id/perg8_rb_resp2"
+                <CheckBox
+                    android:id="@+id/perg8_cb_resp2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="false"
@@ -463,8 +471,8 @@
                     android:text="Monobloco (cesto de cipó)"
                     android:textAppearance="@style/style_resposta" />
 
-                <RadioButton
-                    android:id="@+id/perg8_rb_resp3"
+                <CheckBox
+                    android:id="@+id/perg8_cb_resp3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="false"
@@ -472,8 +480,8 @@
                     android:text="Paneiro"
                     android:textAppearance="@style/style_resposta" />
 
-                <RadioButton
-                    android:id="@+id/perg8_rb_resp4"
+                <CheckBox
+                    android:id="@+id/perg8_cb_resp4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="false"
@@ -481,8 +489,8 @@
                     android:text="Cofo"
                     android:textAppearance="@style/style_resposta" />
 
-                <RadioButton
-                    android:id="@+id/perg8_rb_resp5"
+                <CheckBox
+                    android:id="@+id/perg8_cb_resp5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="false"
@@ -490,8 +498,8 @@
                     android:text="Caixa de isopor"
                     android:textAppearance="@style/style_resposta" />
 
-                <RadioButton
-                    android:id="@+id/perg8_rb_resp6"
+                <CheckBox
+                    android:id="@+id/perg8_cb_resp6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="false"
@@ -499,8 +507,8 @@
                     android:text="Caixa Plástica"
                     android:textAppearance="@style/style_resposta" />
 
-                <RadioButton
-                    android:id="@+id/perg8_rb_resp7"
+                <CheckBox
+                    android:id="@+id/perg8_cb_resp7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="false"
@@ -508,8 +516,8 @@
                     android:text="Balde"
                     android:textAppearance="@style/style_resposta" />
 
-                <RadioButton
-                    android:id="@+id/perg8_rb_resp8"
+                <CheckBox
+                    android:id="@+id/perg8_cb_resp8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="false"
@@ -517,8 +525,8 @@
                     android:text="Saca de feira"
                     android:textAppearance="@style/style_resposta" />
 
-                <RadioButton
-                    android:id="@+id/perg8_rb_resp9"
+                <CheckBox
+                    android:id="@+id/perg8_cb_resp9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="false"
@@ -526,28 +534,26 @@
                     android:text="Carote Plástico 5lts"
                     android:textAppearance="@style/style_resposta" />
 
-                <LinearLayout
+           
+
+                <CheckBox
+                    android:id="@+id/perg8_cb_resp10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:checked="false"
+                    android:paddingRight="15dp"
+                    android:text="Outros:"
+                    android:tag="perg8_et_resp11->this"
+                    android:textAppearance="@style/style_resposta" />
 
-                    <RadioButton
-                        android:id="@+id/perg8_rb_resp10"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:checked="false"
-                        android:paddingRight="15dp"
-                        android:text="Outros:"
-                        android:textAppearance="@style/style_resposta" />
+                <EditText
+                    android:id="@+id/perg8_et_resp11"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:textAppearance="@style/style_resposta"
+                    android:enabled="false" />
 
-                    <EditText
-                        android:id="@+id/perg8_et_resp11"
-                        android:layout_width="300dp"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="20dp"
-                        android:textAppearance="@style/style_resposta" />
-                </LinearLayout>
-            </RadioGroup>
 
         </LinearLayout>
 
@@ -562,8 +568,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
-                android:text="Quais foram os custos de equipamentos para pesca e beneficiamento? Com quais recursos foram adquiridos? Quando foram comprados e serão substituídos? "
-                android:textAppearance="@style/style_questao" />
+                android:text="Quais foram os custos de equipamentos para pesca e beneficiamento?\nCom quais recursos foram adquiridos? Quando foram comprados e serão substituídos? "
+                android:textAppearance="@style/style_questao"
+                android:layout_gravity="center_horizontal" />
 
 
             <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout
@@ -666,7 +673,7 @@
 
                             <EditText
                                 android:id="@+id/perg9_et_resp1"
-                                android:layout_width="50dp"
+                                android:layout_width="100dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta" />
                         </LinearLayout>
@@ -685,7 +692,7 @@
 
                             <EditText
                                 android:id="@+id/perg9_et_resp2"
-                                android:layout_width="50dp"
+                                android:layout_width="100dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta" />
                         </LinearLayout>
@@ -704,7 +711,7 @@
 
                             <EditText
                                 android:id="@+id/perg9_et_resp3"
-                                android:layout_width="50dp"
+                                android:layout_width="100dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta" />
                         </LinearLayout>
@@ -734,9 +741,10 @@
 
                             <EditText
                                 android:id="@+id/perg9_et_resp4"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Ano\nde\nCompra" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -753,9 +761,10 @@
 
                             <EditText
                                 android:id="@+id/perg9_et_resp5"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Ano\nde\nCompra" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -772,9 +781,10 @@
 
                             <EditText
                                 android:id="@+id/perg9_et_resp6"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Ano\nde\nCompra" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -802,9 +812,10 @@
 
                             <EditText
                                 android:id="@+id/perg9_et_resp7"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Qtde." />
                         </LinearLayout>
 
                         <LinearLayout
@@ -821,9 +832,10 @@
 
                             <EditText
                                 android:id="@+id/perg9_et_resp8"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Qtde." />
                         </LinearLayout>
 
                         <LinearLayout
@@ -840,9 +852,10 @@
 
                             <EditText
                                 android:id="@+id/perg9_et_resp9"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Qtde." />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -869,9 +882,10 @@
 
                             <EditText
                                 android:id="@+id/perg9_et_resp10"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -888,10 +902,11 @@
 
                             <EditText
                                 android:id="@+id/perg9_et_resp11"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
                                 android:paddingLeft="20dp"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -908,9 +923,10 @@
 
                             <EditText
                                 android:id="@+id/perg9_et_resp12"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -1122,7 +1138,7 @@
 
                             <EditText
                                 android:id="@+id/perg10_et_resp1"
-                                android:layout_width="50dp"
+                                android:layout_width="100dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta" />
                         </LinearLayout>
@@ -1141,7 +1157,7 @@
 
                             <EditText
                                 android:id="@+id/perg10_et_resp2"
-                                android:layout_width="50dp"
+                                android:layout_width="100dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta" />
                         </LinearLayout>
@@ -1160,7 +1176,7 @@
 
                             <EditText
                                 android:id="@+id/perg10_et_resp3"
-                                android:layout_width="50dp"
+                                android:layout_width="100dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta" />
                         </LinearLayout>
@@ -1190,9 +1206,10 @@
 
                             <EditText
                                 android:id="@+id/perg10_et_resp4"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Ano\nde\nCompra" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -1209,9 +1226,10 @@
 
                             <EditText
                                 android:id="@+id/perg10_et_resp5"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Ano\nde\nCompra" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -1228,9 +1246,10 @@
 
                             <EditText
                                 android:id="@+id/perg10_et_resp6"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Ano\nde\nCompra" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -1258,9 +1277,10 @@
 
                             <EditText
                                 android:id="@+id/perg10_et_resp7"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Qtde." />
                         </LinearLayout>
 
                         <LinearLayout
@@ -1277,9 +1297,10 @@
 
                             <EditText
                                 android:id="@+id/perg10_et_resp8"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Qtde." />
                         </LinearLayout>
 
                         <LinearLayout
@@ -1296,9 +1317,10 @@
 
                             <EditText
                                 android:id="@+id/perg10_et_resp9"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Qtde." />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -1325,9 +1347,10 @@
 
                             <EditText
                                 android:id="@+id/perg10_et_resp10"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -1344,10 +1367,11 @@
 
                             <EditText
                                 android:id="@+id/perg10_et_resp11"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
                                 android:paddingLeft="20dp"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -1364,9 +1388,10 @@
 
                             <EditText
                                 android:id="@+id/perg10_et_resp12"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -1578,7 +1603,7 @@
 
                             <EditText
                                 android:id="@+id/perg11_et_resp1"
-                                android:layout_width="50dp"
+                                android:layout_width="100dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta" />
                         </LinearLayout>
@@ -1597,7 +1622,7 @@
 
                             <EditText
                                 android:id="@+id/perg11_et_resp2"
-                                android:layout_width="50dp"
+                                android:layout_width="100dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta" />
                         </LinearLayout>
@@ -1616,7 +1641,7 @@
 
                             <EditText
                                 android:id="@+id/perg11_et_resp3"
-                                android:layout_width="50dp"
+                                android:layout_width="100dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta" />
                         </LinearLayout>
@@ -1646,9 +1671,10 @@
 
                             <EditText
                                 android:id="@+id/perg11_et_resp4"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Ano\nde\nCompra" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -1665,9 +1691,10 @@
 
                             <EditText
                                 android:id="@+id/perg11_et_resp5"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Ano\nde\nCompra" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -1684,9 +1711,10 @@
 
                             <EditText
                                 android:id="@+id/perg11_et_resp6"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Ano\nde\nCompra" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -1714,9 +1742,10 @@
 
                             <EditText
                                 android:id="@+id/perg11_et_resp7"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Qtde." />
                         </LinearLayout>
 
                         <LinearLayout
@@ -1733,9 +1762,10 @@
 
                             <EditText
                                 android:id="@+id/perg11_et_resp8"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Qtde." />
                         </LinearLayout>
 
                         <LinearLayout
@@ -1752,9 +1782,10 @@
 
                             <EditText
                                 android:id="@+id/perg11_et_resp9"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Qtde." />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -1781,9 +1812,10 @@
 
                             <EditText
                                 android:id="@+id/perg11_et_resp10"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -1800,10 +1832,11 @@
 
                             <EditText
                                 android:id="@+id/perg11_et_resp11"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
                                 android:paddingLeft="20dp"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -1820,9 +1853,10 @@
 
                             <EditText
                                 android:id="@+id/perg11_et_resp12"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -2034,7 +2068,7 @@
 
                             <EditText
                                 android:id="@+id/perg12_et_resp1"
-                                android:layout_width="50dp"
+                                android:layout_width="100dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta" />
                         </LinearLayout>
@@ -2053,7 +2087,7 @@
 
                             <EditText
                                 android:id="@+id/perg12_et_resp2"
-                                android:layout_width="50dp"
+                                android:layout_width="100dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta" />
                         </LinearLayout>
@@ -2072,7 +2106,7 @@
 
                             <EditText
                                 android:id="@+id/perg12_et_resp3"
-                                android:layout_width="50dp"
+                                android:layout_width="100dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta" />
                         </LinearLayout>
@@ -2102,9 +2136,10 @@
 
                             <EditText
                                 android:id="@+id/perg12_et_resp4"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Ano\nde\nCompra" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -2121,9 +2156,10 @@
 
                             <EditText
                                 android:id="@+id/perg12_et_resp5"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Ano\nde\nCompra" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -2140,9 +2176,10 @@
 
                             <EditText
                                 android:id="@+id/perg12_et_resp6"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Ano\nde\nCompra" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -2170,9 +2207,10 @@
 
                             <EditText
                                 android:id="@+id/perg12_et_resp7"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Qtde." />
                         </LinearLayout>
 
                         <LinearLayout
@@ -2189,9 +2227,10 @@
 
                             <EditText
                                 android:id="@+id/perg12_et_resp8"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Qtde." />
                         </LinearLayout>
 
                         <LinearLayout
@@ -2208,9 +2247,10 @@
 
                             <EditText
                                 android:id="@+id/perg12_et_resp9"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Qtde." />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -2237,9 +2277,10 @@
 
                             <EditText
                                 android:id="@+id/perg12_et_resp10"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -2256,10 +2297,11 @@
 
                             <EditText
                                 android:id="@+id/perg12_et_resp11"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
                                 android:paddingLeft="20dp"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -2276,9 +2318,10 @@
 
                             <EditText
                                 android:id="@+id/perg12_et_resp12"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -2490,7 +2533,7 @@
 
                             <EditText
                                 android:id="@+id/perg13_et_resp1"
-                                android:layout_width="50dp"
+                                android:layout_width="100dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta" />
                         </LinearLayout>
@@ -2509,7 +2552,7 @@
 
                             <EditText
                                 android:id="@+id/perg13_et_resp2"
-                                android:layout_width="50dp"
+                                android:layout_width="100dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta" />
                         </LinearLayout>
@@ -2528,7 +2571,7 @@
 
                             <EditText
                                 android:id="@+id/perg13_et_resp3"
-                                android:layout_width="50dp"
+                                android:layout_width="100dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta" />
                         </LinearLayout>
@@ -2558,9 +2601,10 @@
 
                             <EditText
                                 android:id="@+id/perg13_et_resp4"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Ano\nde\nCompra" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -2577,9 +2621,10 @@
 
                             <EditText
                                 android:id="@+id/perg13_et_resp5"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Ano\nde\nCompra" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -2596,9 +2641,10 @@
 
                             <EditText
                                 android:id="@+id/perg13_et_resp6"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Ano\nde\nCompra" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -2626,9 +2672,10 @@
 
                             <EditText
                                 android:id="@+id/perg13_et_resp7"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Qtde." />
                         </LinearLayout>
 
                         <LinearLayout
@@ -2645,9 +2692,10 @@
 
                             <EditText
                                 android:id="@+id/perg13_et_resp8"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Qtde." />
                         </LinearLayout>
 
                         <LinearLayout
@@ -2664,9 +2712,10 @@
 
                             <EditText
                                 android:id="@+id/perg13_et_resp9"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Qtde." />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -2693,9 +2742,10 @@
 
                             <EditText
                                 android:id="@+id/perg13_et_resp10"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -2712,10 +2762,11 @@
 
                             <EditText
                                 android:id="@+id/perg13_et_resp11"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
                                 android:paddingLeft="20dp"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -2732,9 +2783,10 @@
 
                             <EditText
                                 android:id="@+id/perg13_et_resp12"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -2946,7 +2998,7 @@
 
                             <EditText
                                 android:id="@+id/perg14_et_resp1"
-                                android:layout_width="50dp"
+                                android:layout_width="100dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta" />
                         </LinearLayout>
@@ -2965,7 +3017,7 @@
 
                             <EditText
                                 android:id="@+id/perg14_et_resp2"
-                                android:layout_width="50dp"
+                                android:layout_width="100dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta" />
                         </LinearLayout>
@@ -2984,7 +3036,7 @@
 
                             <EditText
                                 android:id="@+id/perg14_et_resp3"
-                                android:layout_width="50dp"
+                                android:layout_width="100dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta" />
                         </LinearLayout>
@@ -3014,9 +3066,10 @@
 
                             <EditText
                                 android:id="@+id/perg14_et_resp4"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Ano\nde\nCompra" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -3033,9 +3086,10 @@
 
                             <EditText
                                 android:id="@+id/perg14_et_resp5"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Ano\nde\nCompra" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -3052,9 +3106,10 @@
 
                             <EditText
                                 android:id="@+id/perg14_et_resp6"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Ano\nde\nCompra" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -3082,9 +3137,10 @@
 
                             <EditText
                                 android:id="@+id/perg14_et_resp7"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Qtde." />
                         </LinearLayout>
 
                         <LinearLayout
@@ -3101,9 +3157,10 @@
 
                             <EditText
                                 android:id="@+id/perg14_et_resp8"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Qtde." />
                         </LinearLayout>
 
                         <LinearLayout
@@ -3120,9 +3177,10 @@
 
                             <EditText
                                 android:id="@+id/perg14_et_resp9"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Qtde." />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -3149,9 +3207,10 @@
 
                             <EditText
                                 android:id="@+id/perg14_et_resp10"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -3168,10 +3227,11 @@
 
                             <EditText
                                 android:id="@+id/perg14_et_resp11"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
                                 android:paddingLeft="20dp"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -3188,9 +3248,10 @@
 
                             <EditText
                                 android:id="@+id/perg14_et_resp12"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -3402,7 +3463,7 @@
 
                             <EditText
                                 android:id="@+id/perg15_et_resp1"
-                                android:layout_width="50dp"
+                                android:layout_width="100dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta" />
                         </LinearLayout>
@@ -3421,7 +3482,7 @@
 
                             <EditText
                                 android:id="@+id/perg15_et_resp2"
-                                android:layout_width="50dp"
+                                android:layout_width="100dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta" />
                         </LinearLayout>
@@ -3440,7 +3501,7 @@
 
                             <EditText
                                 android:id="@+id/perg15_et_resp3"
-                                android:layout_width="50dp"
+                                android:layout_width="100dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta" />
                         </LinearLayout>
@@ -3470,9 +3531,10 @@
 
                             <EditText
                                 android:id="@+id/perg15_et_resp4"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Ano\nde\nCompra" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -3489,9 +3551,10 @@
 
                             <EditText
                                 android:id="@+id/perg15_et_resp5"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Ano\nde\nCompra" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -3508,9 +3571,10 @@
 
                             <EditText
                                 android:id="@+id/perg15_et_resp6"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Ano\nde\nCompra" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -3538,9 +3602,10 @@
 
                             <EditText
                                 android:id="@+id/perg15_et_resp7"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Qtde." />
                         </LinearLayout>
 
                         <LinearLayout
@@ -3557,9 +3622,10 @@
 
                             <EditText
                                 android:id="@+id/perg15_et_resp8"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Qtde." />
                         </LinearLayout>
 
                         <LinearLayout
@@ -3576,9 +3642,10 @@
 
                             <EditText
                                 android:id="@+id/perg15_et_resp9"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Qtde." />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -3605,9 +3672,10 @@
 
                             <EditText
                                 android:id="@+id/perg15_et_resp10"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -3624,10 +3692,11 @@
 
                             <EditText
                                 android:id="@+id/perg15_et_resp11"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
                                 android:paddingLeft="20dp"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -3644,9 +3713,10 @@
 
                             <EditText
                                 android:id="@+id/perg15_et_resp12"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -3858,7 +3928,7 @@
 
                             <EditText
                                 android:id="@+id/perg16_et_resp1"
-                                android:layout_width="50dp"
+                                android:layout_width="100dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta" />
                         </LinearLayout>
@@ -3877,7 +3947,7 @@
 
                             <EditText
                                 android:id="@+id/perg16_et_resp2"
-                                android:layout_width="50dp"
+                                android:layout_width="100dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta" />
                         </LinearLayout>
@@ -3896,7 +3966,7 @@
 
                             <EditText
                                 android:id="@+id/perg16_et_resp3"
-                                android:layout_width="50dp"
+                                android:layout_width="100dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta" />
                         </LinearLayout>
@@ -3926,9 +3996,10 @@
 
                             <EditText
                                 android:id="@+id/perg16_et_resp4"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Ano\nde\nCompra" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -3945,9 +4016,10 @@
 
                             <EditText
                                 android:id="@+id/perg16_et_resp5"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Ano\nde\nCompra" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -3964,9 +4036,10 @@
 
                             <EditText
                                 android:id="@+id/perg16_et_resp6"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Ano\nde\nCompra" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -3994,9 +4067,10 @@
 
                             <EditText
                                 android:id="@+id/perg16_et_resp7"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Qtde." />
                         </LinearLayout>
 
                         <LinearLayout
@@ -4013,9 +4087,10 @@
 
                             <EditText
                                 android:id="@+id/perg16_et_resp8"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Qtde." />
                         </LinearLayout>
 
                         <LinearLayout
@@ -4032,9 +4107,10 @@
 
                             <EditText
                                 android:id="@+id/perg16_et_resp9"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Qtde." />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -4061,9 +4137,10 @@
 
                             <EditText
                                 android:id="@+id/perg16_et_resp10"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -4080,10 +4157,11 @@
 
                             <EditText
                                 android:id="@+id/perg16_et_resp11"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
                                 android:paddingLeft="20dp"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -4100,9 +4178,10 @@
 
                             <EditText
                                 android:id="@+id/perg16_et_resp12"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -4314,7 +4393,7 @@
 
                             <EditText
                                 android:id="@+id/perg17_et_resp1"
-                                android:layout_width="50dp"
+                                android:layout_width="100dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta" />
                         </LinearLayout>
@@ -4333,7 +4412,7 @@
 
                             <EditText
                                 android:id="@+id/perg17_et_resp2"
-                                android:layout_width="50dp"
+                                android:layout_width="100dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta" />
                         </LinearLayout>
@@ -4352,7 +4431,7 @@
 
                             <EditText
                                 android:id="@+id/perg17_et_resp3"
-                                android:layout_width="50dp"
+                                android:layout_width="100dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta" />
                         </LinearLayout>
@@ -4382,9 +4461,10 @@
 
                             <EditText
                                 android:id="@+id/perg17_et_resp4"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Ano\nde\nCompra" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -4401,9 +4481,10 @@
 
                             <EditText
                                 android:id="@+id/perg17_et_resp5"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Ano\nde\nCompra" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -4420,9 +4501,10 @@
 
                             <EditText
                                 android:id="@+id/perg17_et_resp6"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Ano\nde\nCompra" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -4450,9 +4532,10 @@
 
                             <EditText
                                 android:id="@+id/perg17_et_resp7"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Qtde." />
                         </LinearLayout>
 
                         <LinearLayout
@@ -4469,9 +4552,10 @@
 
                             <EditText
                                 android:id="@+id/perg17_et_resp8"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Qtde." />
                         </LinearLayout>
 
                         <LinearLayout
@@ -4488,9 +4572,10 @@
 
                             <EditText
                                 android:id="@+id/perg17_et_resp9"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Qtde." />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -4517,9 +4602,10 @@
 
                             <EditText
                                 android:id="@+id/perg17_et_resp10"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -4536,10 +4622,11 @@
 
                             <EditText
                                 android:id="@+id/perg17_et_resp11"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
                                 android:paddingLeft="20dp"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -4556,9 +4643,10 @@
 
                             <EditText
                                 android:id="@+id/perg17_et_resp12"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -4770,7 +4858,7 @@
 
                             <EditText
                                 android:id="@+id/perg18_et_resp1"
-                                android:layout_width="50dp"
+                                android:layout_width="100dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta" />
                         </LinearLayout>
@@ -4789,7 +4877,7 @@
 
                             <EditText
                                 android:id="@+id/perg18_et_resp2"
-                                android:layout_width="50dp"
+                                android:layout_width="100dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta" />
                         </LinearLayout>
@@ -4808,7 +4896,7 @@
 
                             <EditText
                                 android:id="@+id/perg18_et_resp3"
-                                android:layout_width="50dp"
+                                android:layout_width="100dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta" />
                         </LinearLayout>
@@ -4838,9 +4926,10 @@
 
                             <EditText
                                 android:id="@+id/perg18_et_resp4"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Ano\nde\nCompra" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -4857,9 +4946,10 @@
 
                             <EditText
                                 android:id="@+id/perg18_et_resp5"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Ano\nde\nCompra" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -4876,9 +4966,10 @@
 
                             <EditText
                                 android:id="@+id/perg18_et_resp6"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Ano\nde\nCompra" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -4906,9 +4997,10 @@
 
                             <EditText
                                 android:id="@+id/perg18_et_resp7"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Qtde." />
                         </LinearLayout>
 
                         <LinearLayout
@@ -4925,9 +5017,10 @@
 
                             <EditText
                                 android:id="@+id/perg18_et_resp8"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Qtde." />
                         </LinearLayout>
 
                         <LinearLayout
@@ -4944,9 +5037,10 @@
 
                             <EditText
                                 android:id="@+id/perg18_et_resp9"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Qtde." />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -4973,9 +5067,10 @@
 
                             <EditText
                                 android:id="@+id/perg18_et_resp10"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -4992,10 +5087,11 @@
 
                             <EditText
                                 android:id="@+id/perg18_et_resp11"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
                                 android:paddingLeft="20dp"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -5012,9 +5108,10 @@
 
                             <EditText
                                 android:id="@+id/perg18_et_resp12"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -5430,7 +5527,7 @@
 
                             <EditText
                                 android:id="@+id/perg20_et_resp1"
-                                android:layout_width="50dp"
+                                android:layout_width="100dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta" />
                         </LinearLayout>
@@ -5449,7 +5546,7 @@
 
                             <EditText
                                 android:id="@+id/perg20_et_resp2"
-                                android:layout_width="50dp"
+                                android:layout_width="100dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta" />
                         </LinearLayout>
@@ -5468,7 +5565,7 @@
 
                             <EditText
                                 android:id="@+id/perg20_et_resp3"
-                                android:layout_width="50dp"
+                                android:layout_width="100dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta" />
                         </LinearLayout>
@@ -5498,9 +5595,10 @@
 
                             <EditText
                                 android:id="@+id/perg20_et_resp4"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Ano\nde\nCompra" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -5517,9 +5615,10 @@
 
                             <EditText
                                 android:id="@+id/perg20_et_resp5"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Ano\nde\nCompra" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -5536,9 +5635,10 @@
 
                             <EditText
                                 android:id="@+id/perg20_et_resp6"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Ano\nde\nCompra" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -5566,9 +5666,10 @@
 
                             <EditText
                                 android:id="@+id/perg20_et_resp7"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Qtde." />
                         </LinearLayout>
 
                         <LinearLayout
@@ -5585,9 +5686,10 @@
 
                             <EditText
                                 android:id="@+id/perg20_et_resp8"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Qtde." />
                         </LinearLayout>
 
                         <LinearLayout
@@ -5604,9 +5706,10 @@
 
                             <EditText
                                 android:id="@+id/perg20_et_resp9"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Qtde." />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -5633,9 +5736,10 @@
 
                             <EditText
                                 android:id="@+id/perg20_et_resp10"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -5652,10 +5756,11 @@
 
                             <EditText
                                 android:id="@+id/perg20_et_resp11"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
                                 android:paddingLeft="20dp"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -5672,9 +5777,10 @@
 
                             <EditText
                                 android:id="@+id/perg20_et_resp12"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -5886,7 +5992,7 @@
 
                             <EditText
                                 android:id="@+id/perg21_et_resp1"
-                                android:layout_width="50dp"
+                                android:layout_width="100dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta" />
                         </LinearLayout>
@@ -5905,7 +6011,7 @@
 
                             <EditText
                                 android:id="@+id/perg21_et_resp2"
-                                android:layout_width="50dp"
+                                android:layout_width="100dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta" />
                         </LinearLayout>
@@ -5924,7 +6030,7 @@
 
                             <EditText
                                 android:id="@+id/perg21_et_resp3"
-                                android:layout_width="50dp"
+                                android:layout_width="100dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta" />
                         </LinearLayout>
@@ -5954,9 +6060,10 @@
 
                             <EditText
                                 android:id="@+id/perg21_et_resp4"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Ano\nde\nCompra" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -5973,9 +6080,10 @@
 
                             <EditText
                                 android:id="@+id/perg21_et_resp5"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Ano\nde\nCompra" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -5992,9 +6100,10 @@
 
                             <EditText
                                 android:id="@+id/perg21_et_resp6"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Ano\nde\nCompra" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -6022,9 +6131,10 @@
 
                             <EditText
                                 android:id="@+id/perg21_et_resp7"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Qtde." />
                         </LinearLayout>
 
                         <LinearLayout
@@ -6041,9 +6151,10 @@
 
                             <EditText
                                 android:id="@+id/perg21_et_resp8"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Qtde." />
                         </LinearLayout>
 
                         <LinearLayout
@@ -6060,9 +6171,10 @@
 
                             <EditText
                                 android:id="@+id/perg21_et_resp9"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Qtde." />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -6089,9 +6201,10 @@
 
                             <EditText
                                 android:id="@+id/perg21_et_resp10"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -6108,10 +6221,11 @@
 
                             <EditText
                                 android:id="@+id/perg21_et_resp11"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
                                 android:paddingLeft="20dp"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -6128,9 +6242,10 @@
 
                             <EditText
                                 android:id="@+id/perg21_et_resp12"
-                                android:layout_width="50dp"
+                                android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/style_resposta" />
+                                android:textAppearance="@style/style_resposta"
+                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
                         </LinearLayout>
 
                     </LinearLayout>

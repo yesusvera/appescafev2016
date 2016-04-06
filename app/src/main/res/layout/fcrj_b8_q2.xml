@@ -138,92 +138,79 @@
                 android:text="Qual tipo de embarcação utiliza?  "
                 android:textAppearance="@style/style_questao" />
 
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingLeft="30dp"
-                android:id="@+id/perg2_rg">
 
-                <RadioButton
-                    android:id="@+id/perg2_rb_resp1"
+                <CheckBox
+                    android:id="@+id/perg2_cb_resp1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="false"
                     android:paddingRight="15dp"
                     android:text="Canoa a vela"
-                    android:textAppearance="@style/style_resposta"
-                    android:tag="perg2_et_resp9->false" />
+                    android:textAppearance="@style/style_resposta" />
 
-                <RadioButton
-                    android:id="@+id/perg2_rb_resp2"
+                <CheckBox
+                    android:id="@+id/perg2_cb_resp2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingRight="15dp"
                     android:text="Canoa a remo"
-                    android:textAppearance="@style/style_resposta"
-                    android:tag="perg2_et_resp9->false" />
+                    android:textAppearance="@style/style_resposta" />
 
 
-                <RadioButton
-                    android:id="@+id/perg2_rb_resp3"
+                <CheckBox
+                    android:id="@+id/perg2_cb_resp3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="false"
                     android:paddingRight="15dp"
                     android:text="Canoa a motor"
-                    android:textAppearance="@style/style_resposta"
-                    android:tag="perg2_et_resp9->false" />
+                    android:textAppearance="@style/style_resposta" />
 
-                <RadioButton
-                    android:id="@+id/perg2_rb_resp4"
+                <CheckBox
+                    android:id="@+id/perg2_cb_resp4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="false"
                     android:paddingRight="15dp"
                     android:text="Biana a vela"
-                    android:textAppearance="@style/style_resposta"
-                    android:tag="perg2_et_resp9->false" />
+                    android:textAppearance="@style/style_resposta" />
 
-                <RadioButton
-                    android:id="@+id/perg2_rb_resp5"
+                <CheckBox
+                    android:id="@+id/perg2_cb_resp5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="false"
                     android:paddingRight="15dp"
                     android:text="Biana a Motor"
-                    android:textAppearance="@style/style_resposta"
-                    android:tag="perg2_et_resp9->false" />
+                    android:textAppearance="@style/style_resposta" />
 
-                <RadioButton
-                    android:id="@+id/perg2_rb_resp6"
+                <CheckBox
+                    android:id="@+id/perg2_cb_resp6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="false"
                     android:paddingRight="15dp"
                     android:text="Barco a vela"
-                    android:textAppearance="@style/style_resposta"
-                    android:tag="perg2_et_resp9->false" />
+                    android:textAppearance="@style/style_resposta" />
 
-                <RadioButton
-                    android:id="@+id/perg2_rb_resp7"
+                <CheckBox
+                    android:id="@+id/perg2_cb_resp7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="false"
                     android:paddingRight="15dp"
                     android:text="Barco a motor"
-                    android:textAppearance="@style/style_resposta"
-                    android:tag="perg2_et_resp9->false" />
+                    android:textAppearance="@style/style_resposta" />
 
-                <RadioButton
-                    android:id="@+id/perg2_rb_resp8"
+                <CheckBox
+                    android:id="@+id/perg2_cb_resp8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="false"
                     android:paddingRight="15dp"
                     android:text="Outros:"
                     android:textAppearance="@style/style_resposta"
-                    android:tag="perg2_et_resp9->true" />
+                    android:tag="perg2_et_resp9->this" />
 
                 <EditText
                     android:id="@+id/perg2_et_resp9"
@@ -232,10 +219,7 @@
                     android:paddingLeft="20dp"
                     android:textAppearance="@style/style_resposta"
                     android:enabled="false" />
-
-
-            </RadioGroup>
-
+            
 
         </LinearLayout>
 
