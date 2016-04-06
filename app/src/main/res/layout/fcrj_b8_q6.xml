@@ -206,7 +206,9 @@
                         android:gravity="center"
                         android:text="Não se aplica"
                         android:paddingLeft="25dp"
-                        android:textAppearance="@style/style_questao" />
+                        android:textAppearance="@style/style_questao"
+                        android:textStyle="normal|italic"
+                        android:textColor="#ff0000" />
 
                 </TableRow>
 
@@ -255,7 +257,9 @@
                         android:gravity="center"
                         android:text="Não se aplica"
                         android:paddingLeft="25dp"
-                        android:textAppearance="@style/style_questao" />
+                        android:textAppearance="@style/style_questao"
+                        android:textStyle="normal|italic"
+                        android:textColor="#ff0000" />
 
                 </TableRow>
 

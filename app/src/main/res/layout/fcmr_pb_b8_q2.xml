@@ -310,11 +310,6 @@
                     android:enabled="false"
                     android:tag="perg5_et_resp7->false" />
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
                     <RadioButton
                         android:id="@+id/perg5_rb_resp6"
                         android:layout_width="wrap_content"
@@ -333,7 +328,6 @@
                         android:paddingLeft="20dp"
                         android:textAppearance="@style/style_resposta"
                         android:enabled="false" />
-                </LinearLayout>
             </RadioGroup>
 
         </LinearLayout>
@@ -449,7 +443,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
-                android:text="Como é realizado o transporte do caranguejo na embarcação? "
+                android:text="Como é realizado o transporte do camarão na embarcação? "
                 android:textAppearance="@style/style_questao" />
             
 
@@ -885,7 +879,7 @@
                                 android:layout_width="90dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta"
-                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
+                                android:hint="Valor\nUnitário\nDe\nCompra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -904,9 +898,8 @@
                                 android:id="@+id/perg9_et_resp11"
                                 android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:paddingLeft="20dp"
                                 android:textAppearance="@style/style_resposta"
-                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
+                                android:hint="Valor\nUnitário\nDe\nCompra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -926,7 +919,7 @@
                                 android:layout_width="90dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta"
-                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
+                                android:hint="Valor\nUnitário\nDe\nCompra(R$)" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -1350,7 +1343,7 @@
                                 android:layout_width="90dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta"
-                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
+                                android:hint="Valor\nUnitário\nDe\nCompra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -1369,9 +1362,8 @@
                                 android:id="@+id/perg10_et_resp11"
                                 android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:paddingLeft="20dp"
                                 android:textAppearance="@style/style_resposta"
-                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
+                                android:hint="Valor\nUnitário\nDe\nCompra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -1391,7 +1383,7 @@
                                 android:layout_width="90dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta"
-                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
+                                android:hint="Valor\nUnitário\nDe\nCompra(R$)" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -1815,7 +1807,7 @@
                                 android:layout_width="90dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta"
-                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
+                                android:hint="Valor\nUnitário\nDe\nCompra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -1834,9 +1826,8 @@
                                 android:id="@+id/perg11_et_resp11"
                                 android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:paddingLeft="20dp"
                                 android:textAppearance="@style/style_resposta"
-                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
+                                android:hint="Valor\nUnitário\nDe\nCompra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -1856,7 +1847,7 @@
                                 android:layout_width="90dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta"
-                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
+                                android:hint="Valor\nUnitário\nDe\nCompra(R$)" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -2280,7 +2271,7 @@
                                 android:layout_width="90dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta"
-                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
+                                android:hint="Valor\nUnitário\nDe\nCompra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -2299,9 +2290,8 @@
                                 android:id="@+id/perg12_et_resp11"
                                 android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:paddingLeft="20dp"
                                 android:textAppearance="@style/style_resposta"
-                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
+                                android:hint="Valor\nUnitário\nDe\nCompra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -2321,7 +2311,7 @@
                                 android:layout_width="90dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta"
-                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
+                                android:hint="Valor\nUnitário\nDe\nCompra(R$)" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -2745,7 +2735,7 @@
                                 android:layout_width="90dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta"
-                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
+                                android:hint="Valor\nUnitário\nDe\nCompra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -2764,9 +2754,8 @@
                                 android:id="@+id/perg13_et_resp11"
                                 android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:paddingLeft="20dp"
                                 android:textAppearance="@style/style_resposta"
-                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
+                                android:hint="Valor\nUnitário\nDe\nCompra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -2786,7 +2775,7 @@
                                 android:layout_width="90dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta"
-                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
+                                android:hint="Valor\nUnitário\nDe\nCompra(R$)" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -3210,7 +3199,7 @@
                                 android:layout_width="90dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta"
-                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
+                                android:hint="Valor\nUnitário\nDe\nCompra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -3229,9 +3218,8 @@
                                 android:id="@+id/perg14_et_resp11"
                                 android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:paddingLeft="20dp"
                                 android:textAppearance="@style/style_resposta"
-                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
+                                android:hint="Valor\nUnitário\nDe\nCompra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -3251,7 +3239,7 @@
                                 android:layout_width="90dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta"
-                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
+                                android:hint="Valor\nUnitário\nDe\nCompra(R$)" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -3675,7 +3663,7 @@
                                 android:layout_width="90dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta"
-                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
+                                android:hint="Valor\nUnitário\nDe\nCompra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -3694,9 +3682,8 @@
                                 android:id="@+id/perg15_et_resp11"
                                 android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:paddingLeft="20dp"
                                 android:textAppearance="@style/style_resposta"
-                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
+                                android:hint="Valor\nUnitário\nDe\nCompra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -3716,7 +3703,7 @@
                                 android:layout_width="90dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta"
-                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
+                                android:hint="Valor\nUnitário\nDe\nCompra(R$)" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -4140,7 +4127,7 @@
                                 android:layout_width="90dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta"
-                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
+                                android:hint="Valor\nUnitário\nDe\nCompra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -4159,9 +4146,8 @@
                                 android:id="@+id/perg16_et_resp11"
                                 android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:paddingLeft="20dp"
                                 android:textAppearance="@style/style_resposta"
-                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
+                                android:hint="Valor\nUnitário\nDe\nCompra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -4181,7 +4167,7 @@
                                 android:layout_width="90dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta"
-                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
+                                android:hint="Valor\nUnitário\nDe\nCompra(R$)" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -4605,7 +4591,7 @@
                                 android:layout_width="90dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta"
-                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
+                                android:hint="Valor\nUnitário\nDe\nCompra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -4624,9 +4610,8 @@
                                 android:id="@+id/perg17_et_resp11"
                                 android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:paddingLeft="20dp"
                                 android:textAppearance="@style/style_resposta"
-                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
+                                android:hint="Valor\nUnitário\nDe\nCompra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -4646,7 +4631,7 @@
                                 android:layout_width="90dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta"
-                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
+                                android:hint="Valor\nUnitário\nDe\nCompra(R$)" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -5070,7 +5055,7 @@
                                 android:layout_width="90dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta"
-                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
+                                android:hint="Valor\nUnitário\nDe\nCompra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -5089,9 +5074,8 @@
                                 android:id="@+id/perg18_et_resp11"
                                 android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:paddingLeft="20dp"
                                 android:textAppearance="@style/style_resposta"
-                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
+                                android:hint="Valor\nUnitário\nDe\nCompra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -5111,7 +5095,7 @@
                                 android:layout_width="90dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta"
-                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
+                                android:hint="Valor\nUnitário\nDe\nCompra(R$)" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -5739,7 +5723,7 @@
                                 android:layout_width="90dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta"
-                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
+                                android:hint="Valor\nUnitário\nDe\nCompra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -5758,9 +5742,8 @@
                                 android:id="@+id/perg20_et_resp11"
                                 android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:paddingLeft="20dp"
                                 android:textAppearance="@style/style_resposta"
-                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
+                                android:hint="Valor\nUnitário\nDe\nCompra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -5780,7 +5763,7 @@
                                 android:layout_width="90dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta"
-                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
+                                android:hint="Valor\nUnitário\nDe\nCompra(R$)" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -6204,7 +6187,7 @@
                                 android:layout_width="90dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta"
-                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
+                                android:hint="Valor\nUnitário\nDe\nCompra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -6223,9 +6206,8 @@
                                 android:id="@+id/perg21_et_resp11"
                                 android:layout_width="90dp"
                                 android:layout_height="wrap_content"
-                                android:paddingLeft="20dp"
                                 android:textAppearance="@style/style_resposta"
-                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
+                                android:hint="Valor\nUnitário\nDe\nCompra(R$)" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -6245,7 +6227,7 @@
                                 android:layout_width="90dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/style_resposta"
-                                android:hint="Valor\nUnitário\nDe\Compra(R$)" />
+                                android:hint="Valor\nUnitário\nDe\nCompra(R$)" />
                         </LinearLayout>
 
                     </LinearLayout>

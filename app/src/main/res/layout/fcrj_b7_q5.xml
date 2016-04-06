@@ -64,7 +64,10 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
-                    <RadioButton
+
+
+
+                        <RadioButton
                         android:id="@+id/perg1_rb_resp1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -100,6 +103,16 @@
                             android:id="@+id/perg1_et_resp5"
                             android:layout_width="240dp"
                             android:layout_height="wrap_content"
+                            android:enabled="false" />
+
+                        <RadioButton
+                            android:id="@+id/perg1_rb_resp6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Não se aplica (Questão anterior - Não armazena)"
+                            android:textAppearance="@style/style_resposta"
+                            android:tag="perg1_et_resp5->false"
+                            android:checked="false"
                             android:enabled="false" />
 
                 </RadioGroup>

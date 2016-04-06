@@ -629,19 +629,33 @@ public class FormCamRegActivityNew extends AppCompatActivity
 
         if(formulario!=null ) {
             if(formulario.getSituacao()==1) {
-                Toast.makeText(getApplicationContext(), "Este formulário está em fase de aprovação. Peça para um coordenador validar no ambiente WEB.", Toast.LENGTH_LONG).show();
+                new AlertDialog.Builder(FormCamRegActivityNew.this)
+                        .setTitle(R.string.app_name)
+                        .setMessage("Este formulário está em fase de aprovação. Peça para um coordenador validar no ambiente WEB.")
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setPositiveButton(android.R.string.ok, null).show();
                 return;
             }else if(formulario.getSituacao() == 2) {
-                Toast.makeText(getApplicationContext(), "Este formulário já foi enviado e finalizado, não pode ser enviado novamente.", Toast.LENGTH_LONG).show();
+                new AlertDialog.Builder(FormCamRegActivityNew.this)
+                        .setTitle(R.string.app_name)
+                        .setMessage("Este formulário já foi enviado e finalizado, não pode ser enviado novamente.")
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setPositiveButton(android.R.string.ok,null).show();
                 return;
             }
         }
 
 
         if(!ConnectionNetwork.verifiedInternetConnection(this)){
-            String mensagemErro = "Seu aparelho está sem conectividade com a internet. Por favor habilite seu Wifi ou rede de celular.";
-            Toast toast = Toast.makeText(FormCamRegActivityNew.this, mensagemErro, Toast.LENGTH_LONG);
-            toast.show();
+
+            new AlertDialog.Builder(FormCamRegActivityNew.this)
+                    .setTitle(R.string.app_name)
+                    .setMessage("Seu aparelho está sem conectividade com a internet. Por favor habilite seu Wifi ou rede de celular.")
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .setPositiveButton(android.R.string.ok,null).show();
+//            String mensagemErro = ;
+//            Toast toast = Toast.makeText(FormCamRegActivityNew.this, mensagemErro, Toast.LENGTH_LONG);
+//            toast.show();
             return;
         }
 

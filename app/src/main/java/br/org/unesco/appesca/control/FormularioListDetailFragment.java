@@ -10,12 +10,14 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import br.org.unesco.appesca.R;
 import br.org.unesco.appesca.dao.FormularioDAO;
 import br.org.unesco.appesca.model.Formulario;
 import br.org.unesco.appesca.model.Identity;
+import br.org.unesco.appesca.util.AppescaUtil;
 
 public class FormularioListDetailFragment extends Fragment {
 
@@ -36,6 +38,10 @@ public class FormularioListDetailFragment extends Fragment {
 
                 FormularioDAO formularioDAO = new FormularioDAO(getActivity());
                 String titulo = "Lista";
+
+                TextView txtMensagemFormulariosFinalizados = (TextView) getActivity().findViewById(R.id.txtMensagemFormulariosFinalizados);
+                txtMensagemFormulariosFinalizados.setText("");
+
                 switch (situacaoFormulario){
                     case 0: //TODOS
                         mFormularioList = formularioDAO.listarTodosPorUsuario(Identity.getUsuarioLogado().getId());
@@ -52,6 +58,16 @@ public class FormularioListDetailFragment extends Fragment {
                     case 3: //APROVADOS
                         mFormularioList = formularioDAO.listarPorSituacaoUsuario(2,Identity.getUsuarioLogado().getId());
                         titulo = "Formulários Finalizados (ONLINE)";
+
+
+                        if(mFormularioList!=null && mFormularioList.size()>0){
+                            txtMensagemFormulariosFinalizados.setText("Os formulários aprovados podem somente ser visualizados. Serão deletados do aplicativo depois de 10 dias de visualização.");
+                        }
+
+                        aplicaRegraExlusaoAposDias(10, mFormularioList);
+
+                        mFormularioList = formularioDAO.listarPorSituacaoUsuario(2,Identity.getUsuarioLogado().getId());
+
                         break;
                 }
 
@@ -68,6 +84,23 @@ public class FormularioListDetailFragment extends Fragment {
 
             }catch (Exception e){
 
+            }
+        }
+    }
+
+    public void aplicaRegraExlusaoAposDias(int diasRegra,  List<Formulario> listaFormulario){
+        if(listaFormulario==null){
+            return;
+        }
+
+        for(Formulario form: listaFormulario){
+            if(form.getSituacao()==2) {
+                int diferencaDias = (10 - AppescaUtil.dataDiff(form.getDataAplicacao(), new Date()));
+
+                if (diferencaDias <= 0) {
+                    FormularioDAO formularioDAO = new FormularioDAO(getActivity());
+                    formularioDAO.delete(form.getId());
+                }
             }
         }
     }

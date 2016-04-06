@@ -2,6 +2,7 @@ package br.org.unesco.appesca.bo;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.widget.Toast;
@@ -12,6 +13,7 @@ import com.loopj.android.http.RequestParams;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 
+import br.org.unesco.appesca.R;
 import br.org.unesco.appesca.dao.FormularioDAO;
 import br.org.unesco.appesca.model.Formulario;
 import br.org.unesco.appesca.model.Identity;
@@ -53,6 +55,9 @@ public class FormularioBO {
 
     public void enviarFormulario(Formulario formTemp,final Formulario formularioOriginal, final Context context, final Activity activity){
 
+        final ProgressDialog ringProgressDialog = ProgressDialog.show(activity, "Aguarde ...", "Enviando o formulário para aprovação.", true);
+        ringProgressDialog.setCancelable(true);
+
         prepararObjetoFormulario(formTemp);
 
         FormularioREST formularioREST = new FormularioREST(formTemp);
@@ -73,7 +78,24 @@ public class FormularioBO {
             @Override
             public void onStart() {
 //                showProgress(true);
-                Toast.makeText(context, "Enviando o formulário.", Toast.LENGTH_LONG).show();
+//                Toast.makeText(context, "Enviando o formulário.", Toast.LENGTH_LONG).show();
+            }
+
+            public void mensagem(String msg){
+                new AlertDialog.Builder(activity)
+                        .setTitle(R.string.app_name)
+                        .setMessage(msg)
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                activity.finish();
+                            }
+                        }).show();
+
+                if(ringProgressDialog!=null && ringProgressDialog.isShowing()) {
+                    ringProgressDialog.dismiss();
+                }
             }
 
             @Override
@@ -91,18 +113,22 @@ public class FormularioBO {
                 }
 
 
-                Toast.makeText(context, respEnvioFormulario.getMensagemErro(), Toast.LENGTH_LONG).show();
+//                Toast.makeText(context, respEnvioFormulario.getMensagemErro(), Toast.LENGTH_LONG).show();
 
-                try {
-                    activity.finish();
-                } catch (Exception e) {
+                mensagem(respEnvioFormulario.getMensagemErro());
 
-                }
+
+//                try {
+//
+//                } catch (Exception e) {
+//
+//                }
             }
 
             @Override
             public void onFinish() {
                 super.onFinish();
+
             }
 
             @Override
@@ -113,6 +139,7 @@ public class FormularioBO {
 
             @Override
             public void onFailure(int statusCode, Header[] headers, byte[] errorResponse, Throwable e) {
+                mensagem("Aconteceu alguma falha.");
 //                showProgress(false);
             }
 

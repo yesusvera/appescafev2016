@@ -390,6 +390,7 @@ public class QuestaoDetailFragment extends Fragment {
                     switch (ordemQuestao)
                     {
                         case 53: configuraTabelaB6Q7(formulario);break;
+                        case 59: configuraTabelaB6Q5_CARANGUEJO(formulario);break;
                         case 63: configuraTabelaB7Q9(formulario);break;
                         case 64: configuraTabelaB7Q10(formulario);break;
                         case 65: configuraB7Q11(formulario);break;
@@ -869,6 +870,29 @@ public class QuestaoDetailFragment extends Fragment {
         }
     }
 
+
+
+    public void configuraTabelaB6Q5_CARANGUEJO(Formulario formulario){
+        Questao q58 = questaoDAO.findQuestaoByOrdemIdFormulario(58, formulario.getId());
+        boolean respondeuNao = formularioBO.getResposta(q58, 1, 1)!=null;
+        boolean respondeuSim = formularioBO.getResposta(q58, 1, 2)!=null;
+
+        if(respondeuNao){
+            for(int i=1;i<=6;i++){
+                RadioButton rb = (RadioButton)findViewByStringId("perg1_rb_resp"+i);
+                if(rb!=null){
+                    rb.setChecked(false);
+                    rb.setEnabled(false);
+                    rb.callOnClick();
+                }
+            }
+
+            RadioButton rb = (RadioButton)findViewByStringId("perg1_rb_resp6");
+            rb.setChecked(true);
+            rb.setEnabled(true);
+        }
+
+    }
 
     /**
      * 7. Qual é quantidade média capturada/dia nas marés alta e baixa, nos períodos de inverno e verão, por arte de pesca?

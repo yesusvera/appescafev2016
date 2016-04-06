@@ -30,8 +30,17 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="4dp"
         android:layout_marginTop="10dp"
+        android:orientation="vertical"
         tools:ignore="WebViewLayout">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:id="@+id/txtMensagemFormulariosFinalizados"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="#ff0000" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -12,6 +12,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import br.org.unesco.appesca.R;
@@ -116,6 +117,7 @@ public class FormularioListAdapter extends RecyclerView.Adapter<FormularioListAd
             case 2:
                 holder.imgSituacaoFormulario.setImageResource(R.drawable.enviado_icone);
                 holder.txtSituacao.setText("Finalizado");
+                holder.txtTipoFormulario.setText(holder.txtTipoFormulario.getText() + "(Em " + (10 - AppescaUtil.dataDiff(formulario.getDataAplicacao(), new Date()))+" dias será excluído do aparelho)");
                 holder.txtIdSincronizacao.setText(formulario.getIdSincronizacao());
                 break;
         }
