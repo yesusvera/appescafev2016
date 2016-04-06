@@ -262,45 +262,50 @@ public class FormCamRegActivityNew extends AppCompatActivity
                 return 0;
             }
 
-            private void abrirBloco5(String message) {
-                new AlertDialog.Builder(FormCamRegActivityNew.this)
-                        .setTitle(getString(R.string.app_name))
-                        .setMessage(message)
-                        .setIcon(android.R.drawable.ic_dialog_alert)
-                        .setPositiveButton(R.string.pular_bloco_5, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                if(redirecionar) {
-                                    switch (tipoFormulario){
-                                        case 1://Formulário Camarão Regional
-                                            posAtual = getPosicaoPorIdLayout(R.layout.fcmr_reg_b5_q1);
-                                            break;
-                                        case 2://Formulário Caranguejo
-                                            posAtual = getPosicaoPorIdLayout(R.layout.fcrj_b5_q1);
-                                            break;
-                                        case 3://Formulário Camarão Piticaia e Branco
-                                            posAtual = getPosicaoPorIdLayout(R.layout.fcmr_reg_b5_q1);
-                                            break;
-                                    }
-                                    openFragment(arrayIdsQuestoes[posAtual]);
-                                }
-                            }
-                        })
-                        .setNegativeButton(getString(R.string.nao_ir_proxima), new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                abrirProximaQuestao();
-                            }
-                        })
-                        .show();
-            }
+//            private void abrirBloco5(String message) {
+//                new AlertDialog.Builder(FormCamRegActivityNew.this)
+//                        .setTitle(getString(R.string.app_name))
+//                        .setMessage(message)
+//                        .setIcon(android.R.drawable.ic_dialog_alert)
+//                        .setPositiveButton(R.string.pular_bloco_5, new DialogInterface.OnClickListener() {
+//                            @Override
+//                            public void onClick(DialogInterface dialog, int which) {
+//                                if(redirecionar) {
+//                                    switch (tipoFormulario){
+//                                        case 1://Formulário Camarão Regional
+//                                            posAtual = getPosicaoPorIdLayout(R.layout.fcmr_reg_b5_q1);
+//                                            break;
+//                                        case 2://Formulário Caranguejo
+//                                            posAtual = getPosicaoPorIdLayout(R.layout.fcrj_b5_q1);
+//                                            break;
+//                                        case 3://Formulário Camarão Piticaia e Branco
+//                                            posAtual = getPosicaoPorIdLayout(R.layout.fcmr_reg_b5_q1);
+//                                            break;
+//                                    }
+//                                    openFragment(arrayIdsQuestoes[posAtual]);
+//                                }
+//                            }
+//                        })
+//                        .setNegativeButton(getString(R.string.nao_ir_proxima), new DialogInterface.OnClickListener() {
+//                            @Override
+//                            public void onClick(DialogInterface dialog, int which) {
+//                                abrirProximaQuestao();
+//                            }
+//                        })
+//                        .show();
+//            }
 
             private void abrirProximaQuestao() {
+
+
+
+
                 if(redirecionar) {
-                    if (posAtual == arrayIdsQuestoes.length - 1) {
-                        posAtual = -1;
-                    }
-                    openFragment(arrayIdsQuestoes[++posAtual]);
+
+                        if (posAtual == arrayIdsQuestoes.length - 1) {
+                            posAtual = -1;
+                        }
+                        openFragment(arrayIdsQuestoes[++posAtual]);
                 }
             }
 
@@ -313,43 +318,43 @@ public class FormCamRegActivityNew extends AppCompatActivity
                     chekListQuestoes();
 
                     //Se estou na identificação do entrevistado
-                    if(posAtual==getPosicaoPorIdLayout(R.layout.identificacao_entrevistado_form)){
-                        Questao questao = questaoDAO.findQuestaoByOrdemIdFormulario(posAtual-1, formulario.getId());
-                        FormularioBO formularioBO = new FormularioBO();
-
-                        Resposta responsavelFamiliar = formularioBO.getResposta(questao,14,1);
-                        if(responsavelFamiliar!=null){
-                            abrirBloco5(getString(R.string.pular_bloco5_responsavel_familiar));
-                        }else{
-                            abrirProximaQuestao();
-                        }
-                    }else if(posAtual==getPosicaoPorIdLayout(R.layout.fcmr_reg_b2_q1)){
-                        Questao questao = questaoDAO.findQuestaoByOrdemIdFormulario(posAtual-1, formulario.getId());
-                        FormularioBO formularioBO = new FormularioBO();
-
-                        Resposta pescadorCamarao = formularioBO.getResposta(questao, 1,2);
-
-                        if(pescadorCamarao!=null){
-                            abrirBloco5(getString(R.string.pular_bloco_5_ocupacao_principal));
-                        }else{
-                            abrirProximaQuestao();
-                        }
-
-                    }else if(posAtual==getPosicaoPorIdLayout(R.layout.fcmr_reg_b2_q2)){
-                        Questao questao = questaoDAO.findQuestaoByOrdemIdFormulario(posAtual-1, formulario.getId());
-                        FormularioBO formularioBO = new FormularioBO();
-
-                        Resposta pescadorCamarao = formularioBO.getResposta(questao, 2,2);
-
-                        if(pescadorCamarao!=null){
-                            abrirBloco5(getString(R.string.pular_bloco5_ocupacao));
-                        }else{
-                            abrirProximaQuestao();
-                        }
-
-                    }else{
+//                    if(posAtual==getPosicaoPorIdLayout(R.layout.identificacao_entrevistado_form)){
+//                        Questao questao = questaoDAO.findQuestaoByOrdemIdFormulario(posAtual-1, formulario.getId());
+//                        FormularioBO formularioBO = new FormularioBO();
+//
+//                        Resposta responsavelFamiliar = formularioBO.getResposta(questao,14,1);
+//                        if(responsavelFamiliar!=null){
+//                            abrirBloco5(getString(R.string.pular_bloco5_responsavel_familiar));
+//                        }else{
+//                            abrirProximaQuestao();
+//                        }
+//                    }else if(posAtual==getPosicaoPorIdLayout(R.layout.fcmr_reg_b2_q1)){
+//                        Questao questao = questaoDAO.findQuestaoByOrdemIdFormulario(posAtual-1, formulario.getId());
+//                        FormularioBO formularioBO = new FormularioBO();
+//
+//                        Resposta pescadorCamarao = formularioBO.getResposta(questao, 1,2);
+//
+//                        if(pescadorCamarao!=null){
+//                            abrirBloco5(getString(R.string.pular_bloco_5_ocupacao_principal));
+//                        }else{
+//                            abrirProximaQuestao();
+//                        }
+//
+//                    }else if(posAtual==getPosicaoPorIdLayout(R.layout.fcmr_reg_b2_q2)){
+//                        Questao questao = questaoDAO.findQuestaoByOrdemIdFormulario(posAtual-1, formulario.getId());
+//                        FormularioBO formularioBO = new FormularioBO();
+//
+//                        Resposta pescadorCamarao = formularioBO.getResposta(questao, 2,2);
+//
+//                        if(pescadorCamarao!=null){
+//                            abrirBloco5(getString(R.string.pular_bloco5_ocupacao));
+//                        }else{
+//                            abrirProximaQuestao();
+//                        }
+//
+//                    }else{
                         abrirProximaQuestao();
-                    }
+//                    }
 
                 }else if(result ==1){
                     new AlertDialog.Builder(FormCamRegActivityNew.this)
@@ -761,25 +766,45 @@ public class FormCamRegActivityNew extends AppCompatActivity
         return true;
     }
 
-    private void openFragment(int idLayout) {
+    private void openFragment(final int idLayout) {
         id_activity_questao_atual = idLayout;
 
         int ordemQuestao = posAtual -1;
 
 
-        Bundle arguments = new Bundle();
-        arguments.putString(QuestaoDetailFragment.ARG_ITEM_ID, String.valueOf(idLayout));
-        arguments.putInt(QuestaoDetailFragment.ARG_QUESTAO_ORDEM, ordemQuestao);
-        if(formulario.getId()!=null) {
-            arguments.putInt(QuestaoDetailFragment.ARG_FORMULARIO_ID, formulario.getId());
+        Questao qIdent = questaoDAO.findQuestaoByOrdemIdFormulario(getPosicaoPorIdLayout(R.layout.identificacao_entrevistado_form)-1, formulario.getId());
+        Questao b2q1 = questaoDAO.findQuestaoByOrdemIdFormulario(getPosicaoPorIdLayout(R.layout.fcmr_reg_b2_q1)-1, formulario.getId());
+        Questao b2q2 = questaoDAO.findQuestaoByOrdemIdFormulario(getPosicaoPorIdLayout(R.layout.fcmr_reg_b2_q2)-1, formulario.getId());
+
+        FormularioBO formularioBO = new FormularioBO();
+
+        Resposta responsavelFamiliar = formularioBO.getResposta(qIdent,14,1);
+        Resposta pescadorCamarao = formularioBO.getResposta(b2q1, 1, 2);
+        Resposta pescadorCamaraob2q2 = formularioBO.getResposta(b2q2, 2,2);
+
+        if(responsavelFamiliar!=null && pescadorCamarao!=null && pescadorCamaraob2q2!=null && posAtual > getPosicaoPorIdLayout(R.layout.fcmr_reg_b4_q11)) {
+            new AlertDialog.Builder(FormCamRegActivityNew.this)
+                    .setTitle(getString(R.string.app_name))
+                    .setMessage("O questionário só pode ser respondido até o bloco 4.\n1) Identificação: O Entrevistado é responsável pela unidade familiar.\n2) Bloco 2 (Questões 1 e 2) - O Entrevistado possui como ocupação a pesca de camarão/Caranguejo.")
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .setPositiveButton(android.R.string.ok, null).show();
+
+
+        }else {
+            Bundle arguments = new Bundle();
+            arguments.putString(QuestaoDetailFragment.ARG_ITEM_ID, String.valueOf(idLayout));
+            arguments.putInt(QuestaoDetailFragment.ARG_QUESTAO_ORDEM, ordemQuestao);
+            if (formulario.getId() != null) {
+                arguments.putInt(QuestaoDetailFragment.ARG_FORMULARIO_ID, formulario.getId());
+            }
+
+            QuestaoDetailFragment fragment = new QuestaoDetailFragment();
+
+            fragment.setArguments(arguments);
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.questao_detail_container, fragment)
+                    .commit();
         }
-
-        QuestaoDetailFragment fragment = new QuestaoDetailFragment();
-
-        fragment.setArguments(arguments);
-        getSupportFragmentManager().beginTransaction()
-                .replace(R.id.questao_detail_container, fragment)
-                .commit();
     }
 
 

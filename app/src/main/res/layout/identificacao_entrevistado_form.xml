@@ -673,7 +673,7 @@
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Sim [FILTRO – Apenas quem marcar SIM\nresponderá as questões a partir do Bloco 5]"
+                        android:text="Sim [FILTRO – Se sim, responder todo o questionário.\nSe não, responder apenas os blocos 1,2,3 e 4]"
                         android:textSize="15dp"
                         android:textAppearance="@style/style_resposta"
                         android:id="@+id/perg14_rb_resp1"

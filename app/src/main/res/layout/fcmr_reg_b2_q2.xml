@@ -108,7 +108,7 @@
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Pesca de camarão / caranguejo\n[FILTRO – se marcar esta opção,\nseguir o questionário a partir do Bloco 5]"
+                        android:text="Pescador de camarão/caranguejo\n[FILTRO – Se pescador de camarão/caranguejo, responder todo o questionário.\nSe outras opções, responder apenas os blocos 1,2,3 e 4]"
                         android:textAppearance="@style/style_resposta"
                         android:textColor="#9d08fa"
                         android:id="@+id/perg2_cb_resp2"
