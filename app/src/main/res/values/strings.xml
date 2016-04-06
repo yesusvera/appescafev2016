@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">Appesca</string>
     <string name="title_formulario_detail">Formulario Detail</string>
     <string name="title_questao_list">Questões</string>
@@ -35,5 +35,14 @@
     <string name="pular_bloco_5_ocupacao_principal">Foi respondido que a principal ocupação no momento é Pescador(a) de camarão / Caranguejo, deseja pular para o bloco 5?</string>
     <string name="pular_bloco5_ocupacao">Foi respondido que uma das ocupações no momento é Pescador(a) de camarão / Caranguejo, deseja pular para o bloco 5?</string>
 
+
+    <string name="button_start_record">Gravar</string>
+    <string name="button_pause_record">Parar</string>
+    <string name="button_play_record">Ouvir</string>
+    <string name="error_audio_recorder">Audio recorder error: %1$s</string>
+    <string name="audio_db_title_format"><xliff:g id="format">yyyy-MM-dd HH:mm:ss</xliff:g></string>
+    <string name="audio_db_artist_name">Suas gravações</string>
+    <string name="audio_db_album_name">Gravadas</string>
+    <string name="error_no_permissions">The recorder requires `RECORD_AUDIO` and `WRITE_EXTERNAL_STORAGE` permissions.</string>
 
 </resources>
