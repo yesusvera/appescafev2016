@@ -72,9 +72,10 @@
                 android:text="Verão:"/>
 
             <EditText
-                android:layout_width="241dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/perg1_et_resp1"/>
+                android:id="@+id/perg1_et_resp1"
+                android:inputType="numberDecimal" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -84,9 +85,10 @@
 
 
             <EditText
-                android:layout_width="241dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/perg1_et_resp2"/>
+                android:id="@+id/perg1_et_resp2"
+                android:inputType="numberDecimal" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -111,9 +113,10 @@
                 android:text="Inverno :"/>
 
             <EditText
-                android:layout_width="241dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/perg2_et_resp1"/>
+                android:id="@+id/perg2_et_resp1"
+                android:inputType="numberDecimal" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -123,9 +126,10 @@
 
 
             <EditText
-                android:layout_width="241dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/perg2_et_resp2"/>
+                android:id="@+id/perg2_et_resp2"
+                android:inputType="numberDecimal" />
 
             <TextView
                 android:layout_width="wrap_content"

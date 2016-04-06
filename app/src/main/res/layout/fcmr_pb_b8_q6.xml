@@ -45,7 +45,7 @@
                 android:text="Quais atividades realizadas antes ou depois da pescaria?  Quanto tempo é gasto nessas atividades? "
                 android:textAppearance="@style/style_questao" />
 
-            <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout
+            <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="wrap_content"> <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -68,7 +68,8 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:text="Atividade"
-                        android:textAppearance="@style/style_questao" />
+                        android:textAppearance="@style/style_questao"
+                        android:layout_marginRight="30dp" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -76,7 +77,8 @@
                         android:gravity="center"
                         android:text="Tempo Gasto"
 
-                        android:textAppearance="@style/style_questao" />
+                        android:textAppearance="@style/style_questao"
+                        android:layout_marginRight="30dp" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -84,7 +86,8 @@
                         android:layout_gravity="center_horizontal"
                         android:gravity="center"
                         android:text="Custo R$/ano"
-                        android:textAppearance="@style/style_questao" />
+                        android:textAppearance="@style/style_questao"
+                        android:layout_marginRight="30dp" />
 
                 </TableRow>
 
@@ -92,13 +95,11 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@drawable/border">
+                    android:layout_gravity="center_horizontal">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/border"
                         android:gravity="center"
                         android:text="Reparo (remendar) do petrecho"
                         android:textAppearance="@style/style_questao" />
@@ -106,7 +107,7 @@
                     <RadioGroup
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/border"
+
                         android:orientation="vertical">
 
                         <EditText
@@ -115,7 +116,8 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:paddingLeft="20dp"
-                            android:textAppearance="@style/style_resposta" />
+                            android:textAppearance="@style/style_resposta"
+                            android:hint="Tempo\nGasto" />
 
                         <RadioButton
                             android:id="@+id/perg1_rb_resp2"
@@ -142,7 +144,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:paddingLeft="20dp"
-                        android:textAppearance="@style/style_resposta" />
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Custo R$\nAno" />
 
                 </TableRow>
 
@@ -150,13 +153,11 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@drawable/border">
+                    android:layout_gravity="center_horizontal">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/border"
                         android:gravity="center"
                         android:text="Lavagem de rede"
                         android:textAppearance="@style/style_questao" />
@@ -164,7 +165,6 @@
                     <RadioGroup
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/border"
                         android:orientation="vertical">
 
                         <EditText
@@ -173,7 +173,8 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:paddingLeft="20dp"
-                            android:textAppearance="@style/style_resposta" />
+                            android:textAppearance="@style/style_resposta"
+                            android:hint="Tempo\nGasto" />
 
                         <RadioButton
                             android:id="@+id/perg2_rb_resp2"
@@ -188,7 +189,6 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/border"
                         android:gravity="center"
                         android:text="Não se aplica"
                         android:textAppearance="@style/style_questao" />
@@ -199,13 +199,11 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@drawable/border">
+                    android:layout_gravity="center_horizontal">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/border"
                         android:gravity="center"
                         android:text="Recolher e lavar a embarcação"
                         android:textAppearance="@style/style_questao" />
@@ -213,7 +211,6 @@
                     <RadioGroup
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/border"
                         android:orientation="vertical">
 
                         <EditText
@@ -222,7 +219,8 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:paddingLeft="20dp"
-                            android:textAppearance="@style/style_resposta" />
+                            android:textAppearance="@style/style_resposta"
+                            android:hint="Tempo\nGasto" />
 
                         <RadioButton
                             android:id="@+id/perg3_rb_resp2"
@@ -237,7 +235,6 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/border"
                         android:gravity="center"
                         android:text="Não se aplica"
                         android:textAppearance="@style/style_questao" />
@@ -248,13 +245,11 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@drawable/border">
+                    android:layout_gravity="center_horizontal">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/border"
                         android:gravity="center"
                         android:text="Outros"
                         android:textAppearance="@style/style_questao" />
@@ -266,7 +261,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:paddingLeft="20dp"
-                        android:textAppearance="@style/style_resposta" />
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Tempo\nGasto" />
 
 
                     <EditText
@@ -275,7 +271,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:paddingLeft="20dp"
-                        android:textAppearance="@style/style_resposta" />
+                        android:textAppearance="@style/style_resposta"
+                        android:hint="Custo R$\nAno" />
 
 
                 </TableRow>

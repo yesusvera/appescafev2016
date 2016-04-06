@@ -114,49 +114,56 @@
                                         android:text="Todo mês"
                                         android:textAppearance="@style/style_resposta"
                                         android:id="@+id/perg1_rb_resp1"
-                                        android:paddingRight="15dp"/>
+                                        android:paddingRight="15dp"
+                                        android:tag="perg1_et_resp8->false" />
                                     <RadioButton
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="3 x no ano"
                                         android:textAppearance="@style/style_resposta"
                                         android:id="@+id/perg1_rb_resp2"
-                                        android:checked="false" />
+                                        android:checked="false"
+                                        android:tag="perg1_et_resp8->false" />
                                     <RadioButton
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="2 x no ano"
                                         android:textAppearance="@style/style_resposta"
                                         android:id="@+id/perg1_rb_resp3"
-                                        android:checked="false" />
+                                        android:checked="false"
+                                        android:tag="perg1_et_resp8->false" />
                                     <RadioButton
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="1 x no ano"
                                         android:textAppearance="@style/style_resposta"
                                         android:id="@+id/perg1_rb_resp4"
-                                        android:checked="false" />
+                                        android:checked="false"
+                                        android:tag="perg1_et_resp8->false" />
                                     <RadioButton
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="1 x em 2 anos"
                                         android:textAppearance="@style/style_resposta"
                                         android:id="@+id/perg1_rb_resp5"
-                                        android:checked="false" />
+                                        android:checked="false"
+                                        android:tag="perg1_et_resp8->false" />
                                     <RadioButton
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="1 x  em 3 anos"
                                         android:textAppearance="@style/style_resposta"
                                         android:id="@+id/perg1_rb_resp6"
-                                        android:checked="false" />
+                                        android:checked="false"
+                                        android:tag="perg1_et_resp8->false" />
                                     <RadioButton
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="Outro:"
                                         android:textAppearance="@style/style_resposta"
                                         android:id="@+id/perg1_rb_resp7"
-                                        android:checked="false" />
+                                        android:checked="false"
+                                        android:tag="perg1_et_resp8->true" />
 
                                     <EditText
                                         android:layout_width="match_parent"
@@ -164,7 +171,8 @@
                                         android:paddingLeft="20dp"
                                         android:layout_gravity="center_vertical"
                                         android:id="@+id/perg1_et_resp8"
-                                        android:textAppearance="@style/style_resposta"/>
+                                        android:textAppearance="@style/style_resposta"
+                                        android:enabled="false" />
                                 </RadioGroup>
 
                                 <EditText
@@ -231,46 +239,53 @@
                                         android:text="Todo mês"
                                         android:textAppearance="@style/style_resposta"
                                         android:id="@+id/perg2_rb_resp1"
-                                        android:paddingRight="15dp"/>
+                                        android:paddingRight="15dp"
+                                        android:tag="perg2_et_resp8->false" />
                                     <RadioButton
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="3 x no ano"
                                         android:textAppearance="@style/style_resposta"
                                         android:id="@+id/perg2_rb_resp2"
-                                        android:checked="false" />
+                                        android:checked="false"
+                                        android:tag="perg2_et_resp8->false" />
                                     <RadioButton
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="2 x no ano"
                                         android:textAppearance="@style/style_resposta"
                                         android:id="@+id/perg2_rb_resp3"
-                                        android:checked="false" />
+                                        android:checked="false"
+                                        android:tag="perg2_et_resp8->false" />
                                     <RadioButton
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="1 x no ano"
                                         android:textAppearance="@style/style_resposta"
                                         android:id="@+id/perg2_rb_resp4"
-                                        android:checked="false" />
+                                        android:checked="false"
+                                        android:tag="perg2_et_resp8->false" />
                                     <RadioButton
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="1 x em 2 anos"
                                         android:textAppearance="@style/style_resposta"
                                         android:id="@+id/perg2_rb_resp5"
-                                        android:checked="false" />
+                                        android:checked="false"
+                                        android:tag="perg2_et_resp8->false" />
                                     <RadioButton
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="1 x  em 3 anos"
                                         android:textAppearance="@style/style_resposta"
                                         android:id="@+id/perg2_rb_resp6"
-                                        android:checked="false" />
+                                        android:checked="false"
+                                        android:tag="perg2_et_resp8->false" />
                                     <RadioButton
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="Outro:"
+                                        android:tag="perg2_et_resp8->true"
                                         android:textAppearance="@style/style_resposta"
                                         android:id="@+id/perg2_rb_resp7"
                                         android:checked="false" />
@@ -281,7 +296,8 @@
                                         android:paddingLeft="20dp"
                                         android:layout_gravity="center_vertical"
                                         android:id="@+id/perg2_et_resp8"
-                                        android:textAppearance="@style/style_resposta"/>
+                                        android:textAppearance="@style/style_resposta"
+                                        android:enabled="false" />
                                 </RadioGroup>
 
                                 <EditText
@@ -349,49 +365,56 @@
                                         android:text="Todo mês"
                                         android:textAppearance="@style/style_resposta"
                                         android:id="@+id/perg3_rb_resp1"
-                                        android:paddingRight="15dp"/>
+                                        android:paddingRight="15dp"
+                                        android:tag="perg3_et_resp8->false" />
                                     <RadioButton
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="3 x no ano"
                                         android:textAppearance="@style/style_resposta"
                                         android:id="@+id/perg3_rb_resp2"
-                                        android:checked="false" />
+                                        android:checked="false"
+                                        android:tag="perg3_et_resp8->false" />
                                     <RadioButton
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="2 x no ano"
                                         android:textAppearance="@style/style_resposta"
                                         android:id="@+id/perg3_rb_resp3"
-                                        android:checked="false" />
+                                        android:checked="false"
+                                        android:tag="perg3_et_resp8->false" />
                                     <RadioButton
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="1 x no ano"
                                         android:textAppearance="@style/style_resposta"
                                         android:id="@+id/perg3_rb_resp4"
-                                        android:checked="false" />
+                                        android:checked="false"
+                                        android:tag="perg3_et_resp8->false" />
                                     <RadioButton
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="1 x em 2 anos"
                                         android:textAppearance="@style/style_resposta"
                                         android:id="@+id/perg3_rb_resp5"
-                                        android:checked="false" />
+                                        android:checked="false"
+                                        android:tag="perg3_et_resp8->false" />
                                     <RadioButton
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="1 x  em 3 anos"
                                         android:textAppearance="@style/style_resposta"
                                         android:id="@+id/perg3_rb_resp6"
-                                        android:checked="false" />
+                                        android:checked="false"
+                                        android:tag="perg3_et_resp8->false" />
                                     <RadioButton
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="Outro:"
                                         android:textAppearance="@style/style_resposta"
                                         android:id="@+id/perg3_rb_resp7"
-                                        android:checked="false" />
+                                        android:checked="false"
+                                        android:tag="perg3_et_resp8->true" />
 
                                     <EditText
                                         android:layout_width="match_parent"
@@ -399,7 +422,8 @@
                                         android:paddingLeft="20dp"
                                         android:layout_gravity="center_vertical"
                                         android:id="@+id/perg3_et_resp8"
-                                        android:textAppearance="@style/style_resposta"/>
+                                        android:textAppearance="@style/style_resposta"
+                                        android:enabled="false" />
                                 </RadioGroup>
 
                                 <EditText
@@ -457,7 +481,6 @@
                                 <RadioGroup
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:background="@drawable/border"
                                     android:orientation="vertical">
 
                                     <RadioButton
@@ -466,49 +489,56 @@
                                         android:text="Todo mês"
                                         android:textAppearance="@style/style_resposta"
                                         android:id="@+id/perg4_rb_resp1"
-                                        android:paddingRight="15dp"/>
+                                        android:paddingRight="15dp"
+                                        android:tag="perg4_et_resp8->false" />
                                     <RadioButton
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="3 x no ano"
                                         android:textAppearance="@style/style_resposta"
                                         android:id="@+id/perg4_rb_resp2"
-                                        android:checked="false" />
+                                        android:checked="false"
+                                        android:tag="perg4_et_resp8->false" />
                                     <RadioButton
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="2 x no ano"
                                         android:textAppearance="@style/style_resposta"
                                         android:id="@+id/perg4_rb_resp3"
-                                        android:checked="false" />
+                                        android:checked="false"
+                                        android:tag="perg4_et_resp8->false" />
                                     <RadioButton
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="1 x no ano"
                                         android:textAppearance="@style/style_resposta"
                                         android:id="@+id/perg4_rb_resp4"
-                                        android:checked="false" />
+                                        android:checked="false"
+                                        android:tag="perg4_et_resp8->false" />
                                     <RadioButton
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="1 x em 2 anos"
                                         android:textAppearance="@style/style_resposta"
                                         android:id="@+id/perg4_rb_resp5"
-                                        android:checked="false" />
+                                        android:checked="false"
+                                        android:tag="perg4_et_resp8->false" />
                                     <RadioButton
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="1 x  em 3 anos"
                                         android:textAppearance="@style/style_resposta"
                                         android:id="@+id/perg4_rb_resp6"
-                                        android:checked="false" />
+                                        android:checked="false"
+                                        android:tag="perg4_et_resp8->false" />
                                     <RadioButton
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="Outro:"
                                         android:textAppearance="@style/style_resposta"
                                         android:id="@+id/perg4_rb_resp7"
-                                        android:checked="false" />
+                                        android:checked="false"
+                                        android:tag="perg4_et_resp8->true" />
 
                                     <EditText
                                         android:layout_width="match_parent"
@@ -516,7 +546,8 @@
                                         android:paddingLeft="20dp"
                                         android:layout_gravity="center_vertical"
                                         android:id="@+id/perg4_et_resp8"
-                                        android:textAppearance="@style/style_resposta"/>
+                                        android:textAppearance="@style/style_resposta"
+                                        android:enabled="false" />
                                 </RadioGroup>
 
                                 <EditText
@@ -574,7 +605,6 @@
                                 <RadioGroup
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:background="@drawable/border"
                                     android:orientation="vertical">
 
                                     <RadioButton
@@ -583,49 +613,56 @@
                                         android:text="Todo mês"
                                         android:textAppearance="@style/style_resposta"
                                         android:id="@+id/perg5_rb_resp1"
-                                        android:paddingRight="15dp"/>
+                                        android:paddingRight="15dp"
+                                        android:tag="perg5_et_resp8->false" />
                                     <RadioButton
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="3 x no ano"
                                         android:textAppearance="@style/style_resposta"
                                         android:id="@+id/perg5_rb_resp2"
-                                        android:checked="false" />
+                                        android:checked="false"
+                                        android:tag="perg5_et_resp8->false" />
                                     <RadioButton
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="2 x no ano"
                                         android:textAppearance="@style/style_resposta"
                                         android:id="@+id/perg5_rb_resp3"
-                                        android:checked="false" />
+                                        android:checked="false"
+                                        android:tag="perg5_et_resp8->false" />
                                     <RadioButton
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="1 x no ano"
                                         android:textAppearance="@style/style_resposta"
                                         android:id="@+id/perg5_rb_resp4"
-                                        android:checked="false" />
+                                        android:checked="false"
+                                        android:tag="perg5_et_resp8->false" />
                                     <RadioButton
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="1 x em 2 anos"
                                         android:textAppearance="@style/style_resposta"
                                         android:id="@+id/perg5_rb_resp5"
-                                        android:checked="false" />
+                                        android:checked="false"
+                                        android:tag="perg5_et_resp8->false" />
                                     <RadioButton
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="1 x  em 3 anos"
                                         android:textAppearance="@style/style_resposta"
                                         android:id="@+id/perg5_rb_resp6"
-                                        android:checked="false" />
+                                        android:checked="false"
+                                        android:tag="perg5_et_resp8->false" />
                                     <RadioButton
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="Outro:"
                                         android:textAppearance="@style/style_resposta"
                                         android:id="@+id/perg5_rb_resp7"
-                                        android:checked="false" />
+                                        android:checked="false"
+                                        android:tag="perg5_et_resp8->true" />
 
                                     <EditText
                                         android:layout_width="match_parent"
@@ -633,7 +670,8 @@
                                         android:paddingLeft="20dp"
                                         android:layout_gravity="center_vertical"
                                         android:id="@+id/perg5_et_resp8"
-                                        android:textAppearance="@style/style_resposta"/>
+                                        android:textAppearance="@style/style_resposta"
+                                        android:enabled="false" />
                                 </RadioGroup>
 
                                 <EditText

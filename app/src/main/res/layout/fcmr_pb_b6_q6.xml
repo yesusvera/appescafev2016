@@ -64,7 +64,7 @@
                     android:text="Não"
                     android:textAppearance="@style/style_resposta"
                     android:checked="false"
-                    android:tag="perg4_cb_1ˆ4->true,perg2_et_resp1->false,perg3_et_resp1->false" />
+                    android:tag="perg4_cb_1ˆ4->false,perg2_et_resp1->false,perg3_et_resp1->false" />
 
                 <RadioButton
                     android:id="@+id/perg1_rb_resp2"
@@ -73,7 +73,7 @@
                     android:paddingRight="15dp"
                     android:text="Sim. Responda:"
                     android:textAppearance="@style/style_resposta"
-                    android:tag="perg4_cb_1ˆ4->false,perg2_et_resp1->true,perg3_et_resp1->true" />
+                    android:tag="perg4_cb_1ˆ4->true,perg2_et_resp1->true,perg3_et_resp1->true" />
             </RadioGroup>
 
         </LinearLayout>
