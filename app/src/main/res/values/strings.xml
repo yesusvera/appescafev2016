@@ -39,6 +39,7 @@
     <string name="button_start_record">Gravar</string>
     <string name="button_pause_record">Parar</string>
     <string name="button_play_record">Ouvir</string>
+    <string name="button_clear_record">Excluir</string>
     <string name="error_audio_recorder">Audio recorder error: %1$s</string>
     <string name="audio_db_title_format"><xliff:g id="format">yyyy-MM-dd HH:mm:ss</xliff:g></string>
     <string name="audio_db_artist_name">Suas gravações</string>

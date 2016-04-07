@@ -36,6 +36,7 @@ import android.widget.RadioGroup;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.github.lassana.recorder.AudioRecorder;
 import com.github.lassana.recorder.AudioRecorderBuilder;
@@ -83,6 +84,8 @@ public class QuestaoDetailFragment extends Fragment {
     private Button mStartButton;
     private Button mPauseButton;
     private Button mPlayButton;
+    private Button mClearButton;
+
     private ImageView mCassetteImage;
 
     private Uri mAudioRecordUri;
@@ -104,6 +107,9 @@ public class QuestaoDetailFragment extends Fragment {
                     break;
                 case R.id.buttonPlayRecording:
                     play();
+                    break;
+                case R.id.buttonClearRecording:
+                   clear();
                     break;
                 default:
                     break;
@@ -187,6 +193,11 @@ public class QuestaoDetailFragment extends Fragment {
         mPlayButton = (Button) rootView.findViewById(R.id.buttonPlayRecording);
         if(mPlayButton!=null)
             mPlayButton.setOnClickListener(mOnClickListener);
+
+
+        mClearButton = (Button) rootView.findViewById(R.id.buttonClearRecording);
+        if(mClearButton!=null)
+            mClearButton.setOnClickListener(mOnClickListener);
 
         invalidateViews();
 
@@ -1342,11 +1353,19 @@ public class QuestaoDetailFragment extends Fragment {
     //GRAVACAO
 
     private String getNextFileName() {
+
+        String dtFormatada = "";
+
+        Formulario formulario = formularioDAO.findById(idformulario);
+        if(formulario!=null && formulario.getDataAplicacao()!=null) {
+            SimpleDateFormat sdf = new SimpleDateFormat("ddMMyyyy_hhmmss");
+            dtFormatada = sdf.format(formulario.getDataAplicacao());
+        }
+
         return Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC)
                 .getAbsolutePath()
                 + File.separator
-                + "Record_"
-                + System.currentTimeMillis()
+                + "audio_b9q1_frm" + idformulario + "_"+ dtFormatada
                 + ".mp4";
     }
 
@@ -1357,25 +1376,29 @@ public class QuestaoDetailFragment extends Fragment {
                     mCassetteImage.clearAnimation();
                     mStartButton.setEnabled(false);
                     mPauseButton.setEnabled(false);
-                    mPlayButton.setEnabled(false);
+//                    mPlayButton.setEnabled(false);
                     break;
                 case STATUS_READY_TO_RECORD:
                     mCassetteImage.clearAnimation();
                     mStartButton.setEnabled(true);
                     mPauseButton.setEnabled(false);
-                    mPlayButton.setEnabled(false);
+                    //mPlayButton.setEnabled(false);
                     break;
                 case STATUS_RECORDING:
                     mCassetteImage.startAnimation(
                             AnimationUtils.loadAnimation(getActivity(), R.anim.animation_pulse));
                     mStartButton.setEnabled(false);
                     mPauseButton.setEnabled(true);
+                    mClearButton.setEnabled(false);
                     mPlayButton.setEnabled(false);
+
                     break;
                 case STATUS_RECORD_PAUSED:
                     mCassetteImage.clearAnimation();
                     mStartButton.setEnabled(true);
                     mPauseButton.setEnabled(false);
+
+                    mClearButton.setEnabled(true);
                     mPlayButton.setEnabled(true);
                     break;
                 default:
@@ -1488,12 +1511,49 @@ public class QuestaoDetailFragment extends Fragment {
     }
 
     private void play() {
-        File file = new File(mActiveRecordFileName);
+        File file = new File(getNextFileName());
         if (file.exists()) {
             Intent intent = new Intent();
             intent.setAction(android.content.Intent.ACTION_VIEW);
             intent.setDataAndType(Uri.fromFile(file), "audio/*");
             startActivity(intent);
+        }else{
+            new AlertDialog.Builder(getActivity())
+                    .setTitle("Appesca")
+                    .setMessage("Não existe nenhum áudio gravado ainda.")
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .setPositiveButton(android.R.string.ok, null).show();
+        }
+    }
+
+
+
+    private void clear() {
+        final File file = new File(getNextFileName());
+        if (file.exists()) {
+            new AlertDialog.Builder(getActivity())
+                    .setTitle("Appesca")
+                    .setMessage("Deseja realmente excluir este áudio?")
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            try {
+                                file.delete();
+                                Toast.makeText(getActivity(), "Áudio excluído.", Toast.LENGTH_LONG).show();
+                            }catch (Exception e){
+                                e.printStackTrace();
+                            }
+                        }
+                    })
+                    .setNegativeButton("Não", null)
+                    .show();
+        }else{
+            new AlertDialog.Builder(getActivity())
+                    .setTitle("Appesca")
+                    .setMessage("Não existe nenhum áudio gravado ainda.")
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .setPositiveButton(android.R.string.ok, null).show();
         }
     }
 

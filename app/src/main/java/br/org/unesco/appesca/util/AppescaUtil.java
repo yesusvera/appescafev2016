@@ -1,5 +1,6 @@
 package br.org.unesco.appesca.util;
 
+import android.content.Context;
 import android.util.Log;
 
 import java.util.GregorianCalendar;
@@ -62,4 +63,5 @@ public class AppescaUtil {
         result_days += (endTime.get(GregorianCalendar.DAY_OF_MONTH) - startTime.get(GregorianCalendar.DAY_OF_MONTH));
         return result_years+result_months+result_days;
     }
+
 }

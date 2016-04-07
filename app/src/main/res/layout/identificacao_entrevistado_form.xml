@@ -507,41 +507,46 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <CheckBox
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Casado "
                     android:textSize="14dp"
                     android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg12_cb_resp1" />
-                <CheckBox
+                    android:id="@+id/perg12_rb_resp1" />
+                <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Solteiro"
                     android:textSize="14dp"
                     android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg12_cb_resp2" />
-                <CheckBox
+                    android:id="@+id/perg12_rb_resp2" />
+                <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Divorciado"
                     android:textSize="14dp"
                     android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg12_cb_resp3" />
-                <CheckBox
+                    android:id="@+id/perg12_rb_resp3" />
+                <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Viúvo"
                     android:textSize="14dp"
                     android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg12_cb_resp4" />
-                <CheckBox
+                    android:id="@+id/perg12_rb_resp4" />
+                <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="União estável"
                     android:textSize="14dp"
                     android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg12_cb_resp5" />
+                    android:id="@+id/perg12_rb_resp5" />
+                </RadioGroup>
             </LinearLayout>
 
         </LinearLayout>
@@ -565,83 +570,88 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <CheckBox
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Analfabeto"
                     android:textSize="14dp"
                     android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg13_cb_resp1" />
-                <CheckBox
+                    android:id="@+id/perg13_rb_resp1" />
+                <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Fundamental I incompleto"
                     android:textSize="14dp"
                     android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg13_cb_resp2" />
-                <CheckBox
+                    android:id="@+id/perg13_rb_resp2" />
+                <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Fundamental I completo"
                     android:textSize="14dp"
                     android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg13_cb_resp3" />
-                <CheckBox
+                    android:id="@+id/perg13_rb_resp3" />
+                <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Fundamental II incompleto"
                     android:textSize="14dp"
                     android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg13_cb_resp4" />
-                <CheckBox
+                    android:id="@+id/perg13_rb_resp4" />
+                <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Fundamental II completo"
                     android:textSize="14dp"
                     android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg13_cb_resp5" />
-                <CheckBox
+                    android:id="@+id/perg13_rb_resp5" />
+                <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Médio incompleto"
                     android:textSize="14dp"
                     android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg13_cb_resp6" />
-                <CheckBox
+                    android:id="@+id/perg13_rb_resp6" />
+                <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Médio completo"
                     android:textSize="14dp"
                     android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg13_cb_resp7" />
-                <CheckBox
+                    android:id="@+id/perg13_rb_resp7" />
+                <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Superior incompleto"
                     android:textSize="14dp"
                     android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg13_cb_resp8" />
-                <CheckBox
+                    android:id="@+id/perg13_rb_resp8" />
+                <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Superior completo"
                     android:textSize="14dp"
                     android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg13_cb_resp9" />
-                <CheckBox
+                    android:id="@+id/perg13_rb_resp9" />
+                <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Não Sabe"
                     android:textSize="14dp"
                     android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg13_cb_resp10" />
-                <CheckBox
+                    android:id="@+id/perg13_rb_resp10" />
+                <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Não respondeu"
                     android:textSize="14dp"
                     android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg13_cb_resp11" />
+                    android:id="@+id/perg13_rb_resp11" />
+                </RadioGroup>
             </LinearLayout>
 
         </LinearLayout>
