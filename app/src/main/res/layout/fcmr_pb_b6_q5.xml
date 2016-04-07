@@ -81,8 +81,8 @@
                 android:paddingRight="15dp"
                 android:text="Verão"
                 android:textAppearance="@style/style_resposta"
-                android:enabled="false"
-                android:checked="true"
+                android:enabled="true"
+                android:checked="false"
                 android:background="#fbeb05" />
 
             <CheckBox
@@ -92,8 +92,8 @@
                 android:paddingRight="15dp"
                 android:text="Inverno"
                 android:textAppearance="@style/style_resposta"
-                android:enabled="false"
-                android:checked="true"
+                android:enabled="true"
+                android:checked="false"
                 android:background="#2368f1"
                 android:textColor="#fdfdfd" />
 
@@ -134,8 +134,8 @@
                 android:text="pequena/baixa/morta"
 
                 android:textAppearance="@style/style_resposta"
-                android:enabled="false"
-                android:checked="true" />
+                android:enabled="true"
+                android:checked="false" />
 
             <CheckBox
                 android:id="@+id/perg2_cb_resp2"
@@ -145,8 +145,8 @@
                 android:text="alta/grande/lançante"
 
                 android:textAppearance="@style/style_resposta"
-                android:enabled="false"
-                android:checked="true" />
+                android:enabled="true"
+                android:checked="false" />
         </LinearLayout>
 
 

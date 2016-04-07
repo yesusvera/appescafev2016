@@ -492,7 +492,6 @@ public class QuestaoDetailFragment extends Fragment {
                     }
                     break;
                 case 2: //CARANGUEJO
-
                     switch (ordemQuestao)
                     {
                         case 53: configuraTabelaB6Q7(formulario);break;
@@ -511,7 +510,7 @@ public class QuestaoDetailFragment extends Fragment {
                                  carregaRespostasB6Q4_PITICAIA(formulario);
                                     break;
                         case 51: configuraTabelaB6Q4_PITICAIA(formulario); //esta possui os mesmos componentes visuais.
-                                 carregaRespostasB6Q4_PITICAIA(formulario);
+//                                 carregaRespostasB6Q4_PITICAIA(formulario);
                                      break;
                         case 53:
                         case 54:

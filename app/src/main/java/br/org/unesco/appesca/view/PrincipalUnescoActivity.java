@@ -311,15 +311,17 @@ public class PrincipalUnescoActivity extends AppCompatActivity
                     RespFormularioREST respFormularioREST = (RespFormularioREST) xStream.fromXML(xmlRetorno);
                     List<Formulario> listaFormularios = respFormularioREST.getListaFormularios();
 
-                    FormularioDAO formularioDAO = new FormularioDAO(PrincipalUnescoActivity.this);
-                    for (Formulario form : listaFormularios) {
-                        if (form.getIdSincronizacao() != null) {
-                            Formulario formBD = formularioDAO.getFormularioPorIdSincronizacao(form.getIdSincronizacao());
-                            if (formBD != null) {
-                                form.setId(formBD.getId());
-                                form.setIdUsuario(formBD.getIdUsuario());
+                    if(listaFormularios!=null) {
+                        FormularioDAO formularioDAO = new FormularioDAO(PrincipalUnescoActivity.this);
+                        for (Formulario form : listaFormularios) {
+                            if (form.getIdSincronizacao() != null) {
+                                Formulario formBD = formularioDAO.getFormularioPorIdSincronizacao(form.getIdSincronizacao());
+                                if (formBD != null) {
+                                    form.setId(formBD.getId());
+                                    form.setIdUsuario(formBD.getIdUsuario());
 
-                                formularioDAO.save(form);
+                                    formularioDAO.save(form);
+                                }
                             }
                         }
                     }
@@ -347,19 +349,22 @@ public class PrincipalUnescoActivity extends AppCompatActivity
                 public void onRetry(int retryNo) {
                 }
             });
-
         }else{
             carregaLista(value);
         }
     }
 
     private void carregaLista(int value) {
-        Bundle arguments = new Bundle();
-        arguments.putInt(FormularioListDetailFragment.ARG_ITEM_ID, value);
-        FormularioListDetailFragment fragment = new FormularioListDetailFragment();
-        fragment.setArguments(arguments);
-        getSupportFragmentManager().beginTransaction()
-                .replace(R.id.formulario_detail_container, fragment)
-                .commit();
+        try {
+            Bundle arguments = new Bundle();
+            arguments.putInt(FormularioListDetailFragment.ARG_ITEM_ID, value);
+            FormularioListDetailFragment fragment = new FormularioListDetailFragment();
+            fragment.setArguments(arguments);
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.formulario_detail_container, fragment)
+                    .commit();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
     }
 }

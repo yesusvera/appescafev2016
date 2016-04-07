@@ -62,7 +62,7 @@
                     android:id="@+id/perg1_rb_resp1"
                     android:paddingRight="15dp"
                     android:checked="false"
-                    android:tag="perg2_et_resp1->false,perg3_et_resp1->false,perg4_cb_1ˆ6->true" />
+                    android:tag="perg2_et_resp1->false,perg3_et_resp1->false,perg4_cb_1ˆ6->false" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
@@ -71,7 +71,7 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg1_rb_resp2"
                     android:paddingRight="15dp"
-                    android:tag="perg2_et_resp1->true,perg3_et_resp1->true,perg4_cb_1ˆ6->false" />
+                    android:tag="perg2_et_resp1->true,perg3_et_resp1->true,perg4_cb_1ˆ6->true" />
            </RadioGroup>
 
         </LinearLayout>

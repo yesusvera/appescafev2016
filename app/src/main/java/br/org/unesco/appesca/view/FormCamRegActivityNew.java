@@ -3,10 +3,8 @@ package br.org.unesco.appesca.view;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -25,7 +23,6 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -48,7 +45,6 @@ import br.org.unesco.appesca.model.Resposta;
 import br.org.unesco.appesca.util.AppescaUtil;
 import br.org.unesco.appesca.util.ConnectionNetwork;
 import br.org.unesco.appesca.util.ConstantesIdsFormularios;
-import cz.msebera.android.httpclient.entity.SerializableEntity;
 
 public class FormCamRegActivityNew extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -165,9 +161,8 @@ public class FormCamRegActivityNew extends AppCompatActivity
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
 
-
                                     salvarQuestaoAtual(false);
-                                    openFragment(arrayIdsQuestoes[--posAtual]);
+//                                    openFragment(arrayIdsQuestoes[--posAtual]);
 
 
                                 }
@@ -218,7 +213,10 @@ public class FormCamRegActivityNew extends AppCompatActivity
     }
 
 
-    private void salvarQuestaoAtual(final boolean redirecionar){
+    /**
+     * @param direcao true para avançar e false para retroceder
+     */
+    private void salvarQuestaoAtual(final boolean direcao){
 
         final ProgressDialog ringProgressDialog = ProgressDialog.show(FormCamRegActivityNew.this, "Aguarde ...", "Salvando questão ...", true);
 
@@ -262,50 +260,14 @@ public class FormCamRegActivityNew extends AppCompatActivity
                 return 0;
             }
 
-//            private void abrirBloco5(String message) {
-//                new AlertDialog.Builder(FormCamRegActivityNew.this)
-//                        .setTitle(getString(R.string.app_name))
-//                        .setMessage(message)
-//                        .setIcon(android.R.drawable.ic_dialog_alert)
-//                        .setPositiveButton(R.string.pular_bloco_5, new DialogInterface.OnClickListener() {
-//                            @Override
-//                            public void onClick(DialogInterface dialog, int which) {
-//                                if(redirecionar) {
-//                                    switch (tipoFormulario){
-//                                        case 1://Formulário Camarão Regional
-//                                            posAtual = getPosicaoPorIdLayout(R.layout.fcmr_reg_b5_q1);
-//                                            break;
-//                                        case 2://Formulário Caranguejo
-//                                            posAtual = getPosicaoPorIdLayout(R.layout.fcrj_b5_q1);
-//                                            break;
-//                                        case 3://Formulário Camarão Piticaia e Branco
-//                                            posAtual = getPosicaoPorIdLayout(R.layout.fcmr_reg_b5_q1);
-//                                            break;
-//                                    }
-//                                    openFragment(arrayIdsQuestoes[posAtual]);
-//                                }
-//                            }
-//                        })
-//                        .setNegativeButton(getString(R.string.nao_ir_proxima), new DialogInterface.OnClickListener() {
-//                            @Override
-//                            public void onClick(DialogInterface dialog, int which) {
-//                                abrirProximaQuestao();
-//                            }
-//                        })
-//                        .show();
-//            }
-
-            private void abrirProximaQuestao() {
-
-
-
-
-                if(redirecionar) {
-
+            private void abrirQuestao() {
+                if(direcao) { //AVANÇAR
                         if (posAtual == arrayIdsQuestoes.length - 1) {
                             posAtual = -1;
                         }
                         openFragment(arrayIdsQuestoes[++posAtual]);
+                }else{ //RETROCEDER
+                    openFragment(arrayIdsQuestoes[--posAtual]);
                 }
             }
 
@@ -316,46 +278,7 @@ public class FormCamRegActivityNew extends AppCompatActivity
                 if(result ==0){
                     Toast.makeText(getApplicationContext(), "Questão salva na base local.", Toast.LENGTH_LONG).show();
                     chekListQuestoes();
-
-                    //Se estou na identificação do entrevistado
-//                    if(posAtual==getPosicaoPorIdLayout(R.layout.identificacao_entrevistado_form)){
-//                        Questao questao = questaoDAO.findQuestaoByOrdemIdFormulario(posAtual-1, formulario.getId());
-//                        FormularioBO formularioBO = new FormularioBO();
-//
-//                        Resposta responsavelFamiliar = formularioBO.getResposta(questao,14,1);
-//                        if(responsavelFamiliar!=null){
-//                            abrirBloco5(getString(R.string.pular_bloco5_responsavel_familiar));
-//                        }else{
-//                            abrirProximaQuestao();
-//                        }
-//                    }else if(posAtual==getPosicaoPorIdLayout(R.layout.fcmr_reg_b2_q1)){
-//                        Questao questao = questaoDAO.findQuestaoByOrdemIdFormulario(posAtual-1, formulario.getId());
-//                        FormularioBO formularioBO = new FormularioBO();
-//
-//                        Resposta pescadorCamarao = formularioBO.getResposta(questao, 1,2);
-//
-//                        if(pescadorCamarao!=null){
-//                            abrirBloco5(getString(R.string.pular_bloco_5_ocupacao_principal));
-//                        }else{
-//                            abrirProximaQuestao();
-//                        }
-//
-//                    }else if(posAtual==getPosicaoPorIdLayout(R.layout.fcmr_reg_b2_q2)){
-//                        Questao questao = questaoDAO.findQuestaoByOrdemIdFormulario(posAtual-1, formulario.getId());
-//                        FormularioBO formularioBO = new FormularioBO();
-//
-//                        Resposta pescadorCamarao = formularioBO.getResposta(questao, 2,2);
-//
-//                        if(pescadorCamarao!=null){
-//                            abrirBloco5(getString(R.string.pular_bloco5_ocupacao));
-//                        }else{
-//                            abrirProximaQuestao();
-//                        }
-//
-//                    }else{
-                        abrirProximaQuestao();
-//                    }
-
+                    abrirQuestao();
                 }else if(result ==1){
                     new AlertDialog.Builder(FormCamRegActivityNew.this)
                             .setTitle(getString(R.string.app_name))
@@ -369,21 +292,6 @@ public class FormCamRegActivityNew extends AppCompatActivity
                 }
             }
         }.execute();
-//
-//        new Thread(new Runnable() {
-//            @Override
-//            public void run() {
-//                try {
-
-
-//                } catch (Exception e) {
-//                    e.printStackTrace();
-//                }
-
-//            }
-//
-//
-//        }).start();
     }
 
     public void inicializaFormulario(){
@@ -455,6 +363,9 @@ public class FormCamRegActivityNew extends AppCompatActivity
      * Método necessário para assinalar quais questões já foram respondidas.
      */
     private void chekListQuestoes(){
+            String lblRespondida = "(Respondida)";
+            String lblChecked = "(√)";
+
             if (formulario != null) {
                 List<Questao> listaQuestoes = questaoDAO.getQuestoesByFormulario(formulario.getId());
 
@@ -466,19 +377,21 @@ public class FormCamRegActivityNew extends AppCompatActivity
 
                         if((q.getOrdem()+1)>1) {
                             item.setIcon(R.drawable.questao_icon_respondida);
-                            if(item.getTitle().toString().indexOf("(Respondida)")==-1) {
-                                item.setTitle(item.getTitle() + "(Respondida)");
+                            if(item.getTitle().toString().indexOf(lblRespondida)==-1) {
+                                item.setTitle(item.getTitle() + lblRespondida);
                             }
                         }else{
-//                            item.setIcon(R.drawable.questao_icon_respondida);
-                            if(item.getTitle().toString().indexOf("(√)")==-1) {
-                                item.setTitle(item.getTitle() + "(√)");
+                            if(item.getTitle().toString().indexOf(lblChecked)==-1) {
+                                item.setTitle(item.getTitle() + lblChecked);
                             }
                         }
                     }catch(Exception e){
                         e.printStackTrace();
                     }
                 }
+
+
+
 
                 ProgressBar progressBar = (ProgressBar)cabecalhoNavigationView.findViewById(R.id.progressBarRespostas);
                 TextView txtTextoResposta = (TextView)cabecalhoNavigationView.findViewById(R.id.txtTextoResposta);
@@ -490,6 +403,87 @@ public class FormCamRegActivityNew extends AppCompatActivity
                 TextView txtTextoRespostaPrincipal = (TextView)findViewById(R.id.txtTextoResposta);
 
                 atualizaProgresso(progressBarPrincipal, txtTextoRespostaPrincipal, listaQuestoes);
+
+
+
+
+                //Verificando se as questões foram respondidas para alertar sobre envio.
+                if(!entrevistadoEPescadorOuResponsavelFamiliar()){
+                    //Verificar somente até o bloco 4
+                    boolean preencheuTodoOBloco4 = true;
+                    int posUltQuestaoBloco4 = descobrirPos(R.id.b4_q11);
+
+                    for(int i=0; i<=posUltQuestaoBloco4;i++){
+                        int id_item = arraysIdsMenuLateral[i];
+                        MenuItem item = (MenuItem) menu.findItem(id_item);
+
+                        if(item!=null && item.getTitle()!=null){
+                            if(item.getTitle().toString().indexOf(lblRespondida)==-1 && item.getTitle().toString().indexOf(lblChecked)==-1){
+                                preencheuTodoOBloco4 = false;
+                                break;
+                            }
+                        }
+                    }
+
+                    if(preencheuTodoOBloco4) {
+                        new AlertDialog.Builder(FormCamRegActivityNew.this)
+                                .setTitle(R.string.app_name)
+                                .setMessage("Você preencheu o formulário até o bloco 4, já pode enviar o formulário.")
+                                .setIcon(android.R.drawable.ic_dialog_alert)
+                                .setPositiveButton(android.R.string.ok, null).show();
+                    }else if(posAtual==posUltQuestaoBloco4){
+                        new AlertDialog.Builder(FormCamRegActivityNew.this)
+                                .setTitle(R.string.app_name)
+                                .setMessage("Você precisa preencher o bloco 4 completo, verifique a lista ao lado para ver quais questões ainda não foram respondidas.")
+                                .setIcon(android.R.drawable.ic_dialog_alert)
+                                .setPositiveButton("Ver lista", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+                                        if (drawer!=null && !drawer.isDrawerOpen(GravityCompat.START)) {
+                                            drawer.openDrawer(GravityCompat.START);
+                                        }
+                                    }
+                                }).show();
+                    }
+
+                }else{ // não é pescador
+                    //Verificar o formulário completo
+                    boolean preencheuOFormularioTodo = true;
+                    for(int i=0; i<arraysIdsMenuLateral.length;i++){
+                        int id_item = arraysIdsMenuLateral[i];
+                        MenuItem item = (MenuItem) menu.findItem(id_item);
+
+                        if(item!=null && item.getTitle()!=null){
+                            if(item.getTitle().toString().indexOf(lblRespondida)==-1 && item.getTitle().toString().indexOf(lblChecked)==-1){
+                                preencheuOFormularioTodo = false;
+                                break;
+                            }
+                        }
+                    }
+
+                    if(preencheuOFormularioTodo) {
+                        new AlertDialog.Builder(FormCamRegActivityNew.this)
+                                .setTitle(R.string.app_name)
+                                .setMessage("Você preencheu o formulário completo, já pode enviar o formulário.")
+                                .setIcon(android.R.drawable.ic_dialog_alert)
+                                .setPositiveButton(android.R.string.ok, null).show();
+                    }else if(posAtual==arraysIdsMenuLateral.length-1){
+                        new AlertDialog.Builder(FormCamRegActivityNew.this)
+                                .setTitle(R.string.app_name)
+                                .setMessage("Você precisa preencher o formulário completo, verifique a lista ao lado para ver quais questões ainda não foram respondidas.")
+                                .setIcon(android.R.drawable.ic_dialog_alert)
+                                .setPositiveButton("Ver lista", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+                                        if (drawer!=null && !drawer.isDrawerOpen(GravityCompat.START)) {
+                                            drawer.openDrawer(GravityCompat.START);
+                                        }
+                                    }
+                                }).show();
+                    }
+                }
 
             }
     }
@@ -772,24 +766,23 @@ public class FormCamRegActivityNew extends AppCompatActivity
         int ordemQuestao = posAtual -1;
 
 
-        Questao qIdent = questaoDAO.findQuestaoByOrdemIdFormulario(getPosicaoPorIdLayout(R.layout.identificacao_entrevistado_form)-1, formulario.getId());
-        Questao b2q1 = questaoDAO.findQuestaoByOrdemIdFormulario(getPosicaoPorIdLayout(R.layout.fcmr_reg_b2_q1)-1, formulario.getId());
-        Questao b2q2 = questaoDAO.findQuestaoByOrdemIdFormulario(getPosicaoPorIdLayout(R.layout.fcmr_reg_b2_q2)-1, formulario.getId());
+//        Questao qIdent = questaoDAO.findQuestaoByOrdemIdFormulario(getPosicaoPorIdLayout(R.layout.identificacao_entrevistado_form)-1, formulario.getId());
+//        Questao b2q1 = questaoDAO.findQuestaoByOrdemIdFormulario(getPosicaoPorIdLayout(R.layout.fcmr_reg_b2_q1)-1, formulario.getId());
+//        Questao b2q2 = questaoDAO.findQuestaoByOrdemIdFormulario(getPosicaoPorIdLayout(R.layout.fcmr_reg_b2_q2)-1, formulario.getId());
+//
+//        FormularioBO formularioBO = new FormularioBO();
+//
+//        Resposta responsavelFamiliar = formularioBO.getResposta(qIdent, 14, 1);
+//        Resposta pescadorCamarao = formularioBO.getResposta(b2q1, 1, 2);
+//        Resposta pescadorCamaraob2q2 = formularioBO.getResposta(b2q2, 2,2);
 
-        FormularioBO formularioBO = new FormularioBO();
-
-        Resposta responsavelFamiliar = formularioBO.getResposta(qIdent,14,1);
-        Resposta pescadorCamarao = formularioBO.getResposta(b2q1, 1, 2);
-        Resposta pescadorCamaraob2q2 = formularioBO.getResposta(b2q2, 2,2);
-
-        if(responsavelFamiliar!=null && pescadorCamarao!=null && pescadorCamaraob2q2!=null && posAtual > getPosicaoPorIdLayout(R.layout.fcmr_reg_b4_q11)) {
+        if(!entrevistadoEPescadorOuResponsavelFamiliar() && posAtual > getPosicaoPorIdLayout(R.layout.fcmr_reg_b4_q11)) {
             new AlertDialog.Builder(FormCamRegActivityNew.this)
                     .setTitle(getString(R.string.app_name))
-                    .setMessage("O questionário só pode ser respondido até o bloco 4.\n1) Identificação: O Entrevistado é responsável pela unidade familiar.\n2) Bloco 2 (Questões 1 e 2) - O Entrevistado possui como ocupação a pesca de camarão/Caranguejo.")
+                    .setMessage("O questionário precisa ser respondido apenas até o final do Bloco 4.\nPara responder ao questionário a partir do Bloco 5 o entrevistado deve:\n" +
+                            "* Ser responsável pela unidade Familiar (Resposta a última pergunta da Identificação);\n* Ou Possuir como ocupação a pesca de Camarão/Caranguejo (Resposta ao Bloco 2 na questão 1 ou última pergunta da questão 2);")
                     .setIcon(android.R.drawable.ic_dialog_alert)
                     .setPositiveButton(android.R.string.ok, null).show();
-
-
         }else {
             Bundle arguments = new Bundle();
             arguments.putString(QuestaoDetailFragment.ARG_ITEM_ID, String.valueOf(idLayout));
@@ -807,6 +800,29 @@ public class FormCamRegActivityNew extends AppCompatActivity
         }
     }
 
+    /**
+     * Regra utilizada para saber se tem que preencher o formulário todo ou somente até o bloco 4.
+     * @return
+     */
+
+    private boolean entrevistadoEPescadorOuResponsavelFamiliar(){
+        Questao qIdent = questaoDAO.findQuestaoByOrdemIdFormulario(getPosicaoPorIdLayout(R.layout.identificacao_entrevistado_form)-1, formulario.getId());
+        Questao b2q1 = questaoDAO.findQuestaoByOrdemIdFormulario(getPosicaoPorIdLayout(R.layout.fcmr_reg_b2_q1)-1, formulario.getId());
+        Questao b2q2 = questaoDAO.findQuestaoByOrdemIdFormulario(getPosicaoPorIdLayout(R.layout.fcmr_reg_b2_q2)-1, formulario.getId());
+
+        FormularioBO formularioBO = new FormularioBO();
+
+        Resposta responsavelFamiliar = formularioBO.getResposta(qIdent,14,1);
+        Resposta pescadorCamarao = formularioBO.getResposta(b2q1, 1, 2);
+        Resposta pescadorCamaraob2q2 = formularioBO.getResposta(b2q2, 2,2);
+
+        if(responsavelFamiliar!=null || pescadorCamarao!=null || pescadorCamaraob2q2!=null) {
+            return true;
+        }else{
+            return false;
+        }
+
+    }
 
     private int getPosicaoPorIdLayout(int idLayout){
         if(arrayIdsQuestoes!=null){

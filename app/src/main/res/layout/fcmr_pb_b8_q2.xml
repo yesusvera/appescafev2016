@@ -158,7 +158,8 @@
                     android:paddingRight="15dp"
                     android:text="Outro:"
                     android:textAppearance="@style/style_resposta"
-                    android:enabled="false" />
+                    android:enabled="false"
+                   android:tag="perg2_et_resp9->this" />
 
                 <EditText
                     android:id="@+id/perg2_et_resp9"
