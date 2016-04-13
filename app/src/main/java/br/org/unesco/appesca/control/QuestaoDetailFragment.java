@@ -14,14 +14,12 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -50,7 +48,6 @@ import java.util.Locale;
 
 import br.org.unesco.appesca.R;
 import br.org.unesco.appesca.bo.FormularioBO;
-import br.org.unesco.appesca.bo.RecorderApplication;
 import br.org.unesco.appesca.dao.FormularioDAO;
 import br.org.unesco.appesca.dao.QuestaoDAO;
 import br.org.unesco.appesca.model.Formulario;
@@ -85,6 +82,9 @@ public class QuestaoDetailFragment extends Fragment {
     private Button mPauseButton;
     private Button mPlayButton;
     private Button mClearButton;
+    private TextView txtNomeArquivo;
+    private TextView txtTempoGravacao;
+
 
     private ImageView mCassetteImage;
 
@@ -173,7 +173,7 @@ public class QuestaoDetailFragment extends Fragment {
         if (mAudioRecorder == null
                 || mAudioRecorder.getStatus() == AudioRecorder.Status.STATUS_UNKNOWN) {
             mAudioRecorder = AudioRecorderBuilder.with(getContext())
-                    .fileName(getNextFileName())
+                    .fileName(getFileName())
                     .config(AudioRecorder.MediaRecorderConfig.DEFAULT)
                     .loggable()
                     .build();
@@ -198,6 +198,10 @@ public class QuestaoDetailFragment extends Fragment {
         mClearButton = (Button) rootView.findViewById(R.id.buttonClearRecording);
         if(mClearButton!=null)
             mClearButton.setOnClickListener(mOnClickListener);
+
+
+        txtNomeArquivo = (TextView) rootView.findViewById(R.id.txtNomeArquivo);
+        txtTempoGravacao = (TextView) rootView.findViewById(R.id.txtTempoGravacao);
 
         invalidateViews();
 
@@ -1352,21 +1356,10 @@ public class QuestaoDetailFragment extends Fragment {
 
     //GRAVACAO
 
-    private String getNextFileName() {
-
-        String dtFormatada = "";
-
+    private String getFileName() {
         Formulario formulario = formularioDAO.findById(idformulario);
-        if(formulario!=null && formulario.getDataAplicacao()!=null) {
-            SimpleDateFormat sdf = new SimpleDateFormat("ddMMyyyy_hhmmss");
-            dtFormatada = sdf.format(formulario.getDataAplicacao());
-        }
 
-        return Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC)
-                .getAbsolutePath()
-                + File.separator
-                + "audio_b9q1_frm" + idformulario + "_"+ dtFormatada
-                + ".mp4";
+        return formularioBO.getPathAudioQ9(formulario);
     }
 
     private void invalidateViews() {
@@ -1404,6 +1397,12 @@ public class QuestaoDetailFragment extends Fragment {
                 default:
                     break;
             }
+        }
+        Formulario formulario = formularioDAO.findById(idformulario);
+        if(formulario!=null && formulario.getSituacao()> 0){
+            if(mStartButton!=null) mStartButton.setVisibility(View.GONE);
+            if(mClearButton!=null) mClearButton.setVisibility(View.GONE);
+            if(mPauseButton!=null) mClearButton.setVisibility(View.GONE);
         }
     }
 
@@ -1480,12 +1479,15 @@ public class QuestaoDetailFragment extends Fragment {
                 invalidateViews();
             }
 
+
             @Override
             public void onException(Exception e) {
                 getActivity().setResult(Activity.RESULT_CANCELED);
                 invalidateViews();
                 message(getString(R.string.error_audio_recorder, e));
             }
+
+
         });
     }
 
@@ -1510,8 +1512,9 @@ public class QuestaoDetailFragment extends Fragment {
         });
     }
 
+
     private void play() {
-        File file = new File(getNextFileName());
+        File file = new File(getFileName());
         if (file.exists()) {
             Intent intent = new Intent();
             intent.setAction(android.content.Intent.ACTION_VIEW);
@@ -1527,9 +1530,8 @@ public class QuestaoDetailFragment extends Fragment {
     }
 
 
-
     private void clear() {
-        final File file = new File(getNextFileName());
+        final File file = new File(getFileName());
         if (file.exists()) {
             new AlertDialog.Builder(getActivity())
                     .setTitle("Appesca")
@@ -1601,5 +1603,15 @@ public class QuestaoDetailFragment extends Fragment {
         }
         activity.sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, mAudioRecordUri));
         return mAudioRecordUri;
+    }
+
+    private void atualizaDadosAudio(){
+        if(txtTempoGravacao!=null && txtNomeArquivo!=null){
+            final File file = new File(getFileName());
+            if (file.exists()) {
+                txtNomeArquivo.setText(file.getAbsolutePath());
+                txtTempoGravacao.setText(file.length() + "");
+            }
+        }
     }
 }

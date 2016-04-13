@@ -15,6 +15,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -62,6 +63,7 @@ public class FormCamRegActivityNew extends AppCompatActivity
 
     public static int  id_activity_questao_atual = 0;
     public static int posAtual = 0;
+    public static int postTempRevert = 0;
 
 
     private String nomeFormulario;
@@ -213,14 +215,38 @@ public class FormCamRegActivityNew extends AppCompatActivity
     }
 
 
+    private void configuraVisibilidadeBotoesNavegacao(boolean enabled){
+        FloatingActionButton floatButtonVoltar = (FloatingActionButton) findViewById(R.id.float_button_menu_back);
+        FloatingActionButton floatButtonSalvar = (FloatingActionButton) findViewById(R.id.float_button_menu_save);
+
+
+        if(floatButtonVoltar!=null){
+            floatButtonVoltar.setVisibility(enabled?View.VISIBLE:View.INVISIBLE);
+        }
+        if(floatButtonSalvar!=null){
+            floatButtonSalvar.setVisibility(enabled?View.VISIBLE:View.INVISIBLE);
+        }
+        
+    }
+    
+    
     /**
      * @param direcao true para avançar e false para retroceder
      */
     private void salvarQuestaoAtual(final boolean direcao){
 
+        configuraVisibilidadeBotoesNavegacao(false);
+
+        // Check if no view has focus:
+        View view = this.getCurrentFocus();
+        if (view != null) {
+            InputMethodManager imm = (InputMethodManager)getSystemService(getApplicationContext().INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
+
         final ProgressDialog ringProgressDialog = ProgressDialog.show(FormCamRegActivityNew.this, "Aguarde ...", "Salvando questão ...", true);
 
-        ringProgressDialog.setCancelable(true);
+        ringProgressDialog.setCancelable(false);
 
 
         new AsyncTask<Void,Void,Integer>(){
@@ -249,12 +275,13 @@ public class FormCamRegActivityNew extends AppCompatActivity
                         questaoDAO.updateQuestao(questao);
                     }
 
-                    if(!questaoBO.temAlgumaResposta(questao)){
+                    FormularioBO formularioBO = new FormularioBO();
+
+                    if(questaoBO.temAlgumaResposta(questao) || (posAtual==arrayIdsQuestoes.length-1 && formularioBO.temAudio(formulario) )){
+                        return 0;
+                    }else{
                         questaoBO.excluirQuestao(questao);
                         return 1;
-
-                    }else{
-                        return 0;
                     }
                 }
                 return 0;
@@ -274,22 +301,36 @@ public class FormCamRegActivityNew extends AppCompatActivity
             @Override
             protected void onPostExecute(Integer result) {
                 super.onPostExecute(result);
-
                 if(result ==0){
-                    Toast.makeText(getApplicationContext(), "Questão salva na base local.", Toast.LENGTH_LONG).show();
+                    new AlertDialog.Builder(FormCamRegActivityNew.this)
+                            .setTitle(getString(R.string.app_name))
+                            .setMessage("Questão salva na base local.")
+                            .setIcon(android.R.drawable.ic_dialog_alert)
+                            .setPositiveButton("Continuar", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    abrirQuestao();
+                                }
+                            })
+                            .setNegativeButton("Rever esta questão", null)
+                            .setCancelable(false).show();
+
                     chekListQuestoes();
-                    abrirQuestao();
+
+
+
                 }else if(result ==1){
                     new AlertDialog.Builder(FormCamRegActivityNew.this)
                             .setTitle(getString(R.string.app_name))
                             .setMessage("Esta questão não pode ser salva, uma resposta é necessária.")
                             .setIcon(android.R.drawable.ic_dialog_alert)
-                            .setPositiveButton(android.R.string.ok, null).show();
+                            .setPositiveButton(android.R.string.ok, null).setCancelable(false).show();
                 }
-
                 if(ringProgressDialog!=null && ringProgressDialog.isShowing()) {
                     ringProgressDialog.dismiss();
                 }
+
+                configuraVisibilidadeBotoesNavegacao(true);
             }
         }.execute();
     }
@@ -298,9 +339,7 @@ public class FormCamRegActivityNew extends AppCompatActivity
         if(getIntent().getExtras()!=null && getIntent().getExtras().get(ID_FORMULARIO_OPEN)!=null) {
             formulario = (Formulario) getIntent().getExtras().get(ID_FORMULARIO_OPEN);
         }
-
         Date dtCriacaoFormulario = new Date();
-
         if(formulario==null) {
             formulario = new Formulario();
 
@@ -316,7 +355,6 @@ public class FormCamRegActivityNew extends AppCompatActivity
             formularioDAO.save(formulario);
         }else{
             dtCriacaoFormulario = formulario.getDataAplicacao();
-
             chekListQuestoes();
         }
 
@@ -342,7 +380,6 @@ public class FormCamRegActivityNew extends AppCompatActivity
                 txtStatus.setText("Finalizado (" + idSync + ")");
                 break;
         }
-
 
         TextView txtPesquisador = (TextView) cabecalhoNavigationView.findViewById(R.id.txtPesquisador);
         if (Identity.getUsuarioLogado() != null && Identity.getUsuarioLogado().getNome() != null) {
@@ -406,83 +443,86 @@ public class FormCamRegActivityNew extends AppCompatActivity
 
 
 
+                if(formulario.getSituacao()<=0) {
 
-                //Verificando se as questões foram respondidas para alertar sobre envio.
-                if(!entrevistadoEPescadorOuResponsavelFamiliar()){
-                    //Verificar somente até o bloco 4
-                    boolean preencheuTodoOBloco4 = true;
-                    int posUltQuestaoBloco4 = descobrirPos(R.id.b4_q11);
+                    //Verificando se as questões foram respondidas para alertar sobre envio.
+                    if (!entrevistadoEPescadorOuResponsavelFamiliar()) {
+                        //Verificar somente até o bloco 4
+                        boolean preencheuTodoOBloco4 = true;
+                        int posUltQuestaoBloco4 = descobrirPos(R.id.b4_q11);
 
-                    for(int i=0; i<=posUltQuestaoBloco4;i++){
-                        int id_item = arraysIdsMenuLateral[i];
-                        MenuItem item = (MenuItem) menu.findItem(id_item);
+                        for (int i = 0; i <= posUltQuestaoBloco4; i++) {
+                            int id_item = arraysIdsMenuLateral[i];
+                            MenuItem item = (MenuItem) menu.findItem(id_item);
 
-                        if(item!=null && item.getTitle()!=null){
-                            if(item.getTitle().toString().indexOf(lblRespondida)==-1 && item.getTitle().toString().indexOf(lblChecked)==-1){
-                                preencheuTodoOBloco4 = false;
-                                break;
+                            if (item != null && item.getTitle() != null) {
+                                if (item.getTitle().toString().indexOf(lblRespondida) == -1 && item.getTitle().toString().indexOf(lblChecked) == -1) {
+                                    preencheuTodoOBloco4 = false;
+                                    break;
+                                }
                             }
+                        }
+
+                        if (preencheuTodoOBloco4) {
+                            new AlertDialog.Builder(FormCamRegActivityNew.this)
+                                    .setTitle(R.string.app_name)
+                                    .setMessage("Você preencheu o formulário até o bloco 4, já pode enviar o formulário.")
+                                    .setIcon(android.R.drawable.ic_dialog_alert)
+                                    .setPositiveButton(android.R.string.ok, null).show();
+                        } else if (posAtual == posUltQuestaoBloco4) {
+                            new AlertDialog.Builder(FormCamRegActivityNew.this)
+                                    .setTitle(R.string.app_name)
+                                    .setMessage("Você precisa preencher o bloco 4 completo, verifique a lista ao lado para ver quais questões ainda não foram respondidas.")
+                                    .setIcon(android.R.drawable.ic_dialog_alert)
+                                    .setPositiveButton("Ver lista", new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int which) {
+                                            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+                                            if (drawer != null && !drawer.isDrawerOpen(GravityCompat.START)) {
+                                                drawer.openDrawer(GravityCompat.START);
+                                            }
+                                        }
+                                    }).show();
+                        }
+
+                    } else { // não é pescador
+                        //Verificar o formulário completo
+                        boolean preencheuOFormularioTodo = true;
+                        for (int i = 0; i < arraysIdsMenuLateral.length; i++) {
+                            int id_item = arraysIdsMenuLateral[i];
+                            MenuItem item = (MenuItem) menu.findItem(id_item);
+
+                            if (item != null && item.getTitle() != null) {
+                                if (item.getTitle().toString().indexOf(lblRespondida) == -1 && item.getTitle().toString().indexOf(lblChecked) == -1) {
+                                    preencheuOFormularioTodo = false;
+                                    break;
+                                }
+                            }
+                        }
+
+                        if (preencheuOFormularioTodo) {
+                            new AlertDialog.Builder(FormCamRegActivityNew.this)
+                                    .setTitle(R.string.app_name)
+                                    .setMessage("Você preencheu o formulário completo, já pode enviar o formulário.")
+                                    .setIcon(android.R.drawable.ic_dialog_alert)
+                                    .setPositiveButton(android.R.string.ok, null).show();
+                        } else if (posAtual == arraysIdsMenuLateral.length - 1) {
+                            new AlertDialog.Builder(FormCamRegActivityNew.this)
+                                    .setTitle(R.string.app_name)
+                                    .setMessage("Você precisa preencher o formulário completo, verifique a lista ao lado para ver quais questões ainda não foram respondidas.")
+                                    .setIcon(android.R.drawable.ic_dialog_alert)
+                                    .setPositiveButton("Ver lista", new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int which) {
+                                            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+                                            if (drawer != null && !drawer.isDrawerOpen(GravityCompat.START)) {
+                                                drawer.openDrawer(GravityCompat.START);
+                                            }
+                                        }
+                                    }).show();
                         }
                     }
 
-                    if(preencheuTodoOBloco4) {
-                        new AlertDialog.Builder(FormCamRegActivityNew.this)
-                                .setTitle(R.string.app_name)
-                                .setMessage("Você preencheu o formulário até o bloco 4, já pode enviar o formulário.")
-                                .setIcon(android.R.drawable.ic_dialog_alert)
-                                .setPositiveButton(android.R.string.ok, null).show();
-                    }else if(posAtual==posUltQuestaoBloco4){
-                        new AlertDialog.Builder(FormCamRegActivityNew.this)
-                                .setTitle(R.string.app_name)
-                                .setMessage("Você precisa preencher o bloco 4 completo, verifique a lista ao lado para ver quais questões ainda não foram respondidas.")
-                                .setIcon(android.R.drawable.ic_dialog_alert)
-                                .setPositiveButton("Ver lista", new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialog, int which) {
-                                        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-                                        if (drawer!=null && !drawer.isDrawerOpen(GravityCompat.START)) {
-                                            drawer.openDrawer(GravityCompat.START);
-                                        }
-                                    }
-                                }).show();
-                    }
-
-                }else{ // não é pescador
-                    //Verificar o formulário completo
-                    boolean preencheuOFormularioTodo = true;
-                    for(int i=0; i<arraysIdsMenuLateral.length;i++){
-                        int id_item = arraysIdsMenuLateral[i];
-                        MenuItem item = (MenuItem) menu.findItem(id_item);
-
-                        if(item!=null && item.getTitle()!=null){
-                            if(item.getTitle().toString().indexOf(lblRespondida)==-1 && item.getTitle().toString().indexOf(lblChecked)==-1){
-                                preencheuOFormularioTodo = false;
-                                break;
-                            }
-                        }
-                    }
-
-                    if(preencheuOFormularioTodo) {
-                        new AlertDialog.Builder(FormCamRegActivityNew.this)
-                                .setTitle(R.string.app_name)
-                                .setMessage("Você preencheu o formulário completo, já pode enviar o formulário.")
-                                .setIcon(android.R.drawable.ic_dialog_alert)
-                                .setPositiveButton(android.R.string.ok, null).show();
-                    }else if(posAtual==arraysIdsMenuLateral.length-1){
-                        new AlertDialog.Builder(FormCamRegActivityNew.this)
-                                .setTitle(R.string.app_name)
-                                .setMessage("Você precisa preencher o formulário completo, verifique a lista ao lado para ver quais questões ainda não foram respondidas.")
-                                .setIcon(android.R.drawable.ic_dialog_alert)
-                                .setPositiveButton("Ver lista", new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialog, int which) {
-                                        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-                                        if (drawer!=null && !drawer.isDrawerOpen(GravityCompat.START)) {
-                                            drawer.openDrawer(GravityCompat.START);
-                                        }
-                                    }
-                                }).show();
-                    }
                 }
 
             }
@@ -752,6 +792,9 @@ public class FormCamRegActivityNew extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+
+        postTempRevert = posAtual;
+
         posAtual = descobrirPos(id);
         openFragment(arrayIdsQuestoes[posAtual]);
 
@@ -765,17 +808,6 @@ public class FormCamRegActivityNew extends AppCompatActivity
 
         int ordemQuestao = posAtual -1;
 
-
-//        Questao qIdent = questaoDAO.findQuestaoByOrdemIdFormulario(getPosicaoPorIdLayout(R.layout.identificacao_entrevistado_form)-1, formulario.getId());
-//        Questao b2q1 = questaoDAO.findQuestaoByOrdemIdFormulario(getPosicaoPorIdLayout(R.layout.fcmr_reg_b2_q1)-1, formulario.getId());
-//        Questao b2q2 = questaoDAO.findQuestaoByOrdemIdFormulario(getPosicaoPorIdLayout(R.layout.fcmr_reg_b2_q2)-1, formulario.getId());
-//
-//        FormularioBO formularioBO = new FormularioBO();
-//
-//        Resposta responsavelFamiliar = formularioBO.getResposta(qIdent, 14, 1);
-//        Resposta pescadorCamarao = formularioBO.getResposta(b2q1, 1, 2);
-//        Resposta pescadorCamaraob2q2 = formularioBO.getResposta(b2q2, 2,2);
-
         if(!entrevistadoEPescadorOuResponsavelFamiliar() && posAtual > getPosicaoPorIdLayout(R.layout.fcmr_reg_b4_q11)) {
             new AlertDialog.Builder(FormCamRegActivityNew.this)
                     .setTitle(getString(R.string.app_name))
@@ -783,6 +815,13 @@ public class FormCamRegActivityNew extends AppCompatActivity
                             "* Ser responsável pela unidade Familiar (Resposta a última pergunta da Identificação);\n* Ou Possuir como ocupação a pesca de Camarão/Caranguejo (Resposta ao Bloco 2 na questão 1 ou última pergunta da questão 2);")
                     .setIcon(android.R.drawable.ic_dialog_alert)
                     .setPositiveButton(android.R.string.ok, null).show();
+
+            posAtual = postTempRevert;
+
+            MenuItem item = (MenuItem) findViewById(arraysIdsMenuLateral[posAtual]);
+            if(item!=null){
+                item.setChecked(true);
+            }
         }else {
             Bundle arguments = new Bundle();
             arguments.putString(QuestaoDetailFragment.ARG_ITEM_ID, String.valueOf(idLayout));

@@ -1,5 +1,6 @@
 package br.org.unesco.appesca.model;
 
+import java.io.File;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
@@ -99,4 +100,5 @@ public class Formulario extends BaseModel implements java.io.Serializable {
 	public void setLongitude(BigDecimal longitude) {
 		this.longitude = longitude;
 	}
+
 }

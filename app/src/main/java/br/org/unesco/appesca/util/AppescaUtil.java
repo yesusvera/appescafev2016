@@ -2,7 +2,13 @@ package br.org.unesco.appesca.util;
 
 import android.content.Context;
 import android.util.Log;
+import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.GregorianCalendar;
 
 /**
@@ -15,6 +21,23 @@ public class AppescaUtil {
         Runtime.getRuntime().gc();
 
         Log.i("GC", "LIMPANDO MEMORIA ANDROID");
+    }
+
+
+
+    public static byte[] getBytesFromFile(File file) throws IOException {
+        InputStream is = null;
+        try {
+            long length = file.length();
+//            if (length &gt; MAXLENGTH) throw new IllegalArgumentException (&quot;File is too big&quot;);
+            byte[] ret = new byte [(int) length];
+            is = new FileInputStream(file);
+            is.read (ret);
+
+            return ret;
+        } finally {
+            if (is != null) try { is.close(); } catch (IOException ex) {}
+        }
     }
 
     /**

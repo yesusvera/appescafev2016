@@ -1432,7 +1432,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:checked="false"
-                                android:text="Financiada"
+                                android:text="Doação"
                                 android:textAppearance="@style/style_resposta" />
                         </RadioGroup>
 
@@ -1470,7 +1470,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:checked="false"
-                                android:text="Financiada"
+                                android:text="Doação"
                                 android:textAppearance="@style/style_resposta" />
                         </RadioGroup>
 
@@ -1508,7 +1508,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:checked="false"
-                                android:text="Financiada"
+                                android:text="Doação"
                                 android:textAppearance="@style/style_resposta" />
                         </RadioGroup>
 
@@ -1896,7 +1896,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:checked="false"
-                                android:text="Financiada"
+                                android:text="Doação"
                                 android:textAppearance="@style/style_resposta" />
                         </RadioGroup>
 
@@ -1934,7 +1934,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:checked="false"
-                                android:text="Financiada"
+                                android:text="Doação"
                                 android:textAppearance="@style/style_resposta" />
                         </RadioGroup>
 
@@ -1972,7 +1972,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:checked="false"
-                                android:text="Financiada"
+                                android:text="Doação"
                                 android:textAppearance="@style/style_resposta" />
                         </RadioGroup>
 
@@ -2360,7 +2360,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:checked="false"
-                                android:text="Financiada"
+                                android:text="Doação"
                                 android:textAppearance="@style/style_resposta" />
                         </RadioGroup>
 
@@ -2398,7 +2398,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:checked="false"
-                                android:text="Financiada"
+                                android:text="Doação"
                                 android:textAppearance="@style/style_resposta" />
                         </RadioGroup>
 
@@ -2436,7 +2436,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:checked="false"
-                                android:text="Financiada"
+                                android:text="Doação"
                                 android:textAppearance="@style/style_resposta" />
                         </RadioGroup>
 
@@ -2862,7 +2862,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:checked="false"
-                                android:text="Financiada"
+                                android:text="Doação"
                                 android:textAppearance="@style/style_resposta" />
                         </RadioGroup>
 
@@ -2900,7 +2900,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:checked="false"
-                                android:text="Financiada"
+                                android:text="Doação"
                                 android:textAppearance="@style/style_resposta" />
                         </RadioGroup>
 
@@ -3288,7 +3288,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:checked="false"
-                                android:text="Financiada"
+                                android:text="Doação"
                                 android:textAppearance="@style/style_resposta" />
                         </RadioGroup>
 
@@ -3326,7 +3326,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:checked="false"
-                                android:text="Financiada"
+                                android:text="Doação"
                                 android:textAppearance="@style/style_resposta" />
                         </RadioGroup>
 
@@ -3364,7 +3364,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:checked="false"
-                                android:text="Financiada"
+                                android:text="Doação"
                                 android:textAppearance="@style/style_resposta" />
                         </RadioGroup>
 
@@ -3752,7 +3752,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:checked="false"
-                                android:text="Financiada"
+                                android:text="Doação"
                                 android:textAppearance="@style/style_resposta" />
                         </RadioGroup>
 
@@ -3790,7 +3790,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:checked="false"
-                                android:text="Financiada"
+                                android:text="Doação"
                                 android:textAppearance="@style/style_resposta" />
                         </RadioGroup>
 
@@ -3828,7 +3828,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:checked="false"
-                                android:text="Financiada"
+                                android:text="Doação"
                                 android:textAppearance="@style/style_resposta" />
                         </RadioGroup>
 
@@ -4216,7 +4216,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:checked="false"
-                                android:text="Financiada"
+                                android:text="Doação"
                                 android:textAppearance="@style/style_resposta" />
                         </RadioGroup>
 
@@ -4254,7 +4254,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:checked="false"
-                                android:text="Financiada"
+                                android:text="Doação"
                                 android:textAppearance="@style/style_resposta" />
                         </RadioGroup>
 
@@ -4292,7 +4292,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:checked="false"
-                                android:text="Financiada"
+                                android:text="Doação"
                                 android:textAppearance="@style/style_resposta" />
                         </RadioGroup>
 
@@ -4680,7 +4680,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:checked="false"
-                                android:text="Financiada"
+                                android:text="Doação"
                                 android:textAppearance="@style/style_resposta" />
                         </RadioGroup>
 
@@ -4718,7 +4718,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:checked="false"
-                                android:text="Financiada"
+                                android:text="Doação"
                                 android:textAppearance="@style/style_resposta" />
                         </RadioGroup>
 
@@ -4756,7 +4756,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:checked="false"
-                                android:text="Financiada"
+                                android:text="Doação"
                                 android:textAppearance="@style/style_resposta" />
                         </RadioGroup>
 
@@ -5144,7 +5144,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:checked="false"
-                                android:text="Financiada"
+                                android:text="Doação"
                                 android:textAppearance="@style/style_resposta" />
                         </RadioGroup>
 
@@ -5182,7 +5182,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:checked="false"
-                                android:text="Financiada"
+                                android:text="Doação"
                                 android:textAppearance="@style/style_resposta" />
                         </RadioGroup>
 
@@ -5220,7 +5220,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:checked="false"
-                                android:text="Financiada"
+                                android:text="Doação"
                                 android:textAppearance="@style/style_resposta" />
                         </RadioGroup>
 
@@ -5369,7 +5369,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:checked="false"
-                                android:text="Financiada"
+                                android:text="Doação"
                                 android:textAppearance="@style/style_resposta" />
                         </RadioGroup>
 
@@ -5407,7 +5407,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:checked="false"
-                                android:text="Financiada"
+                                android:text="Doação"
                                 android:textAppearance="@style/style_resposta" />
                         </RadioGroup>
 
@@ -5445,7 +5445,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:checked="false"
-                                android:text="Financiada"
+                                android:text="Doação"
                                 android:textAppearance="@style/style_resposta" />
                         </RadioGroup>
 
@@ -5812,7 +5812,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:checked="false"
-                                android:text="Financiada"
+                                android:text="Doação"
                                 android:textAppearance="@style/style_resposta" />
                         </RadioGroup>
 
@@ -5850,7 +5850,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:checked="false"
-                                android:text="Financiada"
+                                android:text="Doação"
                                 android:textAppearance="@style/style_resposta" />
                         </RadioGroup>
 
@@ -5888,7 +5888,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:checked="false"
-                                android:text="Financiada"
+                                android:text="Doação"
                                 android:textAppearance="@style/style_resposta" />
                         </RadioGroup>
 
@@ -6276,7 +6276,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:checked="false"
-                                android:text="Financiada"
+                                android:text="Doação"
                                 android:textAppearance="@style/style_resposta" />
                         </RadioGroup>
 
@@ -6314,7 +6314,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:checked="false"
-                                android:text="Financiada"
+                                android:text="Doação"
                                 android:textAppearance="@style/style_resposta" />
                         </RadioGroup>
 
@@ -6352,7 +6352,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:checked="false"
-                                android:text="Financiada"
+                                android:text="Doação"
                                 android:textAppearance="@style/style_resposta" />
                         </RadioGroup>
 

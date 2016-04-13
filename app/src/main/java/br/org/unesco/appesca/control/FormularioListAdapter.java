@@ -42,6 +42,7 @@ public class FormularioListAdapter extends RecyclerView.Adapter<FormularioListAd
         public TextView txtDataFormulario;
         public TextView txtSituacao;
         public TextView txtIdSincronizacao;
+        public TextView txtRegistroOffline;
         public ImageView imgSituacaoFormulario;
         public ImageView imgVisualizarFormulario;
         public ProgressBar progressBar;
@@ -58,6 +59,7 @@ public class FormularioListAdapter extends RecyclerView.Adapter<FormularioListAd
             imgSituacaoFormulario = (ImageView) v.findViewById(R.id.imgSituacaoFormulario);
             txtSituacao = (TextView) v.findViewById(R.id.txtSituacao);
             txtIdSincronizacao = (TextView) v.findViewById(R.id.txtIdSincronizacao);
+            txtRegistroOffline = (TextView) v.findViewById(R.id.txtRegistroOffline);
             imgVisualizarFormulario = (ImageView) v.findViewById(R.id.imgVisualizar);
             progressBar = (ProgressBar)v.findViewById(R.id.progressBarRespostas);
             txtTextoResposta = (TextView)v.findViewById(R.id.txtTextoResposta);
@@ -96,6 +98,7 @@ public class FormularioListAdapter extends RecyclerView.Adapter<FormularioListAd
         final Formulario formulario = mListFormulario.get(position);
         holder.txtDataFormulario.setText(new SimpleDateFormat(ConstantesUNESCO.FORMATO_DATA).format(formulario.getDataAplicacao()));
         holder.txtTipoFormulario.setText(formulario.getNome());
+        holder.txtRegistroOffline.setText(new FormularioBO().getRegistroOffline(formulario, questaoDAO));
 //        holder.txtUfMunicipio.setText("");
 //        holder.txtFuncao.setText("");
 

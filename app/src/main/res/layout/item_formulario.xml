@@ -21,6 +21,12 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center">
+            <TextView
+                android:id="@+id/txtRegistroOffline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11dp"
+                android:textColor="@android:color/tertiary_text_light" />
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"

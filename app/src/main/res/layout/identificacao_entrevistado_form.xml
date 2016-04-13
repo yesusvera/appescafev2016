@@ -238,21 +238,24 @@
                     android:text="Certidão de Nascimento"
                     android:textSize="14dp"
                     android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg6_cb_resp1" />
+                    android:id="@+id/perg6_cb_resp1"
+                    android:checked="false" />
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Carteira de Identidade"
                     android:textSize="14dp"
                     android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg6_cb_resp2" />
+                    android:id="@+id/perg6_cb_resp2"
+                    android:checked="false" />
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Cadastro de Pessoa Física (CPF)"
                     android:textSize="14dp"
                     android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg6_cb_resp3" />
+                    android:id="@+id/perg6_cb_resp3"
+                    android:checked="false" />
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -538,14 +541,16 @@
                     android:text="Viúvo"
                     android:textSize="14dp"
                     android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg12_rb_resp4" />
+                    android:id="@+id/perg12_rb_resp4"
+                    android:checked="false" />
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="União estável"
                     android:textSize="14dp"
                     android:textAppearance="@style/style_resposta"
-                    android:id="@+id/perg12_rb_resp5" />
+                    android:id="@+id/perg12_rb_resp5"
+                    android:checked="false" />
                 </RadioGroup>
             </LinearLayout>
 
