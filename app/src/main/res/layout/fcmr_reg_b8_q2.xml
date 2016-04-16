@@ -41,7 +41,7 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
                 android:textAppearance="@style/style_questao"
-                android:text=" A embarcação utilizada na pesca é própria?"
+                android:text="Sobre a embarcação principal, isto é, a mais utilizada para a pesca, ela é própria?"
                 />
 
             <RadioGroup
@@ -85,7 +85,7 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
                 android:textAppearance="@style/style_questao"
-                android:text="Qual o tipo de casco é utilizado?  (perguntar para cada embarcação que possuir)"
+                android:text="Qual é o tipo de casco da embarcação principal?"
                 />
 
             <TextView
@@ -234,7 +234,7 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
                 android:textAppearance="@style/style_questao"
-                android:text="Quantos são os tripulantes (piloteiro, proeiro, etc)? (perguntar para cada embarcação que possuir)"
+                android:text="Quantos são os tripulantes (piloto, proeiro, etc) da embarcação principal?"
                 />
             
 
@@ -397,7 +397,7 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
                 android:textAppearance="@style/style_questao"
-                android:text="Se não possui embarcação própria, de quem é a embarcação que utiliza?"
+                android:text="Se não é própria, de quem é a embarcação principal? "
                 />
 
             <RadioGroup
@@ -471,7 +471,7 @@
             android:layout_height="wrap_content"
             android:paddingBottom="5dp"
             android:textAppearance="@style/style_questao"
-            android:text="Quanto é pago pelo aluguel da embarcação? R$"
+            android:text="Quanto é pago pelo aluguel da embarcação principal?"
             />
 
         <EditText
@@ -537,7 +537,7 @@
                         android:layout_height="wrap_content"
                         android:paddingBottom="5dp"
                         android:textAppearance="@style/style_questao"
-                        android:text="Quanto custaram os equipamentos para pesca e beneficiamento? Com qual recursos foram adquiridos? Quando foram comprados e serão substituídos? (inserir os bens marcados na questão 1 do bloco 8)"/>
+                        android:text="Quanto custaram os principais equipamentos para a pesca e beneficiamento? Quando foram comprados e serão substituídos? (inserir os bens marcados na questão 1 do bloco 8)"/>
 
 
                         <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="match_parent"             android:layout_height="fill_parent"> <TableLayout

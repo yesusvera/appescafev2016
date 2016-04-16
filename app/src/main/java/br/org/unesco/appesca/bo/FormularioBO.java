@@ -87,7 +87,7 @@ public class FormularioBO {
         XStream xStream = new XStream(new DomDriver());
         String xmlFormularioRest = xStream.toXML(formularioREST);
 
-        String strURL = ConstantesREST.getURLService(ConstantesREST.FORMULARIO_INSERIR);
+        String strURL = ConstantesREST.getURLService(ConstantesREST.FORMULARIO_INSERIR_VS2);
 
         RequestParams params = new RequestParams();
 
@@ -95,22 +95,21 @@ public class FormularioBO {
         params.put("login", Identity.getUsuarioLogado().getLogin());
         params.put("senha", Identity.getUsuarioLogado().getSenha());
 
-//        FormularioBO formularioBO = new FormularioBO();
-//        if (formularioBO.temAudio(formularioOriginal)) {
-//            File audioQ9 = new File(formularioBO.getPathAudioQ9(formularioOriginal));
-//
-//            try {
-//                byte[] bytes = AppescaUtil.getBytesFromFile(audioQ9);
-////                params.put("audioQ9", new ByteArrayInputStream(bytes));
-////                params.put("audioQ9", new FileInputStream(audioQ9), formularioBO.getPathAudioQ9(formularioOriginal));
-////                params.put("audioQ9", audioQ9);
-//            } catch (IOException io) {
-//                io.printStackTrace();
-//            }
-//        }
+        FormularioBO formularioBO = new FormularioBO();
+        if (formularioBO.temAudio(formularioOriginal)) {
+            File audioB9Q1 = new File(formularioBO.getPathAudioQ9(formularioOriginal));
+
+            try {
+                byte[] bytes = AppescaUtil.getBytesFromFile(audioB9Q1);
+//                params.put("audioQ9", new ByteArrayInputStream(bytes));
+//                params.put("audioQ9", new FileInputStream(audioQ9), formularioBO.getPathAudioQ9(formularioOriginal));
+                params.put("audioB9Q1", audioB9Q1);
+            } catch (IOException io) {
+                io.printStackTrace();
+            }
+        }
 
         AsyncHttpClient client = new AsyncHttpClient();
-
         client.setResponseTimeout(10 * 10000);
         client.post(strURL, params, new AsyncHttpResponseHandler() {
             @Override

@@ -2144,7 +2144,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
-                android:text="1.4) O senhor armazena o camarão branco?  "
+                android:text="1.4) O senhor armazena o camarão piticaia?  "
                 android:textAppearance="@style/style_questao" />
 
 
