@@ -376,6 +376,7 @@ public class PrincipalUnescoActivity extends AppCompatActivity
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         AppescaUtil.limparMemoria();
+                        FormCamRegActivityNew.formulario = null;
                         Intent intent = new Intent(PrincipalUnescoActivity.this, FormCamRegActivityNew.class);
                         intent.putExtra(FormCamRegActivityNew.ID_NOME_FORMULARIO, nome);
                         intent.putExtra(FormCamRegActivityNew.ID_TIPO_FORMULARIO, tipoFormulario);

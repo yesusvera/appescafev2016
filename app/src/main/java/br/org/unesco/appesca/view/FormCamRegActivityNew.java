@@ -136,7 +136,7 @@ public class FormCamRegActivityNew extends AppCompatActivity
 
         toolbar.setLogo(R.mipmap.ic_launcher);
 
-        formulario = null;
+//        formulario = null;
 
         questaoDAO = new QuestaoDAO(FormCamRegActivityNew.this);
         respostaDAO = new RespostaDAO(FormCamRegActivityNew.this);
@@ -397,9 +397,9 @@ public class FormCamRegActivityNew extends AppCompatActivity
     }
 
     public void inicializaFormulario(){
-        if(getIntent().getExtras()!=null && getIntent().getExtras().get(ID_FORMULARIO_OPEN)!=null) {
-            formulario = (Formulario) getIntent().getExtras().get(ID_FORMULARIO_OPEN);
-        }
+//        if(getIntent().getExtras()!=null && getIntent().getExtras().get(ID_FORMULARIO_OPEN)!=null) {
+//            formulario = (Formulario) getIntent().getExtras().get(ID_FORMULARIO_OPEN);
+//        }
         Date dtCriacaoFormulario = new Date();
         if(formulario==null) {
             formulario = new Formulario();
