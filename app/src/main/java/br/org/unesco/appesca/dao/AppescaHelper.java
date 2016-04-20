@@ -7,7 +7,16 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class AppescaHelper extends SQLiteOpenHelper{
 
     private static final String DATABASE_NAME = "appescadb";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
+
+
+    /********************* TABELA LOCALIZACAO USUARIO***********************/
+    public static final String TABLE_LOCALIZACAO_USUARIO = "LOCALIZACAO_USUARIO";
+    public static final String COL_LOCALIZACAO_USUARIO_ID = "ID_LOCALIZACAO_USUARIO";
+    public static final String COL_DATA_REGISTRO = "DATA_REGISTRO";
+    public static final String COL_LATITUDE = "LATITUDE";
+    public static final String COL_LONGITUDE = "LONGITUDE";
+    public static final String COL_PROVIDED = "PROVIDED";
 
     /********************* TABELA TIPO FORMULARIO ***********************/
     public static final String TABLE_TIPO_FORMULARIO = "TIPO_FORMULARIO";
@@ -131,6 +140,7 @@ public class AppescaHelper extends SQLiteOpenHelper{
         sqLiteDatabase.execSQL(criarTabelaEntrevistado());
         sqLiteDatabase.execSQL(criarTabelaEquipe());
         sqLiteDatabase.execSQL(criarTabelaMembrosEquipe());
+        sqLiteDatabase.execSQL(criarTabelaLocalizacaoUsuario());
     }
 
     @Override
@@ -185,11 +195,32 @@ public class AppescaHelper extends SQLiteOpenHelper{
         sql.append(COL_FORMULARIO_NOME + " TEXT , ");
         sql.append(COL_FORMULARIO_DATA_APLICACAO + " DATETIME , ");
         sql.append(COL_FORMULARIO_ID_USUARIO + " INTEGER , ");
+        sql.append(COL_LATITUDE + " TEXT , ");
+        sql.append(COL_LONGITUDE + " TEXT , ");
         sql.append(COL_FORMULARIO_ID_TIPO_FORMULARIO + " INTEGER , ");
         sql.append(COL_FORMULARIO_SITUACAO + " INTEGER , ");
         sql.append(" FOREIGN KEY ("+ COL_FORMULARIO_ID_USUARIO +") REFERENCES "+ TABLE_USUARIO+" ("+ COL_USUARIO_ID +") ");
         sql.append(" FOREIGN KEY ("+ COL_FORMULARIO_ID_TIPO_FORMULARIO +") REFERENCES "+ TABLE_TIPO_FORMULARIO+" ("+ COL_TIPO_FORMULARIO_ID +") ");
 
+        sql.append("); ");
+
+        return sql.toString();
+    }
+
+
+    private static String criarTabelaLocalizacaoUsuario() {
+        final StringBuffer sql = new StringBuffer();
+
+        sql.append("CREATE TABLE IF NOT EXISTS ");
+        sql.append(TABLE_LOCALIZACAO_USUARIO);
+        sql.append(" ( ");
+        sql.append(COL_LOCALIZACAO_USUARIO_ID + " INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL , ");
+        sql.append(COL_USUARIO_ID + " INTEGER , ");
+        sql.append(COL_DATA_REGISTRO + " DATETIME , ");
+        sql.append(COL_LATITUDE + " TEXT , ");
+        sql.append(COL_LONGITUDE + " TEXT , ");
+        sql.append(COL_PROVIDED + " TEXT , ");
+        sql.append(" FOREIGN KEY ("+ COL_USUARIO_ID +") REFERENCES "+ TABLE_USUARIO+" ("+ COL_USUARIO_ID +") ");
         sql.append("); ");
 
         return sql.toString();

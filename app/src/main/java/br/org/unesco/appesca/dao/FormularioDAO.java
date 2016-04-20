@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
+import java.math.BigDecimal;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -104,6 +105,13 @@ public class FormularioDAO extends BaseDAO<Formulario> {
         values.put(AppescaHelper.COL_FORMULARIO_ID_TIPO_FORMULARIO, formulario.getIdTipoFormulario());
         values.put(AppescaHelper.COL_FORMULARIO_SITUACAO, formulario.getSituacao());
 
+        if(formulario.getLatitude()!=null) {
+            values.put(AppescaHelper.COL_LATITUDE, formulario.getLatitude().toString());
+        }
+
+        if(formulario.getLongitude()!=null) {
+            values.put(AppescaHelper.COL_LONGITUDE, formulario.getLatitude().toString());
+        }
         return values;
     }
 
@@ -116,6 +124,17 @@ public class FormularioDAO extends BaseDAO<Formulario> {
         formulario.setIdUsuario(getInt(cursor, AppescaHelper.COL_FORMULARIO_ID_USUARIO));
         formulario.setIdTipoFormulario(getInt(cursor, AppescaHelper.COL_FORMULARIO_ID_TIPO_FORMULARIO));
         formulario.setSituacao(getInt(cursor, AppescaHelper.COL_FORMULARIO_SITUACAO));
+
+        String latitude = getString(cursor, AppescaHelper.COL_LATITUDE);
+        if(latitude!=null && !latitude.isEmpty()){
+            BigDecimal bDLat = new BigDecimal(latitude);
+            formulario.setLatitude(bDLat);
+        }
+        String longitude = getString(cursor, AppescaHelper.COL_LONGITUDE);
+        if(longitude!=null && !longitude.isEmpty()){
+            BigDecimal bDLong = new BigDecimal(longitude);
+            formulario.setLongitude(bDLong);
+        }
 
         return formulario;
     }

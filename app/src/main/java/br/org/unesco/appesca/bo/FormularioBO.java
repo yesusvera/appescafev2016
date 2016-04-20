@@ -33,6 +33,7 @@ import br.org.unesco.appesca.rest.model.FormularioREST;
 import br.org.unesco.appesca.rest.model.RespEnvioFormulario;
 import br.org.unesco.appesca.util.AppescaUtil;
 import br.org.unesco.appesca.util.ConstantesREST;
+import br.org.unesco.appesca.view.FormCamRegActivityNew;
 import cz.msebera.android.httpclient.Header;
 
 /**
@@ -97,16 +98,21 @@ public class FormularioBO {
 
         FormularioBO formularioBO = new FormularioBO();
         if (formularioBO.temAudio(formularioOriginal)) {
-            File audioB9Q1 = new File(formularioBO.getPathAudioQ9(formularioOriginal));
 
-            try {
-                byte[] bytes = AppescaUtil.getBytesFromFile(audioB9Q1);
-//                params.put("audioQ9", new ByteArrayInputStream(bytes));
-//                params.put("audioQ9", new FileInputStream(audioQ9), formularioBO.getPathAudioQ9(formularioOriginal));
-                params.put("audioB9Q1", audioB9Q1);
-            } catch (IOException io) {
-                io.printStackTrace();
-            }
+//            int indexAudioQ = FormCamRegActivityNew.arrayIdsQuestoes.length-2;
+//            Questao questaoAudio = new QuestaoDAO(activity).findQuestaoByOrdemIdFormulario(indexAudioQ, formularioOriginal.getId());
+//
+//            if(questaoAudio!=null){
+
+                File audioB9Q1 = new File(formularioBO.getPathAudioQ9(formularioOriginal));
+
+                try {
+                    byte[] bytes = AppescaUtil.getBytesFromFile(audioB9Q1);
+                    params.put("audioB9Q1", audioB9Q1);
+                } catch (IOException io) {
+                    io.printStackTrace();
+                }
+//            }
         }
 
         AsyncHttpClient client = new AsyncHttpClient();

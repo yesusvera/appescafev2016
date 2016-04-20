@@ -2,7 +2,11 @@ package br.org.unesco.appesca.view;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -12,8 +16,10 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.CheckBox;
@@ -24,6 +30,7 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -175,11 +182,16 @@ public class FormCamRegActivityNew extends AppCompatActivity
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.float_button_menu_save);
         //SALVAR AS RESPOSTAS DA QUESTAO
-        fab.setOnClickListener(new View.OnClickListener() {
+        fab.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View view) {
-                    AppescaUtil.limparMemoria();
+            public boolean onTouch(View v, MotionEvent event) {
+
+                if(event.getAction()==MotionEvent.ACTION_UP) {
                     salvarQuestaoAtual(true);
+                    AppescaUtil.limparMemoria();
+                }
+
+                return true;
             }
         });
 
@@ -335,6 +347,55 @@ public class FormCamRegActivityNew extends AppCompatActivity
         }.execute();
     }
 
+    public void capturaLocalizacao() throws SecurityException, Exception{
+        LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+
+
+        LocationListener listener = new LocationListener() {
+            @Override
+            public void onStatusChanged(String arg0, int arg1, Bundle arg2) {
+//                Toast.makeText(getApplicationContext(), "Status alterado", Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onProviderEnabled(String arg0) {
+//                Toast.makeText(getApplicationContext(), "Provider Habilitado", Toast.LENGTH_LONG).show();
+
+            }
+
+            @Override
+            public void onProviderDisabled(String arg0) {
+//                Toast.makeText(getApplicationContext(), "Provider Desabilitado", Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onLocationChanged(Location location) {
+                try {
+                    if (formulario != null) {
+                        if (formulario.getLatitude() == null && formulario.getLongitude() == null) {
+                            formulario.setLatitude(new BigDecimal(location.getLatitude()));
+                            formulario.setLongitude(new BigDecimal(location.getLongitude()));
+
+                            FormularioDAO formularioDAO = new FormularioDAO(FormCamRegActivityNew.this);
+                            formularioDAO.save(formulario);
+
+                            Toast.makeText(getApplicationContext(), "Localização capturada.", Toast.LENGTH_LONG).show();
+                        }
+                    }
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
+        };
+
+        try {
+            locationManager.requestSingleUpdate(LocationManager.GPS_PROVIDER, listener, null);
+            locationManager.requestSingleUpdate(LocationManager.NETWORK_PROVIDER, listener, null);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
     public void inicializaFormulario(){
         if(getIntent().getExtras()!=null && getIntent().getExtras().get(ID_FORMULARIO_OPEN)!=null) {
             formulario = (Formulario) getIntent().getExtras().get(ID_FORMULARIO_OPEN);
@@ -356,6 +417,12 @@ public class FormCamRegActivityNew extends AppCompatActivity
         }else{
             dtCriacaoFormulario = formulario.getDataAplicacao();
             chekListQuestoes();
+        }
+
+        try {
+            capturaLocalizacao();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
         TextView txtStatus = (TextView) cabecalhoNavigationView.findViewById(R.id.txtStatus);

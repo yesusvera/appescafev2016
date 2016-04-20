@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class LocalizacaoUsuario implements java.io.Serializable {
+public class LocalizacaoUsuario extends BaseModel {
 
 	private static final long serialVersionUID = 2165508619825487958L;
 
@@ -13,6 +13,7 @@ public class LocalizacaoUsuario implements java.io.Serializable {
 	private Date dataRegistro;
 	private BigDecimal latitude;
 	private BigDecimal longitude;
+	private String provided;
 	
 	public LocalizacaoUsuario() {
 	}
@@ -67,5 +68,13 @@ public class LocalizacaoUsuario implements java.io.Serializable {
 
 	public void setLongitude(BigDecimal longitude) {
 		this.longitude = longitude;
+	}
+
+	public String getProvided() {
+		return provided;
+	}
+
+	public void setProvided(String provided) {
+		this.provided = provided;
 	}
 }

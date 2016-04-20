@@ -1,10 +1,14 @@
 package br.org.unesco.appesca.view;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -13,7 +17,6 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -26,19 +29,23 @@ import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.net.URL;
-import java.text.Normalizer;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import br.org.unesco.appesca.R;
+import br.org.unesco.appesca.bo.LocalizacaoUsuarioBO;
 import br.org.unesco.appesca.control.FormularioListDetailFragment;
 import br.org.unesco.appesca.dao.FormularioDAO;
+import br.org.unesco.appesca.dao.LocalizacaoUsuarioDAO;
 import br.org.unesco.appesca.dao.UsuarioDAO;
 import br.org.unesco.appesca.model.Formulario;
 import br.org.unesco.appesca.model.Identity;
-import br.org.unesco.appesca.rest.model.RespAutenticacaoREST;
+import br.org.unesco.appesca.model.LocalizacaoUsuario;
 import br.org.unesco.appesca.rest.model.RespFormularioREST;
 import br.org.unesco.appesca.util.AppescaUtil;
 import br.org.unesco.appesca.util.ConnectionNetwork;
@@ -54,6 +61,11 @@ public class PrincipalUnescoActivity extends AppCompatActivity
 
     NavigationView navigationView;
     View cabecalhoNavigationView;
+
+
+    List<Location> locs = new ArrayList<Location>();
+    LocationListener listener;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,6 +101,13 @@ public class PrincipalUnescoActivity extends AppCompatActivity
         carregarDadosUsuario();
 
         listarFormularios(0);
+
+        geoLocalizacao();
+
+
+        enviaLocalizacoesPendentes();
+
+
     }
 
     @Override
@@ -96,6 +115,92 @@ public class PrincipalUnescoActivity extends AppCompatActivity
         super.onResume();
 
         listarFormularios(0);
+    }
+
+
+    public void enviaLocalizacoesPendentes(){
+        try {
+            new LocalizacaoUsuarioBO().enviarLocalizacoesPendentes(getApplicationContext(), this);
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public void geoLocalizacao(){
+        LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+
+
+        long tempo = 1000 * 60 * 60 ; //1 hora
+        float distancia = 20; // 20 metros
+
+        this.listener = new LocationListener() {
+
+            @Override
+            public void onStatusChanged(String arg0, int arg1, Bundle arg2) {
+//                Toast.makeText(getApplicationContext(), "Status alterado", Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onProviderEnabled(String arg0) {
+//                Toast.makeText(getApplicationContext(), "Provider Habilitado", Toast.LENGTH_LONG).show();
+
+            }
+
+            @Override
+            public void onProviderDisabled(String arg0) {
+                Toast.makeText(getApplicationContext(), "Habilite o GPS.", Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onLocationChanged(Location location) {
+//                TextView numero = (TextView) findViewById( R.id.numero);
+//                TextView latitude = (TextView) findViewById( R.id.latitude);
+//                TextView longitude = (TextView) findViewById( R.id.longitude);
+//                TextView time = (TextView) findViewById( R.id.time);
+//                TextView acuracy = (TextView) findViewById( R.id.Acuracy);
+
+                if( location != null ){
+                    try {
+                        LocalizacaoUsuarioDAO localizacaoUsuarioDAO = new LocalizacaoUsuarioDAO(PrincipalUnescoActivity.this);
+                        LocalizacaoUsuario locUsr = new LocalizacaoUsuario();
+
+                        locUsr.setUsuario(Identity.getUsuarioLogado());
+                        locUsr.setLatitude(new BigDecimal(location.getLatitude()));
+                        locUsr.setLongitude(new BigDecimal(location.getLongitude()));
+                        locUsr.setProvided(location.getProvider());
+
+
+                        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+                        locUsr.setDataRegistro(new Date(location.getTime()));
+
+
+                        localizacaoUsuarioDAO.save(locUsr);
+
+                        Toast.makeText(getApplicationContext(), "Localização capturada.", Toast.LENGTH_LONG).show();
+
+//                    locs.add(location);
+//                    numero.setText( "Número de posições travadas: "+locs.size() );
+//                    latitude.setText( "Latitude: "+location.getLatitude() );
+//                    longitude.setText( "Longitude: "+location.getLongitude() );
+//                    acuracy.setText( "Precisão: "+location.getAccuracy()+"" );
+//
+//                    time.setText( "Data:"+sdf.format( location.getTime() ) );
+
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+                }
+
+            }
+        };
+
+        try {
+            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, tempo, distancia, this.listener, null);
+            locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, tempo, distancia, this.listener, null);
+        }catch(SecurityException se){
+            se.printStackTrace();
+        }
+
     }
 
     /**
@@ -201,6 +306,7 @@ public class PrincipalUnescoActivity extends AppCompatActivity
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        enviaLocalizacoesPendentes();
                         Identity.setUsuarioLogado(null);
                         finish();
                     }
