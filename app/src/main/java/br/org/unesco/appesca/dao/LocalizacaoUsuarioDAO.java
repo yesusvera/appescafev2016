@@ -39,7 +39,7 @@ public class LocalizacaoUsuarioDAO extends BaseDAO<LocalizacaoUsuario>  {
         }
 
         if(localizacaoUsuario.getLongitude()!=null) {
-            values.put(AppescaHelper.COL_LONGITUDE, localizacaoUsuario.getLatitude().toString());
+            values.put(AppescaHelper.COL_LONGITUDE, localizacaoUsuario.getLongitude().toString());
         }
 
         values.put(AppescaHelper.COL_PROVIDED, localizacaoUsuario.getProvided());

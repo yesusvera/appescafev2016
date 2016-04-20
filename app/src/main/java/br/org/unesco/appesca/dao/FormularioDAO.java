@@ -110,7 +110,7 @@ public class FormularioDAO extends BaseDAO<Formulario> {
         }
 
         if(formulario.getLongitude()!=null) {
-            values.put(AppescaHelper.COL_LONGITUDE, formulario.getLatitude().toString());
+            values.put(AppescaHelper.COL_LONGITUDE, formulario.getLongitude().toString());
         }
         return values;
     }
