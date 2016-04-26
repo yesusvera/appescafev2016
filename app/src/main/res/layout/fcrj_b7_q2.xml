@@ -27,6 +27,24 @@
                 android:textStyle="bold" />
         </LinearLayout>
 
+        <!-- QUESTAO 2-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+
+            <TextView
+                android:id="@+id/perg1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="Qual a quantidade média vendida por tipo de produto, no inverno e no verão? Qual o preço da venda?"
+                android:textAppearance="@style/style_questao" />
+
+        </LinearLayout>
+
         <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout
             android:paddingTop="15dp"
             android:orientation="vertical"
@@ -52,11 +70,11 @@
                             android:text="Produto"/>
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:textAppearance="@style/style_questao"
                             android:paddingBottom="5dp"
                             android:gravity="center"
-                            android:text="Período"/>
+                            android:text="Período\nNúmero\nde\nCaranguejos"/>
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -65,7 +83,7 @@
                             android:gravity="center"
                             android:layout_gravity="center_horizontal"
                             android:layout_span="2"
-                            android:text="Quantidade Média (Kg)/dia" />
+                            android:text="Quantidade \nMédia/dia" />
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -73,7 +91,8 @@
                             android:paddingBottom="5dp"
                             android:gravity="center"
                             android:layout_gravity="center_horizontal"
-                            android:text="Observações"/>
+                            android:text="Preço Venda"
+                            android:layout_span="2" />
             </TableRow>
 
             <TableRow
@@ -100,6 +119,25 @@
                     android:layout_gravity="center_horizontal"
                     android:text="Inverno"/>
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:layout_column="4"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Verão"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/style_questao"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:layout_column="5"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Inverno"/>
+
             </TableRow>
 
 
@@ -113,7 +151,7 @@
                     android:textAppearance="@style/style_questao"
                     android:paddingBottom="5dp"
                     android:gravity="center"
-                    android:text="Graúdo In natura"/>
+                    android:text="Graúdo Vivo"/>
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
@@ -155,12 +193,21 @@
                     android:hint="Inverno Média\nKg/dia"
                     android:inputType="numberDecimal" />
                 <EditText
-                    android:layout_width="190dp"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg1_et_resp5"
                     android:textAppearance="@style/style_resposta"
                     android:lines="3"
-                    android:hint="Observações" />
+                    android:hint="Verão\nPreço Venda"
+                    android:inputType="numberDecimal" />
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg1_et_resp6"
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="3"
+                    android:hint="Inverno\nPreço Venda"
+                    android:inputType="numberDecimal" />
 
             </TableRow>
 
@@ -175,7 +222,7 @@
                     android:textAppearance="@style/style_questao"
                     android:paddingBottom="5dp"
                     android:gravity="center"
-                    android:text="Médio In natura"/>
+                    android:text="Médio Vivo"/>
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
@@ -217,12 +264,21 @@
                     android:hint="Inverno Média\nKg/dia"
                     android:inputType="numberDecimal" />
                 <EditText
-                    android:layout_width="190dp"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg2_et_resp5"
                     android:textAppearance="@style/style_resposta"
                     android:lines="3"
-                    android:hint="Observações" />
+                    android:hint="Verão\nPreço Venda"
+                    android:inputType="numberDecimal" />
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg2_et_resp6"
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="3"
+                    android:hint="Inverno\nPreço Venda"
+                    android:inputType="numberDecimal" />
 
             </TableRow>
 
@@ -236,7 +292,7 @@
                     android:textAppearance="@style/style_questao"
                     android:paddingBottom="5dp"
                     android:gravity="center"
-                    android:text="Pequeno In natura"/>
+                    android:text="Pequeno Vivo"/>
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
@@ -278,12 +334,21 @@
                     android:hint="Inverno Média\nKg/dia"
                     android:inputType="numberDecimal" />
                 <EditText
-                    android:layout_width="190dp"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg3_et_resp5"
                     android:textAppearance="@style/style_resposta"
                     android:lines="3"
-                    android:hint="Observações" />
+                    android:hint="Verão\nPreço Venda"
+                    android:inputType="numberDecimal" />
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg3_et_resp6"
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="3"
+                    android:hint="Inverno\nPreço Venda"
+                    android:inputType="numberDecimal" />
 
             </TableRow>
 
@@ -341,12 +406,21 @@
                     android:hint="Inverno Média\nKg/dia"
                     android:inputType="numberDecimal" />
                 <EditText
-                    android:layout_width="190dp"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg4_et_resp5"
                     android:textAppearance="@style/style_resposta"
                     android:lines="3"
-                    android:hint="Observações" />
+                    android:hint="Verão\nPreço Venda"
+                    android:inputType="numberDecimal" />
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg4_et_resp6"
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="3"
+                    android:hint="Inverno\nPreço Venda"
+                    android:inputType="numberDecimal" />
 
             </TableRow>
 
@@ -403,12 +477,21 @@
                     android:hint="Inverno Média\nKg/dia"
                     android:inputType="numberDecimal" />
                 <EditText
-                    android:layout_width="190dp"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg5_et_resp5"
                     android:textAppearance="@style/style_resposta"
                     android:lines="3"
-                    android:hint="Observações" />
+                    android:hint="Verão\nPreço Venda"
+                    android:inputType="numberDecimal" />
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg5_et_resp6"
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="3"
+                    android:hint="Inverno\nPreço Venda"
+                    android:inputType="numberDecimal" />
 
             </TableRow>
 
@@ -467,12 +550,21 @@
                     android:hint="Inverno Média\nKg/dia"
                     android:inputType="numberDecimal" />
                 <EditText
-                    android:layout_width="190dp"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg6_et_resp5"
                     android:textAppearance="@style/style_resposta"
                     android:lines="3"
-                    android:hint="Observações" />
+                    android:hint="Verão\nPreço Venda"
+                    android:inputType="numberDecimal" />
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg6_et_resp6"
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="3"
+                    android:hint="Inverno\nPreço Venda"
+                    android:inputType="numberDecimal" />
 
             </TableRow>
 
@@ -529,12 +621,21 @@
                     android:hint="Inverno Média\nKg/dia"
                     android:inputType="numberDecimal" />
                 <EditText
-                    android:layout_width="190dp"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/perg7_et_resp5"
                     android:textAppearance="@style/style_resposta"
                     android:lines="3"
-                    android:hint="Observações" />
+                    android:hint="Verão\nPreço Venda"
+                    android:inputType="numberDecimal" />
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/perg7_et_resp6"
+                    android:textAppearance="@style/style_resposta"
+                    android:lines="3"
+                    android:hint="Inverno\nPreço Venda"
+                    android:inputType="numberDecimal" />
 
             </TableRow>
         </TableLayout></HorizontalScrollView>

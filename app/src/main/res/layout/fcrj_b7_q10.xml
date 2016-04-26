@@ -34,7 +34,7 @@
             android:textAppearance="@style/style_questao"
             android:paddingBottom="5dp"
             android:gravity="center"
-            android:text="Qual é o preço de venda do caranguejo (vivo e beneficiado) por tipo de comprador ao longo do ano na Alta e Baixa temporada."/>
+            android:text="Qual é o preço de venda da unidade de caranguejo (vivo e beneficiado) por tipo de comprador ao longo do ano na Alta e Baixa temporada."/>
 
         <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"             android:layout_width="wrap_content"             android:layout_height="fill_parent"> <TableLayout
             android:paddingTop="15dp"
@@ -110,7 +110,7 @@
                             android:paddingBottom="5dp"
                             android:gravity="center"
                             android:layout_span="2"
-                            android:text="Preço (R$)/kg do"/>
+                            android:text="Preço (R$)/Unidade"/>
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -119,7 +119,7 @@
                             android:gravity="center"
                             android:layout_gravity="center_horizontal"
                             android:layout_span="2"
-                            android:text="Preço (R$)/kg" />
+                            android:text="Preço (R$)/Unidade" />
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -128,7 +128,7 @@
                             android:gravity="center"
                             android:layout_span="2"
                             android:layout_gravity="center_horizontal"
-                            android:text="Preço (R$)/kg"/>
+                            android:text="Preço (R$)/Unidade"/>
             </TableRow>
 
 
