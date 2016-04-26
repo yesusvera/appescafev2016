@@ -131,7 +131,8 @@ public class PrincipalUnescoActivity extends AppCompatActivity
 
 
         long tempo = 1000 * 60 * 60 ; //1 hora
-        float distancia = 20; // 20 metros
+//        long tempo = 1000;
+        float distancia = 0; // 20 metros
 
         this.listener = new LocationListener() {
 
@@ -161,22 +162,23 @@ public class PrincipalUnescoActivity extends AppCompatActivity
 
                 if( location != null ){
                     try {
-                        LocalizacaoUsuarioDAO localizacaoUsuarioDAO = new LocalizacaoUsuarioDAO(PrincipalUnescoActivity.this);
-                        LocalizacaoUsuario locUsr = new LocalizacaoUsuario();
+                        if(Identity.getUsuarioLogado()!=null) {
+                            LocalizacaoUsuarioDAO localizacaoUsuarioDAO = new LocalizacaoUsuarioDAO(PrincipalUnescoActivity.this);
+                            LocalizacaoUsuario locUsr = new LocalizacaoUsuario();
 
-                        locUsr.setUsuario(Identity.getUsuarioLogado());
-                        locUsr.setLatitude(new BigDecimal(location.getLatitude()));
-                        locUsr.setLongitude(new BigDecimal(location.getLongitude()));
-                        locUsr.setProvided(location.getProvider());
-
-
-                        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-                        locUsr.setDataRegistro(new Date(location.getTime()));
+                            locUsr.setUsuario(Identity.getUsuarioLogado());
+                            locUsr.setLatitude(new BigDecimal(location.getLatitude()));
+                            locUsr.setLongitude(new BigDecimal(location.getLongitude()));
+                            locUsr.setProvided(location.getProvider());
 
 
-                        localizacaoUsuarioDAO.save(locUsr);
+                            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+                            locUsr.setDataRegistro(new Date(location.getTime()));
 
-                        Toast.makeText(getApplicationContext(), "Localização capturada.", Toast.LENGTH_LONG).show();
+
+                            localizacaoUsuarioDAO.save(locUsr);
+
+                            Toast.makeText(getApplicationContext(), "Localização capturada.", Toast.LENGTH_LONG).show();
 
 //                    locs.add(location);
 //                    numero.setText( "Número de posições travadas: "+locs.size() );
@@ -186,6 +188,7 @@ public class PrincipalUnescoActivity extends AppCompatActivity
 //
 //                    time.setText( "Data:"+sdf.format( location.getTime() ) );
 
+                        }
                     }catch (Exception e){
                         e.printStackTrace();
                     }

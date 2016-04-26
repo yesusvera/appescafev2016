@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.widget.Toast;
 
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
@@ -41,6 +42,26 @@ public class LocalizacaoUsuarioBO {
             return;
         }
 
+        UsuarioDAO usuarioDAO = new UsuarioDAO(context);
+
+        Usuario usrTmp = new Usuario();
+
+        for(LocalizacaoUsuario locUsr: listaLocalizacoes){
+            if(locUsr.getUsuario()!=null && locUsr.getUsuario().getId()!=null) {
+                if(usrTmp == null || usrTmp.getId() != locUsr.getUsuario().getId()) {
+                    usrTmp = usuarioDAO.findById(locUsr.getUsuario().getId());
+                }
+
+                if(usrTmp!=null) {
+                    Usuario usrFnl = new Usuario();
+                    usrFnl.setLogin(usrTmp.getLogin());
+                    usrFnl.setEmail(usrTmp.getEmail());
+
+                    locUsr.setUsuario(usrFnl);
+                }
+            }
+        }
+
         final ProgressDialog ringProgressDialog = ProgressDialog.show(activity, "Aguarde ...", "Enviando as localizações gravadas, aguarde...", true);
         ringProgressDialog.setCancelable(true);
 
@@ -66,11 +87,15 @@ public class LocalizacaoUsuarioBO {
 
             public void mensagem(String msg) {
                 try {
-                    new AlertDialog.Builder(activity)
-                            .setTitle(R.string.app_name)
-                            .setMessage(msg)
-                            .setIcon(android.R.drawable.ic_dialog_alert)
-                            .setPositiveButton(android.R.string.ok, null).show();
+//                    new AlertDialog.Builder(activity)
+//                            .setTitle(R.string.app_name)
+//                            .setMessage(msg)
+//                            .setIcon(android.R.drawable.ic_dialog_alert)
+//                            .setPositiveButton(android.R.string.ok, null).show();
+
+                    String mensagemErro = msg;
+                    Toast toast = Toast.makeText(activity, mensagemErro, Toast.LENGTH_LONG);
+                    toast.show();
 
                     if (ringProgressDialog != null && ringProgressDialog.isShowing()) {
                         ringProgressDialog.dismiss();
@@ -110,7 +135,7 @@ public class LocalizacaoUsuarioBO {
 
             @Override
             public void onFailure(int statusCode, Header[] headers, byte[] errorResponse, Throwable e) {
-                mensagem("Aconteceu alguma falha de conectividade." + "\n" + e.getMessage());
+//                mensagem("Aconteceu alguma falha de conectividade." + "\n" + e.getMessage());
                 e.printStackTrace();
             }
 

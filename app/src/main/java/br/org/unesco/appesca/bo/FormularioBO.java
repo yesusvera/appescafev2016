@@ -178,7 +178,7 @@ public class FormularioBO {
 
             @Override
             public void onFailure(int statusCode, Header[] headers, byte[] errorResponse, Throwable e) {
-                mensagem("Aconteceu alguma falha." + "\n" + e.getMessage());
+//                mensagem("Aconteceu alguma falha." + "\n" + e.getMessage());
                 e.printStackTrace();
 //                showProgress(false);
             }
