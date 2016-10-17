@@ -44,29 +44,37 @@ public class ConstantesIdsFormularios {
                 R.layout.fcmr_reg_b1_q9,R.layout.fcmr_reg_b1_q10, R.layout.fcmr_reg_b1_q11, R.layout.fcmr_reg_b1_q12,
                 R.layout.fcmr_reg_b1_q13,R.layout.fcmr_reg_b1_q14,R.layout.fcmr_reg_b1_q15,
 
+                //QUESTAO 16 A 21
                 R.layout.fcmr_reg_b2_q1,R.layout.fcmr_reg_b2_q2, R.layout.fcmr_reg_b2_q3,
                 R.layout.fcmr_reg_b2_q4,R.layout.fcmr_reg_b2_q5,R.layout.fcmr_reg_b2_q6,
 
+                //QUESTAO 22 A 30
                 R.layout.fcmr_reg_b3_q1,R.layout.fcmr_reg_b3_q2,R.layout.fcmr_reg_b3_q3,
                 R.layout.fcmr_reg_b3_q4,R.layout.fcmr_reg_b3_q5,R.layout.fcmr_reg_b3_q6,
                 R.layout.fcmr_reg_b3_q7,R.layout.fcmr_reg_b3_q8,R.layout.fcmr_reg_b3_q9,
 
+                //QUESTAO 31 A 41
                 R.layout.fcrj_b4_q1, R.layout.fcmr_reg_b4_q2, R.layout.fcrj_b4_q3,
                 R.layout.fcrj_b4_q4, R.layout.fcmr_reg_b4_q5, R.layout.fcmr_reg_b4_q6,
                 R.layout.fcmr_reg_b4_q7, R.layout.fcmr_reg_b4_q8,R.layout.fcmr_reg_b4_q9,
                 R.layout.fcmr_reg_b4_q10, R.layout.fcmr_reg_b4_q11,
 
+                //QUESTAO 42 A 46
                 R.layout.fcrj_b5_q1, R.layout.fcrj_b5_q2, R.layout.fcrj_b5_q3,
                 R.layout.fcrj_b5_q4, R.layout.fcrj_b5_q5,
 
+                //QUESTAO 47 A 54
                 R.layout.fcrj_b6_q1, R.layout.fcrj_b6_q2, R.layout.fcrj_b6_q3, R.layout.fcrj_b6_q4, R.layout.fcrj_b6_q5,
                 R.layout.fcrj_b6_q6, R.layout.fcrj_b6_q7, R.layout.fcrj_b6_q8,
 
+                //QUESTAO 55 A 67
                 R.layout.fcrj_b7_q1, R.layout.fcrj_b7_q2, R.layout.fcrj_b7_q3, R.layout.fcrj_b7_q4, R.layout.fcrj_b7_q5, R.layout.fcrj_b7_q6,
                 R.layout.fcrj_b7_q7, R.layout.fcrj_b7_q8, R.layout.fcrj_b7_q9, R.layout.fcrj_b7_q10, R.layout.fcrj_b7_q11, R.layout.fcrj_b7_q12, R.layout.fcrj_b7_q13,
 
+                //QUESTAO 68 A 73
                 R.layout.fcrj_b8_q1, R.layout.fcrj_b8_q2, R.layout.fcrj_b8_q3, R.layout.fcrj_b8_q4, R.layout.fcrj_b8_q5, R.layout.fcrj_b8_q6,
 
+                //QUESTAO 74
                 R.layout.fcmr_reg_b9_q1
         };
 
@@ -106,29 +114,37 @@ public class ConstantesIdsFormularios {
             R.layout.fcmr_reg_b1_q9,R.layout.fcmr_reg_b1_q10, R.layout.fcmr_reg_b1_q11, R.layout.fcmr_reg_b1_q12,
             R.layout.fcmr_reg_b1_q13,R.layout.fcmr_reg_b1_q14,R.layout.fcmr_reg_b1_q15,
 
+            //QUESTAO 16 A 21
             R.layout.fcmr_reg_b2_q1,R.layout.fcmr_reg_b2_q2, R.layout.fcmr_reg_b2_q3,
             R.layout.fcmr_reg_b2_q4,R.layout.fcmr_reg_b2_q5,R.layout.fcmr_reg_b2_q6,
 
+            //QUESTAO 22 A 30
             R.layout.fcmr_reg_b3_q1,R.layout.fcmr_reg_b3_q2,R.layout.fcmr_reg_b3_q3,
             R.layout.fcmr_reg_b3_q4,R.layout.fcmr_reg_b3_q5,R.layout.fcmr_reg_b3_q6,
             R.layout.fcmr_reg_b3_q7,R.layout.fcmr_reg_b3_q8,R.layout.fcmr_reg_b3_q9,
 
+            //QUESTAO 31 A 41
             R.layout.fcmr_reg_b4_q1, R.layout.fcmr_reg_b4_q2, R.layout.fcmr_reg_b4_q3,
             R.layout.fcmr_reg_b4_q4, R.layout.fcmr_reg_b4_q5, R.layout.fcmr_reg_b4_q6,
             R.layout.fcmr_reg_b4_q7, R.layout.fcmr_reg_b4_q8,R.layout.fcmr_reg_b4_q9,
             R.layout.fcmr_reg_b4_q10, R.layout.fcmr_reg_b4_q11,
 
+            //QUESTAO 42 A 46
             R.layout.fcmr_reg_b5_q1, R.layout.fcmr_reg_b5_q2, R.layout.fcmr_reg_b5_q3,
             R.layout.fcmr_reg_b5_q4, R.layout.fcmr_reg_b5_q5,
 
+            //QUESTAO 47 A 52
             R.layout.fcmr_reg_b6_q1, R.layout.fcmr_pb_b6_q2, R.layout.fcmr_pb_b6_q3,
             R.layout.fcmr_pb_b6_q4, R.layout.fcmr_pb_b6_q5, R.layout.fcmr_pb_b6_q6,
 
+            //QUESTAO 53 A 54
             R.layout.fcmr_pb_b7_q1, R.layout.fcmr_pb_b7_q2,
 
+            //QUESTAO 55 A 60
             R.layout.fcmr_pb_b8_q1, R.layout.fcmr_pb_b8_q2, R.layout.fcmr_pb_b8_q3, R.layout.fcmr_pb_b8_q4,
             R.layout.fcmr_pb_b8_q5, R.layout.fcmr_pb_b8_q6,
 
+            //QUESTAO 61
             R.layout.fcmr_reg_b9_q1
 
         };
@@ -169,34 +185,42 @@ public class ConstantesIdsFormularios {
                 R.layout.fcmr_reg_b1_q9,R.layout.fcmr_reg_b1_q10, R.layout.fcmr_reg_b1_q11, R.layout.fcmr_reg_b1_q12,
                 R.layout.fcmr_reg_b1_q13,R.layout.fcmr_reg_b1_q14,R.layout.fcmr_reg_b1_q15,
 
+                //QUESTAO 16 A 21
                 R.layout.fcmr_reg_b2_q1,R.layout.fcmr_reg_b2_q2, R.layout.fcmr_reg_b2_q3,
                 R.layout.fcmr_reg_b2_q4,R.layout.fcmr_reg_b2_q5,R.layout.fcmr_reg_b2_q6,
 
+                //QUESTAO 22 A 30
                 R.layout.fcmr_reg_b3_q1,R.layout.fcmr_reg_b3_q2,R.layout.fcmr_reg_b3_q3,
                 R.layout.fcmr_reg_b3_q4,R.layout.fcmr_reg_b3_q5,R.layout.fcmr_reg_b3_q6,
                 R.layout.fcmr_reg_b3_q7,R.layout.fcmr_reg_b3_q8,R.layout.fcmr_reg_b3_q9,
 
+                //QUESTAO 31 A 41
                 R.layout.fcmr_reg_b4_q1, R.layout.fcmr_reg_b4_q2, R.layout.fcmr_reg_b4_q3,
                 R.layout.fcmr_reg_b4_q4, R.layout.fcmr_reg_b4_q5, R.layout.fcmr_reg_b4_q6,
                 R.layout.fcmr_reg_b4_q7, R.layout.fcmr_reg_b4_q8,R.layout.fcmr_reg_b4_q9,
                 R.layout.fcmr_reg_b4_q10, R.layout.fcmr_reg_b4_q11,
 
+                //QUESTAO 42 A 46
                 R.layout.fcmr_reg_b5_q1, R.layout.fcmr_reg_b5_q2, R.layout.fcmr_reg_b5_q3,
                 R.layout.fcmr_reg_b5_q4, R.layout.fcmr_reg_b5_q5 ,
 
+                //QUESTAO 47 A 53
                 R.layout.fcmr_reg_b6_q1, R.layout.fcmr_reg_b6_q2, R.layout.fcmr_reg_b6_q3,
                 R.layout.fcmr_reg_b6_q4, R.layout.fcmr_reg_b6_q5, R.layout.fcmr_reg_b6_q6,
                 R.layout.fcmr_reg_b6_q7,
 
+                //QUESTAO 54 A 65
                 R.layout.fcmr_reg_b7_q1, R.layout.fcmr_reg_b7_q2, R.layout.fcmr_reg_b7_q3,
                 R.layout.fcmr_reg_b7_q4, R.layout.fcmr_reg_b7_q5, R.layout.fcmr_reg_b7_q6,
                 R.layout.fcmr_reg_b7_q7, R.layout.fcmr_reg_b7_q8,R.layout.fcmr_reg_b7_q9,
                 R.layout.fcmr_reg_b7_q10,R.layout.fcmr_reg_b7_q11,R.layout.fcmr_reg_b7_q12,
 
+                //QUESTAO 66 A 72
                 R.layout.fcmr_reg_b8_q1 , R.layout.fcmr_reg_b8_q2, R.layout.fcmr_reg_b8_q3,
                 R.layout.fcmr_reg_b8_q4, R.layout.fcmr_reg_b8_q5, R.layout.fcmr_reg_b8_q6,
                 R.layout.fcmr_reg_b8_q7,
 
+                //QUESTAO 73
                 R.layout.fcmr_reg_b9_q1
         };
 
