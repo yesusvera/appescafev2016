@@ -52,7 +52,8 @@
                     android:textAppearance="@style/style_resposta"
                     android:id="@+id/perg1_cb_resp1"
                     android:paddingRight="15dp"
-                    android:tag="perg1_et_resp2->this" />
+                    android:tag="perg1_et_resp2->this"
+                    android:checked="false" />
 
                 <EditText
                     android:layout_width="match_parent"

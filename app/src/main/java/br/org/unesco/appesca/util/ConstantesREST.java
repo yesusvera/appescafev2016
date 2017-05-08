@@ -5,11 +5,11 @@ package br.org.unesco.appesca.util;
  */
 public class ConstantesREST {
 
-//     public static String HOST = "http://172.20.10.2:8080/appesca-web/";
-      public static String HOST = "http://sauber03.unesco.org.br/appesca-web/";
-     //private final static String HOST = "http://macbookyesus.local:8080/appesca-web/";
+    //     public static String HOST = "http://172.20.10.2:8080/appesca-web/";
+    public static String HOST = "http://sauber03.unesco.org.br/appesca-web/";
+    //private final static String HOST = "http://macbookyesus.local:8080/appesca-web/";
 
-     /**
+    /**
      * SERVICOS REST
      */
     public final static String AUTHENTICATION_SERVICE = "rest/usuario/autenticacao";

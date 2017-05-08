@@ -601,448 +601,448 @@
                                     </TableRow>
 
 
-                                    <TableRow
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@drawable/border">
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="20dp">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:text="Embarcação. Qual tamanho?"/>
+
+
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center"
+                                            android:textAppearance="@style/style_resposta"
+                                            android:text="1º"/>
+
+                                        <EditText
+                                            android:layout_width="150dp"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/perg6_et_resp1"
+                                            android:textAppearance="@style/style_resposta"/>
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center"
+                                            android:textAppearance="@style/style_resposta"
+                                            android:text="2º"/>
+
+                                        <EditText
+                                            android:layout_width="150dp"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/perg6_et_resp2"
+                                            android:textAppearance="@style/style_resposta"/>
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center"
+                                            android:textAppearance="@style/style_resposta"
+                                            android:text="3º"/>
+
+                                        <EditText
+                                            android:layout_width="150dp"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/perg6_et_resp3"
+                                            android:textAppearance="@style/style_resposta"/>
+                                    </LinearLayout>
+
+                               </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:background="@drawable/border"
+                                    android:orientation="vertical"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:padding="20dp">
+
+
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center"
+                                            android:textAppearance="@style/style_resposta"
+                                            android:text="1º"/>
+
+                                        <EditText
+                                            android:layout_width="60dp"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/perg6_et_resp4"
+                                            android:textAppearance="@style/style_resposta"
+                                            android:inputType="numberDecimal"
+                                            android:hint="Ano\nDe\nCompra" />
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center"
+                                            android:textAppearance="@style/style_resposta"
+                                            android:text="2º"/>
+
+                                        <EditText
+                                            android:layout_width="60dp"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/perg6_et_resp5"
+                                            android:textAppearance="@style/style_resposta"
+                                            android:inputType="numberDecimal"
+                                            android:hint="Ano\nDe\nCompra" />
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center"
+                                            android:textAppearance="@style/style_resposta"
+                                            android:text="3º"/>
+
+                                        <EditText
+                                            android:layout_width="60dp"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/perg6_et_resp6"
+                                            android:textAppearance="@style/style_resposta"
+                                            android:inputType="numberDecimal"
+                                            android:hint="Ano\nDe\nCompra" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:background="@drawable/border"
+                                    android:orientation="vertical"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:padding="20dp">
+
+
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center"
+                                            android:textAppearance="@style/style_resposta"
+                                            android:text="1º"/>
+
+                                        <EditText
+                                            android:layout_width="60dp"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/perg6_et_resp7"
+                                            android:textAppearance="@style/style_resposta"
+                                            android:inputType="numberDecimal"
+                                            android:hint="Qtde." />
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center"
+                                            android:textAppearance="@style/style_resposta"
+                                            android:text="2º"/>
+
+                                        <EditText
+                                            android:layout_width="60dp"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/perg6_et_resp8"
+                                            android:textAppearance="@style/style_resposta"
+                                            android:inputType="numberDecimal"
+                                            android:hint="Qtde." />
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center"
+                                            android:textAppearance="@style/style_resposta"
+                                            android:text="3º"/>
+
+                                        <EditText
+                                            android:layout_width="60dp"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/perg6_et_resp9"
+                                            android:textAppearance="@style/style_resposta"
+                                            android:inputType="numberDecimal"
+                                            android:hint="Qtde." />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:background="@drawable/border"
+                                    android:orientation="vertical"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:padding="20dp">
+
+
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center"
+                                            android:textAppearance="@style/style_resposta"
+                                            android:text="1º"/>
+
+                                        <EditText
+                                            android:layout_width="60dp"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/perg6_et_resp10"
+                                            android:textAppearance="@style/style_resposta"
+                                            android:hint="Valor\nUn. (R$)" />
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center"
+                                            android:textAppearance="@style/style_resposta"
+                                            android:text="2º"/>
+
+                                        <EditText
+                                            android:layout_width="60dp"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/perg6_et_resp11"
+                                            android:textAppearance="@style/style_resposta"
+                                            android:hint="Valor\nUn. (R$)" />
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center"
+                                            android:textAppearance="@style/style_resposta"
+                                            android:text="3º"/>
+
+                                        <EditText
+                                            android:layout_width="60dp"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/perg6_et_resp12"
+                                            android:textAppearance="@style/style_resposta"
+                                            android:hint="Valor\nUn. (R$)" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:background="@drawable/border"
+                                    android:orientation="vertical"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="20dp">
+
+
+                                    <RadioGroup
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:layout_gravity="center_horizontal"
-                                        android:background="@drawable/border">
+                                        android:orientation="vertical">
 
-                                        <LinearLayout
-                                            android:orientation="vertical"
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="@style/style_questao"
+                                            android:gravity="left"
+                                            android:text="1º"/>
+
+                                        <RadioButton
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:padding="20dp">
-                                            <TextView
-                                                android:layout_width="match_parent"
-                                                android:layout_height="match_parent"
-                                                android:gravity="center"
-                                                android:textAppearance="@style/style_resposta"
-                                                android:text="Embarcação. Qual tamanho?"/>
+                                            android:text="Própria"
+                                            android:textAppearance="@style/style_resposta"
+                                            android:id="@+id/perg6_rb_resp13"
+                                            android:paddingRight="15dp"/>
 
 
-                                            <LinearLayout
-                                                android:orientation="horizontal"
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content">
-                                                <TextView
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="match_parent"
-                                                    android:gravity="center"
-                                                    android:textAppearance="@style/style_resposta"
-                                                    android:text="1º"/>
-
-                                                <EditText
-                                                    android:layout_width="150dp"
-                                                    android:layout_height="wrap_content"
-                                                    android:id="@+id/perg6_et_resp1"
-                                                    android:textAppearance="@style/style_resposta"/>
-                                            </LinearLayout>
-                                            <LinearLayout
-                                                android:orientation="horizontal"
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content">
-                                                <TextView
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="match_parent"
-                                                    android:gravity="center"
-                                                    android:textAppearance="@style/style_resposta"
-                                                    android:text="2º"/>
-
-                                                <EditText
-                                                    android:layout_width="150dp"
-                                                    android:layout_height="wrap_content"
-                                                    android:id="@+id/perg6_et_resp2"
-                                                    android:textAppearance="@style/style_resposta"/>
-                                            </LinearLayout>
-                                            <LinearLayout
-                                                android:orientation="horizontal"
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content">
-                                                <TextView
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="match_parent"
-                                                    android:gravity="center"
-                                                    android:textAppearance="@style/style_resposta"
-                                                    android:text="3º"/>
-
-                                                <EditText
-                                                    android:layout_width="150dp"
-                                                    android:layout_height="wrap_content"
-                                                    android:id="@+id/perg6_et_resp3"
-                                                    android:textAppearance="@style/style_resposta"/>
-                                            </LinearLayout>
-
-                                       </LinearLayout>
-
-
-                                        <LinearLayout
-                                            android:background="@drawable/border"
-                                            android:orientation="vertical"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="match_parent"
-                                            android:padding="20dp">
-
-
-                                            <LinearLayout
-                                                android:orientation="horizontal"
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content">
-                                                <TextView
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="match_parent"
-                                                    android:gravity="center"
-                                                    android:textAppearance="@style/style_resposta"
-                                                    android:text="1º"/>
-
-                                                <EditText
-                                                    android:layout_width="60dp"
-                                                    android:layout_height="wrap_content"
-                                                    android:id="@+id/perg6_et_resp4"
-                                                    android:textAppearance="@style/style_resposta"
-                                                    android:inputType="numberDecimal"
-                                                    android:hint="Ano\nDe\nCompra" />
-                                            </LinearLayout>
-                                            <LinearLayout
-                                                android:orientation="horizontal"
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content">
-                                                <TextView
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="match_parent"
-                                                    android:gravity="center"
-                                                    android:textAppearance="@style/style_resposta"
-                                                    android:text="2º"/>
-
-                                                <EditText
-                                                    android:layout_width="60dp"
-                                                    android:layout_height="wrap_content"
-                                                    android:id="@+id/perg6_et_resp5"
-                                                    android:textAppearance="@style/style_resposta"
-                                                    android:inputType="numberDecimal"
-                                                    android:hint="Ano\nDe\nCompra" />
-                                            </LinearLayout>
-                                            <LinearLayout
-                                                android:orientation="horizontal"
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content">
-                                                <TextView
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="match_parent"
-                                                    android:gravity="center"
-                                                    android:textAppearance="@style/style_resposta"
-                                                    android:text="3º"/>
-
-                                                <EditText
-                                                    android:layout_width="60dp"
-                                                    android:layout_height="wrap_content"
-                                                    android:id="@+id/perg6_et_resp6"
-                                                    android:textAppearance="@style/style_resposta"
-                                                    android:inputType="numberDecimal"
-                                                    android:hint="Ano\nDe\nCompra" />
-                                            </LinearLayout>
-
-                                        </LinearLayout>
-
-
-                                        <LinearLayout
-                                            android:background="@drawable/border"
-                                            android:orientation="vertical"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="match_parent"
-                                            android:padding="20dp">
-
-
-                                            <LinearLayout
-                                                android:orientation="horizontal"
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content">
-                                                <TextView
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="match_parent"
-                                                    android:gravity="center"
-                                                    android:textAppearance="@style/style_resposta"
-                                                    android:text="1º"/>
-
-                                                <EditText
-                                                    android:layout_width="60dp"
-                                                    android:layout_height="wrap_content"
-                                                    android:id="@+id/perg6_et_resp7"
-                                                    android:textAppearance="@style/style_resposta"
-                                                    android:inputType="numberDecimal"
-                                                    android:hint="Qtde." />
-                                            </LinearLayout>
-                                            <LinearLayout
-                                                android:orientation="horizontal"
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content">
-                                                <TextView
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="match_parent"
-                                                    android:gravity="center"
-                                                    android:textAppearance="@style/style_resposta"
-                                                    android:text="2º"/>
-
-                                                <EditText
-                                                    android:layout_width="60dp"
-                                                    android:layout_height="wrap_content"
-                                                    android:id="@+id/perg6_et_resp8"
-                                                    android:textAppearance="@style/style_resposta"
-                                                    android:inputType="numberDecimal"
-                                                    android:hint="Qtde." />
-                                            </LinearLayout>
-                                            <LinearLayout
-                                                android:orientation="horizontal"
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content">
-                                                <TextView
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="match_parent"
-                                                    android:gravity="center"
-                                                    android:textAppearance="@style/style_resposta"
-                                                    android:text="3º"/>
-
-                                                <EditText
-                                                    android:layout_width="60dp"
-                                                    android:layout_height="wrap_content"
-                                                    android:id="@+id/perg6_et_resp9"
-                                                    android:textAppearance="@style/style_resposta"
-                                                    android:inputType="numberDecimal"
-                                                    android:hint="Qtde." />
-                                            </LinearLayout>
-
-                                        </LinearLayout>
-
-                                        <LinearLayout
-                                            android:background="@drawable/border"
-                                            android:orientation="vertical"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="match_parent"
-                                            android:padding="20dp">
-
-
-                                            <LinearLayout
-                                                android:orientation="horizontal"
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content">
-                                                <TextView
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="match_parent"
-                                                    android:gravity="center"
-                                                    android:textAppearance="@style/style_resposta"
-                                                    android:text="1º"/>
-
-                                                <EditText
-                                                    android:layout_width="60dp"
-                                                    android:layout_height="wrap_content"
-                                                    android:id="@+id/perg6_et_resp10"
-                                                    android:textAppearance="@style/style_resposta"
-                                                    android:hint="Valor\nUn. (R$)" />
-                                            </LinearLayout>
-                                            <LinearLayout
-                                                android:orientation="horizontal"
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content">
-                                                <TextView
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="match_parent"
-                                                    android:gravity="center"
-                                                    android:textAppearance="@style/style_resposta"
-                                                    android:text="2º"/>
-
-                                                <EditText
-                                                    android:layout_width="60dp"
-                                                    android:layout_height="wrap_content"
-                                                    android:id="@+id/perg6_et_resp11"
-                                                    android:textAppearance="@style/style_resposta"
-                                                    android:hint="Valor\nUn. (R$)" />
-                                            </LinearLayout>
-                                            <LinearLayout
-                                                android:orientation="horizontal"
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content">
-                                                <TextView
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="match_parent"
-                                                    android:gravity="center"
-                                                    android:textAppearance="@style/style_resposta"
-                                                    android:text="3º"/>
-
-                                                <EditText
-                                                    android:layout_width="60dp"
-                                                    android:layout_height="wrap_content"
-                                                    android:id="@+id/perg6_et_resp12"
-                                                    android:textAppearance="@style/style_resposta"
-                                                    android:hint="Valor\nUn. (R$)" />
-                                            </LinearLayout>
-
-                                        </LinearLayout>
-
-
-                                        <LinearLayout
-                                            android:background="@drawable/border"
-                                            android:orientation="vertical"
+                                        <RadioButton
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:padding="20dp">
-
-
-                                            <RadioGroup
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:orientation="vertical">
-
-                                                <TextView
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="wrap_content"
-                                                    android:textAppearance="@style/style_questao"
-                                                    android:gravity="left"
-                                                    android:text="1º"/>
-
-                                                <RadioButton
-                                                    android:layout_width="wrap_content"
-                                                    android:layout_height="wrap_content"
-                                                    android:text="Própria"
-                                                    android:textAppearance="@style/style_resposta"
-                                                    android:id="@+id/perg6_rb_resp13"
-                                                    android:paddingRight="15dp"/>
-
-
-                                                <RadioButton
-                                                    android:layout_width="wrap_content"
-                                                    android:layout_height="wrap_content"
-                                                    android:text="Financiada"
-                                                    android:textAppearance="@style/style_resposta"
-                                                    android:id="@+id/perg6_rb_resp14"
-                                                    android:checked="false" />
-                                                <RadioButton
-                                                    android:layout_width="wrap_content"
-                                                    android:layout_height="wrap_content"
-                                                    android:text="Doação"
-                                                    android:textAppearance="@style/style_resposta"
-                                                    android:id="@+id/perg6_rb_resp15"
-                                                    android:checked="false" />
-                                            </RadioGroup>
-
-                                            <RadioGroup
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:orientation="vertical">
-
-                                                <TextView
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="wrap_content"
-                                                    android:textAppearance="@style/style_questao"
-                                                    android:gravity="left"
-                                                    android:text="2º"/>
-
-                                                <RadioButton
-                                                    android:layout_width="wrap_content"
-                                                    android:layout_height="wrap_content"
-                                                    android:text="Própria"
-                                                    android:textAppearance="@style/style_resposta"
-                                                    android:id="@+id/perg6_rb_resp16"
-                                                    android:paddingRight="15dp"/>
-
-
-                                                <RadioButton
-                                                    android:layout_width="wrap_content"
-                                                    android:layout_height="wrap_content"
-                                                    android:text="Financiada"
-                                                    android:textAppearance="@style/style_resposta"
-                                                    android:id="@+id/perg6_rb_resp17"
-                                                    android:checked="false" />
-                                                <RadioButton
-                                                    android:layout_width="wrap_content"
-                                                    android:layout_height="wrap_content"
-                                                    android:text="Doação"
-                                                    android:textAppearance="@style/style_resposta"
-                                                    android:id="@+id/perg6_rb_resp18"
-                                                    android:checked="false" />
-                                            </RadioGroup>
-
-                                            <RadioGroup
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:orientation="vertical">
-
-                                                <TextView
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="wrap_content"
-                                                    android:textAppearance="@style/style_questao"
-                                                    android:gravity="left"
-                                                    android:text="3º"/>
-
-                                                <RadioButton
-                                                    android:layout_width="wrap_content"
-                                                    android:layout_height="wrap_content"
-                                                    android:text="Própria"
-                                                    android:textAppearance="@style/style_resposta"
-                                                    android:id="@+id/perg6_rb_resp19"
-                                                    android:paddingRight="15dp"/>
-
-
-                                                <RadioButton
-                                                    android:layout_width="wrap_content"
-                                                    android:layout_height="wrap_content"
-                                                    android:text="Financiada"
-                                                    android:textAppearance="@style/style_resposta"
-                                                    android:id="@+id/perg6_rb_resp20"
-                                                    android:checked="false" />
-                                                <RadioButton
-                                                    android:layout_width="wrap_content"
-                                                    android:layout_height="wrap_content"
-                                                    android:text="Doação"
-                                                    android:textAppearance="@style/style_resposta"
-                                                    android:id="@+id/perg6_rb_resp21"
-                                                    android:checked="false" />
-                                            </RadioGroup>
-
-                                        </LinearLayout>
-
-                                        <LinearLayout
-                                            android:orientation="vertical"
+                                            android:text="Financiada"
+                                            android:textAppearance="@style/style_resposta"
+                                            android:id="@+id/perg6_rb_resp14"
+                                            android:checked="false" />
+                                        <RadioButton
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:padding="20dp">
-                                            <TextView
-                                                android:layout_width="match_parent"
-                                                android:layout_height="match_parent"
-                                                android:gravity="left"
-                                                android:textAppearance="@style/style_resposta"
-                                                android:text="Ano:"/>
+                                            android:text="Doação"
+                                            android:textAppearance="@style/style_resposta"
+                                            android:id="@+id/perg6_rb_resp15"
+                                            android:checked="false" />
+                                    </RadioGroup>
 
-                                            <EditText
-                                                android:layout_width="70dp"
-                                                android:layout_height="wrap_content"
-                                                android:paddingLeft="20dp"
-                                                android:id="@+id/perg6_et_resp22"
-                                                android:textAppearance="@style/style_resposta"/>
+                                    <RadioGroup
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
 
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="@style/style_questao"
+                                            android:gravity="left"
+                                            android:text="2º"/>
 
-                                            <RadioGroup
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:orientation="vertical">
-                                                <RadioButton
-                                                    android:layout_width="wrap_content"
-                                                    android:layout_height="wrap_content"
-                                                    android:text="Não sabe"
-                                                    android:textAppearance="@style/style_resposta"
-                                                    android:id="@+id/perg6_rb_resp23"
-                                                    android:paddingRight="15dp"/>
-                                                <RadioButton
-                                                    android:layout_width="wrap_content"
-                                                    android:layout_height="wrap_content"
-                                                    android:text="Não respondeu"
-                                                    android:textAppearance="@style/style_resposta"
-                                                    android:id="@+id/perg6_rb_resp24"
-                                                    android:paddingRight="15dp"/>
-                                            </RadioGroup>
-                                        </LinearLayout>
+                                        <RadioButton
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Própria"
+                                            android:textAppearance="@style/style_resposta"
+                                            android:id="@+id/perg6_rb_resp16"
+                                            android:paddingRight="15dp"/>
 
 
-                                    </TableRow>
+                                        <RadioButton
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Financiada"
+                                            android:textAppearance="@style/style_resposta"
+                                            android:id="@+id/perg6_rb_resp17"
+                                            android:checked="false" />
+                                        <RadioButton
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Doação"
+                                            android:textAppearance="@style/style_resposta"
+                                            android:id="@+id/perg6_rb_resp18"
+                                            android:checked="false" />
+                                    </RadioGroup>
 
+                                    <RadioGroup
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="@style/style_questao"
+                                            android:gravity="left"
+                                            android:text="3º"/>
+
+                                        <RadioButton
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Própria"
+                                            android:textAppearance="@style/style_resposta"
+                                            android:id="@+id/perg6_rb_resp19"
+                                            android:paddingRight="15dp"/>
+
+
+                                        <RadioButton
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Financiada"
+                                            android:textAppearance="@style/style_resposta"
+                                            android:id="@+id/perg6_rb_resp20"
+                                            android:checked="false" />
+                                        <RadioButton
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Doação"
+                                            android:textAppearance="@style/style_resposta"
+                                            android:id="@+id/perg6_rb_resp21"
+                                            android:checked="false" />
+                                    </RadioGroup>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="20dp">
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="left"
+                                        android:textAppearance="@style/style_resposta"
+                                        android:text="Ano:"/>
+
+                                    <EditText
+                                        android:layout_width="70dp"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="20dp"
+                                        android:id="@+id/perg6_et_resp22"
+                                        android:textAppearance="@style/style_resposta"/>
+
+
+                                    <RadioGroup
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+                                        <RadioButton
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Não sabe"
+                                            android:textAppearance="@style/style_resposta"
+                                            android:id="@+id/perg6_rb_resp23"
+                                            android:paddingRight="15dp"/>
+                                        <RadioButton
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Não respondeu"
+                                            android:textAppearance="@style/style_resposta"
+                                            android:id="@+id/perg6_rb_resp24"
+                                            android:paddingRight="15dp"/>
+                                    </RadioGroup>
+                                </LinearLayout>
+
+
+                            </TableRow>
 
 
                             <TableRow

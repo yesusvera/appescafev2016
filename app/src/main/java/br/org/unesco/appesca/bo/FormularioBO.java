@@ -71,18 +71,6 @@ public class FormularioBO {
 
         prepararObjetoFormulario(formTemp);
 
-//        FormularioBO formularioBO = new FormularioBO();
-//        if (formularioBO.temAudio(formularioOriginal)) {
-//            File audioQ9 = new File(formularioBO.getPathAudioQ9(formularioOriginal));
-//
-//            try {
-//                byte[] bytes = AppescaUtil.getBytesFromFile(audioQ9);
-//                formTemp.setAudioQ9(bytes);
-//            } catch (IOException io) {
-//                io.printStackTrace();
-//            }
-//        }
-
         FormularioREST formularioREST = new FormularioREST(formTemp);
 
         XStream xStream = new XStream(new DomDriver());
@@ -99,11 +87,6 @@ public class FormularioBO {
         FormularioBO formularioBO = new FormularioBO();
         if (formularioBO.temAudio(formularioOriginal)) {
 
-//            int indexAudioQ = FormCamRegActivityNew.arrayIdsQuestoes.length-2;
-//            Questao questaoAudio = new QuestaoDAO(activity).findQuestaoByOrdemIdFormulario(indexAudioQ, formularioOriginal.getId());
-//
-//            if(questaoAudio!=null){
-
                 File audioB9Q1 = new File(formularioBO.getPathAudioQ9(formularioOriginal));
 
                 try {
@@ -112,7 +95,7 @@ public class FormularioBO {
                 } catch (IOException io) {
                     io.printStackTrace();
                 }
-//            }
+
         }
 
         AsyncHttpClient client = new AsyncHttpClient();

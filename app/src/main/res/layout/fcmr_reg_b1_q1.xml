@@ -1404,7 +1404,8 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
                 android:textAppearance="@style/style_questao"
-                android:text="Quem é responsável pela unidade familiar?"/>
+                android:text="Quem é responsável pela unidade familiar?"
+                android:allowUndo="true" />
         </LinearLayout>
 
         <!-- TABULACAO DAS OPCOES -->

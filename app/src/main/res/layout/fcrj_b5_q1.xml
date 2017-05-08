@@ -41,8 +41,7 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
                 android:textAppearance="@style/style_questao"
-                android:text="A partir de que idade você começou a trabalhar com a
-pesca e/ou catação de caranguejo?"/>
+                android:text="A partir de que idade você começou a trabalhar com a pesca e/ou catação de caranguejo?"/>
 
             <!-- RESPOSTA + TABULACAO DAS OPCOES -->
             <LinearLayout
